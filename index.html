@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Kbengine by kbengine</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Kbengine</h1>
+        <h2>hello kbengine! a mmog of engine!</h2>
+        <a href="https://github.com/kbengine/kbengine" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>kbengine</h1>
+
+<h2>演示截图(点击图片看视频):</h2>
+
+<p><a href="http://v.youku.com/v_show/id_XMTc2MDcxMDUy.html"><img src="https://github.com/downloads/kbengine/kbengine/demo.jpg" alt="kbengine"></a></p>
+
+<h2>控制台截图:</h2>
+
+<p><a href="http://v.youku.com/v_show/id_XMTc2MDcxMDUy.html"><img src="https://github.com/downloads/kbengine/kbengine/guiconsole_debug.jpg" alt="kbengine"></a>
+<a href="http://v.youku.com/v_show/id_XMTc2MDcxMDUy.html"><img src="https://github.com/downloads/kbengine/kbengine/guiconsole_log.jpg" alt="kbengine"></a></p>
+
+<h2>什么是KBEngine?</h2>
+
+<p>kbengine仿照bigworld技术努力成为一款开源mmog引擎，bigworld引擎的特点是开发者无需接触c++底层，
+无需重复性的实现网络，内存管理，线程管理等底层通用性技术，把精力集中到游戏开发层面上来，
+使用python就能够简单高效的打造一款游戏。</p>
+
+<p>先简单的介绍一下引擎的各个组件部分:</p>
+
+<pre><code>· dbmgr:
+这个程序主要是用来处理游戏的数据库部分，它封装了mysql，能够很方便的完成各种数据库操作, 
+以及整个游戏的entityID分配等等, 共享数据(globaldata, baseAppData, cellAppData)。 
+另外还提供一套接口与第三方运营接口对接。
+
+
+· baseappmgr:
+主要是用来负责处理所有的baseapp的工作分配（负载平衡）等。服务器上会有一个或者多个baseapp，主要看使用者如何配置。 
+
+
+· baseapp:
+baseappmgr将一个client分配给它之后， 它才接受某个帐号登陆， 登陆后就会将client分配到一个合适的cellapp，
+一个帐号登陆到baseapp之后就不会再改变，这个baseapp会一直维护这个帐号，直到与他断开连接。当然baseapp还会处理很多的东西，
+例如entity需要存储到数据库的数据会定时给dbmgr处理， 备份entity cell部分的相关数据等等。客户端与服务器的通讯只能通过baseapp来完成, 
+它也充当服务器与客户端之间的防火墙。 
+
+
+· cellappmgr:
+负责所有cellapp的工作分配，包括负载均衡处理等。服务器上会有一个或者多个cellapp，主要看使用者如何配置。 
+
+
+· cellapp:
+一个cellapp负责处理一个或者多个space，当一个space上消耗过大时kbe将会寻找空闲的cell来均衡负载， 
+整个游戏的实时处理逻辑部分也在cellapp， 包括aoi, 逻辑层的ai, entity移动导航等等。 
+
+
+· loginapp:
+它只处理client的登录接入, 账号由dbmgr检查通过就会从baseappmgr得到一个baseapp的地址发给客户端，
+然后就与客户端断开连接， 客户端需要主动连接获得到的baseapp，可在多台机器部署多个loginapp进程。 
+
+
+· client:
+客户端我们将提供基础框架，这个框架不包括渲染部分和输入输出部分的具体实现, 
+我们将提供一个lib文件和一套API接口，开发者可以选择使用自己比较适合的图形渲染引擎与输入输出控制部分， 
+当然我们也会封装一套默认的相关模块，目前我们准备开源的渲染引擎ogre来实现图形表现部分。 
+
+
+· kbmachine:
+抽象出一个kbe硬件节点(一台硬件服务器只能存在一个这样的进程)。主要用途是接受远程指令处理本机上的组件启动与关闭, 
+提供本机上运行组件的接入口以及搜集当前机器上的一些信息， 
+如：CPU， 内存等。 这些信息会提供给一些对此比较感兴趣的组件。 
+
+
+· guiconsole: 
+这是一个控制台工具， 可以实时的观察服务器运行状态， 实时观测不同space中entity的动态，
+并支持动态调试服务器python逻辑层以及查看各个组件的日志，启动服务器与关闭等。 
+</code></pre>
+
+<h2>GO!</h2>
+
+<p><strong>设置环境变量:</strong></p>
+
+<p>kbe会读取KBE_ROOT，KBE_RES_PATH， KBE_HYBRID_PATH系统环境变量来做一些事情。</p>
+
+<p>linux:</p>
+
+<pre><code>[kbe@localhost ~]# vim ~/.bashrc
+
+ulimit -c unlimited
+
+export KBE_ROOT=/home/kbe/kbengine/
+
+export KBE_RES_PATH=$KBE_ROOT/kbe/res/:$KBE_ROOT/demo/:$KBE_ROOT/demo/res/
+
+export KBE_HYBRID_PATH=$KBE_ROOT/kbe/bin/Hybrid64/
+
+[root@localhost ~]# vim /etc/passwd
+
+修改kbe的uid必须唯一, uid用来区分不同的服务器组， 如果二台硬件维护一组服务器那么二台硬件上的uid必须一致。
+</code></pre>
+
+<p>windows:</p>
+
+<pre><code>鼠标右键"我的电脑"-&gt;"高级"-&gt;"环境变量" 设置对应的值就好了。
+</code></pre>
+
+<p>KBE_ROOT:</p>
+
+<pre><code>kbe根目录路径。
+</code></pre>
+
+<p>KBE_RES_PATH:</p>
+
+<pre><code>相关资源路径用':'或者';'分隔, 第一个res必须是kbe系统res, 第二个res必须是用户脚本res， 其他无限制。
+</code></pre>
+
+<p>KBE_HYBRID_PATH:</p>
+
+<pre><code>kbe二进制文件所在目录路径。
+</code></pre>
+
+<h2>编译:</h2>
+
+<p>linux:</p>
+
+<pre><code>测试系统(x32&amp;x64): centos &gt;= 5.x, debian &gt;= 5.x
+编译器 gcc: &gt;= 4.4.x
+
+
+[root@localhost ~]# cd $KBE_ROOT/kbe/src
+
+[root@localhost /src]# make
+</code></pre>
+
+<p>windows:</p>
+
+<pre><code>安装好vc2008sp1版本直接编译完即可
+
+KBE_ROOT\kbengine\kbe\src\kbengine_vs90.sln
+</code></pre>
+
+<p>注意: </p>
+
+<pre><code>1: 如使用其他版本编译器最好将python、log4cxx、 mysql也重新编译。
+
+2: 在linux上编译完成如因为python无法初始化无法正常运行的情况(这是个bug http://bugs.python.org/issue11320):
+
+cd src\lib\python
+
+./configure
+
+make
+
+make install
+
+再启动服务器
+</code></pre>
+
+<h2>配置数据库:</h2>
+
+<pre><code>1: 安装好mysql
+    如果是windows系统则my.ini中加入如下代码使mysql大小写敏感
+    [mysqld]
+    lower_case_table_names=2
+
+2: 创建一个数据库账户， 假设用户名密码都为"kbe"
+    grant all privileges on mydb.* to kbe@% identified by 'kbe';
+    grant select,insert,update,delete,create,drop on mydb.* to kbe@% identified by 'kbe';
+    FLUSH PRIVILEGES;
+
+3: 新建一个数据库， 假设数据库名为"kbe"
+    create database kbe;
+
+4: 在res\server\kbengine_defs.xml的dbmgr节修改相关参数(推荐在demo\res\server\kbengine.xml进行重载修改)。
+</code></pre>
+
+<h2>启动服务器:</h2>
+
+<p>linux:</p>
+
+<pre><code>[root@localhost ~]# cd $KBE_HYBRID_PATH
+
+sh start.sh
+
+sh kill.sh
+</code></pre>
+
+<p>windows:</p>
+
+<pre><code>cd KBE_HYBRID_PATH
+
+!.bat
+
+~.bat
+
+或者使用tools\server\guiconsole\guiconsole.exe来启动和关闭服务器。
+</code></pre>
+
+<h2>日志:</h2>
+
+<pre><code>KBE_HYBRID_PATH目录下会产生各组件运行的日志信息， 也可以使用guiconsole来查看。
+</code></pre>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/kbengine/kbengine/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/kbengine/kbengine/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/kbengine/kbengine"></a> is maintained by <a href="https://github.com/kbengine">kbengine</a>.</p>
+
+          <p>This page was generated by <a href="pages.github.com">GitHub Pages</a> using the Architect theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
