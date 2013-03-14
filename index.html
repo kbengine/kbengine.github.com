@@ -1,43 +1,46 @@
 <!DOCTYPE html>
 <html>
+
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Kbengine : MMOG engine!" />
 
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <title>Kbengine by kbengine</title>
+    <title>Kbengine</title>
   </head>
 
   <body>
-    <header>
-      <div class="inner">
-        <h1>Kbengine</h1>
-        <h2>MMOG engine!</h2>
-        <a href="https://github.com/kbengine/kbengine" class="button"><small>View project on</small>GitHub</a>
-      </div>
-    </header>
 
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
-          <h1>kbengine</h1>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/kbengine/kbengine">View on GitHub</a>
+
+          <h1 id="project_title">Kbengine</h1>
+          <h2 id="project_tagline">MMOG engine!</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/kbengine/kbengine/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/kbengine/kbengine/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>kbengine</h1>
 
 <h2>演示截图(点击图片看视频):</h2>
 
-<p><a href="http://v.youku.com/v_show/id_XMTc2MDcxMDUy.html"><img src="https://github.com/downloads/kbengine/kbengine/demo.jpg" alt="kbengine"></a></p>
+<p><a href="http://v.youku.com/v_show/id_XMTc2MDcxMDUy.html"><img src="https://sourceforge.net/p/kbengine/screenshot/323758.jpg" alt="kbengine"></a></p>
 
 <h2>控制台截图:</h2>
 
-<p><a href="http://v.youku.com/v_show/id_XMTc2MDcxMDUy.html"><img src="https://github.com/downloads/kbengine/kbengine/guiconsole_debug.jpg" alt="kbengine"></a>
-<a href="http://v.youku.com/v_show/id_XMTc2MDcxMDUy.html"><img src="https://github.com/downloads/kbengine/kbengine/guiconsole_log.jpg" alt="kbengine"></a></p>
+<p><a href="http://v.youku.com/v_show/id_XMTc2MDcxMDUy.html"><img src="https://sourceforge.net/p/kbengine/screenshot/guiconsole_debug.jpg" alt="kbengine"></a>
+<a href="http://v.youku.com/v_show/id_XMTc2MDcxMDUy.html"><img src="https://sourceforge.net/p/kbengine/screenshot/guiconsole_log.jpg" alt="kbengine"></a></p>
 
 <h2>什么是KBEngine?</h2>
 
@@ -59,7 +62,7 @@ bigworld引擎的特点是理论支持无限大世界，多进程分布式负载
 
 
 · baseapp:
-客户端与服务器的通讯只能通过baseapp来完成, 一个帐号登陆到baseapp之后就不会再改变，这个baseapp会一直维护这个帐号，
+客户端与服务端的通讯只能通过baseapp来完成, 一个帐号登陆到baseapp之后就不会再改变，这个baseapp会一直维护这个帐号，
 直到与他断开连接, 并不像cellapp一样会迁移entity。另外它还会定义备份entity的cell数据、定时写数据到数据库、
 定时备份相关数据到其他baseapp、数据包加密解密、逻辑层还可以利用base不迁移的特性在此实现类似全局管理器之类的系统。
 baseapp部署的数量可自由配置。
@@ -70,8 +73,8 @@ baseapp部署的数量可自由配置。
 
 
 · cellapp:
-一个cellapp负责处理一个(尽量)或者多个cell，每个cell处理一个space的部分或者整个space，当一个space上消耗过大时kbe将会
-寻找空闲的cellapp来均衡负载， 整个游戏的实时处理逻辑部分也在cellapp，包括aoi, 逻辑层的ai, entity移动导航等等。 
+一个cellapp负责处理一个(尽量)或者多个space，每个space包含一个cell, cell可以维护整个space区域或者部分区域，当一个space上消耗过大时
+cellappmgr将会寻找空闲的cellapp来均衡负载， 整个游戏的实时处理逻辑部分也在cellapp，包括aoi, 逻辑层的ai, entity移动导航等等。 
 cellapp部署的数量可自由配置。
 
 · loginapp:
@@ -92,8 +95,8 @@ cellapp部署的数量可自由配置。
 
 
 · guiconsole: 
-这是一个控制台工具， 可以实时的观察服务器运行状态， 实时观测不同space中entity的动态，
-并支持动态调试服务器python逻辑层以及查看各个组件的日志，启动服务器与关闭等。 
+这是一个控制台工具， 可以实时的观察服务端运行状态， 实时观测不同space中entity的动态，
+并支持动态调试服务端python逻辑层以及查看各个组件的日志，启动服务端与关闭等。 
 
 
 · messagelog: 
@@ -120,12 +123,13 @@ export KBE_HYBRID_PATH=$KBE_ROOT/kbe/bin/Hybrid64/
 
 [root@localhost ~]# vim /etc/passwd
 
-修改kbe的uid必须唯一, uid用来区分不同的服务器组， 如果二台硬件维护一组服务器那么二台硬件上的uid必须一致。
+修改kbe的uid必须唯一, uid用来区分不同的服务端组， 如果二台硬件维护一组服务端那么二台硬件上的uid必须一致, 值需大于0。
 </code></pre>
 
 <p>windows:</p>
 
 <pre><code>鼠标右键"我的电脑"-&gt;"高级"-&gt;"环境变量" 设置对应的值就好了。
+(注意:windows下需要在环境变量中添加UID, 值需大于0)
 </code></pre>
 
 <p>KBE_ROOT:</p>
@@ -135,7 +139,7 @@ export KBE_HYBRID_PATH=$KBE_ROOT/kbe/bin/Hybrid64/
 
 <p>KBE_RES_PATH:</p>
 
-<pre><code>相关资源路径用':'或者';'分隔, 第一个res必须是kbe系统res, 第二个res必须是用户脚本res， 其他无限制。
+<pre><code>相关资源路径用':'或者';'分隔, 第一个res必须是kbe引擎的res, 第二个res必须是用户脚本根目录， 其他无限制。
 </code></pre>
 
 <p>KBE_HYBRID_PATH:</p>
@@ -165,9 +169,13 @@ KBE_ROOT\kbengine\kbe\src\kbengine_vs90.sln
 
 <p>注意: </p>
 
-<pre><code>1: 如使用其他版本编译器最好将python、log4cxx、 mysql也重新编译。
+<pre><code>1: 如使用其他版本编译器最好将python、openssl、log4cxx(kbe\src\libs\*.a)也重新编译。
 
-2: 在linux上编译完成如因为python无法初始化无法正常运行的情况(这是个bug http://bugs.python.org/issue11320):
+2: 某些平台上的mysql路径可能不是/usr/lib64/mysql/mysql_config
+
+修改kbe\src\build\common.mak中的MYSQL_CONFIG_PATH=/usr/lib64/mysql/mysql_config
+
+3: 在linux上编译完成如因为python无法初始化无法正常运行的情况(这是个bug http://bugs.python.org/issue11320):
 
 cd src\lib\python
 
@@ -177,7 +185,7 @@ make
 
 make install
 
-再启动服务器
+再启动服务端。
 </code></pre>
 
 <h2>配置数据库:</h2>
@@ -188,17 +196,17 @@ make install
     lower_case_table_names=2
 
 2: 创建一个数据库账户， 假设用户名密码都为"kbe"
-    grant all privileges on mydb.* to kbe@% identified by 'kbe';
-    grant select,insert,update,delete,create,drop on mydb.* to kbe@% identified by 'kbe';
+    grant all privileges on mydb.* to kbe@'%' identified by 'kbe';
+    grant select,insert,update,delete,create,drop on mydb.* to kbe@'%' identified by 'kbe';
     FLUSH PRIVILEGES;
 
 3: 新建一个数据库， 假设数据库名为"kbe"
     create database kbe;
 
-4: 在res\server\kbengine_defs.xml的dbmgr节修改相关参数(推荐在demo\res\server\kbengine.xml进行重载修改)。
+4: 在res\server\kbengine_defs.xml的dbmgr节修改databaseName参数(推荐在demo\res\server\kbengine.xml进行重载修改)。
 </code></pre>
 
-<h2>启动服务器:</h2>
+<h2>启动服务端:</h2>
 
 <p>linux:</p>
 
@@ -207,6 +215,9 @@ make install
 sh start.sh
 
 sh kill.sh
+
+(注意: 如有开放防火墙请对外开放这些端口tcp:loginapp登录端口、 baseapp登录端口具体请看kbengine_defs.xml。 
+并且允许udp广播端口20086-20088)
 </code></pre>
 
 <p>windows:</p>
@@ -217,32 +228,26 @@ sh kill.sh
 
 ~.bat
 
-或者使用tools\server\guiconsole\guiconsole.exe来启动和关闭服务器。
+或者使用tools\server\guiconsole\guiconsole.exe来启动和关闭服务端。
+(注意: windows版本仅用于测试， 由于使用select目前不支持大量连接。)
 </code></pre>
 
 <h2>日志:</h2>
 
 <pre><code>KBE_HYBRID_PATH目录下会产生各组件运行的日志信息， 也可以使用guiconsole来查看。
 </code></pre>
-        </section>
-
-        <aside id="sidebar">
-          <a href="https://github.com/kbengine/kbengine/zipball/master" class="button">
-            <small>Download</small>
-            .zip file
-          </a>
-          <a href="https://github.com/kbengine/kbengine/tarball/master" class="button">
-            <small>Download</small>
-            .tar.gz file
-          </a>
-
-          <p class="repo-owner"><a href="https://github.com/kbengine/kbengine"></a> is maintained by <a href="https://github.com/kbengine">kbengine</a>.</p>
-
-          <p>This page was generated by <a href="pages.github.com">GitHub Pages</a> using the Architect theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.</p>
-        </aside>
-      </div>
+      </section>
     </div>
 
-  
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Kbengine maintained by <a href="https://github.com/kbengine">kbengine</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
   </body>
 </html>
