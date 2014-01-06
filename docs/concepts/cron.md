@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Cron Scheduler · Docs · MSM
+title: Cron Scheduler · Docs · KBE
 tab: docs
 docsitem: concepts-cron
 ---
