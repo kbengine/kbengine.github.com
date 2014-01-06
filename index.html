@@ -1,253 +1,183 @@
-<!DOCTYPE html>
-<html>
-
-  <head>
-    <meta charset='utf-8' />
-    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Kbengine : MMOG engine!" />
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Kbengine</title>
-  </head>
-
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/kbengine/kbengine">View on GitHub</a>
-
-          <h1 id="project_title">Kbengine</h1>
-          <h2 id="project_tagline">MMOG engine!</h2>
-
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/kbengine/kbengine/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/kbengine/kbengine/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1>kbengine</h1>
-
-<h2>演示截图(点击图片看视频):</h2>
-
-<p><a href="http://v.youku.com/v_show/id_XMTc2MDcxMDUy.html"><img src="https://sourceforge.net/p/kbengine/screenshot/323758.jpg" alt="kbengine"></a></p>
-
-<h2>控制台截图:</h2>
-
-<p><a href="http://v.youku.com/v_show/id_XMTc2MDcxMDUy.html"><img src="https://sourceforge.net/p/kbengine/screenshot/guiconsole_debug.jpg" alt="kbengine"></a>
-<a href="http://v.youku.com/v_show/id_XMTc2MDcxMDUy.html"><img src="https://sourceforge.net/p/kbengine/screenshot/guiconsole_log.jpg" alt="kbengine"></a></p>
-
-<h2>什么是KBEngine?</h2>
-
-<p>kbengine仿照bigworld技术努力成为一款开源mmog引擎。
-bigworld引擎的特点是理论支持无限大世界，多进程分布式负载。
-开发者无需过多接触c++底层，无需重复性的实现网络模块，内存管理，
-线程管理等底层通用性技术，把精力集中到游戏开发层面上来，
-使用python就能够简单高效的打造一款游戏。</p>
-
-<p>简单的介绍一下引擎的各个主要组件部分:</p>
-
-<pre><code>· dbmgr:
-实现数据的存取，默认使用mysql作为数据库。另外还包括整个游戏的entityID分配、
-共享数据(globaldata, baseAppData, cellAppData)、与第三方运营接口对接框架。
-
-
-· baseappmgr:
-主要负责协调所有的baseapp的工作（base部分的负载平衡）等。
-
-
-· baseapp:
-客户端与服务端的通讯只能通过baseapp来完成, 一个帐号登陆到baseapp之后就不会再改变，这个baseapp会一直维护这个帐号，
-直到与他断开连接, 并不像cellapp一样会迁移entity。另外它还会定义备份entity的cell数据、定时写数据到数据库、
-定时备份相关数据到其他baseapp、数据包加密解密、逻辑层还可以利用base不迁移的特性在此实现类似全局管理器之类的系统。
-baseapp部署的数量可自由配置。
-
-
-· cellappmgr:
-主要负责协调所有cellapp的工作，包括负载均衡处理等。
-
-
-· cellapp:
-一个cellapp负责处理一个(尽量)或者多个space，每个space包含一个cell, cell可以维护整个space区域或者部分区域，当一个space上消耗过大时
-cellappmgr将会寻找空闲的cellapp来均衡负载， 整个游戏的实时处理逻辑部分也在cellapp，包括aoi, 逻辑层的ai, entity移动导航等等。 
-cellapp部署的数量可自由配置。
-
-· loginapp:
-它只处理client的登录接入, 账号由dbmgr检查通过就会从baseappmgr得到一个baseapp的地址发给客户端，
-然后就与客户端断开连接， 客户端需要主动连接获得到的baseapp，可在多台机器部署多个loginapp进程。 
-
-
-· client:
-客户端我们将提供基础框架，这个框架不包括渲染部分和输入输出部分的具体实现, 
-我们将提供一个lib文件和一套API接口，开发者可以选择使用自己比较适合的图形渲染引擎与输入输出控制部分， 
-当然我们也会封装一套默认的相关模块，目前我们准备采用开源的渲染引擎ogre来实现图形表现部分。 
-
-
-· kbmachine:
-抽象出一个kbe硬件节点(一台硬件服务器只能存在一个这样的进程)。主要用途是接受远程指令处理本机上的组件启动与关闭, 
-提供本机上运行组件的接入口以及搜集当前机器上的一些信息， 
-如：CPU， 内存等。 这些信息会提供给一些对此比较感兴趣的组件。 
-
-
-· guiconsole: 
-这是一个控制台工具， 可以实时的观察服务端运行状态， 实时观测不同space中entity的动态，
-并支持动态调试服务端python逻辑层以及查看各个组件的日志，启动服务端与关闭等。 
-
-
-· messagelog: 
-收集和备份各个组件的运行日志，可使用guiconsole来查看和搜索相关信息。
-</code></pre>
-
-<h2>GO!</h2>
-
-<p><strong>设置环境变量:</strong></p>
-
-<p>kbe会读取KBE_ROOT，KBE_RES_PATH， KBE_HYBRID_PATH系统环境变量来做一些事情。</p>
-
-<p>linux:</p>
-
-<pre><code>[kbe@localhost ~]# vim ~/.bashrc
-
-ulimit -c unlimited
-
-export KBE_ROOT=/home/kbe/kbengine/
-
-export KBE_RES_PATH=$KBE_ROOT/kbe/res/:$KBE_ROOT/demo/:$KBE_ROOT/demo/res/
-
-export KBE_HYBRID_PATH=$KBE_ROOT/kbe/bin/Hybrid64/
-
-[root@localhost ~]# vim /etc/passwd
-
-修改kbe的uid必须唯一, uid用来区分不同的服务端组， 如果二台硬件维护一组服务端那么二台硬件上的uid必须一致, 值需大于0。
-</code></pre>
-
-<p>windows:</p>
-
-<pre><code>鼠标右键"我的电脑"-&gt;"高级"-&gt;"环境变量" 设置对应的值就好了。
-(注意:windows下需要在环境变量中添加UID, 值需大于0)
-</code></pre>
-
-<p>KBE_ROOT:</p>
-
-<pre><code>kbe根目录路径。
-</code></pre>
-
-<p>KBE_RES_PATH:</p>
-
-<pre><code>相关资源路径用':'或者';'分隔, 第一个res必须是kbe引擎的res, 第二个res必须是用户脚本根目录， 其他无限制。
-</code></pre>
-
-<p>KBE_HYBRID_PATH:</p>
-
-<pre><code>kbe二进制文件所在目录路径。
-</code></pre>
-
-<h2>编译:</h2>
-
-<p>linux:</p>
-
-<pre><code>测试系统(x32&amp;x64): centos &gt;= 5.x, debian &gt;= 5.x
-编译器 gcc: &gt;= 4.4.x
-
-
-[root@localhost ~]# cd $KBE_ROOT/kbe/src
-
-[root@localhost /src]# make
-</code></pre>
-
-<p>windows:</p>
-
-<pre><code>安装好vc2008sp1版本直接编译完即可
-
-KBE_ROOT\kbengine\kbe\src\kbengine_vs90.sln
-</code></pre>
-
-<p>注意: </p>
-
-<pre><code>1: 如使用其他版本编译器最好将python、openssl、log4cxx(kbe\src\libs\*.a)也重新编译。
-
-2: 某些平台上的mysql路径可能不是/usr/lib64/mysql/mysql_config
-
-修改kbe\src\build\common.mak中的MYSQL_CONFIG_PATH=/usr/lib64/mysql/mysql_config
-
-3: 在linux上编译完成如因为python无法初始化无法正常运行的情况(这是个bug http://bugs.python.org/issue11320):
-
-cd src\lib\python
-
-./configure
-
-make
-
-make install
-
-再启动服务端。
-</code></pre>
-
-<h2>配置数据库:</h2>
-
-<pre><code>1: 安装好mysql
-    如果是windows系统则my.ini中加入如下代码使mysql大小写敏感
-    [mysqld]
-    lower_case_table_names=2
-
-2: 创建一个数据库账户， 假设用户名密码都为"kbe"
-    grant all privileges on mydb.* to kbe@'%' identified by 'kbe';
-    grant select,insert,update,delete,create,drop on mydb.* to kbe@'%' identified by 'kbe';
-    FLUSH PRIVILEGES;
-
-3: 新建一个数据库， 假设数据库名为"kbe"
-    create database kbe;
-
-4: 在res\server\kbengine_defs.xml的dbmgr节修改databaseName参数(推荐在demo\res\server\kbengine.xml进行重载修改)。
-</code></pre>
-
-<h2>启动服务端:</h2>
-
-<p>linux:</p>
-
-<pre><code>[root@localhost ~]# cd $KBE_HYBRID_PATH
-
-sh start.sh
-
-sh kill.sh
-
-(注意: 如有开放防火墙请对外开放这些端口tcp:loginapp登录端口、 baseapp登录端口具体请看kbengine_defs.xml。 
-并且允许udp广播端口20086-20088)
-</code></pre>
-
-<p>windows:</p>
-
-<pre><code>cd KBE_HYBRID_PATH
-
-!.bat
-
-~.bat
-
-或者使用tools\server\guiconsole\guiconsole.exe来启动和关闭服务端。
-(注意: windows版本仅用于测试， 由于使用select目前不支持大量连接。)
-</code></pre>
-
-<h2>日志:</h2>
-
-<pre><code>KBE_HYBRID_PATH目录下会产生各组件运行的日志信息， 也可以使用guiconsole来查看。
-</code></pre>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Kbengine maintained by <a href="https://github.com/kbengine">kbengine</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
+---
+layout: default
+title: KBEngine
+tab: overview
+---
+
+      <div class="masthead">
+        <div class="new-blog-post">
+          <a href="{{ site.baseurl}}{{ paginator.posts[0].url }}" onclick="_gaq.push(['_trackEvent', 'Masthead Actions', 'New Blog Post', '{{ paginator.posts[0].title }}']);">
+            New Blog Post: <strong>{{ paginator.posts[0].title }}</strong>
+          </a>
+        </div>
+        <!-- <p class="introducing">Introducing...</p> -->
+        <h1>KBEngine</h1>
+        <p>A comprehensive start up script for Minecraft and Bukkit servers.</p>
     
+        <div class="buttons">
+          <a id="view-button" href="https://github.com/kbengine/kbengine" class="btn btn-primary btn-large" onclick="_gaq.push(['_trackEvent', 'Masthead Actions', 'Github Project', 'View project on GitHub']);">View project on GitHub</a>
+          <a id="install-button" href="{{ site.baseurl }}/docs/" class="btn btn-large" onclick="_gaq.push(['_trackEvent', 'Masthead Actions', 'Install']);">Install Guide <small>(0.8.0)</small></a>
+        </div>
+      
+        <ul class="quick-links">
+          <li>
+            <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=marcuswhybrow&amp;repo=minecraft-server-manager&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+          </li>
+          <li>
+            <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=marcuswhybrow&amp;repo=minecraft-server-manager&amp;type=fork&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+          </li>
+          <li class="text ga-track"><a href="{{ site.baseurl }}/docs/">Read the docs</a></li>
+          <li class="text ga-track"><a href="https://github.com/marcuswhybrow/minecraft-server-manager/issues">Submit an issue</a></li>
+          <li class="text ga-track"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=Z7XQDNF7U5GLL">Donate</a></li>
+          <li>
+            <div class="g-plusone" data-size="medium" data-href="http://www.kbengine.org/"></div>
+          </li>
+        </ul>
+        
+        <div class="section players">
+          <div class="player player-craftysaurus" title="visit my website">
+            <iframe src="http://marcuswhybrow.github.com/minecraft-widgets/skin.html?playername=craftysaurus&amp;scale=2" allowtransparency="true" frameborder="0" scrolling="0" width="32" height="65"></iframe>
+            <div class="shadow"></div>
+            <a class="link" href="http://marcuswhybrow.net/" onclick="_gaq.push(['_trackEvent', 'Masthead Actions', 'Created by craftysaurus']);"></a>
+          </div>
+          <p class="created-by">Created by craftysaurus</p>
+        </div>
+      </div>
+    
+      <div class="section features">
+        <h1>Designed by admins, for admins.</h1>
+        <p class="byline">Reasons why you'll love MSM</p>
+      
+        <div class="row">
+          <div class="span4">
+            <img class="feature-icon" src="assets/img/glyphicons/glyphicons_043_group.png">
+            <h2>Built to be improved</h2>
+            <p>Like you, I want to modify my startup script when necessary. MSM was born out of this process, and will continue to be improved in this way.</p>
+          </div>
+        
+          <div class="span4">
+            <img class="feature-icon" src="assets/img/glyphicons/glyphicons_342_hdd.png">
+            <h2>World and server backups</h2>
+            <p>Periodically create <a class="ga-track" href="http://wiki.sk89q.com/wiki/WorldEdit/Snapshots">WorldEdit compatible snapshots</a> and then restore regions in-game to protect against griefers. Or backup the entire server directory for complete protection.</p>
+          </div>
+        
+          <div class="span4">
+            <img class="feature-icon" src="assets/img/glyphicons/glyphicons_319_sort.png">
+            <h2>Works with all Debian systems</h2>
+            <p>As long as you have an <code>/etc/init.d</code> directory your good to go. MSM is only a single script written in bash, which automatically starts up and shuts down your Minecraft servers.</p>
+          </div>
+        </div>
+      
+        <div class="row">
+          <div class="span4">
+            <img class="feature-icon" src="assets/img/glyphicons/glyphicons_181_download_alt.png">
+            <h2>Automatic jar updates</h2>
+            <p>Group jar files according to where they where downloaded from. Make sure your server is always using the latest version, by automatically downloading new files.</p>
+          </div>
+        
+          <div class="span4">
+            <img class="feature-icon" src="assets/img/glyphicons/glyphicons_119_adjust.png">
+            <h2>Easily configurable</h2>
+            <p>Configure how MSM operates in the <code>/etc/msm.conf</code> file. Sensible defaults mean you won't need to alter much, but allow changing anything you can think of. </p>
+          </div>
+        
+          <div class="span4">
+            <img class="feature-icon" src="assets/img/glyphicons/glyphicons_082_roundabout.png">
+            <h2>Responsive commands</h2>
+            <p>MSM watches a server's log file to determine exactly when a command has finished, making restarting, backing up and other non-instant actions return control as soon as possible.</p>
+          </div>
+        </div>
+      
+        <div class="row">
+          <div class="span4">
+            <img class="feature-icon" src="assets/img/glyphicons/glyphicons_355_announcement.png">
+            <h2>Player notifications</h2>
+            <p>Keep your players informed with specifc, dynamic and configurable in-game broadcasts. Warn players that a server is shutting before actually issuing the command.</p>
+          </div>
+        
+          <div class="span4">
+            <img class="feature-icon" src="assets/img/glyphicons/glyphicons_269_keyboard_wired.png">
+            <h2>Easy to get to grips with</h2>
+            <p>As well as <a class="ga-track" href="{{ site.baseurl }}/docs/">detailed documentation</a>, and <a class="ga-track" href="https://github.com/marcuswhybrow/minecraft-server-manager/issues">issue submissions</a>, bash completion makes remembering what to type a thing of the past. Just hit tab!</p>
+          </div>
+        
+          <div class="span4">
+            <img class="feature-icon" src="assets/img/glyphicons/glyphicons_118_embed_close.png">
+            <h2>Beautiful code</h2>
+            <p>Readable code means less bugs, easier fixes, simpler updates, and lowers the learning curve for new contributors to the project. Why not <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=marcuswhybrow&amp;repo=minecraft-server-manager&amp;type=fork&amp;count=false" allowtransparency="true" frameborder="0" scrolling="0" width="55px" height="20px"></iframe> the code and start today.</p>
+          </div>
+        </div>
+      
+        <div class="row">
+          <div class="span3">
+            <h2>Cron support</h2>
+            <p>Out of the box cron script provided for backups, logrolls and more.</p>
+          </div>
+        
+          <div class="span3">
+            <h2>Continuous Integration</h2>
+            <p>Each version is <a class="ga-track" href="http://travis-ci.org/#!/marcuswhybrow/minecraft-server-manager">checked</a> against shunit2 unit tests by <a class="ga-track" href="http://travis-ci.org">travis-ci.org</a>.</p>
+          </div>
+        
+          <div class="span3">
+            <h2>Open Source</h2>
+            <p>Built for and maintained by the community thanks to <a class="ga-track" href="https://github.com/">GitHub</a></p>
+          </div>
+        
+          <div class="span3">
+            <h2>Upcomming Features</h2>
+            <p><em>QuickBackup</em> and easy rollback features are in the pipeline. Stay tuned.</p>
+          </div>
+        </div>
+      </div>
 
-  </body>
-</html>
+      <div class="section">
+        <div class="contributors">
+          <h1>Contributors</h1>
+          <div id="contributors"></div>
+          <p class="byline">
+            Want to be in this list? Just
+            <iframe class="github-btn fork-btn" src="http://ghbtns.com/github-btn.html?user=marcuswhybrow&amp;repo=minecraft-server-manager&amp;type=fork&amp;count=false&amp;size=large" allowtransparency="true" frameborder="0" scrolling="0" width="80px" height="30px"></iframe>
+            and send a pull request.
+          </p>
+        </div>
+
+        <div id="donators" class="donators">
+          <h1>Donators</h1>
+          <p class="byline">These kind, kind people have <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=Z7XQDNF7U5GLL">donated</a> to MSM:</p>
+
+          <div rel="tooltip" title="Joe Cabezas" class="donator">
+            <a href="https://github.com/joecabezas" target="_blank"><img src="https://secure.gravatar.com/avatar/a8f692e07db8ac26f52e80ad08e7f57c?s=420&d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a>
+          </div>
+
+          <div rel="tooltip" title="Tony Stark" class="donator">
+            <a href="https://github.com/b0Stark" target="_blank"><img src="https://secure.gravatar.com/avatar/1964a6296d58899f4320d26db49fb1cb?s=420&d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a>
+          </div>
+          
+          <div rel="tooltip" title="Sander Danielsen" class="donator">
+            <a href="https://github.com/TheLugal" target="_blank"><img src="https://secure.gravatar.com/avatar/c8546380fab296bb0b41d4b6bb1ad51c?s=420&d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a>
+          </div>
+          
+          <div rel="tooltip" title="Nikush Patel" class="donator">
+            <a href="https://github.com/nikush/" target="_blank"><img src="https://secure.gravatar.com/avatar/eeb72a285c72782faf981caa847805c8?s=420&d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png"></a>
+          </div>
+          
+          <div rel="tooltip" title="Paulo José Gurjão" class="donator">
+            <a href="https://github.com/pgurjao" target="_blank"><img src="https://2.gravatar.com/avatar/89163edacdd7f9a75c41d0e9f33e30b4?d=https%3A%2F%2Fidenticons.github.com%2F1739ea8a2c68f5f782749965c2c3ee7f.png&s=420"></a>
+          </div>
+
+          <div rel="tooltip" title="John" class="donator">
+            <a href="http://www.minepick.com/" target="_blank"><img src="https://i2.wp.com/a248.e.akamai.net/assets.github.com/images/gravatars/gravatar-user-420.png"></a>
+          </div>
+        </div>
+
+        <div class="stargazers">
+          <h1>Stargazers</h1>
+          <p class="byline">All those who starred the project:</p>
+          <div id="stargazers"></div>
+        </div>
+      </div>
+    
+      <div class="section milestones">
+        <h1>Project Milestones</h1>
+      </div>

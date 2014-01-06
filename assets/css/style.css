@@ -1,0 +1,495 @@
+body {
+  padding-top: 130px;
+  background: #fff url(../img/grass-bg-small.png) repeat-x center 40px;
+}
+
+.section h1,
+.section .byline {
+  text-align: center;
+}
+
+.section h1 {
+  font-weight: 300;
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.section .byline {
+  text-align: center;
+  color: #999;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 24px;
+  margin-bottom: 20px;
+}
+
+.masthead {
+  padding-bottom: 50px;
+  border-bottom: 1px solid #e5e5e5;
+  position: relative;
+}
+.masthead h1,
+.masthead p {
+  text-align: center;
+}
+.masthead h1 {
+  font-size: 81px;
+  margin-bottom: 18px;
+  line-height: 1;
+}
+.masthead p {
+  font-size: 30px;
+  line-height: 36px;
+  margin-bottom: 18px;
+  font-weight: 300;
+}
+.masthead .btn-large {
+  font-size: 20px;
+  padding: 14px 24px;
+}
+.masthead .btn-large small {
+  font-size: 14px;
+  color: #888;
+  position: relative;
+  top: -1px;
+}
+.masthead .introducing {
+  color: #999;
+  margin-bottom: 5px;
+  font-size: 18px;
+  line-height: 30px;
+}
+.masthead .buttons {
+  margin-top: 30px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.masthead #view-button,
+.masthead #install-button {
+  display: inline-block;
+  vertical-align: top;
+}
+.masthead #view-button {
+  margin-right: 10px;
+}
+
+.docs .masthead {
+  border-bottom: none;
+}
+
+
+.quick-links {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+
+
+.quick-links {
+  list-style: none;
+  margin: 0;
+  text-align: center;
+  margin: 5px 20px;
+}
+.quick-links li {
+  display: inline;
+  vertical-align: top;
+}
+.quick-links li.text {
+  position: relative;
+  top: -5px;
+  margin-right: 20px;
+}
+
+
+
+.features {
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+.features h1 {
+  text-align: center;
+  font-weight: 300;
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+.features h2 {
+  font-size: 22px;
+  font-weight: 300;
+}
+.feature-icon {
+  float: left;
+  margin: 7px 10px 0 0;
+  opacity: 0.8;
+}
+.features .row {
+  margin-bottom: 9px;
+}
+.features .github-btn {
+  display: inline;
+  vertical-align: top;
+  position: relative;
+  top: -2px;
+}
+
+
+
+.footer {
+  margin-top: 45px;
+  padding: 35px 0 36px;
+  border-top: 1px solid #e5e5e5;
+}
+.footer p {
+  margin-bottom: 0;
+}
+
+
+
+.milestones {
+  /*border-top: 1px solid #e5e5e5;*/
+  /*padding-top: 50px;*/
+  display: none;
+}
+.milestones h1 {
+  text-align: center;
+  font-weight: 300;
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+.milestones h2 {
+  font-weight: 300;
+}
+
+
+
+.players {
+  position: absolute;
+  bottom: -20px;
+  padding-left: 20px;
+}
+.players .created-by {
+  position: absolute;
+  font-size: 13px;
+  width: 300px;
+  bottom: -1px;
+  left: 62px;
+  text-align: left;
+  color: #ccc;
+  text-transform: lowercase;
+}
+.players .player {
+  position: relative;
+  width: 32px;
+  height: 80px; /* 65 + 15 */
+}
+.players .player .link {
+  display: block;
+  z-index: 200;
+  position: absolute;
+  left: 0;
+  top: 15px; /* The 15 added to .players .player height */
+  right: 0;
+  bottom: 0;
+}
+.players .player iframe {
+  position: absolute;
+  z-index: 100;
+  bottom: 0;
+  left: 0;
+  
+  -webkit-transition: all 0.05s linear;
+     -moz-transition: all 0.05s linear;
+      -ms-transition: all 0.05s linear;
+       -o-transition: all 0.05s linear;
+          transition: all 0.05s linear;
+}
+.players .player:hover iframe {
+  -webkit-transform: translate(0, -10px);
+     -moz-transform: translate(0, -10px);
+      -ms-transform: translate(0, -10px);
+       -o-transform: translate(0, -10px);
+          transform: translate(0, -10px);
+}
+.players .player .shadow {
+  z-index: 50;
+  width: 50px;
+  height: 15px;
+  
+  position: absolute;
+  bottom: -7px;
+  left: -9px;
+  
+  background: -webkit-radial-gradient(50% 50%, cover, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 50%);
+  background:    -moz-radial-gradient(50% 50%, cover, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 50%);
+  background:     -ms-radial-gradient(50% 50%, cover, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 50%);
+  background:      -o-radial-gradient(50% 50%, cover, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 50%);
+  background:         radial-gradient(50% 50%, cover, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 50%);
+}
+.players .player:hover .shadow {
+  background: -webkit-radial-gradient(50% 50%, cover, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 50%);
+  background:    -moz-radial-gradient(50% 50%, cover, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 50%);
+  background:     -ms-radial-gradient(50% 50%, cover, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 50%);
+  background:      -o-radial-gradient(50% 50%, cover, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 50%);
+  background:         radial-gradient(50% 50%, cover, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 50%);
+}
+
+
+
+.navbar .brand {
+  text-transform: uppercase;
+  font-weight: 100;
+  color: white;
+}
+
+
+
+.docs-content h1 {
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+
+.docs .nav-list {
+  margin-bottom: 20px;
+}
+
+
+
+.section-blog .content.container,
+.section-blog .content .container {
+  width: 550px;
+}
+
+@media (max-width: 549px) {
+  .section-blog .content.container,
+  .section-blog .content .container {
+    width: auto;
+  }
+}
+
+.section-blog .title {
+  font-size: 40px;
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+.section-blog .title a {
+  color: rgb(51, 51, 51);
+}
+.section-blog .date {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
+
+.section-blog .full-post,
+.section-blog .inline-post {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.5em;
+}
+
+.section-blog .full-post p,
+.section-blog .inline-post p {
+  margin-bottom: 20px;
+}
+
+.section-blog .inline-post .title-card {
+  position: relative;
+  height: 80px;
+  margin-bottom: 20px;
+}
+.section-blog .inline-post .title-card .left {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+}
+.section-blog .inline-post .title-card .right {
+  position: absolute;
+  margin-left: 90px;
+  width: 100%;
+  height: 60px;
+  padding: 10px 0;
+}
+.section-blog .inline-post .title-card .right .date {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  margin: 0;
+}
+
+.section-blog .inline-post .title-card a.avatar {
+  width: 80px;
+  height: 80px;
+  display: block;
+}
+.section-blog .inline-post .title-card a.avatar:hover {
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+}
+.section-blog .inline-post .title-card a.avatar img {
+  width: 80px;
+  height: 80px;
+  -webkit-border-radius: 40px;
+     -moz-border-radius: 40px;
+          border-radius: 40px;
+  box-shadow: 1px solid
+}
+
+.section-blog .inline-post .title-card .title {
+  float: left;
+}
+
+.section-blog .inline-post {
+  margin-bottom: 60px;
+}
+
+.section-blog .masthead {
+  border-bottom: none;
+}
+
+.section-blog .breadcrumbs {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #888;
+}
+.section-blog .breadcrumbs a {
+  margin-right: 10px;
+  color: #888;
+  font-weight: 300;
+}
+.section-blog .breadcrumbs a:hover {
+  color: #000;
+}
+
+
+.new-blog-post {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 20px;
+  position: absolute;
+  top: -40px;
+  width: 100%;
+  font-weight: 300;
+}
+.new-blog-post a {
+  color: #030;
+/*  background-color: rgba(0,0,0,0.1);
+  border: 2px solid rgba(255,255,255,0.1);*/
+  padding: 10px 20px;
+  line-height: 1.2em;
+}
+
+@media (max-width: 979px) {
+  .new-blog-post {
+    position: relative;
+    top: 0;
+    padding-top: 22px;
+    margin-bottom: -5px;
+  }
+}
+
+.donators {
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.donators .donator {
+  font-size: 30px;
+  display: inline-block;
+  margin: 20px 10px 0;
+}
+
+.donators .donator img {
+  width: 80px;
+  height: 80px;
+}
+
+.stargazers {
+  display: none;
+  background-image: -webkit-radial-gradient(top center, 500px 500px, #f5f7ff, white);
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #eee;
+}
+
+#stargazers {
+  text-align: center;
+  margin-top: 30px;
+}
+
+#stargazers:hover .stargazer {
+  opacity: 0.5;
+}
+
+#stargazers .stargazer {
+  width: 80px;
+  height: 80px;
+  display: inline-block;
+  z-index: 50;
+  position: relative;
+  -webkit-transition: all .1s ease-in-out;
+}
+
+#stargazers .stargazer:hover {
+  -webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 1);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 1);
+  z-index: 100;
+  -webkit-transform: scale(1.5);
+  opacity: 1;
+}
+
+#stargazers .stargazer img {
+  width: 80px;
+  height: 80px;
+}
+
+#stargazers .stargazer.maintainer {
+  
+}
+
+#stargazers .stargazer.donator {
+  
+}
+
+.contributors {
+  border-top: 1px solid #eee;
+  padding-top: 40px;
+  background-image: -webkit-radial-gradient(center, 500px 500px, #fffafa, white);
+  padding-bottom: 40px;
+}
+
+#contributors {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+#contributors .contributor {
+  display: inline-block;
+  width: 80px;
+  text-align: center;
+  margin: 0 10px;
+  position: relative;
+}
+
+#contributors .contributor span {
+  clear: left;
+  text-align: center;
+  padding-top: 3px;
+  background-color: white;
+  border-radius: 6px;
+  position: relative;
+  bottom: -10px;
+  display: inline-block;
+  padding: 2px 0 0;
+  width: 50px;
+}
+
+.contributors .byline .fork-btn {
+  position: relative;
+  top: 9px;
+}
