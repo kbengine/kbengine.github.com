@@ -16,5 +16,5 @@ The release of Minecraft 1.3.1 has MSM needing a minor version update to accomod
 
 *Marcus*
 
-[stargazers]: https://github.com/marcuswhybrow/minecraft-server-manager/stargazers
+[stargazers]: https://github.com/kbengine/kbengine/stargazers
 [me]: https://github.com/marcuswhybrow
