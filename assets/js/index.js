@@ -1,14 +1,14 @@
 $(function() {
-  var milestonesUrl = "https://api.github.com/repos/marcuswhybrow/minecraft-server-manager/milestones?callback=?",
-      tagsUrl       = "https://api.github.com/repos/marcuswhybrow/minecraft-server-manager/tags?callback=?"
-      stargazersUrl = "https://api.github.com/repos/marcuswhybrow/minecraft-server-manager/stargazers?per_page=100&callback=?",
-      contributorsUrl = "https://api.github.com/repos/marcuswhybrow/minecraft-server-manager/contributors?per_page=100&callback=?";
+  var milestonesUrl = "https://api.github.com/repos/kbengine/kbengine/milestones?callback=?",
+      tagsUrl       = "https://api.github.com/repos/kbengine/kbengine/tags?callback=?"
+      stargazersUrl = "https://api.github.com/repos/kbengine/kbengine/stargazers?per_page=100&callback=?",
+      contributorsUrl = "https://api.github.com/repos/kbengine/kbengine/contributors?per_page=100&callback=?";
 
   var maintainers = [
-    "marcuswhybrow",
+    "kbengine",
   ];
   var donators = [
-    "joecabezas",
+    "kbengine",
   ];
 
   function populateContributors() {
@@ -113,7 +113,7 @@ $(function() {
       
       var $div = $("<div>").addClass("milestone");
       var $link = $("<a>")
-            .attr("href", "https://github.com/marcuswhybrow/minecraft-server-manager/issues?state=open&milestone=" + milestone.number)
+            .attr("href", "https://github.com/kbengine/kbengine/issues?state=open&milestone=" + milestone.number)
             .addClass("ga-track")
             .appendTo($div);
       $("<h2>").text(milestone.title).appendTo($link);
