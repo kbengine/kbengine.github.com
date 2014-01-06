@@ -12,9 +12,9 @@ Maybe check out the [list of stargazers][stargazers] for kbe, and give it a star
 
 ---
 
-The release of Minecraft 1.3.1 has kbe needing a minor version update to accomodate all those changes. I ([Marcus Whybrow][me]) have recently begun a new Job, so I hope everyone will forgive me whilst I learn to ballance my responsibility to kbe with my hungar for money!
+The release of kbengine 0.1.1 has kbe needing a minor version update to accomodate all those changes. I ([Marcus Whybrow][me]) have recently begun a new Job, so I hope everyone will forgive me whilst I learn to ballance my responsibility to kbe with my hungar for money!
 
-*KBE*
+*kbe*
 
 [stargazers]: https://github.com/kbengine/kbengine/stargazers
 [me]: https://github.com/kbengine

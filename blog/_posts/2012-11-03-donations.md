@@ -14,7 +14,7 @@ I'm not sure if it's possible to discern this information, but if donators would
 
 I'm so pleased that kbe has got to the stage where people think it's worth supporting!
 
-*Marcus*
+*kbe*
 
 [readme]: https://github.com/kbengine/kbengine#readme
 [star]: https://github.com/kbengine/kbengine
