@@ -18,4 +18,4 @@ I'm so pleased that MSM has got to the stage where people think it's worth suppo
 
 [readme]: https://github.com/kbengine/kbengine#readme
 [star]: https://github.com/kbengine/kbengine
-[paypal]: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=Z7XQDNF7U5GLL
+[paypal]: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=NSMU5PADHVMXC
