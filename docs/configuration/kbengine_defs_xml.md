@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Server Configuration · Docs · MSM
+title: Server Configuration · Docs · KBEngine
 tab: docs
 docsitem: configuration-server
 ---

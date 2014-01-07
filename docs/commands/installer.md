@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Setup Commands · Docs · MSM
+title: Setup Commands · Docs · KBEngine
 tab: docs
 docsitem: commands-setup
 ---

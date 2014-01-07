@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Global Configuration · Docs · MSM
+title: Global Configuration · Docs · KBEngine
 tab: docs
 docsitem: configuration-msm
 ---
