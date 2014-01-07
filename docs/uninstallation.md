@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Uninstallation · Docs · MSM
+title: Uninstallation · Docs · KBEngine
 tab: docs
 docsitem: uninstallation
 ---
@@ -8,12 +8,6 @@ docsitem: uninstallation
 Uninstallation
 ==============
 
-You can easily uninstall MSM by just deleting the following files:
+You can easily uninstall:
 
-* /etc/init.d/msm
-* /etc/cron.d/msm
-* /etc/bash_completion.d/msm
-* /etc/msm.conf
-* /usr/local/bin/msm
-
-This will leave you with just the `/opt/msm` directory which contains all your servers and backups.
+python $KBE_ROOT/kbe/tools/server/install/installer.py uninstall

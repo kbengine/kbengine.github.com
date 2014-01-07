@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Installation · Docs · MSM
+title: Installation · Docs · KBEngine
 tab: docs
 docsitem: installation
 ---
@@ -8,114 +8,83 @@ docsitem: installation
 Installation
 ============
 
-**Note:** You must have both `sudo` and `cron` install on your system for MSM to function properly.
+Install KBEngine on a (Centos/Debian/Ubuntu etc.) server by pasting this line in your terminal:
 
-Install MSM on a Debian server (Ubuntu etc.) by pasting this line in your terminal:
-
-    wget -q http://git.io/Sxpr9g -O /tmp/msm && bash /tmp/msm
-
-Or on RedHat using:
-
-    wget -q http://git.io/lu0ULA -O /tmp/msm && bash /tmp/msm
+    python kbengine/kbe/tools/server/install/installer.py install
 
 Or [suggest a new platform][issues].
 
-You can paste the links in your browser to read the script that will be executed. Or, if you don't want to trust a script, install MSM manually:
+You can paste the links in your browser to read the script that will be executed. Or, 
+if you don't want to trust a script, install KBEngine manually:
 
 Manual Installation
 -------------------
 
-1. This script uses the following tools: **screen**, **rsync**, **zip**. Let's install them:
+1. To set environment variables:
 
-        sudo apt-get update
-        sudo apt-get install screen rsync zip
+        KBEngine can read KBE_ROOT, KBE_RES_PATH, KBE_HYBRID_PATH system environment variables to do something.
 
-2. Download MSM's default configuraiton file, then **read through it** and change anything you want. Be sure to carry any changes you make forwards through this guide.
+	linux:
 
-        sudo wget http://git.io/6eiCSg -O /etc/msm.conf
+		[kbe@localhost ~]# vim ~/.bashrc
 
-3. Create the directories MSM needs:
+		ulimit -c unlimited
 
-    First create the folder where MSM will store server, jars, and other files:
+		export KBE_ROOT=/home/kbe/kbengine/
 
-        sudo mkdir /opt/msm
-        sudo chown minecraft /opt/msm
-        sudo chmod -R 775 /opt/msm
+		export KBE_RES_PATH=$KBE_ROOT/kbe/res/:$KBE_ROOT/demo/:$KBE_ROOT/demo/res/
 
-    If you want to store your world folders in RAM for a performance boost, create this directory in ramdisk (`/dev/shm` is the default in Ubuntu):
+		export KBE_HYBRID_PATH=$KBE_ROOT/kbe/bin/Hybrid64/
 
-        sudo mkdir /dev/shm/msm
-        sudo chown minecraft /dev/shm/msm
-        sudo chmod -R 775 /dev/shm/msm
+		[root@localhost ~]# vim /etc/passwd
+		
+		uid is used to distinguish between different server groups, 
+		if multiple servers distributed server maintenance KBE then uid must be the same on each server, 
+		the value must be greater than 0.
 
-4. Download the MSM script and place it in `/etc/init.d`:
+	windows:
 
-        sudo wget http://git.io/J1GAxA -O /etc/init.d/msm
+		The right mouse button: "My Computer"->"Advanced"->"Environment Variables" Set up.
+		(Note: Need to add UID environment variable, the value must be greater than 0)
 
-5. Set script permissions, and integrate script with startup/shutdown:
+	KBE_ROOT:
 
-        sudo chmod 755 /etc/init.d/msm
-        sudo update-rc.d msm defaults
+		kbe root directory path.
 
-6. Create a shortcut so we can use just type `msm`:
 
-        sudo ln -s /etc/init.d/msm /usr/local/bin/msm
+	KBE_RES_PATH:
 
-7. Ask MSM to update, getting the latest files:
+		Related Resources path with ':' or ';' separated, the first "respath" is kbe engine "respath", 
+		the second "respath" must be the root user scripts, others without limitation.
 
-        sudo msm update
 
-8. Setup MSM's included cron script for sheduled tasks and force cron to load script:
+	KBE_HYBRID_PATH:
 
-        sudo wget http://git.io/pczolg -O /etc/cron.d/msm
-        sudo service cron reload
+		kbe binary file directory path.
 
-    If you understand cron, give it a read and alter the timings to your liking.
+2. Set up the database:
+	1. Install mysql:
+		If the windows system then add the following code to make my.ini mysql case sensitive
+		[mysqld]
+		lower_case_table_names = 2
 
-9. Create a jar group to manage current and future Minecraft versions:
+	2. Create a database account, assuming the user name password are "kbe"
 
-        sudo msm jargroup create minecraft https://s3.amazonaws.com/MinecraftDownload/launcher/minecraft_server.jar
+		grant all privileges on * * to kbe @ '%' identified by 'kbe';
+		grant select, insert, update, delete, create, drop on * * to kbe @ '%' identified by 'kbe';
+		FLUSH PRIVILEGES;
 
-10. Create a new server, and tell it to use the latest of those Minecraft jars:
+	3. Create a new database, the database name is "demo"
+		create database demo;
 
-        sudo msm server create <server-name>
-        sudo msm <server-name> jar minecraft
-
-11. Start your new server:
-
-    Before you start make sure to let MSM know which version of Minecraft you are running by adding the following line to `/opt/msm/servers/<server-name>/server.properties`
-
-        msm-version=minecraft/1.3.1
-
-    The available strings are currently:
-
-    * `minecraft/1.2.0` and above.
-    * `craftbukkit/1.2.0` and above.
-
-    See [versioning/versions.txt][versions] for the up to the minute list.
-
-    Once that clunky step it out the way (I'm working on making it more transparent) let's start the server:
-
-        sudo msm <server-name> start
-
-12. Move generated worlds to the world storage folder:
-
-    When a Minecraft server starts for the first time, it generates a new world according to the `level-name` entry in `server.properties`, which is `world` by default.
-
-    MSM requires that you move this newly generated world (and any accompanying folders such as `world_nether` or `world_the_end` in the case of CraftBukkit) to a new directory which you must create inside of the server root folder called `worldstorage`. 
-    
-    After moving them, run `sudo msm <server-name> worlds load` to create the symlinks needed for the server to recognize  new worlds.
-    
-    See [Concepts &rarr; Server Layout][layout] for further explanation.
-
+	4. Modify the databaseName in res\server\kbengine_defs.xml of dbmgr section (recommended demo\res\server\kbengine.xml overloaded modifications).
 
 Check Out The Commands
 ----------------------
 
-If stuck, you can always type `msm help` for a quick list of all commands, or if you want to know more about a command read the [command documentation][commands].
+If stuck, you can always type `KBEngine help` for a quick list of all commands, or if you want to know more about a command read the [command documentation][commands].
 
 [config]: {{ site.baseurl }}/docs/configuration/
-[cron]: {{ site.baseurl }}/docs/concepts/cron.html
 [commands]: {{ site.baseurl }}/docs/commands/
 [versions]: https://github.com/kbengine/kbengine/blob/latest/versioning/versions.txt
 [layout]: {{ site.baseurl }}/docs/concepts/layout.html
