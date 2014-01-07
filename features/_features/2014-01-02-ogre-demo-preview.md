@@ -1,6 +1,6 @@
 ---
-layout: post
-title: 100 Stargazers!
+layout: features
+title: ogre demo
 author: kbengine
 ---
 

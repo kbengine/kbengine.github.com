@@ -1,6 +1,6 @@
 ---
-layout: post
-title: Welcome kbe
+layout: features
+title: Console profile
 author: kbengine
 ---
 
