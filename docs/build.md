@@ -16,7 +16,7 @@ linux:
 	The compiler gcc: >= 4.4.x
 
 
-	[root @ localhost ~] # cd $KBE_ROOT/kbe/src
+	[root @ localhost ~]# cd $KBE_ROOT/kbe/src
 
 	[root @ localhost/ src]# make
 
