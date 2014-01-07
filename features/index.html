@@ -10,21 +10,13 @@ title: Features · KBEngine
   <p>The Preview of KBE</p>
 </div>
 
-{% for post in site.posts %}
-  <div class="inline-post">
-    <div class="title-card">
-        <div class="left">
-            <a class="avatar" href="https://github.com/{{ post.author }}" target="_blank" title="{{ post.author }}">
-                <img src="https://github.com/{{ post.author }}.png">
-            </a>
-        </div>
-        <div class="right">
-            <h2 class="title">
-                <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-            </h2>
-            <p class="date">{{ post.date | date: "%d %B %Y" }}</p>
-        </div>
-    </div>
-    {{ post.content }}
-  </div>
-{% endfor %}
+<div class="hero-unit">
+	<p>If your looking to get going see the <a href="{{ site.baseurl }}/docs/installation.html" onclick="_gaq.push(['_trackEvent', 'Documentation', 'Home: Install Guide']);">Install guide</a>, then peruse <a href="{{ site.baseurl }}/docs/commands/" onclick="_gaq.push(['_trackEvent', 'Documentation', 'Home: The Commands']);">the commands</a>. After that maybe watch the project for updates on <a href="https://github.com/kbengine/kbengine/" onclick="_gaq.push(['_trackEvent', 'Documentation', 'Home: GitHub']);">GitHub</a> and join the KBE community.</p>
+	<p>
+		<a
+			class="btn btn-primary btn-large"
+			href="{{ site.baseurl }}/docs/installation.html"
+			onclick="_gaq.push(['_trackEvent', 'Documentation', 'Home: Get Started Installing']);">
+			Get Started Installing</a>
+	</p>
+</div>
