@@ -10,7 +10,7 @@ Installation
 
 Install KBEngine on a (Centos/Debian/Ubuntu etc.) server by pasting this line in your terminal:
 
-    python kbengine/kbe/tools/server/install/installer.py install
+	python kbengine/kbe/tools/server/install/installer.py install
 
 Or suggest a new platform.
 
@@ -62,6 +62,7 @@ Manual Installation
 
 		kbe binary file directory path.
 
+
 2. Set up the database:
 
 	1. Install mysql:
@@ -74,6 +75,7 @@ Manual Installation
 		lower_case_table_names = 2
 
 
+
 	2. Create a database account, assuming the user name password are "kbe"
 
 		grant all privileges on * * to kbe @ '%' identified by 'kbe';
@@ -83,12 +85,16 @@ Manual Installation
 		FLUSH PRIVILEGES;
 
 
+
 	3. Create a new database, the database name is "demo"
 
 		create database demo;
 
 
+
 	4. Modify the databaseName in res\server\kbengine_defs.xml of dbmgr section (recommended demo\res\server\kbengine.xml overloaded modifications).
+
+
 
 Check Out The Commands
 ----------------------

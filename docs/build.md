@@ -32,10 +32,10 @@ Note:
 
 	2: mysql path on some platforms may not /usr/lib64/mysql/mysql_config
 
-	Modify kbe\src\build\common.mak the MYSQL_CONFIG_PATH=/usr/lib64/mysql/mysql_config
+		Modify kbe\src\build\common.mak the MYSQL_CONFIG_PATH=/usr/lib64/mysql/mysql_config
 
 
-	3: On linux compiled as python Unable to initialize because the situation can not be normal operation (this is a bug <a href="http://bugs.python.org/issue11320">http://bugs.python.org/issue11320</a>):
+	3: On linux compiled as python Unable to initialize because the situation can not be normal operation (this is a bug http://bugs.python.org/issue11320):
 
 		cd src\lib\python
 		

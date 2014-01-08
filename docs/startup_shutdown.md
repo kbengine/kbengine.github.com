@@ -5,11 +5,13 @@ tab: docs
 docsitem: startup_shutdown
 ---
 
-Startup and Shutdown
+Startup
 ==============
 
-You can easily Startup and Shutdown:
-
 	python $KBE_ROOT/kbe/tools/server/pycluster/cluster_controller.py start
+
+
+Shutdown
+-------------------
 
 	python $KBE_ROOT/kbe/tools/server/pycluster/cluster_controller.py stop
