@@ -92,7 +92,7 @@ Manual Installation
 
 
 
-### 3. Optimization of the operating system(Linux)
+### 3. Optimization of the operating system(Linux) (Optional)
 
 	Set /etc/security/limits.conf:
 
@@ -108,7 +108,7 @@ Manual Installation
 
 
 
-### 4: Multi-card configurations:
+### 4: Multi-card configurations: (Optional)
 
 	If eth0 is external, eth1 is the internal:
 
@@ -124,7 +124,9 @@ Manual Installation
 
 
 
+### 5. Linux firewall: (Optional)
 
+	see: [firewall]
 
 
 
@@ -141,3 +143,4 @@ If stuck, you can always type `KBEngine help` for a quick list of all commands, 
 [High-performance linux server configuration]: {{ site.baseurl }}/docs/documentations/linuxosconfig.html
 [kbengine_defs.xml]: {{ site.baseurl }}/docs/configuration/kbengine_defs.html
 [kbengine.xml]: {{ site.baseurl }}/docs/configuration/kbengine.html
+[firewall]: {{ site.baseurl }}/docs/documentations/linuxfirewall.html
