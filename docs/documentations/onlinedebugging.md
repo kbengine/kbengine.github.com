@@ -9,8 +9,10 @@ Online debugging
 ====================
 
 Allows the generation of core files:
+
 	Adding ~/.bashrc file:
+
 		ulimit -c unlimited
 	
 	Require root privileges:
-		echo '%e.core.%p' > /proc/sys/kernel/core_pattern
+		[root@gameserver ~]# echo '%e.core.%p' > /proc/sys/kernel/core_pattern

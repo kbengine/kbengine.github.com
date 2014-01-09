@@ -16,7 +16,7 @@ path:
 ### Information query servers:
 
 	[kbe@gameserver ~]$ python $KBE_ROOT/kbe/tools/server/pycluster/cluster_controller.py
-
+	[kbe@gameserver ~]$ python $KBE_ROOT/kbe/tools/server/pycluster/cluster_controller.py query
 
 	/-----------------------------------------------------
 	[kbmachine: %CPU:16.24, %MEM:13.54, %pCPU:0.00, pMem:11.79m, totalMem=1070.44m/7908.32m, addr=192.168.11.11]
