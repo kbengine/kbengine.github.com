@@ -20,7 +20,7 @@ if you don't want to trust a script, install KBEngine manually:
 Manual Installation
 -------------------
 
-1. To set environment variables:
+### 1. To set environment variables:
 
         KBEngine can read KBE_ROOT, KBE_RES_PATH, KBE_HYBRID_PATH system environment variables to do something.
 
@@ -63,7 +63,8 @@ Manual Installation
 		kbe binary file directory path.
 
 
-2. Set up the database:
+
+### 2. Set up the database:
 
 	1. Install mysql:
 
@@ -95,7 +96,8 @@ Manual Installation
 	4. Modify the databaseName in res\server\kbengine_defs.xml of dbmgr section (recommended demo\res\server\kbengine.xml overloaded modifications).
 
 
-3. Optimization of the operating system(Linux)
+
+### 3. Optimization of the operating system(Linux)
 
 	Set /etc/security/limits.conf:
 		* soft nofile 65535
@@ -108,7 +110,8 @@ Manual Installation
 	see: [High-performance linux server configuration]
 
 
-4: Multi-card configurations:
+
+### 4: Multi-card configurations:
 
 	If eth0 is external, eth1 is the internal:
 		/sbin/ip route del broadcast 255.255.255.255 dev eth0
@@ -119,6 +122,7 @@ Manual Installation
 		loginapp	: externalInterface = eth0, internalInterface = eth1
 		billingsystem 	: externalInterface = eth0, internalInterface = eth1
 		[others]	: externalInterface = eth1, internalInterface = eth1
+
 
 
 
