@@ -12,13 +12,10 @@ path:
 	kbe/tools/server/pycluster/cluster_controller.py
 
 
-Information query servers:
+-----------------------------------------------------
+### Information query servers:
 
-	python $KBE_ROOT/kbe/tools/server/pycluster/cluster_controller.py
-
-or
-
-	python $KBE_ROOT/kbe/tools/server/pycluster/cluster_controller.py query
+	[kbe@gameserver ~]$ `python $KBE_ROOT/kbe/tools/server/pycluster/cluster_controller.py`
 
 
 	/-----------------------------------------------------
@@ -53,3 +50,52 @@ or
 	|-     cellapp8 1008806317202177300     500     30245   14      0.33    0.64    50.47m  entities=59     cells=0         0
 	/-----------------------------------------------------
 	machines: 3, components=21, numBases=874, numProxices=849, numClients=425, numEntities=391, numCells=0.
+
+
+-----------------------------------------------------
+### Start the server:
+
+	[kbe@gameserver ~]$ `python $KBE_ROOT/kbe/tools/server/pycluster/cluster_controller.py start`
+	[kbe@gameserver ~]$ `python $KBE_ROOT/kbe/tools/server/pycluster/cluster_controller.py start dbmgr|baseappmgr|cellappmgr|baseapp|cellapp|cellapp|loginapp`
+
+
+-----------------------------------------------------
+### Shut down the server:
+
+	[kbe@gameserver ~]$ `python $KBE_ROOT/kbe/tools/server/pycluster/cluster_controller.py stop`
+
+
+-----------------------------------------------------
+### Console:
+
+	[kbe@gameserver ~]$ `python $KBE_ROOT/kbe/tools/server/pycluster/cluster_controller.py console cellapp1`
+	Trying 192.168.11.15...
+	Connected to . (192.168.11.15).
+	Escape character is '^]'.
+	password:kbe
+	welcome to cellapp 
+	Version: 0.0.1. Config: Hybrid64. Built: 10:53:47 Nov 20 2013. AppUID: 504403161688137595. UID: 500. PID: 30217
+	/---------------------------------------------
+	Command List:
+	[:help          ]: list commands.
+	[:quit          ]: quit the server.
+	[:python        ]: python console.
+	[:root          ]: return to the root layer.
+	[:cprofile      ]: collects and reports the internal c++ profiles 
+	                of a server process over a period of time.
+	                 usage: ":cprofile 30"
+	[:pyprofile     ]: collects and reports the python profiles 
+	                of a server process over a period of time.
+	                 usage: ":pyprofile 30"
+	[:eventprofile  ]: a server process over a period of time, 
+	                collects and reports the all non-volatile cummunication 
+	                down to the client.
+	                 usage: ":eventprofile 30"
+	[:mercuryprofile]: collects and reports the mercury profiles 
+	                of a server process over a period of time.
+	                 usage: ":mercuryprofile 30"
+
+
+	/--------------------------------------------- 
+	[cellapp@python ~] >>> 
+	[cellapp@python ~] >>> dir(KBEngine)
