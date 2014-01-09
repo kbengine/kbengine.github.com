@@ -69,14 +69,14 @@ Manual Installation
 
 ### 2. Set up the database:
 
-	1. Install mysql:
+	. Install mysql:
 
 		If the windows system then add the following code to make my.ini mysql case sensitive
 
 		[mysqld]
 		lower_case_table_names = 2
 
-	2. Create a database account, assuming the user name password are "kbe"
+	. Create a database account, assuming the user name password are "kbe"
 
 		grant all privileges on * * to kbe @ '%' identified by 'kbe';
 
@@ -84,11 +84,11 @@ Manual Installation
 
 		FLUSH PRIVILEGES;
 
-	3. Create a new database, the database name is "demo"
+	. Create a new database, the database name is "demo"
 
 		create database demo;
 
-	4. Modify the databaseName in res\server\[kbengine_defs.xml] of dbmgr section (recommended demo\res\server\[kbengine.xml] overloaded modifications).
+	. Modify the databaseName in res\server\[kbengine_defs.xml] of dbmgr section (recommended demo\res\server\[kbengine.xml] overloaded modifications).
 
 
 
