@@ -70,9 +70,7 @@ Manual Installation
 
 		If the windows system then add the following code to make my.ini mysql case sensitive
 
-
 		[mysqld]
-
 		lower_case_table_names = 2
 
 
@@ -80,9 +78,7 @@ Manual Installation
 	2. Create a database account, assuming the user name password are "kbe"
 
 		grant all privileges on * * to kbe @ '%' identified by 'kbe';
-
 		grant select, insert, update, delete, create, drop on * * to kbe @ '%' identified by 'kbe';
-
 		FLUSH PRIVILEGES;
 
 
@@ -100,10 +96,12 @@ Manual Installation
 ### 3. Optimization of the operating system(Linux)
 
 	Set /etc/security/limits.conf:
-		* soft nofile 65535
-		* hard nofile 65535
+
+		soft nofile 65535
+		hard nofile 65535
 
 	Defines the maximum send/receive window size:
+
 		[root@localhost ~]# echo 524288 > /proc/sys/net/core/rmem_max
 		[root@localhost ~]# echo 524288 > /proc/sys/net/core/wmem_max
 
@@ -114,10 +112,12 @@ Manual Installation
 ### 4: Multi-card configurations:
 
 	If eth0 is external, eth1 is the internal:
+
 		/sbin/ip route del broadcast 255.255.255.255 dev eth0
 		/sbin/ip route add broadcast 255.255.255.255 dev eth1
 
 	Please set ([kbengine.xml] | [kbengine_defs.xml]):
+
 		baseapp 	: externalInterface = eth0, internalInterface = eth1
 		loginapp	: externalInterface = eth0, internalInterface = eth1
 		billingsystem 	: externalInterface = eth0, internalInterface = eth1
