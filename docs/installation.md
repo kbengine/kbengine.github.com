@@ -88,7 +88,7 @@ Manual Installation
 
 		create database demo;
 
-	. Modify the databaseName in res\server\<a href="{{ site.baseurl }}/docs/configuration/kbengine_defs.html">kbengine_defs.xml</a> of dbmgr section (recommended demo\res\server\<a href="{{ site.baseurl }}/docs/configuration/kbengine.html">kbengine.xml</a> overloaded modifications).
+	. Modify the databaseName in res\server\[kbengine_defs.xml][kbengine_defs.xml] of dbmgr section (recommended demo\res\server\[kbengine.xml][kbengine.xml] overloaded modifications).
 
 
 
@@ -115,7 +115,7 @@ Manual Installation
 		/sbin/ip route del broadcast 255.255.255.255 dev eth0
 		/sbin/ip route add broadcast 255.255.255.255 dev eth1
 
-	Please set (<a href="{{ site.baseurl }}/docs/configuration/kbengine.html">kbengine.xml</a> | <a href="{{ site.baseurl }}/docs/configuration/kbengine_defs.html">kbengine_defs.xml</a>):
+	Please set ([kbengine.xml][kbengine.xml] | [kbengine_defs.xml][kbengine_defs.xml]):
 
 		baseapp 	: externalInterface = eth0, internalInterface = eth1
 		loginapp	: externalInterface = eth0, internalInterface = eth1
