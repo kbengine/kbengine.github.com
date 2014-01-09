@@ -88,7 +88,7 @@ Manual Installation
 
 		create database demo;
 
-	4. Modify the databaseName in res\server\kbengine_defs.xml of dbmgr section (recommended demo\res\server\kbengine.xml overloaded modifications).
+	4. Modify the databaseName in res\server\[kbengine_defs.xml] of dbmgr section (recommended demo\res\server\[kbengine.xml] overloaded modifications).
 
 
 
@@ -126,7 +126,7 @@ Manual Installation
 
 ### 5. Linux firewall: (Optional)
 
-	see: [firewall]
+see: [Linux firewall settings]
 
 
 
@@ -143,4 +143,4 @@ If stuck, you can always type `KBEngine help` for a quick list of all commands, 
 [High-performance linux server configuration]: {{ site.baseurl }}/docs/documentations/linuxosconfig.html
 [kbengine_defs.xml]: {{ site.baseurl }}/docs/configuration/kbengine_defs.html
 [kbengine.xml]: {{ site.baseurl }}/docs/configuration/kbengine.html
-[firewall]: {{ site.baseurl }}/docs/documentations/linuxfirewall.html
+[Linux firewall settings]: {{ site.baseurl }}/docs/documentations/linuxfirewall.html
