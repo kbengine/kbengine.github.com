@@ -10,16 +10,16 @@ Commands
 
 ### pycluster([cluster_controller]):
 
-	python cluster_controller.py `query`: 
+	python cluster_controller.py query: 
 		Information query servers
 
-	python cluster_controller.py `start`: 
+	python cluster_controller.py start: 
 		Start the servers.
 
-	python cluster_controller.py `stop`: 
+	python cluster_controller.py stop: 
 		Shut down the servers.
 
-	python cluster_controller.py `console`: 
+	python cluster_controller.py console: 
 		Online debugging, python console.
 
 

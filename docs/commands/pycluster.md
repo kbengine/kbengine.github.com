@@ -15,7 +15,7 @@ path:
 -----------------------------------------------------
 ### Information query servers:
 
-	[kbe@gameserver ~]$ `python $KBE_ROOT/kbe/tools/server/pycluster/cluster_controller.py`
+	[kbe@gameserver ~]$ python $KBE_ROOT/kbe/tools/server/pycluster/cluster_controller.py
 
 
 	/-----------------------------------------------------
@@ -55,20 +55,20 @@ path:
 -----------------------------------------------------
 ### Start the servers:
 
-	[kbe@gameserver ~]$ `python $KBE_ROOT/kbe/tools/server/pycluster/cluster_controller.py start`
-	[kbe@gameserver ~]$ `python $KBE_ROOT/kbe/tools/server/pycluster/cluster_controller.py start dbmgr|baseappmgr|cellappmgr|baseapp|cellapp|cellapp|loginapp`
+	[kbe@gameserver ~]$ python $KBE_ROOT/kbe/tools/server/pycluster/cluster_controller.py start
+	[kbe@gameserver ~]$ python $KBE_ROOT/kbe/tools/server/pycluster/cluster_controller.py start dbmgr|baseappmgr|cellappmgr|baseapp|cellapp|cellapp|loginapp
 
 
 -----------------------------------------------------
 ### Shut down the servers:
 
-	[kbe@gameserver ~]$ `python $KBE_ROOT/kbe/tools/server/pycluster/cluster_controller.py stop`
+	[kbe@gameserver ~]$ python $KBE_ROOT/kbe/tools/server/pycluster/cluster_controller.py stop
 
 
 -----------------------------------------------------
 ### Console:
 
-	[kbe@gameserver ~]$ `python $KBE_ROOT/kbe/tools/server/pycluster/cluster_controller.py console cellapp1`
+	[kbe@gameserver ~]$ python $KBE_ROOT/kbe/tools/server/pycluster/cluster_controller.py console cellapp1
 	Trying 192.168.11.15...
 	Connected to . (192.168.11.15).
 	Escape character is '^]'.
