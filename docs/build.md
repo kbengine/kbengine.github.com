@@ -46,11 +46,8 @@ Note:
 
 	3: On linux compiled as python Unable to initialize because the situation can not be normal operation (this is a bug http://bugs.python.org/issue11320):
 
-		cd src\lib\python
-		
-		./configure
-
-		make
-		
-		make install
+		[root @ localhost ~] cd src\lib\python
+		[root @ localhost ~] ./configure
+		[root @ localhost ~] make
+		[root @ localhost ~] make install
 
