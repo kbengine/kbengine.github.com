@@ -69,14 +69,14 @@ KBEngine can read KBE_ROOT, KBE_RES_PATH, KBE_HYBRID_PATH system environment var
 
 ### 2. Set up the database:
 
-. Install mysql:
+Install mysql:
 
 		If the windows system then add the following code to make my.ini mysql case sensitive
 
 		[mysqld]
 		lower_case_table_names = 2
 
-. Create a database account, assuming the user name password are "kbe"
+Create a database account, assuming the user name password are "kbe"
 
 		grant all privileges on * * to kbe @ '%' identified by 'kbe';
 
@@ -84,7 +84,7 @@ KBEngine can read KBE_ROOT, KBE_RES_PATH, KBE_HYBRID_PATH system environment var
 
 		FLUSH PRIVILEGES;
 
-. Create a new database, the database name is "demo"
+Create a new database, the database name is "demo"
 
 		create database demo;
 
