@@ -72,7 +72,7 @@ path:
 	Trying 192.168.11.15...
 	Connected to . (192.168.11.15).
 	Escape character is '^]'.
-	password:kbe
+	password:kbe	(Set in the [kbengine_defs.xml]->telnet_service->password)
 	welcome to cellapp 
 	Version: 0.0.1. Config: Hybrid64. Built: 10:53:47 Nov 20 2013. AppUID: 504403161688137595. UID: 500. PID: 30217
 	/---------------------------------------------
@@ -99,3 +99,5 @@ path:
 	/--------------------------------------------- 
 	[cellapp@python ~] >>> 
 	[cellapp@python ~] >>> dir(KBEngine)
+
+[kbengine_defs.xml]: {{ site.baseurl }}/docs/configuration/kbengine_defs.html
