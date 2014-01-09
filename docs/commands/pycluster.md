@@ -53,14 +53,14 @@ path:
 
 
 -----------------------------------------------------
-### Start the server:
+### Start the servers:
 
 	[kbe@gameserver ~]$ `python $KBE_ROOT/kbe/tools/server/pycluster/cluster_controller.py start`
 	[kbe@gameserver ~]$ `python $KBE_ROOT/kbe/tools/server/pycluster/cluster_controller.py start dbmgr|baseappmgr|cellappmgr|baseapp|cellapp|cellapp|loginapp`
 
 
 -----------------------------------------------------
-### Shut down the server:
+### Shut down the servers:
 
 	[kbe@gameserver ~]$ `python $KBE_ROOT/kbe/tools/server/pycluster/cluster_controller.py stop`
 
