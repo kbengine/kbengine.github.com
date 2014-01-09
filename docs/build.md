@@ -15,9 +15,18 @@ linux:
 	Test System (x32 & x64): centos >= 5.x, debian >= 5.x
 	The compiler gcc: >= 4.4.x
 
+	[root @ localhost ~]# yum install gcc  
+	[root @ localhost ~]# yum install glib  
+	[root @ localhost ~]# yum install gcc-c++  
+	[root @ localhost ~]# yum install esound-devel  
+	[root @ localhost ~]# yum install ncurses-devel 
+	[root @ localhost ~]# yum install perl 
+	[root @ localhost ~]# yum install openssl-devel 
+	[root @ localhost ~]# yum install zlib-devel 
+	[root @ localhost ~]# yum install mysql-server
+	[root @ localhost ~]# yum install mysql-devel 
 
 	[root @ localhost ~]# cd $KBE_ROOT/kbe/src
-
 	[root @ localhost/ src]# make
 
 windows:

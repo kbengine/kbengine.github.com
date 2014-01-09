@@ -95,6 +95,32 @@ Manual Installation
 	4. Modify the databaseName in res\server\kbengine_defs.xml of dbmgr section (recommended demo\res\server\kbengine.xml overloaded modifications).
 
 
+3. Optimization of the operating system(Linux)
+
+	Set /etc/security/limits.conf:
+		* soft nofile 65535
+		* hard nofile 65535
+
+	Defines the maximum send/receive window size:
+		[root@localhost ~]# echo 524288 > /proc/sys/net/core/rmem_max
+		[root@localhost ~]# echo 524288 > /proc/sys/net/core/wmem_max
+
+	see: [High-performance linux server configuration]
+
+
+4: Multi-card configurations:
+
+	If eth0 is external, eth1 is the internal:
+		/sbin/ip route del broadcast 255.255.255.255 dev eth0
+		/sbin/ip route add broadcast 255.255.255.255 dev eth1
+
+	Please set ([kbengine.xml] | [kbengine_defs.xml]):
+		baseapp 	: externalInterface = eth0, internalInterface = eth1
+		loginapp	: externalInterface = eth0, internalInterface = eth1
+		billingsystem 	: externalInterface = eth0, internalInterface = eth1
+		[others]	: externalInterface = eth1, internalInterface = eth1
+
+
 
 Check Out The Commands
 ----------------------
@@ -106,3 +132,6 @@ If stuck, you can always type `KBEngine help` for a quick list of all commands, 
 [versions]: https://github.com/kbengine/kbengine/blob/latest/versioning/versions.txt
 [layout]: {{ site.baseurl }}/docs/concepts/layout.html
 [issues]: https://github.com/kbengine/kbengine/issues
+[High-performance linux server configuration]: {{ site.baseurl }}/docs/documentations/linuxosconfig.html
+[kbengine_defs.xml]: {{ site.baseurl }}/docs/configuration/kbengine_defs.html
+[kbengine.xml]: {{ site.baseurl }}/docs/configuration/kbengine.html

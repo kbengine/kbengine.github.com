@@ -15,3 +15,11 @@ Shutdown
 -------------------
 
 	python $KBE_ROOT/kbe/tools/server/pycluster/cluster_controller.py stop
+
+
+Quick Startup and Shutdown
+-------------------
+
+	[kbe @gameserver ~]$ cd $KBE_HYBRID_PATH
+	[kbe @gameserver ~]$ sh start.sh
+	[kbe @gameserver ~]$ sh kill.sh
