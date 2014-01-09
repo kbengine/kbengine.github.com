@@ -25,7 +25,7 @@ Manual Installation
 
 ### 1. To set environment variables:
 
-        KBEngine can read KBE_ROOT, KBE_RES_PATH, KBE_HYBRID_PATH system environment variables to do something.
+KBEngine can read KBE_ROOT, KBE_RES_PATH, KBE_HYBRID_PATH system environment variables to do something.
 
 	linux:
 
@@ -69,14 +69,14 @@ Manual Installation
 
 ### 2. Set up the database:
 
-	. Install mysql:
+. Install mysql:
 
 		If the windows system then add the following code to make my.ini mysql case sensitive
 
 		[mysqld]
 		lower_case_table_names = 2
 
-	. Create a database account, assuming the user name password are "kbe"
+. Create a database account, assuming the user name password are "kbe"
 
 		grant all privileges on * * to kbe @ '%' identified by 'kbe';
 
@@ -84,38 +84,38 @@ Manual Installation
 
 		FLUSH PRIVILEGES;
 
-	. Create a new database, the database name is "demo"
+. Create a new database, the database name is "demo"
 
 		create database demo;
 
-	. Modify the databaseName in res\server\[kbengine_defs.xml][kbengine_defs.xml] of dbmgr section (recommended demo\res\server\[kbengine.xml][kbengine.xml] overloaded modifications).
+. Modify the databaseName in res\server\[kbengine_defs.xml] of dbmgr section (recommended demo\res\server\[kbengine.xml] overloaded modifications).
 
 
 
 ### 3. Optimization of the operating system(Linux) (Optional)
 
-	Set /etc/security/limits.conf:
+Set /etc/security/limits.conf:
 
 		soft nofile 65535
 		hard nofile 65535
 
-	Defines the maximum send/receive window size:
+Defines the maximum send/receive window size:
 
 		[root@localhost ~]# echo 524288 > /proc/sys/net/core/rmem_max
 		[root@localhost ~]# echo 524288 > /proc/sys/net/core/wmem_max
 
-	see: [High-performance linux server configuration]
+see: [High-performance linux server configuration]
 
 
 
 ### 4: Multi-card configurations: (Optional)
 
-	If eth0 is external, eth1 is the internal:
+If eth0 is external, eth1 is the internal:
 
 		/sbin/ip route del broadcast 255.255.255.255 dev eth0
 		/sbin/ip route add broadcast 255.255.255.255 dev eth1
 
-	Please set ([kbengine.xml][kbengine.xml] | [kbengine_defs.xml][kbengine_defs.xml]):
+Please set ([kbengine.xml] | [kbengine_defs.xml]):
 
 		baseapp 	: externalInterface = eth0, internalInterface = eth1
 		loginapp	: externalInterface = eth0, internalInterface = eth1
