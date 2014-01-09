@@ -12,7 +12,6 @@ Allows the generation of core files:
 
 
 	Adding ~/.bashrc file:
-
 		ulimit -c unlimited
 	
 	Require root privileges:
