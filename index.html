@@ -6,7 +6,7 @@ tab: overview
 
       <div class="masthead">
         <div class="new-blog-post">
-          <a href="{{ site.baseurl}}{{ paginator.posts[0].url }}" onclick="_gaq.push(['_trackEvent', 'Masthead Actions', 'New Blog Post', '{{ paginator.posts[0].title }}']);">
+          <a href="{{ site.baseurl}}{{ paginator.posts[0].url }}" onclick="ga('_trackEvent', 'Masthead Actions', 'New Blog Post', '{{ paginator.posts[0].title }}');">
             New Blog Post: <strong>{{ paginator.posts[0].title }}</strong>
           </a>
         </div>
@@ -15,10 +15,10 @@ tab: overview
         <p>A mmog engine of server.</p>
     
         <div class="buttons">
-          <a id="download-button" href="http://sourceforge.net/projects/kbengine/files/" class="btn btn-primary btn-large" onclick="_gaq.push(['_trackEvent', 'Masthead Actions', 'download']);">Download</a>
-          <a id="install-button" href="{{ site.baseurl }}/docs/" class="btn btn-large" onclick="_gaq.push(['_trackEvent', 'Masthead Actions', 'Install']);">Install Guide </a>
-          <a id="view-button" href="https://github.com/kbengine/kbengine" class="btn btn-large" onclick="_gaq.push(['_trackEvent', 'Masthead Actions', 'Github Project', 'View project on GitHub']);">Source</a>
-          <a id="demo-button" href="{{ site.baseurl }}/demo/" class="btn btn-large" onclick="_gaq.push(['_trackEvent', 'Masthead Actions', 'Demo']);">Demo </a>
+          <a id="download-button" href="http://sourceforge.net/projects/kbengine/files/" class="btn btn-primary btn-large" onclick="ga('_trackEvent', 'Masthead Actions', 'download');">Download</a>
+          <a id="install-button" href="{{ site.baseurl }}/docs/" class="btn btn-large" onclick="ga('_trackEvent', 'Masthead Actions', 'Install');">Install Guide </a>
+          <a id="view-button" href="https://github.com/kbengine/kbengine" class="btn btn-large" onclick="ga('_trackEvent', 'Masthead Actions', 'Github Project', 'View project on GitHub');">Source</a>
+          <a id="demo-button" href="{{ site.baseurl }}/demo/" class="btn btn-large" onclick="ga('_trackEvent', 'Masthead Actions', 'Demo');">Demo </a>
         </div>
       
         <ul class="quick-links">
@@ -40,7 +40,7 @@ tab: overview
           <div class="player player-craftysaurus" title="visit my website">
             <iframe src="http://www.kbengine.org/assets/img/gravatar-user-min.jpg" allowtransparency="true" frameborder="0" scrolling="0" width="32" height="65"></iframe>
             <div class="shadow"></div>
-            <a class="link" href="http://www.kbengine.org/" onclick="_gaq.push(['_trackEvent', 'Masthead Actions', 'Created by kbe']);"></a>
+            <a class="link" href="http://www.kbengine.org/" onclick="ga('_trackEvent', 'Masthead Actions', 'Created by kbe');"></a>
           </div>
           <p class="created-by">Created by kbe</p>
         </div>
