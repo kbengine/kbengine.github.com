@@ -53,10 +53,10 @@ The main use type alias:
 * Engine can automatically identify the network transmission and storage
 
 
-Path definition file : demo/res/scripts/entity_defs/alias.xml
+Path definition file : `demo/res/scripts/entity_defs/alias.xml`
 
 ------------------------------------------
-### Common type alias
+### Simple type alias
 
 	<BOOL> 		UINT8	</BOOL>
 	<ENTITY_ID>	INT32	</ENTITY_ID>
@@ -89,7 +89,7 @@ The basic format:
 	       </Properties>
 	</typename>
 
-Example:
+### Example:
 
 	<AVATAR_INFOS>	FIXED_DICT
 		<Properties>
@@ -108,6 +108,11 @@ Example:
 		</Properties>
 	</AVATAR_INFOS>	
 	
+	// Memory in the form:
+        AVATAR_INFOS = {"dbid" : 1, "name" : "kbengine", "roleType" : 1, "level" : 0}
+
+-----------------------------------------------
+
 	<AVATAR_INFOS_LIST>	FIXED_DICT
 		<implementedBy>AVATAR_INFOS.inst</implementedBy>
 		<Properties>
@@ -117,6 +122,21 @@ Example:
 		</Properties>
 	</AVATAR_INFOS_LIST>	
 	
+Memory in the form:
+
+If you do not (AVATAR_INFOS.inst)
+        AVATAR_INFOS_LIST = {"values" : [{"dbid" : 1, "name" : "kbengine", "roleType" : 1, "level" : 0}, 
+				{"dbid" : 2, "name" : "kbengine1", "roleType" : 2, "level" : 1}]
+	
+	
+If you have (AVATAR_INFOS.inst) may become, Specific implementations look.
+Here we assume that the dictionary is implemented as
+
+        AVATAR_INFOS_LIST = {"kbengine" : {"dbid" : 1, "name" : "kbengine", "roleType" : 1, "level" : 0}, 
+				"kbengine1" : {"dbid" : 2, "name" : "kbengine1", "roleType" : 2, "level" : 1}}
+
+-----------------------------------------------
+
 	<BAG>	FIXED_DICT
 		<Properties>
 			<values>
@@ -124,3 +144,7 @@ Example:
 			</values>
 		</Properties>
 	</BAG>	
+
+Memory in the form:
+
+        BAG = {"values" : [[1,2,3], [4,5,6], [7,8,9]]}
