@@ -21,7 +21,7 @@ Allows the generation of core files:
 Use visualization tools([GuiConsole]):
 --------------------------------------
 
-* Enter debug tab, where you can use the python command line when running the server dynamically (output, change)
+* Enter debug tab, where you can use the python command line when running the server dynamically (output, change).
 
 * Into the profile tab, where you can use the python command line when running the server analysis program.
 
@@ -32,6 +32,10 @@ Use visualization tools([GuiConsole]):
 	* eventprofile: Events that occurred within a period of time statistics
 
 	* mercuryprofile: Processing of the network within a period of time for analysis
+
+* Enter watcher tab, where you can monitor the status of various runtime server.
+
+For details, please see: [GuiConsole]
 
 <img class="screenshots-img" src="{{ site.baseurl }}/assets/img/screenshots/guiconsole_debug.jpg">
 
