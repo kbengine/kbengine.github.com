@@ -108,7 +108,8 @@ The basic format:
 		</Properties>
 	</AVATAR_INFOS>	
 	
-	// Memory in the form:
+Memory in the form:
+
         AVATAR_INFOS = {"dbid" : 1, "name" : "kbengine", "roleType" : 1, "level" : 0}
 
 -----------------------------------------------
@@ -125,6 +126,7 @@ The basic format:
 Memory in the form:
 
 If you do not (AVATAR_INFOS.inst)
+
         AVATAR_INFOS_LIST = {"values" : [{"dbid" : 1, "name" : "kbengine", "roleType" : 1, "level" : 0}, 
 				{"dbid" : 2, "name" : "kbengine1", "roleType" : 2, "level" : 1}]
 	
