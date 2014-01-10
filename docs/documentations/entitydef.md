@@ -41,14 +41,13 @@ Example:
 
 * Def file to create a directory in `res/scripts/entity_defs`
 
-For example: Account.def
-
+	For example: Account.def
 
 * You may also need to define some properties and methods
 
+	* In the `demo/res/scripts/`, base and cell or client add xxx.py
 
-* In the `demo/res/scripts/`, base and cell or client add xxx.py
-Not every entity needs to create three parts(client, base, cell), press need to select.
+	* Not every entity needs to create three parts(client, base, cell), press need to select.
 
 
 -----------------------------------------
