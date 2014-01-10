@@ -39,6 +39,17 @@ Example:
 	</root>
 
 
+### 2: Def file to create a directory in `res/scripts/entity_defs`
+
+For example: Account.def
+
+
+### 3: You may also need to define some properties and methods
+
+
+
+
+
 
 
 
