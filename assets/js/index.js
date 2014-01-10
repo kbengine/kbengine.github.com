@@ -170,6 +170,6 @@ $(function() {
 
   $('a.ga-track').live('click', function() {
     var $this = $(this);
-    ga('_trackEvent', 'External Link', $this.text(), $this.attr('href'));
+    _gaq.push(['_trackEvent', 'External Link', $this.text(), $this.attr('href')]);
   });
 });
