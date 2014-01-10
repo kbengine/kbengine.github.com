@@ -128,13 +128,13 @@ Memory in the form:
 	
 Memory in the form:
 
-If you do not (AVATAR_INFOS.inst)
+If you do not implementedBy
 
         AVATAR_INFOS_LIST = {"values" : [{"dbid" : 1, "name" : "kbengine", "roleType" : 1, "level" : 0}, 
 				{"dbid" : 2, "name" : "kbengine1", "roleType" : 2, "level" : 1}]
 	
 	
-If you have (AVATAR_INFOS.inst) may become, Specific implementations look.
+If you have implementedBy may become, Specific implementations look.
 Here we assume that the dictionary is implemented as
 
         AVATAR_INFOS_LIST = {"kbengine" : {"dbid" : 1, "name" : "kbengine", "roleType" : 1, "level" : 0}, 
