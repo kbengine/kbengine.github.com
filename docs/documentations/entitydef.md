@@ -122,6 +122,7 @@ For example: In a client to get a list of server roles(Account.py):
 
 Type Scope
 ----------------------------------------- 
+
 	[name]			[client]		[base]			[cell]
 	BASE			-			*			-
 	BASE_AND_CLIENT		*			*			-
