@@ -88,6 +88,9 @@ The basic format:
 
 	       </Properties>
 	</typename>
+	
+About implementedBy
+see also :[Custom types]
 
 ### Example:
 
@@ -150,3 +153,8 @@ Here we assume that the dictionary is implemented as
 Memory in the form:
 
         BAG = {"values" : [[1,2,3], [4,5,6], [7,8,9]]}
+
+
+
+
+[Custom types]: {{ site.baseurl }}/docs/documentations/customtypes.html
