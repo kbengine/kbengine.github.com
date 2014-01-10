@@ -117,6 +117,23 @@ For example: In a client to get a list of server roles(Account.py):
 	 self.base.reqAvatarList()
 
 
+-----------------------------------------
+
+
+Type Scope
+-----------------------------------------
+	[name]			[client]		[base]			[cell]
+	BASE			-			*			-
+	BASE_AND_CLIENT		*			*			-
+	CELL_PRIVATE		-			-			*(cell)
+	CELL_PUBLIC		-			-			*(cells)
+	CELL_PUBLIC_AND_OWN	*(client)		-			*(cells)
+	ALL_CLIENTS		*(clients)		-			*(cells)
+	OWN_CLIENT		*(client)		-			*(cell)
+	OTHER_CLIENTS		*(other clients)	-			*(cells)
+
+
+
 -----------------------------------------------
 download: 
 [rpgdemo_project.tar]
