@@ -54,6 +54,86 @@ Not every entity needs to create three parts(client, base, cell), press need to 
 
 
 
+Def file format
+-----------------------------------------
+
+	<root>
+		<Properties>
+			// Property Name
+			<accountName>
+				// Property type
+				<Type>			UNICODE				</Type>
+
+				// Property Scopes
+				<Flags>			BASE				</Flags>
+
+				// Is stored in the database (optional)
+				<Persistent>		true				</Persistent>
+
+				// The maximum length is stored in the database (optional)
+				<DatabaseLength> 	100				</DatabaseLength>
+
+				// Default value (optional)
+				<Default>		kbengine			</Default>
+
+				// mysql Identifier (optional)
+				<Identifier>		true				</Identifier>
+			</accountName>
+			
+			...
+			...
+		</Properties>
+
+		<ClientMethods>
+			// remote method Name
+			<onReqAvatarList>
+				// remote method args type
+				<Arg>	AVATAR_INFOS_LIST	</Arg>
+			</onReqAvatarList>
+
+			...
+			...
+		</ClientMethods>
+
+		<BaseMethods>
+			// remote method Name
+			<reqAvatarList>
+				<Exposed/>
+			</reqAvatarList>
+			
+			...
+			...
+		</BaseMethods>
+
+		<CellMethods>
+			<hello>
+			</hello>
+		</CellMethods>
+
+	</root>
+
+For example: In a client to get a list of server roles(Account.py):
+
+	 self.base.reqAvatarList()
+
+
+
+
+
+Type Scope
+-----------------------------------------
+
+	[name]			[client]		[base]			[cell]
+	BASE			-			*			-
+	BASE_AND_CLIENT		*			*			-
+	CELL_PRIVATE		-			-			*(cell)
+	CELL_PUBLIC		-			-			*(cells)
+	CELL_PUBLIC_AND_OWN	*(client)		-			*(cells)
+	ALL_CLIENTS		*(clients)		-			*(cells)
+	OWN_CLIENT		*(client)		-			*(cell)
+	OTHER_CLIENTS		*(other clients)	-			*(cells)
+
+
 
 -----------------------------------------------
 
