@@ -51,7 +51,7 @@ For example: Account.def
 Not every entity needs to create three parts(client, base, cell), press need to select.
 
 
-
+-----------------------------------------
 
 
 Def file format
@@ -117,7 +117,7 @@ For example: In a client to get a list of server roles(Account.py):
 	 self.base.reqAvatarList()
 
 
-
+-----------------------------------------
 
 
 Type Scope
