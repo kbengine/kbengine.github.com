@@ -47,7 +47,8 @@ For example: Account.def
 ### 3: You may also need to define some properties and methods
 
 
-
+### 4: In the `demo/res/scripts/`, base and cell or client add xxx.py
+Not every entity needs to create three parts(client, base, cell), press need to select.
 
 
 
