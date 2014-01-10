@@ -38,13 +38,21 @@ Example:
 		<Gate/>
 	</root>
 
-### 2: Def file to create a directory in [`res\scripts\entity_defs`]
+
+### 2: Def file to create a directory in [`res/scripts/entity_defs`]
 
 For example: Account.def
 
 
 ### 3: You may also need to define some properties and methods
 
+
+
+
+
+
+
+-----------------------------------------------
 
 Def file format
 -----------------------------------------
@@ -59,7 +67,7 @@ Def file format
 				// Property Scopes
 				<Flags>			BASE				</Flags>
 
-				// Is stored in the database
+				// Is stored in the database (optional)
 				<Persistent>		true				</Persistent>
 
 				// The maximum length is stored in the database (optional)
@@ -105,6 +113,7 @@ Def file format
 	</root>
 
 For example: In a client to get a list of server roles(Account.py):
+
 	 self.base.reqAvatarList()
 
 
