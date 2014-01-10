@@ -45,9 +45,9 @@ Example:
 
 * You may also need to define some properties and methods
 
-	* In the `demo/res/scripts/`, base and cell or client add xxx.py
+	1. In the `demo/res/scripts/`, base and cell or client add xxx.py
 
-	* Not every entity needs to create three parts(client, base, cell), press need to select.
+	2. Not every entity needs to create three parts(client, base, cell), press need to select.
 
 
 -----------------------------------------
