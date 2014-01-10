@@ -39,7 +39,7 @@ Example:
 	</root>
 
 
-### 2: Def file to create a directory in [`res/scripts/entity_defs`]
+### 2: Def file to create a directory in `res/scripts/entity_defs`
 
 For example: Account.def
 
