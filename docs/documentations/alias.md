@@ -92,7 +92,9 @@ The basic format:
 About implementedBy
 see also :[Custom types]
 
-### Example:
+----------------------------------------------
+
+### Example1:
 
 	<AVATAR_INFOS>	FIXED_DICT
 		<Properties>
@@ -117,6 +119,8 @@ Memory in the form:
 
 -----------------------------------------------
 
+### Example2:
+
 	<AVATAR_INFOS_LIST>	FIXED_DICT
 		<implementedBy>AVATAR_INFOS.inst</implementedBy>
 		<Properties>
@@ -131,7 +135,7 @@ Memory in the form:
 If you do not implementedBy
 
         AVATAR_INFOS_LIST = {"values" : [{"dbid" : 1, "name" : "kbengine", "roleType" : 1, "level" : 0}, 
-				{"dbid" : 2, "name" : "kbengine1", "roleType" : 2, "level" : 1}]
+				{"dbid" : 2, "name" : "kbengine1", "roleType" : 2, "level" : 1}]}
 	
 	
 If you have implementedBy may become, Specific implementations look.
@@ -141,6 +145,8 @@ Here we assume that the dictionary is implemented as
 				"kbengine1" : {"dbid" : 2, "name" : "kbengine1", "roleType" : 2, "level" : 1}}
 
 -----------------------------------------------
+
+### Example3:
 
 	<BAG>	FIXED_DICT
 		<Properties>
