@@ -8,11 +8,12 @@ docsitem: documentation-stresstest
 Stress Test
 ====================
 
-Bots
---------------------------------------
-
 Use virtual client and use the same game logic, so a large number of robots login server for the game, 
 we can observe that the server is running condition, with debug to find bottlenecks.
+
+
+Start bots
+--------------------------------------
 
 	[kbe@gameserver ~]$ ./bots &
 
