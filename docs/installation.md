@@ -79,7 +79,7 @@ Install mysql:
 
 Create a new database, the database name is "demo"
 
-		create database demo;
+		create database kbe;
 
 
 Create a database account, assuming the user name password are "kbe"
