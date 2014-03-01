@@ -77,7 +77,7 @@ Install mysql:
 		lower_case_table_names = 2
 
 
-Create a new database, the database name is "demo"
+Create a new database, the database name is "kbe"
 
 		create database kbe;
 
