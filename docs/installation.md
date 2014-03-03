@@ -74,7 +74,7 @@ Install mysql:
 		If the windows system then add the following code to make my.ini mysql case sensitive
 
 		[mysqld]
-		lower_case_table_names = 2
+		lower_case_table_names = 0
 
 
 Create a new database, the database name is "kbe"
