@@ -36,7 +36,7 @@ windows:
 
 Note: 
 
-	1: If using other versions of the compiler is best to python, openssl, log4cxx (kbe\src\libs\*a.) Have to be recompiled.
+	1: If using other versions of the compiler is best to openssl, log4cxx (kbe\src\libs\*a.) Have to be recompiled.
 
 
 	2: mysql path on some platforms may not /usr/lib64/mysql/mysql_config
