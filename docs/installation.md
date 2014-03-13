@@ -27,13 +27,13 @@ Manual Installation
 
 KBEngine can read KBE_ROOT, KBE_RES_PATH, KBE_HYBRID_PATH system environment variables to do something.
 
-	linux:
+	Linux: (assuming kbe be placed in the ~/ directory)
 
 		[kbe@localhost ~]# vim ~/.bashrc
 
 		ulimit -c unlimited
 
-		export KBE_ROOT=/home/kbe/kbengine/
+		export KBE_ROOT=~/kbengine/
 
 		export KBE_RES_PATH=$KBE_ROOT/kbe/res/:$KBE_ROOT/demo/:$KBE_ROOT/demo/res/
 
@@ -45,7 +45,7 @@ KBEngine can read KBE_ROOT, KBE_RES_PATH, KBE_HYBRID_PATH system environment var
 		if multiple servers distributed server maintenance KBE then uid must be the same on each server, 
 		the value must be greater than 0.
 
-	windows:
+	Windows:
 
 		The right mouse button: "My Computer"->"Advanced"->"Environment Variables" Set up.
 		(Note: Need to add UID environment variable, the value must be greater than 0)
