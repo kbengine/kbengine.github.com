@@ -71,7 +71,7 @@ KBEngine can read KBE_ROOT, KBE_RES_PATH, KBE_HYBRID_PATH system environment var
 
 Install mysql:
 
-		If the windows system then add the following code to make my.ini mysql case sensitive
+		If the Windows then add the following code to make my.ini mysql case sensitive
 
 		[mysqld]
 		lower_case_table_names = 0

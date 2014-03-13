@@ -11,7 +11,7 @@ Guiconsole Commands
 path: 
 	kbe/tools/server/guiconsole/guiconsole.exe
 
-This is a visual software application running on windows.
+This is a visual software application running on Windows.
 
 <img class="screenshots-img" src="{{ site.baseurl }}/assets/img/screenshots/guiconsole_debug.jpg">
 
