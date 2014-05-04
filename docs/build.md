@@ -31,7 +31,7 @@ Linux:
 
 Windows:
 
-	KBE_ROOT\kbengine\kbe\src\kbengine_vs90.sln
+	KBE_ROOT\kbengine\kbe\src\kbengine_vs90.sln  (vs2008 sp1)
 
 
 Note: 
