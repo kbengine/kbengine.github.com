@@ -76,19 +76,31 @@ Install mysql:
 		[mysqld]
 		lower_case_table_names = 0
 
+		(Service MySQL restart, CMD input:)
+		net stop mysql
+		net start mysql
 
 Create a new database, the database name is "kbe"
 
-		create database kbe;
+		mysql> create database kbe;
+
+
+Delete an anonymous user
+		
+		mysql> use mysql 
+		
+		mysql> delete from user where user=''; 
+
+		mysql> FLUSH PRIVILEGES;
 
 
 Create a database account, assuming the user name password are "kbe"
 
-		grant all privileges on *.* to kbe@'%' identified by 'kbe';
+		mysql> grant all privileges on *.* to kbe@'%' identified by 'kbe';
 
-		grant select,insert,update,delete,create,drop on *.* to kbe@'%' identified by 'kbe';
+		mysql> grant select,insert,update,delete,create,drop on *.* to kbe@'%' identified by 'kbe';
 
-		FLUSH PRIVILEGES;
+		mysql> FLUSH PRIVILEGES;
 
 . Modify the databaseName in res\server\[kbengine_defs.xml] of dbmgr section (recommended demo\res\server\[kbengine.xml] overloaded modifications).
 
