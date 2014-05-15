@@ -80,6 +80,15 @@ Install mysql:
 		net stop mysql
 		net start mysql
 
+		Check lower_case_table_names, must be 0:
+		mysql> SHOW VARIABLES like "lower_case_table_names";
+		+------------------------+-------+
+		| Variable_name          | Value |
+		+------------------------+-------+
+		| lower_case_table_names | 0     |
+		+------------------------+-------+
+		1 row in set (0.00 sec)
+
 Create a new database, the database name is "kbe"
 
 		mysql> create database kbe;
@@ -88,18 +97,14 @@ Create a new database, the database name is "kbe"
 Delete an anonymous user
 		
 		mysql> use mysql 
-		
 		mysql> delete from user where user=''; 
-
 		mysql> FLUSH PRIVILEGES;
 
 
 Create a database account, assuming the user name password are "kbe"
 
 		mysql> grant all privileges on *.* to kbe@'%' identified by 'kbe';
-
 		mysql> grant select,insert,update,delete,create,drop on *.* to kbe@'%' identified by 'kbe';
-
 		mysql> FLUSH PRIVILEGES;
 
 . Modify the databaseName in res\server\[kbengine_defs.xml] of dbmgr section (recommended demo\res\server\[kbengine.xml] overloaded modifications).
