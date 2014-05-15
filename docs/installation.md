@@ -89,19 +89,19 @@ Install mysql:
 		+------------------------+-------+
 		1 row in set (0.00 sec)
 
-Create a new database, the database name is "kbe"
+Create a database account, username and password is "kbe"
 
 		mysql> create database kbe;
 
 
-Delete an anonymous user
+Delete anonymous user
 		
 		mysql> use mysql 
 		mysql> delete from user where user=''; 
 		mysql> FLUSH PRIVILEGES;
 
 
-Create a database account, assuming the user name password are "kbe"
+Create a database account, name is kbe
 
 		mysql> grant all privileges on *.* to kbe@'%' identified by 'kbe';
 		mysql> grant select,insert,update,delete,create,drop on *.* to kbe@'%' identified by 'kbe';
