@@ -80,7 +80,7 @@ Install mysql:
 		net stop mysql
 		net start mysql
 
-		Check lower_case_table_names, must be 0:
+		Check lower_case_table_names, must be is 0:
 		mysql> SHOW VARIABLES like "lower_case_table_names";
 		+------------------------+-------+
 		| Variable_name          | Value |
