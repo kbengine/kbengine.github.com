@@ -107,6 +107,12 @@ Create a database account, assuming the user name password are "kbe"
 		mysql> grant select,insert,update,delete,create,drop on *.* to kbe@'%' identified by 'kbe';
 		mysql> FLUSH PRIVILEGES;
 
+		(Test whether the CMD can use this account login mysql(Note that the default mysql port is 3306, you can modify kbengine_defs.xml->dbmgr-><port>330x</port>),
+		If an error occurs, please google mysql error code.
+		Enter your mysql installation directory to find mysql.exe, enter the directory and then execute cmd following statement:)
+
+		C:\mysql\bin> mysql -ukbe -pkbe -hlocalhost -P3306
+
 . Modify the databaseName in res\server\[kbengine_defs.xml] of dbmgr section (recommended demo\res\server\[kbengine.xml] overloaded modifications).
 
 
