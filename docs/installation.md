@@ -8,13 +8,10 @@ docsitem: installation
 Installation
 ============
 
-Install KBEngine on a (Centos/Debian/Ubuntu etc.) server by pasting this line in your terminal:
+Install KBEngine on a (Centos/Debian/Ubuntu etc.) server, in your terminal input:
 
 	python kbengine/kbe/tools/server/install/installer.py install
 
-Or suggest a new platform.
-
-You can paste the links in your browser to read the script that will be executed. Or, 
 if you don't want to trust a script, install KBEngine manually:
 
 Manual Installation
