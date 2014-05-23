@@ -1,0 +1,30 @@
+---
+layout: default
+tab: blog
+footer: hide
+title: Blog · KBEngine
+---
+
+<div class="masthead">
+  <h1>Blog</h1>
+  <p>The narrative of KBE</p>
+</div>
+
+{% for post in site.posts %}
+  <div class="inline-post">
+    <div class="title-card">
+        <div class="left">
+            <a class="avatar" href="https://github.com/{{ post.author }}" target="_blank" title="{{ post.author }}">
+                <img src="https://github.com/{{ post.author }}.png">
+            </a>
+        </div>
+        <div class="right">
+            <h2 class="title">
+                <a href="{{ site.baseurl }}/cn{{ post.url }}">{{ post.title }}</a>
+            </h2>
+            <p class="date">{{ post.date | date: "%d %B %Y" }}</p>
+        </div>
+    </div>
+    {{ post.content }}
+  </div>
+{% endfor %}

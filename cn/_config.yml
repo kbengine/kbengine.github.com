@@ -1,0 +1,3 @@
+permalink: /:categories/:title
+baseurl: http://www.kbengine.org
+paginate: 10

@@ -1,0 +1,170 @@
+---
+layout: default
+title: KBEngine
+tab: overview
+---
+
+      <div class="masthead">
+        <div class="new-blog-post">
+          <a href="{{ site.baseurl}}{{ paginator.posts[0].url }}" onclick="_gaq.push(['_trackEvent', 'Masthead Actions', 'New Blog Post', '{{ paginator.posts[0].title }}']);">
+            New Blog Post: <strong>{{ paginator.posts[0].title }}</strong>
+          </a>
+        </div>
+        <!-- <p class="introducing">Introducing...</p> -->
+        <h1>KBEngine</h1>
+        <p>A mmog engine of server.</p>
+    
+        <div class="buttons">
+          <a id="download-button" href="http://sourceforge.net/projects/kbengine/files/" class="btn btn-primary btn-large" onclick="_gaq.push(['_trackEvent', 'Masthead Actions', 'download']);">Download</a>
+          <a id="install-button" href="{{ site.baseurl }}/cn/docs/" class="btn btn-large" onclick="_gaq.push(['_trackEvent', 'Masthead Actions', 'Install']);">Install Guide </a>
+          <a id="view-button" href="https://github.com/kbengine/kbengine" class="btn btn-large" onclick="_gaq.push(['_trackEvent', 'Masthead Actions', 'Github Project', 'View project on GitHub']);">Source</a>
+          <a id="demo-button" href="{{ site.baseurl }}/cn/demos/" class="btn btn-large" onclick="_gaq.push(['_trackEvent', 'Masthead Actions', 'Demo']);">Demos </a>
+        </div>
+      
+        <ul class="quick-links">
+          <li>
+            <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=kbengine&amp;repo=kbengine&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+          </li>
+          <li>
+            <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=kbengine&amp;repo=kbengine&amp;type=fork&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+          </li>
+          <li class="text ga-track"><a href="{{ site.baseurl }}/cn/docs/">Read the docs</a></li>
+          <li class="text ga-track"><a href="https://github.com/kbengine/kbengine/issues">Submit an issue</a></li>
+          <li class="text ga-track"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=NSMU5PADHVMXC">Donate</a></li>
+          <li>
+            <div class="g-plusone" data-size="medium" data-href="http://www.kbengine.org/"></div>
+          </li>
+        </ul>
+        
+        <div class="section players">
+          <div class="player player-craftysaurus" title="visit my website">
+            <iframe src="http://www.kbengine.org/assets/img/gravatar-user-min.jpg" allowtransparency="true" frameborder="0" scrolling="0" width="32" height="65"></iframe>
+            <div class="shadow"></div>
+            <a class="link" href="http://www.kbengine.org/" onclick="_gaq.push(['_trackEvent', 'Masthead Actions', 'Created by kbe']);"></a>
+          </div>
+          <p class="created-by">Created by kbe</p>
+        </div>
+      </div>
+    
+      <div class="section features">
+        <h1>Designed by admins, for admins.</h1>
+        <p class="byline">Reasons why you'll love KBEngine</p>
+      
+        <div class="row">
+          <div class="span4">
+            <img class="feature-icon" src="assets/img/glyphicons/glyphicons_043_group.png">
+            <h2>Many people online</h2>
+            <p>Support large numbers of users at the same time real-time interaction.</p>
+          </div>
+        
+          <div class="span4">
+            <img class="feature-icon" src="assets/img/glyphicons/glyphicons_342_hdd.png">
+            <h2>server backups</h2>
+            <p>Support the regular automatic backup and manual backup.</p>
+          </div>
+        
+          <div class="span4">
+            <img class="feature-icon" src="assets/img/glyphicons/glyphicons_319_sort.png">
+            <h2>Works with linux/windows systems</h2>
+            <p>Linux only supports (x86 and x64): ubuntu, debain, centos, redhat. Others not tested.
+              supports all versions of windows, but windows version only for debugging.</p>
+          </div>
+        </div>
+      
+        <div class="row">
+          <div class="span4">
+            <img class="feature-icon" src="assets/img/glyphicons/glyphicons_208_cart_out.png">
+            <h2>Improve client sdk</h2>
+            <p>Clients have to do is receive event data is then rendered. Support ogre, unity3d, cocos2d, html5 etc.</p>
+          </div>
+        
+          <div class="span4">
+            <img class="feature-icon" src="assets/img/glyphicons/glyphicons_119_adjust.png">
+            <h2>Easily configurable</h2>
+            <p>Configure how KBE operates in the <code>demo/res/server/kbengine.xml</code> and <code>kbe/res/server/kbengine_defs.xml</code> file. Sensible defaults mean you won't need to alter much, but allow changing anything you can think of. </p>
+          </div>
+        
+          <div class="span4">
+            <img class="feature-icon" src="assets/img/glyphicons/glyphicons_040_stats.png">
+            <h2>Load Balancing</h2>
+            <p>To more efficient use of limited hardware, dynamic load balancing technology allows high load when the server is still able to secure.</p>
+          </div>
+        </div>
+      
+        <div class="row">
+          <div class="span4">
+            <img class="feature-icon" src="assets/img/glyphicons/glyphicons_374_claw_hammer.png">
+            <h2>Strong supporting tool</h2>
+            <p>Online debug, view status, startup and shutdown.</p>
+          </div>
+        
+          <div class="span4">
+            <img class="feature-icon" src="assets/img/glyphicons/glyphicons_044_keys.png">
+            <h2>Simple game design</h2>
+            <p>Only need to use python script can efficiently complete the game design.</p>
+          </div>
+        
+          <div class="span4">
+            <img class="feature-icon" src="assets/img/glyphicons/glyphicons_118_embed_close.png">
+            <h2>Beautiful code</h2>
+            <p>Readable code means less bugs, easier fixes, simpler updates, and lowers the learning curve for new contributors to the project. Why not <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=kbengine&amp;repo=kbengine&amp;type=fork&amp;count=false" allowtransparency="true" frameborder="0" scrolling="0" width="55px" height="20px"></iframe> the code and start today.</p>
+          </div>
+        </div>
+      
+        <div class="row">
+          <div class="span3">
+            <h2>Cron support</h2>
+            <p>Out of the box cron script provided for backups, logrolls and more.</p>
+          </div>
+        
+          <div class="span3">
+            <h2>Continuous Integration</h2>
+            <p>Each version is <a class="ga-track" href="http://travis-ci.org/#!/kbengine/kbengine">checked</a> against shunit2 unit tests by <a class="ga-track" href="http://travis-ci.org">travis-ci.org</a>.</p>
+          </div>
+        
+          <div class="span3">
+            <h2>Open Source</h2>
+            <p>Built for and maintained by the community thanks to <a class="ga-track" href="https://github.com/">GitHub</a></p>
+          </div>
+        
+          <div class="span3">
+            <h2>Screenshots</h2>
+            <p>you might like. <a class="ga-track" href="{{ site.baseurl }}/cn/screenshots/">preview</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="contributors">
+          <h1>Contributors</h1>
+          <div id="contributors"></div>
+          <p class="byline">
+            Want to be in this list? Just
+            <iframe class="github-btn fork-btn" src="http://ghbtns.com/github-btn.html?user=kbengine&amp;repo=kbengine&amp;type=fork&amp;count=false&amp;size=large" allowtransparency="true" frameborder="0" scrolling="0" width="80px" height="30px"></iframe>
+            and send a pull request.
+          </p>
+        </div>
+
+        <div id="donators" class="donators">
+          <h1>Donators</h1>
+          <p class="byline">These kind, kind people have <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=NSMU5PADHVMXC">donated</a> to kbengine:</p>
+
+          <div rel="tooltip" title="kbe" class="donator">
+            <a href="https://github.com/kbengine" target="_blank"><img src="http://www.gravatar.com/avatar/5af0807036d99993054c9332a21ff19b.png"></a>
+          </div>
+
+          <div rel="tooltip" title="seat" class="donator">
+            <a href="http://www.kbengine.org/" target="_blank"><img src="assets/img/gravatar-user-420.png"></a>
+          </div>
+        </div>
+
+        <div class="stargazers">
+          <h1>Stargazers</h1>
+          <p class="byline">All those who starred the project:</p>
+          <div id="stargazers"></div>
+        </div>
+      </div>
+    
+      <div class="section milestones">
+        <h1>Project Milestones</h1>
+      </div>
