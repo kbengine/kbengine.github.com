@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: docs_cn
 title: Server Configuration · Docs · KBEngine
 tab: docs
 docsitem: configuration-kbengine-defs
@@ -14,4 +14,4 @@ there is no conflict in the development along with updated engine or multiple pr
 
 
 
-[kbengine.xml]: {{ site.baseurl }}/docs/configuration/kbengine.html
+[kbengine.xml]: {{ site.baseurl }}/cn/docs/configuration/kbengine.html

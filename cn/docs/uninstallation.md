@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: docs_cn
 title: Uninstallation · Docs · KBEngine
 tab: docs
 docsitem: uninstallation

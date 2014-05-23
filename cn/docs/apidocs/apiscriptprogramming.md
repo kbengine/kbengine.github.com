@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: docs_cn
 title: Script Programming · Docs · KBEngine
 tab: docs
 docsitem: api-script-programming

@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: docs_cn
 title: Pycluster Commands · Docs · KBEngine
 tab: docs
 docsitem: commands-pycluster
@@ -100,4 +100,4 @@ path:
 	[cellapp@python ~] >>> 
 	[cellapp@python ~] >>> dir(KBEngine)
 
-[kbengine_defs.xml]: {{ site.baseurl }}/docs/configuration/kbengine_defs.html
+[kbengine_defs.xml]: {{ site.baseurl }}/cn/docs/configuration/kbengine_defs.html

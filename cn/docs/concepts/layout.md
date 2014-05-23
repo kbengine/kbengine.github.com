@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: docs_cn
 title: Server Layout · Docs · KBE
 tab: docs
 docsitem: concepts-layout
@@ -40,4 +40,4 @@ Server Layout
 			      |----------|
 
 
-[config-server]: {{ site.baseurl }}/docs/configuration/kbengine.html
+[config-server]: {{ site.baseurl }}/cn/docs/configuration/kbengine.html

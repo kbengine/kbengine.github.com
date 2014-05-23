@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: docs_cn
 title: Global Configuration · Docs · KBEngine
 tab: docs
 docsitem: configuration-kbengine
@@ -12,4 +12,4 @@ If you need to change the configuration of the engine, as long as the inheritanc
 this configuration file and overwrite the corresponding section kbe/res/server/[kbengine_defs.xml], 
 but doing so will not damage the engine settings, there is no conflict in the development along with updated engine or multiple projects.
 
-[kbengine_defs.xml]: {{ site.baseurl }}/docs/configuration/kbengine_defs.html
+[kbengine_defs.xml]: {{ site.baseurl }}/cn/docs/configuration/kbengine_defs.html

@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: docs_cn
 title: Type the alias · Docs · KBEngine
 tab: docs
 docsitem: documentation-alias
@@ -163,4 +163,4 @@ Memory in the form:
 
 
 
-[Custom types]: {{ site.baseurl }}/docs/documentations/customtypes.html
+[Custom types]: {{ site.baseurl }}/cn/docs/documentations/customtypes.html

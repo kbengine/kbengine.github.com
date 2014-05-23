@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: docs_cn
 title: Empty Project · Docs · KBEngine
 tab: docs
 docsitem: documentation-room-game-example1

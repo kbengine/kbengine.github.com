@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: docs_cn
 title: Linux firewall settings · Docs · KBEngine
 tab: docs
 docsitem: documentation-linuxfirewall

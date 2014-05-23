@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: docs_cn
 title: Online debugging · Docs · KBEngine
 tab: docs
 docsitem: documentation-online-debugging
@@ -27,7 +27,7 @@ Use visualization tools([GuiConsole]):
 
 	* pyprofile: provide deterministic profiling of Python programs
 
-	* cprofile: provide deterministic profiling of c / c + + programs
+	* cprofile: provide deterministic profiling of c/c++ programs
 
 	* eventprofile: Events that occurred within a period of time statistics
 
@@ -47,5 +47,5 @@ Use script tools([Cluster Controller]):
 * You can enter the python command line tools for debugging (see: [Console][Cluster Controller])
 
 
-[GuiConsole]: {{ site.baseurl }}/docs/commands/guiconsole.html
-[Cluster Controller]: {{ site.baseurl }}/docs/commands/pycluster.html
+[GuiConsole]: {{ site.baseurl }}/cn/docs/commands/guiconsole.html
+[Cluster Controller]: {{ site.baseurl }}/cn/docs/commands/pycluster.html

@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: docs_cn
 title: Commands Overview · Docs · KBEngine
 tab: docs
 docsitem: commands-overview
@@ -24,5 +24,5 @@ Commands
 
 
 
-[cluster_controller]: {{ site.baseurl }}/docs/commands/pycluster
+[cluster_controller]: {{ site.baseurl }}/cn/docs/commands/pycluster
 	

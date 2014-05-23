@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post_cn
 title: Welcome kbe
 author: kbengine
 ---

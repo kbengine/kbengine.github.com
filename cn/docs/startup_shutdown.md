@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: docs_cn
 title: Startup and Shutdown · Docs · KBEngine
 tab: docs
 docsitem: startup-shutdown

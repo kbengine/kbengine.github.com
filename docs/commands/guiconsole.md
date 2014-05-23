@@ -29,7 +29,7 @@ Description
 
 	* pyprofile: provide deterministic profiling of Python programs
 
-	* cprofile: provide deterministic profiling of c / c + + programs
+	* cprofile: provide deterministic profiling of c/c++ programs
 
 	* eventprofile: Events that occurred within a period of time statistics
 

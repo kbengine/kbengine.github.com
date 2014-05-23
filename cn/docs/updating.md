@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: docs_cn
 title: Updating · Docs · KBEngine
 tab: docs
 docsitem: updating

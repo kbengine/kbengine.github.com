@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: docs_cn
 title: Stress Test · Docs · KBEngine
 tab: docs
 docsitem: documentation-stresstest
@@ -31,4 +31,4 @@ see also [kbengine_defs.xml]->`bots`
 
 
 
-[kbengine_defs.xml]: {{ site.baseurl }}/docs/configuration/kbengine_defs.html
+[kbengine_defs.xml]: {{ site.baseurl }}/cn/docs/configuration/kbengine_defs.html
