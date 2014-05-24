@@ -10,6 +10,14 @@ define(['jquery', 'underscore', 'backbone', 'app/collections/Stargazers'], funct
 			stargazers.fetch().complete(function() {
 				that.set('stargazers', stargazers);
 			});
+			
+			
+			var forks = new Stargazers();
+			forks.url = this.get('forks_url');
+			
+			forks.fetch().complete(function() {
+				that.set('forks', forks);
+			});
 		}
 	});
 

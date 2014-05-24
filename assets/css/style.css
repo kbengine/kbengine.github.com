@@ -14,7 +14,22 @@ li {
 .repo {
 	width: 100%;
 }
+
+.repo1 {
+	width: 100%;
+}
+
 .stargazer {
+	float: left;
+	margin: 10px 10px 10px 0;
+}
+
+.fork {
+	float: left;
+	margin: 10px 10px 10px 0;
+}
+
+.forks {
 	float: left;
 	margin: 10px 10px 10px 0;
 }

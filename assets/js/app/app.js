@@ -1,5 +1,5 @@
-define(['jquery', 'underscore', 'backbone', 'app/collections/Repos', 'app/views/RepoListView'],
-	function($, _, Backbone, Repos, RepoListView) {
+define(['jquery', 'underscore', 'backbone', 'app/collections/Repos', 'app/views/RepoListView', 'app/views/ForkRepoListView'],
+function($, _, Backbone, Repos, RepoListView, ForkRepoListView) {
 	'use strict';
 
 	var App = {
@@ -12,12 +12,13 @@ define(['jquery', 'underscore', 'backbone', 'app/collections/Repos', 'app/views/
 			var url = 'https://api.github.com/users/kbengine/repos';
 			var repos = new Repos();
 			repos.url = url;
-			repos.comparator = function(repo) {
-				return -repo.get("stargazers_count");
-			};
+
 			repos.fetch().complete(function() {
 				var repoListView = new RepoListView({collection: repos});
 				repoListView.render();
+				var repoListView = new ForkRepoListView({collection: repos});
+				repoListView.render();
+				
 			});
 		}
 	};
