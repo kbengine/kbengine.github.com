@@ -20,17 +20,17 @@ li {
 }
 
 .stargazer {
-	float: left;
+	float: center;
 	margin: 10px 10px 10px 0;
 }
 
 .fork {
-	float: left;
+	float: center;
 	margin: 10px 10px 10px 0;
 }
 
 .forks {
-	float: left;
+	float: center;
 	margin: 10px 10px 10px 0;
 }
 
