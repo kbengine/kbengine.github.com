@@ -158,18 +158,23 @@ tab: overview
           </div>
         </div>
 
-        <div class="stargazers">
+        <div class="container">
           <h1>Stargazers</h1>
           <p class="byline">All those who starred the project:</p>
           <div id="stargazers"></div>
-			<div class="container">
+
 				<div class="row">
 					<div class="col-xs-12">
 						<section id="repos">
 						</div>
 					</div>
 				</div>
-			</div>
+        </div>
+      </div>
+    
+      <div class="section milestones">
+        <h1>Project Milestones</h1>
+      </div>
 
 			<script type="text/template" id="repo">
 					<h1><a href="<%= html_url %>"><%= name %></a></h1>
@@ -179,9 +184,3 @@ tab: overview
 			<script type="text/template" id="stargazer">
 				<a href="<%= html_url %>"><img width="100" src="<%= avatar_url %>" /></a>
 			</script>
-        </div>
-      </div>
-    
-      <div class="section milestones">
-        <h1>Project Milestones</h1>
-      </div>
