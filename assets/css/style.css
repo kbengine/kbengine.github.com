@@ -21,21 +21,25 @@ li {
 
 .stargazer {
 	float: center;
+	text-align: center;
 	margin: 10px 10px 10px 0;
 }
 
 .fork {
 	float: center;
+	text-align: center;
 	margin: 10px 10px 10px 0;
 }
 
 .forks {
 	float: center;
+	text-align: center;
 	margin: 10px 10px 10px 0;
 }
 
 .container {
 	margin-top: 2em;
+	text-align: center;
 }
 
 .section h1,
