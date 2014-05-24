@@ -427,53 +427,7 @@ li {
   height: 80px;
 }
 
-.stargazers {
-  display: none;
-  background-image: -webkit-radial-gradient(top center, 500px 500px, #f5f7ff, white);
-  padding-top: 40px;
-  padding-bottom: 40px;
-  margin-bottom: 40px;
-  border-bottom: 1px solid #eee;
-}
 
-#stargazers {
-  text-align: center;
-  margin-top: 30px;
-}
-
-#stargazers:hover .stargazer {
-  opacity: 0.5;
-}
-
-#stargazers .stargazer {
-  width: 80px;
-  height: 80px;
-  display: inline-block;
-  z-index: 50;
-  position: relative;
-  -webkit-transition: all .1s ease-in-out;
-}
-
-#stargazers .stargazer:hover {
-  -webkit-box-shadow: 0 0 40px rgba(0, 0, 0, 1);
-  box-shadow: 0 0 40px rgba(0, 0, 0, 1);
-  z-index: 100;
-  -webkit-transform: scale(1.5);
-  opacity: 1;
-}
-
-#stargazers .stargazer img {
-  width: 80px;
-  height: 80px;
-}
-
-#stargazers .stargazer.maintainer {
-  
-}
-
-#stargazers .stargazer.donator {
-  
-}
 
 .contributors {
   border-top: 1px solid #eee;
