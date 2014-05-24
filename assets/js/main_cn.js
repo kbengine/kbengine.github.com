@@ -1,5 +1,5 @@
 require.config({
-    baseUrl: 'http://www.kbengine.org/assets/js',
+    baseUrl: '../assets/js',
     paths: {
         jquery: 'lib/jquery',
         underscore: 'lib/underscore',
