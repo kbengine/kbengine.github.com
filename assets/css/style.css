@@ -3,6 +3,26 @@ body {
   background: #fff url(../img/grass-bg-small.png) repeat-x center 40px;
 }
 
+ul {
+	padding: 0;
+}
+
+li {
+	list-style: none;
+}
+
+.repo {
+	width: 100%;
+}
+.stargazer {
+	float: left;
+	margin: 10px 10px 10px 0;
+}
+
+.container {
+	margin-top: 2em;
+}
+
 .section h1,
 .section .byline {
   text-align: center;
