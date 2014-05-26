@@ -468,33 +468,6 @@ li {
   padding-bottom: 50px;
 }
 
-#contributors {
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 30px;
-}
-
-#contributors .contributor {
-  display: inline-block;
-  width: 80px;
-  text-align: center;
-  margin: 0 10px;
-  position: relative;
-}
-
-#contributors .contributor span {
-  clear: left;
-  text-align: center;
-  padding-top: 3px;
-  background-color: white;
-  border-radius: 6px;
-  position: relative;
-  bottom: -10px;
-  display: inline-block;
-  padding: 2px 0 0;
-  width: 50px;
-}
-
 .contributors .byline .fork-btn {
   position: relative;
   top: 9px;
