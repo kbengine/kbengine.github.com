@@ -442,9 +442,16 @@ li {
   height: 80px;
 }
 
-
+.stargazers_section {
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+}
 
 .contributors {
+  text-align: center;
   border-top: 1px solid #eee;
   padding-top: 40px;
   background-image: -webkit-radial-gradient(center, 500px 500px, #fffafa, white);
