@@ -7,7 +7,7 @@ define(['jquery', 'underscore', 'backbone', 'app/collections/Stargazers'], funct
 			var stargazers_count = this.get('stargazers_count');
 			
 			var stargazers = new Stargazers();
-			stargazers.url = this.get('stargazers_url') + "per_page=30&page=" + (Math.ceil(Math.random()*(stargazers_count / 30)));
+			stargazers.url = this.get('stargazers_url') + "?per_page=30&page=" + ((Math.ceil(Math.random()*(stargazers_count / 30))) + 1);
 			alert(stargazers.url);
 			stargazers.comparator = function(stargazer, stargazer1) {
 				return Math.random()>0.5?(-1):1;
@@ -20,7 +20,7 @@ define(['jquery', 'underscore', 'backbone', 'app/collections/Stargazers'], funct
 			});
 			
 			var forks = new Stargazers();
-			forks.url = this.get('forks_url') + "per_page=30&page=" + (Math.ceil(Math.random()*(forks_count / 30)));
+			forks.url = this.get('forks_url') + "?per_page=30&page=" + ((Math.ceil(Math.random()*(forks_count / 30))) + 1);
 			
 			forks.comparator = function(fork, fork1) {
 				return Math.random()>0.5?(-1):1;
