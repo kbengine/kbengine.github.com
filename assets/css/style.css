@@ -461,8 +461,9 @@ li {
 
 .contributors {
   text-align: center;
-  border-top: 1px solid #eee;
+  border-top: 1px solid #e5e5e5;
   padding-top: 50px;
+  padding-bottom: 50px;
   background-image: -webkit-radial-gradient(center, 500px 500px, #fffafa, white);
   padding-bottom: 50px;
 }
