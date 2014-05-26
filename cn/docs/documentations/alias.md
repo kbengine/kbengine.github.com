@@ -5,10 +5,10 @@ tab: docs
 docsitem: documentation-alias
 ---
 
-Type the alias
+类型别名
 ====================
 
-Base Script Types
+脚本基础类别
 ------------------------------------------
 
 	[Name]			[Size]
@@ -26,9 +26,9 @@ Base Script Types
 	FLOAT			4
 	DOUBLE			8
 
-	VECTOR2			8
-	VECTOR3			12
-	VECTOR4			16
+	VECTOR2			12
+	VECTOR3			16
+	VECTOR4			20
 
 	STRING			N
 	UNICODE			N
@@ -41,22 +41,23 @@ Base Script Types
 
 
 
-Define an alias
+定义一个别名
 ------------------------------------------
 
-The main use type alias:
-
-* Developers can more easily understand the meaning of a type
-
-* You can define complex custom type
-
-* Engine can automatically identify the network transmission and storage
+为什么要使用类型别名?
 
 
-Path definition file : `demo/res/scripts/entity_defs/alias.xml`
+* 开发人员可以更容易的理解类型的含义
+
+* 您可以定义复杂的自定义类型
+
+* 引擎可以自动识别数据类型进行网络传输和存储
+
+
+文件目录地址 : `demo/res/scripts/entity_defs/alias.xml`
 
 ------------------------------------------
-### Simple type alias
+### 简单的别名
 
 	<BOOL> 		UINT8	</BOOL>
 	<ENTITY_ID>	INT32	</ENTITY_ID>
@@ -64,37 +65,37 @@ Path definition file : `demo/res/scripts/entity_defs/alias.xml`
 	<ENTITY_FORBID_COUNTER> ARRAY <of> INT8		</of>		</ENTITY_FORBID_COUNTER>
 	<ENTITYID_LIST> 	ARRAY <of> ENTITY_ID	</of>		</ENTITYID_LIST>
 
-### Fixed dictionary type alias
+### 固定字典类型定义
 
-Data structures can be used as a dictionary like python, the engine can be identified in the storage and network transmission based on the definition.
+数据结构可以是一个类似于Python字典的结构，引擎可以根据用户的定义将这样一个结构的数据通过网络传输到目的地并还原成该结构，或者存储到数据库中以及从数据库中还原。
 
-The basic format:
+基本格式如下:
 
-	<typename> FIXED_DICT
+	<类型名称> FIXED_DICT
 
-	       // (Optional implementation)
-	       // By the user decides: Use this module (xxx.inst) to this data structure in the memory data structure
-	       // When the engine for data storage or network transmission of this data structure must be restored
+	       // (可选实现)
+               // 使用此模块(xxx.inst)允许用户重定义该数据结构在内存中存在的形式，
+               // 当引擎进行数据存储或进行网络传输时必须还原成引擎原本的数据结构，引擎才可以识别和进行相关操作。
 	       <implementedBy> xxx.inst </implementedBy>
 
-	      //This data structure member
+	      // 这个数据结构的成员
 	       <Properties>
 
-			// dictionary of key
-			<typeAliasName> 
-				// dictionary of value
-				<Type> typename </Type>
-			</typeAliasName>
+			// 字典的key
+			<keyName> 
+				// 字典的值
+				<Type> 类型名称 </Type>
+			</keyName>
 
 	       </Properties>
 	</typename>
 	
-About implementedBy
-see also :[Custom types]
+关于implementedBy机制:
+参看: [自定义类型]
 
 ----------------------------------------------
 
-### Example1:
+### 例子1:
 
 	<AVATAR_INFOS>	FIXED_DICT
 		<Properties>
@@ -113,13 +114,13 @@ see also :[Custom types]
 		</Properties>
 	</AVATAR_INFOS>	
 	
-Memory in the form:
+在内存中的默认形式:
 
         AVATAR_INFOS = {"dbid" : 1, "name" : "kbengine", "roleType" : 1, "level" : 0}
 
 -----------------------------------------------
 
-### Example2:
+### 例子2:
 
 	<AVATAR_INFOS_LIST>	FIXED_DICT
 		<implementedBy>AVATAR_INFOS.inst</implementedBy>
@@ -130,23 +131,19 @@ Memory in the form:
 		</Properties>
 	</AVATAR_INFOS_LIST>	
 	
-Memory in the form:
-
-If you do not implementedBy
+在内存中的默认形式(如果没有实现implementedBy):
 
         AVATAR_INFOS_LIST = {"values" : [{"dbid" : 1, "name" : "kbengine", "roleType" : 1, "level" : 0}, 
 				{"dbid" : 2, "name" : "kbengine1", "roleType" : 2, "level" : 1}]}
 	
-	
-If you have implementedBy may become, Specific implementations look.
-Here we assume that the dictionary is implemented as
+如果实现implementedBy， 用户可以将其在内存中存储为如下(参考demo中的代码demo\res\scripts\user_type\AVATAR_INFOS.py):
 
         AVATAR_INFOS_LIST = {"kbengine" : {"dbid" : 1, "name" : "kbengine", "roleType" : 1, "level" : 0}, 
 				"kbengine1" : {"dbid" : 2, "name" : "kbengine1", "roleType" : 2, "level" : 1}}
 
 -----------------------------------------------
 
-### Example3:
+### 例子3:
 
 	<BAG>	FIXED_DICT
 		<Properties>
@@ -156,11 +153,11 @@ Here we assume that the dictionary is implemented as
 		</Properties>
 	</BAG>	
 
-Memory in the form:
+在内存中的默认形式(如果没有实现implementedBy):
 
         BAG = {"values" : [[1,2,3], [4,5,6], [7,8,9]]}
 
 
 
 
-[Custom types]: {{ site.baseurl }}/cn/docs/documentations/customtypes.html
+[自定义类型]: {{ site.baseurl }}/cn/docs/documentations/customtypes.html

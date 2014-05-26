@@ -8,7 +8,7 @@ docsitem: documentation-online-debugging
 Online debugging
 ====================
 
-Allows the generation of core files:
+Allows the generation of core files(Linux only):
 --------------------------------------
 
 	Adding ~/.bashrc file:
@@ -18,7 +18,7 @@ Allows the generation of core files:
 		[root@gameserver ~]# echo '%e.core.%p' > /proc/sys/kernel/core_pattern
 
 
-Use visualization tools([GuiConsole]):
+Use visualization tools([GUIConsole]):
 --------------------------------------
 
 * Enter debug tab, where you can use the python command line when running the server dynamically (output, change).
@@ -35,7 +35,7 @@ Use visualization tools([GuiConsole]):
 
 * Enter watcher tab, where you can monitor the status of various runtime server.
 
-For details, please see: [GuiConsole]
+For details, please see: [GUIConsole]
 
 <img class="screenshots-img" src="{{ site.baseurl }}/assets/img/screenshots/guiconsole_debug.jpg">
 
@@ -47,5 +47,5 @@ Use script tools([Cluster Controller]):
 * You can enter the python command line tools for debugging (see: [Console][Cluster Controller])
 
 
-[GuiConsole]: {{ site.baseurl }}/docs/commands/guiconsole.html
+[GUIConsole]: {{ site.baseurl }}/docs/commands/guiconsole.html
 [Cluster Controller]: {{ site.baseurl }}/docs/commands/pycluster.html

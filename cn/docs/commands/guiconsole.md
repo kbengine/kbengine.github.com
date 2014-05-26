@@ -5,18 +5,18 @@ tab: docs
 docsitem: commands-guiconsole
 ---
 
-Guiconsole Commands
+Guiconsole 命令
 ===============
 
-path: 
+路径: 
 	kbe/tools/server/guiconsole/guiconsole.exe
 
-This is a visual software application running on Windows.
+这个图形工具只能在Windows运行
 
 <img class="screenshots-img" src="{{ site.baseurl }}/assets/img/screenshots/guiconsole_debug.jpg">
 
 
-Description
+描述
 ------------------------------------------
 
 * Status tab, Server Components list, with simple operating status information.

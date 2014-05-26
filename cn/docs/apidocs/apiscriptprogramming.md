@@ -5,12 +5,12 @@ tab: docs
 docsitem: api-script-programming
 ---
 
-Script Programming
+脚本编程
 ====================
 
-download: 
-[Script Programming API]
+下载: 
+[脚本编程API]
 
 
 
-[Script Programming API]: {{ site.baseurl }}/assets/other/kbengine_api.chm
+[脚本编程API]: {{ site.baseurl }}/assets/other/kbengine_api.chm

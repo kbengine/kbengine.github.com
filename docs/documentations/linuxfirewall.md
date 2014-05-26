@@ -16,7 +16,7 @@ Example:
 
 	UDP broadcast: (20086-20088)
 
-download: 
+Download: 
 [centos_firewall.tar]
 
 

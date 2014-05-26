@@ -5,6 +5,6 @@ tab: docs
 docsitem: documentation-customtypes
 ---
 
-Custom types
+自定义类型
 ====================
 

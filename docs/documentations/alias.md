@@ -26,9 +26,9 @@ Base Script Types
 	FLOAT			4
 	DOUBLE			8
 
-	VECTOR2			8
-	VECTOR3			12
-	VECTOR4			16
+	VECTOR2			12
+	VECTOR3			16
+	VECTOR4			20
 
 	STRING			N
 	UNICODE			N
@@ -44,13 +44,13 @@ Base Script Types
 Define an alias
 ------------------------------------------
 
-The main use type alias:
+Why use a type alias?
 
 * Developers can more easily understand the meaning of a type
 
 * You can define complex custom type
 
-* Engine can automatically identify the network transmission and storage
+* Engine can automatically identify the type of data for network transmission and storage
 
 
 Path definition file : `demo/res/scripts/entity_defs/alias.xml`
@@ -66,25 +66,25 @@ Path definition file : `demo/res/scripts/entity_defs/alias.xml`
 
 ### Fixed dictionary type alias
 
-Data structures can be used as a dictionary like python, the engine can be identified in the storage and network transmission based on the definition.
+Data structures can be used as a dictionary like Python, the engine can be identified in the storage and network transmission based on the definition.
 
 The basic format:
 
 	<typename> FIXED_DICT
 
 	       // (Optional implementation)
-	       // By the user decides: Use this module (xxx.inst) to this data structure in the memory data structure
+	       // Allows the user to re-define the data structure in memory in the form of existence, 
 	       // When the engine for data storage or network transmission of this data structure must be restored
 	       <implementedBy> xxx.inst </implementedBy>
 
-	      //This data structure member
+	      // This data structure member
 	       <Properties>
 
 			// dictionary of key
-			<typeAliasName> 
+			<keyName> 
 				// dictionary of value
 				<Type> typename </Type>
-			</typeAliasName>
+			</keyName>
 
 	       </Properties>
 	</typename>
@@ -113,7 +113,7 @@ see also :[Custom types]
 		</Properties>
 	</AVATAR_INFOS>	
 	
-Memory in the form:
+The default format in memory(If you do not implementedBy):
 
         AVATAR_INFOS = {"dbid" : 1, "name" : "kbengine", "roleType" : 1, "level" : 0}
 
@@ -130,9 +130,7 @@ Memory in the form:
 		</Properties>
 	</AVATAR_INFOS_LIST>	
 	
-Memory in the form:
-
-If you do not implementedBy
+The default format in memory(If you do not implementedBy):
 
         AVATAR_INFOS_LIST = {"values" : [{"dbid" : 1, "name" : "kbengine", "roleType" : 1, "level" : 0}, 
 				{"dbid" : 2, "name" : "kbengine1", "roleType" : 2, "level" : 1}]}
@@ -156,7 +154,7 @@ Here we assume that the dictionary is implemented as
 		</Properties>
 	</BAG>	
 
-Memory in the form:
+The default format in memory(If you do not implementedBy):
 
         BAG = {"values" : [[1,2,3], [4,5,6], [7,8,9]]}
 

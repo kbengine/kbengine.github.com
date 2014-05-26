@@ -22,7 +22,7 @@ What needs to be defined Entity:
 You need to perform the following steps:
 -----------------------------------------
 
-* Registration
+* Registration of Entity
 
 Path definition file : `demo/res/scripts/entities.xml`
 
@@ -45,7 +45,7 @@ Example:
 
 * You may also need to define some properties and methods
 
-	1. In the `demo/res/scripts/`, base and cell or client add xxx.py
+	1. In the `demo/res/scripts/` directory has three subdirectories (base, cell, client), you can add Account.py needed.
 
 	2. Not every entity needs to create three parts(client, base, cell), press need to select.
 
@@ -75,7 +75,7 @@ Def file format
 				// Default value (optional)
 				<Default>		kbengine			</Default>
 
-				// mysql Identifier (optional)
+				// Mysql Identifier (optional)
 				<Identifier>		true				</Identifier>
 			</accountName>
 			
@@ -84,7 +84,7 @@ Def file format
 		</Properties>
 
 		<ClientMethods>
-			// remote method Name
+			// Remote Method name of the Client exposure
 			<onReqAvatarList>
 				// remote method args type
 				<Arg>	AVATAR_INFOS_LIST	</Arg>
@@ -95,9 +95,9 @@ Def file format
 		</ClientMethods>
 
 		<BaseMethods>
-			// remote method Name
+			// Remote Method name of the Baseapp exposure
 			<reqAvatarList>
-				<Exposed/>
+				<Exposed/> // cell exposure method must exist this tag
 			</reqAvatarList>
 			
 			...
@@ -105,13 +105,14 @@ Def file format
 		</BaseMethods>
 
 		<CellMethods>
+			// Remote Method name of the Cellapp exposure
 			<hello>
 			</hello>
 		</CellMethods>
 
 	</root>
 
-For example: In a client to get a list of server roles(Account.py):
+For example: Call the base method in the client to get a list of roles (Account.py):
 
 	 self.base.reqAvatarList()
 
@@ -119,10 +120,10 @@ For example: In a client to get a list of server roles(Account.py):
 -----------------------------------------
 
 
-Type Scope
+Propertie Scope
 -----------------------------------------
 
-	[name]			[client]		[base]			[cell]
+	[type]			[client]		[base]			[cell]
 	BASE			-			*			-
 	BASE_AND_CLIENT		*			*			-
 	CELL_PRIVATE		-			-			*(cell)
@@ -136,7 +137,7 @@ Type Scope
 
 -----------------------------------------------
 
-download: 
+download(example): 
 [rpgdemo_project.tar]
 
 

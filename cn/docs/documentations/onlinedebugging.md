@@ -5,47 +5,47 @@ tab: docs
 docsitem: documentation-online-debugging
 ---
 
-Online debugging
+在线调试
 ====================
 
-Allows the generation of core files:
+允许系统产生core文件(仅Linux):
 --------------------------------------
 
-	Adding ~/.bashrc file:
+	在~/.bashrc中添加如下命令:
 		ulimit -c unlimited
 	
-	Require root privileges:
+	需要root权限执行:
 		[root@gameserver ~]# echo '%e.core.%p' > /proc/sys/kernel/core_pattern
 
 
-Use visualization tools([GuiConsole]):
+使用可视化工具 ([GUIConsole]):
 --------------------------------------
 
-* Enter debug tab, where you can use the python command line when running the server dynamically (output, change).
+* 进入debug页, 在这里你可以在服务端运行状态下动态的进行Python代码调试，动态的执行一些代码和输出信息。
 
-* Into the profile tab, where you can use the python command line when running the server analysis program.
+* 进入profile页, 你可以在服务端运行状态下动态的获得一段时间内的程序性能分析。
 
-	* pyprofile: provide deterministic profiling of Python programs
+	* pyprofile: 提供了逻辑层Python程序的性能分析
 
-	* cprofile: provide deterministic profiling of c/c++ programs
+	* cprofile: 提供引擎层c/c++程序的性能分析
 
-	* eventprofile: Events that occurred within a period of time statistics
+	* eventprofile: 在一段时间内发生的事件的数据统计
 
-	* mercuryprofile: Processing of the network within a period of time for analysis
+	* mercuryprofile: 在一段时间内的网络数据分析
 
-* Enter watcher tab, where you can monitor the status of various runtime server.
+* 进入watcher页, 你可以实时的观查服务端在运行的一些被监视的参数变化。
 
-For details, please see: [GuiConsole]
+详细请参考: [GUIConsole]
 
 <img class="screenshots-img" src="{{ site.baseurl }}/assets/img/screenshots/guiconsole_debug.jpg">
 
-Use script tools([Cluster Controller]):
+使用脚本命令工具([Cluster Controller]):
 --------------------------------------
 
-* you can use this tool to view status information for running the server (see: [Information query servers][Cluster Controller])
+* 你可以使用这个工具查看服务端运行的一些状态信息 (参看: [Information query servers][Cluster Controller])
 
-* You can enter the python command line tools for debugging (see: [Console][Cluster Controller])
+* 你可以使用这个工具进入Python命令行调试 (参看: [Console][Cluster Controller])
 
 
-[GuiConsole]: {{ site.baseurl }}/cn/docs/commands/guiconsole.html
+[GUIConsole]: {{ site.baseurl }}/cn/docs/commands/guiconsole.html
 [Cluster Controller]: {{ site.baseurl }}/cn/docs/commands/pycluster.html

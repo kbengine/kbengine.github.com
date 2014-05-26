@@ -5,28 +5,28 @@ tab: docs
 docsitem: documentation-entitydef
 ---
 
-Defining the Entity
+定义实体
 ====================
 
-What needs to be defined Entity:
+什么时候需要定义实体:
 
-* Stored in the database
+* 需要进行数据存储
 
-* Ability to facilitate remote access
+* 能够方便的远程访问
 
-* Need to manage and monitor its engines, such as: AOI, Trap, etc...
+* 需要引擎管理和监控, 例如: AOI, Trap, 等等.
 
-* When a disaster recovery server can automatically recover
+* 当灾难发生后服务端可以自动进行灾难的恢复
 
 
-You need to perform the following steps:
+您需要执行以下步骤：
 -----------------------------------------
 
-* Registration
+* 注册实体
 
-Path definition file : `demo/res/scripts/entities.xml`
+目录地址 : `demo/res/scripts/entities.xml`
 
-Example:
+例子:
 
 	<root>
 		<Account/>
@@ -39,43 +39,43 @@ Example:
 	</root>
 
 
-* Def file to create a directory in `res/scripts/entity_defs`
+* 在`res/scripts/entity_defs`目录下创建一个定义文件
 
-	For example: Account.def
+	例子: Account.def
 
-* You may also need to define some properties and methods
+* 你可能需要定义一些属性和方法
 
-	1. In the `demo/res/scripts/`, base and cell or client add xxx.py
+	1. 在`demo/res/scripts/`目录下有三个子目录(base、cell、client)，你可以根据需要添加Account.py。
 
-	2. Not every entity needs to create three parts(client, base, cell), press need to select.
+	2. 不是每个实体都存在(client, base, cell)这三个部分, 你可以根据需要做出一些选择。
 
 
 -----------------------------------------
 
 
-Def file format
+定义文件的格式
 -----------------------------------------
 
 	<root>
 		<Properties>
-			// Property Name
+			// 属性名称
 			<accountName>
-				// Property type
+				// 属性类型
 				<Type>			UNICODE				</Type>
 
-				// Property Scopes
+				// 属性的作用域
 				<Flags>			BASE				</Flags>
 
-				// Is stored in the database (optional)
+				// 是否存储到数据库 (可选)
 				<Persistent>		true				</Persistent>
 
-				// The maximum length is stored in the database (optional)
+				// 存储到数据库中的最大长度 (可选)
 				<DatabaseLength> 	100				</DatabaseLength>
 
-				// Default value (optional)
+				// 默认值 (可选， 不清楚最好不要设置)
 				<Default>		kbengine			</Default>
 
-				// mysql Identifier (optional)
+				// Mysql Identifier (可选)
 				<Identifier>		true				</Identifier>
 			</accountName>
 			
@@ -84,9 +84,9 @@ Def file format
 		</Properties>
 
 		<ClientMethods>
-			// remote method Name
+			// 客户端暴露的远程方法名称
 			<onReqAvatarList>
-				// remote method args type
+				// 远程方法的参数
 				<Arg>	AVATAR_INFOS_LIST	</Arg>
 			</onReqAvatarList>
 
@@ -95,9 +95,9 @@ Def file format
 		</ClientMethods>
 
 		<BaseMethods>
-			// remote method Name
+			// Baseapp暴露的远程方法名称
 			<reqAvatarList>
-				<Exposed/>
+				<Exposed/> // cell暴露方法必须存在这个标记
 			</reqAvatarList>
 			
 			...
@@ -105,13 +105,14 @@ Def file format
 		</BaseMethods>
 
 		<CellMethods>
+			// Cellapp暴露的远程方法名称
 			<hello>
 			</hello>
 		</CellMethods>
 
 	</root>
 
-For example: In a client to get a list of server roles(Account.py):
+例子: 在客户端中调用base方法获得角色列表(Account.py):
 
 	 self.base.reqAvatarList()
 
@@ -119,10 +120,10 @@ For example: In a client to get a list of server roles(Account.py):
 -----------------------------------------
 
 
-Type Scope
+属性作用于
 -----------------------------------------
 
-	[name]			[client]		[base]			[cell]
+	[类型]			[client]		[base]			[cell]
 	BASE			-			*			-
 	BASE_AND_CLIENT		*			*			-
 	CELL_PRIVATE		-			-			*(cell)
@@ -136,7 +137,7 @@ Type Scope
 
 -----------------------------------------------
 
-download: 
+下载例子代码: 
 [rpgdemo_project.tar]
 
 

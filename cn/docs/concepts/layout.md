@@ -5,7 +5,7 @@ tab: docs
 docsitem: concepts-layout
 ---
 
-Server Layout
+服务端架构
 =============
 
 

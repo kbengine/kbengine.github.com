@@ -12,8 +12,8 @@ You can easily build:
 
 Linux:
 
-	Test System (x32 & x64): centos >= 5.x, debian >= 5.x
-	The compiler gcc: >= 4.4.x
+	Test System (x32/x64): Centos >= 5.x, Debian >= 5.x, Redhat, Ubuntu
+	The compiler GCC: >= 4.4.x
 
 	[root @ localhost ~]# yum install gcc  
 	[root @ localhost ~]# yum install glib  
@@ -45,6 +45,8 @@ Note:
 
 
 	3: On Linux compiled as python Unable to initialize because the situation can not be normal operation (this is a bug http://bugs.python.org/issue11320):
+		
+		You can execute the following command to solve this problem
 
 		[root @ localhost ~] cd src\lib\python
 		[root @ localhost ~] ./configure

@@ -5,15 +5,15 @@ tab: docs
 docsitem: build
 ---
 
-build
+建立
 ==============
 
-You can easily build:
+只需简单的几步:
 
 Linux:
 
-	Test System (x32 & x64): centos >= 5.x, debian >= 5.x
-	The compiler gcc: >= 4.4.x
+	仅测试了(x32/x64): Centos >= 5.x, Debian >= 5.x
+	GCC版本: >= 4.4.x
 
 	[root @ localhost ~]# yum install gcc  
 	[root @ localhost ~]# yum install glib  
@@ -34,17 +34,19 @@ Windows:
 	KBE_ROOT\kbengine\kbe\src\kbengine_vs90.sln  (vs2008 sp1)
 
 
-Note: 
+注意: 
 
-	1: If using other versions of the compiler is best to openssl, log4cxx (kbe\src\libs\*a.) Have to be recompiled.
-
-
-	2: mysql path on some platforms may not /usr/lib64/mysql/mysql_config
-
-		Modify kbe\src\build\common.mak the MYSQL_CONFIG_PATH=/usr/lib64/mysql/mysql_config
+	1: 如果使用了其他版本的编译器最好重编译openssl、log4cxx与其他(kbe\src\libs\*a.)。
 
 
-	3: On Linux compiled as python Unable to initialize because the situation can not be normal operation (this is a bug http://bugs.python.org/issue11320):
+	2: mysql_config在某些操作系统版本上可能不是这个路径地址 /usr/lib64/mysql/mysql_config
+
+		你可以手动修改kbe\src\build\common.mak其中MYSQL_CONFIG_PATH=/usr/lib64/mysql/mysql_config。
+
+
+	3: 在Linux上编译之后可能会出现Python解释器无法初始化而导致无法启动服务端的问题 (这是一个Python的bug，参看:http://bugs.python.org/issue11320):
+		
+		你可以执行如下命令解决这个问题
 
 		[root @ localhost ~] cd src\lib\python
 		[root @ localhost ~] ./configure

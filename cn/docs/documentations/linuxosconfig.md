@@ -5,10 +5,10 @@ tab: docs
 docsitem: documentation-linuxosconfig
 ---
 
-High-performance linux server configuration
+高性能Linux服务器配置
 ====================
 
-download: 
+下载: 
 [centos_config.tar]
 
 

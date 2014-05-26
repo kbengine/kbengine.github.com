@@ -8,8 +8,9 @@ docsitem: documentation-stresstest
 Stress Test
 ====================
 
-Use virtual client and use the same game logic, so a large number of robots login server for the game, 
-we can observe that the server is running condition, with debug to find bottlenecks.
+Use the virtual client, and uses the same game logic, so that a large number of players 
+login the robot simulation game server, we can observe that the server is running condition, 
+with debug to find bottlenecks.
 
 
 Start bots

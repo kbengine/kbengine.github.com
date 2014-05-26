@@ -5,29 +5,29 @@ tab: docs
 docsitem: documentation-stresstest
 ---
 
-Stress Test
+压力测试
 ====================
 
-Use virtual client and use the same game logic, so a large number of robots login server for the game, 
-we can observe that the server is running condition, with debug to find bottlenecks.
+使用虚拟的客户端，并使用相同的游戏逻辑，让大量的机器人模拟玩家登陆服务器进行游戏，
+我们可以观察到在服务器运行状况，使用调试来发现瓶颈。
 
 
-Start bots
+手动启动机器人
 --------------------------------------
 
 	[kbe@gameserver ~]$ ./bots &
 
-Or use script:
+或者使用脚本启动:
 
 	kbe/bin/Hybrid/!warringstart_bots.bat
 	kbe/bin/Hybrid64/bots_start.sh
 
 
 
-Configuration Bots
+配置机器人程序
 --------------------------------------
 
-see also [kbengine_defs.xml]->`bots`
+参考: [kbengine_defs.xml]->`bots`
 
 
 
