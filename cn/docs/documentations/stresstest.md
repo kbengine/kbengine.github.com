@@ -18,6 +18,7 @@ docsitem: documentation-stresstest
 	[kbe@gameserver ~]$ ./bots &
 
 或者使用脚本启动:
+--------------------------------------
 
 	kbe/bin/Hybrid/!warringstart_bots.bat
 	kbe/bin/Hybrid64/bots_start.sh

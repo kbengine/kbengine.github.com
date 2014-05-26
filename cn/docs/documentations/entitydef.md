@@ -22,28 +22,29 @@ docsitem: documentation-entitydef
 您需要执行以下步骤：
 -----------------------------------------
 
-* 注册实体
+1. 注册实体
 
-目录地址 : `demo/res/scripts/entities.xml`
+	目录地址 : `demo/res/scripts/entities.xml`
 
-例子:
+	例子:
 
-	<root>
-		<Account/>
-		<Avatar/>
-		<Spaces/>
-		<Space/>
-		<Monster/>
-		<NPC/>
-		<Gate/>
-	</root>
+		<root>
+			<Account/>
+			<Avatar/>
+			<Spaces/>
+			<Space/>
+			<Monster/>
+			<NPC/>
+			<Gate/>
+		</root>
 
 
-* 在`res/scripts/entity_defs`目录下创建一个定义文件
+2. 在`res/scripts/entity_defs`目录下创建一个定义文件
 
 	例子: Account.def
 
-* 你可能需要定义一些属性和方法
+
+3. 你可能需要定义一些属性和方法
 
 	1. 在`demo/res/scripts/`目录下有三个子目录(base、cell、client)，你可以根据需要添加Account.py。
 
@@ -120,7 +121,7 @@ docsitem: documentation-entitydef
 -----------------------------------------
 
 
-属性作用于
+属性作用域
 -----------------------------------------
 
 	[类型]			[client]		[base]			[cell]

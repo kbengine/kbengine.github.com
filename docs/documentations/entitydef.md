@@ -22,28 +22,29 @@ What needs to be defined Entity:
 You need to perform the following steps:
 -----------------------------------------
 
-* Registration of Entity
+1. Registration of Entity
 
-Path definition file : `demo/res/scripts/entities.xml`
+	Path definition file : `demo/res/scripts/entities.xml`
 
-Example:
+	Example:
 
-	<root>
-		<Account/>
-		<Avatar/>
-		<Spaces/>
-		<Space/>
-		<Monster/>
-		<NPC/>
-		<Gate/>
-	</root>
+		<root>
+			<Account/>
+			<Avatar/>
+			<Spaces/>
+			<Space/>
+			<Monster/>
+			<NPC/>
+			<Gate/>
+		</root>
 
 
-* Def file to create a directory in `res/scripts/entity_defs`
+2. Def file to create a directory in `res/scripts/entity_defs`
 
 	For example: Account.def
 
-* You may also need to define some properties and methods
+
+3. You may also need to define some properties and methods
 
 	1. In the `demo/res/scripts/` directory has three subdirectories (base, cell, client), you can add Account.py needed.
 

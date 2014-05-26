@@ -19,6 +19,7 @@ Start bots
 	[kbe@gameserver ~]$ ./bots &
 
 Or use script:
+--------------------------------------
 
 	kbe/bin/Hybrid/!warringstart_bots.bat
 	kbe/bin/Hybrid64/bots_start.sh
