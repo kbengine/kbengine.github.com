@@ -12,7 +12,7 @@ define(['jquery', 'underscore', 'backbone', 'app/collections/Stargazers'], funct
 				
 			var that = this;
 			stargazers.fetch().complete(function() {
-				stargazers.sort(function(a,b){return Math.random()>0.5?(-1):1});
+				stargazers.sort();
 				that.set('stargazers', stargazers);
 			});
 			
@@ -24,7 +24,7 @@ define(['jquery', 'underscore', 'backbone', 'app/collections/Stargazers'], funct
 			};
 			
 			forks.fetch().complete(function() {
-				forks.sort(function(a,b){return Math.random()>0.5?(-1):1});
+				forks.sort();
 				that.set('forks', forks);
 			});
 		}
