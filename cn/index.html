@@ -47,7 +47,7 @@ tab: overview
       </div>
     
       <div class="section features">
-        <h1>你一定会喜欢的原因.</h1>
+        <h1>你会喜欢的原因.</h1>
         <p class="byline">Designed by admins, for admins.</p>
       
         <div class="row">
@@ -141,7 +141,7 @@ tab: overview
 
       <div class="section">
         <div id="donators" class="donators">
-          <h1>捐赠者</h1>
+          <h1>谁在捐赠?</h1>
           <p class="byline">感谢他们<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=NSMU5PADHVMXC">捐赠</a>了KBEngine:</p>
 
           <div rel="tooltip" title="kbe" class="donator">
@@ -151,16 +151,18 @@ tab: overview
           <div rel="tooltip" title="seat" class="donator">
             <a href="http://www.kbengine.org/cn/" target="_blank"><img src="{{ site.baseurl }}/assets/img/gravatar-user-420.png"></a>
           </div>
+          </div>
         </div>
         
         <div class="contributors">
-          <h1>贡献者</h1>
+          <h1>谁在贡献?</h1>
           <div id="contributors"></div>
           <p class="byline">
             你也想在这个名单内? 仅需要
             <iframe class="github-btn fork-btn" src="http://ghbtns.com/github-btn.html?user=kbengine&amp;repo=kbengine&amp;type=fork&amp;count=false&amp;size=large" allowtransparency="true" frameborder="0" scrolling="0" width="80px" height="30px"></iframe>
             一个请求。
           </p>
+          
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12">
@@ -179,8 +181,9 @@ tab: overview
         </div>
 
         <div class="stargazers">
-          <h1>关注者</h1>
-          <p class="byline">谁在关注这个项目:</p>
+          <h1>他们都在关注</h1>
+          <p class="byline">他们很可爱:</p>
+          
 			<div class="container">
 				<div class="row">
 					<div class="col-xs-12">
@@ -189,13 +192,13 @@ tab: overview
 				</div>
 			</div>
 			
-		<script type="text/template" id="repo">
-				<div class="stargazers"></div>
-		</script>
+			<script type="text/template" id="repo">
+					<div class="stargazers"></div>
+			</script>
 
-		<script type="text/template" id="stargazer">
-			<a href="<%= html_url %>"><img width="100" src="<%= avatar_url %>" /></a>
-		</script>
+			<script type="text/template" id="stargazer">
+				<a href="<%= html_url %>"><img width="100" src="<%= avatar_url %>" /></a>
+			</script>
       </div>
     
       <div class="section milestones">
