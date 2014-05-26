@@ -5,7 +5,7 @@ tab: docs
 docsitem: commands-guiconsole
 ---
 
-Guiconsole 命令
+GUIConsole 工具
 ===============
 
 路径: 
@@ -19,25 +19,25 @@ Guiconsole 命令
 描述
 ------------------------------------------
 
-* Status tab, Server Components list, with simple operating status information.
+* Status选项卡, 服务端组件列表, 提供一些简单的系统信息。
 
-* Debug tab, where you can use the python command line when running the server dynamically (output, change).
+* Debug选项卡, 你可以在服务端运行的时候使用Python语句进行动态的调试与输出。
 
-* Log tab, Real-time view log information service side.
+* Log选项卡, 实时的查看服务端运行log.
 
-* Profile tab, where you can use the python command line when running the server analysis program.
+* Profile选项卡, 你可以在服务端运行状态下动态的获得一段时间内的程序性能分析。
 
-	* pyprofile: provide deterministic profiling of Python programs
+	* pyprofile: 提供了逻辑层Python程序的性能分析
 
-	* cprofile: provide deterministic profiling of c/c++ programs
+	* cprofile: 提供引擎层c/c++程序的性能分析
 
-	* eventprofile: Events that occurred within a period of time statistics
+	* eventprofile: 在一段时间内发生的事件的数据统计
 
-	* mercuryprofile: Processing of the network within a period of time for analysis
+	* mercuryprofile: 在一段时间内的网络数据分析
 
-* Watcher tab, where you can monitor the status of various runtime server.
+* Watcher选项卡, 你可以实时的观查服务端在运行的一些被监视的参数变化。
 
-* SpaceView tab, Real-time view of server space layout and load-balancing graphics information.
+* SpaceView选项卡, 实时的查看服务端对一个完整的场景进行动态负载平衡的情况。
 
 
 

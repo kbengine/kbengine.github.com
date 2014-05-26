@@ -17,7 +17,7 @@ Commands
 		Start the servers.
 
 	python cluster_controller.py stop: 
-		Shut down the servers.
+		Shutdown the servers.
 
 	python cluster_controller.py console: 
 		Online debugging, python console.

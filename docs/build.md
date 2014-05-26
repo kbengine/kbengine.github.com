@@ -31,7 +31,8 @@ Linux:
 
 Windows:
 
-	KBE_ROOT\kbengine\kbe\src\kbengine_vs90.sln  (vs2008 sp1)
+	KBE_ROOT\kbengine\kbe\src\kbengine_vs90.sln
+	(Note: vs2008 need to install sp1, you can upgrade to a higher version of VC compiler)
 
 
 Note: 

@@ -11,16 +11,16 @@ docsitem: commands-overview
 ### 集群控制([cluster_controller]):
 
 	python cluster_controller.py query: 
-		Information query servers
+		查询服务端集群信息。
 
 	python cluster_controller.py start: 
-		Start the servers.
+		启动服务端集群。
 
 	python cluster_controller.py stop: 
-		Shut down the servers.
+		关闭服务端集群。
 
 	python cluster_controller.py console: 
-		Online debugging, python console.
+		在线调试，Python控制台等。
 
 
 

@@ -5,7 +5,7 @@ tab: docs
 docsitem: commands-guiconsole
 ---
 
-Guiconsole Commands
+GUIConsole Tools
 ===============
 
 path: 

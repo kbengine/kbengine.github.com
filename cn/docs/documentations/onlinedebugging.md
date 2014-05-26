@@ -21,20 +21,6 @@ docsitem: documentation-online-debugging
 使用可视化工具 ([GUIConsole]):
 --------------------------------------
 
-* 进入debug页, 在这里你可以在服务端运行状态下动态的进行Python代码调试，动态的执行一些代码和输出信息。
-
-* 进入profile页, 你可以在服务端运行状态下动态的获得一段时间内的程序性能分析。
-
-	* pyprofile: 提供了逻辑层Python程序的性能分析
-
-	* cprofile: 提供引擎层c/c++程序的性能分析
-
-	* eventprofile: 在一段时间内发生的事件的数据统计
-
-	* mercuryprofile: 在一段时间内的网络数据分析
-
-* 进入watcher页, 你可以实时的观查服务端在运行的一些被监视的参数变化。
-
 详细请参考: [GUIConsole]
 
 <img class="screenshots-img" src="{{ site.baseurl }}/assets/img/screenshots/guiconsole_debug.jpg">

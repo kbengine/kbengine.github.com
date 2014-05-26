@@ -40,12 +40,20 @@ KBEngine can read KBE_ROOT, KBE_RES_PATH, KBE_HYBRID_PATH system environment var
 		
 		uid is used to distinguish between different server groups, 
 		if multiple servers distributed server maintenance KBE then uid must be the same on each server, 
-		the value must be greater than 0.
+		uid must be greater than 0 and less than 32767.
 
 	Windows:
 
-		The right mouse button: "My Computer"->"Advanced"->"Environment Variables" Set up.
-		(Note: Need to add UID environment variable, the value must be greater than 0)
+		The right mouse button: "My Computer"->"Advanced"->"Environment Variables" Set up(If installed in C drive).
+
+		KBE_ROOT = C:/kbengine/
+		KBE_RES_PATH = $KBE_ROOT/kbe/res/;$KBE_ROOT/demo/;$KBE_ROOT/demo/res/
+		KBE_HYBRID_PATH = $KBE_ROOT/kbe/bin/Hybrid64/
+
+		(Note: Windows system account no UID attribute, Users need to add this environment variable, 
+		UID must be greater than 0 and less than 32767)
+		
+		UID = 1
 
 	KBE_ROOT:
 
@@ -111,15 +119,13 @@ Create a database account, username and password is "kbe"
 		Windows:
 			Enter your mysql installation directory to find mysql.exe, 
 			enter the directory and then execute cmd following statement:
-
 			C:\mysql\bin> mysql -ukbe -pkbe -hlocalhost -P3306
 
 		Linux:
-
 			[root@localhost ~] mysql -ukbe -pkbe -hlocalhost -P3306
 
 
-. Modify the databaseName in res\server\[kbengine_defs.xml] of dbmgr section 
+Modify the databaseName in res\server\[kbengine_defs.xml] of dbmgr section 
   (recommended demo\res\server\[kbengine.xml] overloaded modifications).
 
 
