@@ -5,10 +5,10 @@ tab: docs
 docsitem: commands-overview
 ---
 
-Commands
+命令
 ========
 
-### pycluster([cluster_controller]):
+### 集群控制([cluster_controller]):
 
 	python cluster_controller.py query: 
 		Information query servers

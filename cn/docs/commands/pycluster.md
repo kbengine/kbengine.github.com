@@ -5,15 +5,15 @@ tab: docs
 docsitem: commands-pycluster
 ---
 
-Pycluster Commands
+集群控制命令
 ================
 
-path: 
+目录地址: 
 	kbe/tools/server/pycluster/cluster_controller.py
 
 
 -----------------------------------------------------
-### Information query servers:
+### 查询服务端信息:
 
 	[kbe@gameserver ~]$ python $KBE_ROOT/kbe/tools/server/pycluster/cluster_controller.py
 	[kbe@gameserver ~]$ python $KBE_ROOT/kbe/tools/server/pycluster/cluster_controller.py query
@@ -53,20 +53,20 @@ path:
 
 
 -----------------------------------------------------
-### Start the servers:
+### 启动服务端:
 
 	[kbe@gameserver ~]$ python $KBE_ROOT/kbe/tools/server/pycluster/cluster_controller.py start
 	[kbe@gameserver ~]$ python $KBE_ROOT/kbe/tools/server/pycluster/cluster_controller.py start dbmgr|baseappmgr|cellappmgr|baseapp|cellapp|cellapp|loginapp
 
 
 -----------------------------------------------------
-### Shut down the servers:
+### 关闭服务端:
 
 	[kbe@gameserver ~]$ python $KBE_ROOT/kbe/tools/server/pycluster/cluster_controller.py stop
 
 
 -----------------------------------------------------
-### Console:
+### 脚本控制台:
 
 	[kbe@gameserver ~]$ python $KBE_ROOT/kbe/tools/server/pycluster/cluster_controller.py console cellapp1
 	Trying 192.168.11.15...

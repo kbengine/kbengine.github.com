@@ -5,7 +5,7 @@ tab: docs
 docsitem: commands-installer
 ---
 
-Installer Commands
+安装命令
 ==============
 
 
