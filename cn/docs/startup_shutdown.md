@@ -5,19 +5,19 @@ tab: docs
 docsitem: startup-shutdown
 ---
 
-Startup
+启动服务端
 ==============
 
 	python $KBE_ROOT/kbe/tools/server/pycluster/cluster_controller.py start
-	(Note: The initial start mysql server will automatically build the table, you may need to wait for some time.)
+	(注意: 初次启动kbe时，mysql需要初始化一些表结构， 可能会花上几分钟请耐心等待完成。)
 
-Shutdown
+关闭服务端
 -------------------
 
 	python $KBE_ROOT/kbe/tools/server/pycluster/cluster_controller.py stop
 
 
-Quick Startup and Shutdown
+快速启动与关闭服务端
 -------------------
 
 	[Linux]:

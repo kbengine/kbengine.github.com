@@ -5,79 +5,81 @@ tab: docs
 docsitem: installation
 ---
 
-Installation
+安装
 ============
 
-Install KBEngine on a (Centos/Debian/Ubuntu etc.) server, in your terminal input:
+在Linux上安装(Centos/Debian/Ubuntu etc.) 服务端, 请在终端输入:
 
 	python kbengine/kbe/tools/server/install/installer.py install
 
-if you don't want to trust a script, install KBEngine manually:
+如果你不信任脚本， 你也可以选择手动安装:
 
-Manual Installation
+手动安装
 -------------------
 
 
 
 
-### 1. To set environment variables:
+### 1. 设置环境变量:
 
-KBEngine can read KBE_ROOT, KBE_RES_PATH, KBE_HYBRID_PATH system environment variables to do something.
+KBEngine会读取系统中设置的(KBE_ROOT, KBE_RES_PATH, KBE_HYBRID_PATH)环境变量, 按照如下步骤设置环境变量.
 
-	Linux: (assuming kbe be placed in the ~/ directory)
+	Linux: (假如kbe被安装在~/目录)
 
 		[kbe@localhost ~]# vim ~/.bashrc
 
 		ulimit -c unlimited
-
 		export KBE_ROOT=~/kbengine/
-
 		export KBE_RES_PATH=$KBE_ROOT/kbe/res/:$KBE_ROOT/demo/:$KBE_ROOT/demo/res/
-
 		export KBE_HYBRID_PATH=$KBE_ROOT/kbe/bin/Hybrid64/
 
 		[root@localhost ~]# vim /etc/passwd
 		
-		uid is used to distinguish between different server groups, 
-		if multiple servers distributed server maintenance KBE then uid must be the same on each server, 
-		the value must be greater than 0.
+		操作系统账号的uid将被用于不同的服务器组来区分， 如果是多台硬件服务器共同维护一组服务，
+		那么每一台机器上的系统uid环境变量都应该保持一致，否则无法形成服务组。
+		另外uid必须大于0, 小于32767.
 
 	Windows:
 
-		The right mouse button: "My Computer"->"Advanced"->"Environment Variables" Set up.
-		(Note: Need to add UID environment variable, the value must be greater than 0)
+		鼠标右键点击: "我的电脑"->"高级"->"环境变量"， 然后设置(假如安装在C盘)
+
+		KBE_ROOT=C:/kbengine/
+		KBE_RES_PATH=$KBE_ROOT/kbe/res/:$KBE_ROOT/demo/:$KBE_ROOT/demo/res/
+		KBE_HYBRID_PATH=$KBE_ROOT/kbe/bin/Hybrid64/
+
+		(注意: Windows系统账号没有UID属性， 需要用户自己添加这个环境变量, UID必须大于0, 小于32767)
+		UID=1
 
 	KBE_ROOT:
 
-		kbe root directory path.
+		引擎根目录。
 
 
 	KBE_RES_PATH:
 
-		Related Resources path with ':' or ';' separated, the first "respath" is kbe engine "respath", 
-		the second "respath" must be the root user scripts, others without limitation.
+		不同路径使用':'或者';'分隔, Windows由于操作系统规则必须使用';'分隔，默认情况下资源路径中第一个资源路径
+		是引擎的资源路径， 第二个资源路径是用户脚本的资源路径。
 
 
 	KBE_HYBRID_PATH:
 
-		kbe binary file directory path.
+		引擎二进制文件所在目录。
 
 
+### 2. 安装数据库:
 
-### 2. Set up the database:
+安装Mysql:
 
-Install mysql:
-
-		If the Windows then add the following code to make my.ini mysql case sensitive
+		如果是Windows环境，Mysql默认是忽略大小写的，请在my.ini添加如下命令设置大小写敏感
 
 		[mysqld]
 		lower_case_table_names = 0
 
-		(Service MySQL restart, CMD input:)
+		(重启Mysql, CMD输入如下命令:)
 		net stop mysql
 		net start mysql
 
-		Check lower_case_table_names, must be is 0:
+		检查Mysql变量 lower_case_table_names必须等于0, 使用如下命令检查:
 		mysql> SHOW VARIABLES like "lower_case_table_names";
 		+------------------------+-------+
 		| Variable_name          | Value |
@@ -86,31 +88,31 @@ Install mysql:
 		+------------------------+-------+
 		1 row in set (0.00 sec)
 
-Create a database account, username and password is "kbe"
+创建数据库，假设是数据库名为"kbe"
 
 		mysql> create database kbe;
 
 
-Delete anonymous user
+删除匿名用户
 		
 		mysql> use mysql 
 		mysql> delete from user where user=''; 
 		mysql> FLUSH PRIVILEGES;
 
 
-Create a database account, name is kbe
+创建数据库用户，用户名和密码假设是"kbe"
 
 		mysql> grant all privileges on *.* to kbe@'%' identified by 'kbe';
 		mysql> grant select,insert,update,delete,create,drop on *.* to kbe@'%' identified by 'kbe';
 		mysql> FLUSH PRIVILEGES;
 
-		Test whether the CMD can use this account login mysql(Note that the default mysql port is 3306, 
-		you can modify kbengine_defs.xml->dbmgr-><port>330x</port>),
-		If an error occurs, please google mysql error code.
+		在CMD中测试一下是否能使用这个账号登陆Mysql(请注意默认Mysql端口为3306， 
+		如不一致请修改kbengine_defs.xml->dbmgr-><port>330x</port>)， 
+		如果没有提示错误则账号配置完毕， 有错误请google
+		进入你的mysql安装目录找到mysql.exe所在目录, 然后cmd进入这个目录中执行如下语句:
 		
 		Windows:
-			Enter your mysql installation directory to find mysql.exe, 
-			enter the directory and then execute cmd following statement:
+			进入你的mysql安装目录找到mysql.exe, 然后在CMD执行如下命令:
 
 			C:\mysql\bin> mysql -ukbe -pkbe -hlocalhost -P3306
 
@@ -119,35 +121,35 @@ Create a database account, name is kbe
 			[root@localhost ~] mysql -ukbe -pkbe -hlocalhost -P3306
 
 
-. Modify the databaseName in res\server\[kbengine_defs.xml] of dbmgr section 
-  (recommended demo\res\server\[kbengine.xml] overloaded modifications).
+. 修改res\server\[kbengine_defs.xml]配置中dbmgr段的databaseName参数 
+  (建议在demo\res\server\[kbengine.xml]中进行重载修改，这样kbengine在做改动后开发者更新时不会发生冲突)。
 
 
 
-### 3. Optimization of the operating system(Linux) (Optional)
+### 3. 优化操作系统(仅Linux) (可选)
 
-Set /etc/security/limits.conf:
+设置允许打开的最大文件数 /etc/security/limits.conf:
 
 		soft nofile 65535
 		hard nofile 65535
 
-Defines the maximum send/receive window size:
+修改socket发送窗口与接收窗口最大缓冲:
 
 		[root@localhost ~]# echo 524288 > /proc/sys/net/core/rmem_max
 		[root@localhost ~]# echo 524288 > /proc/sys/net/core/wmem_max
 
-see: [High-performance linux server configuration]
+参考: [高性能Linux服务器配置]
 
 
 
-### 4: Multi-card configurations: (Optional)
+### 4: 多网卡环境配置: (可选)
 
-If eth0 is external, eth1 is the internal:
+如果eth0是外部网卡地址, eth1是内部网卡地址执行如下命令设置广播地址为内部网卡地址:
 
 		/sbin/ip route del broadcast 255.255.255.255 dev eth0
 		/sbin/ip route add broadcast 255.255.255.255 dev eth1
 
-Please set ([kbengine.xml] | [kbengine_defs.xml]):
+同时请设置引擎配置([kbengine.xml] | [kbengine_defs.xml])中的相关选项为如下:
 
 		baseapp 	: externalInterface = eth0, internalInterface = eth1
 		loginapp	: externalInterface = eth0, internalInterface = eth1
@@ -156,23 +158,18 @@ Please set ([kbengine.xml] | [kbengine_defs.xml]):
 
 
 
-### 5. Linux firewall: (Optional)
+### 5. Linux 防火墙设置: (可选)
 
-see: [Linux firewall settings]
+参考: [Linux防火墙设置]
 
 
-
-Check Out The Commands
-----------------------
-
-If stuck, you can always type `KBEngine help` for a quick list of all commands, or if you want to know more about a command read the [command documentation][commands].
 
 [config]: {{ site.baseurl }}/docs/configuration/
 [commands]: {{ site.baseurl }}/docs/commands/
 [versions]: https://github.com/kbengine/kbengine/blob/latest/versioning/versions.txt
 [layout]: {{ site.baseurl }}/docs/concepts/layout.html
 [issues]: https://github.com/kbengine/kbengine/issues
-[High-performance linux server configuration]: {{ site.baseurl }}/docs/documentations/linuxosconfig.html
+[高性能Linux服务器配置]: {{ site.baseurl }}/docs/documentations/linuxosconfig.html
 [kbengine_defs.xml]: {{ site.baseurl }}/docs/configuration/kbengine_defs.html
 [kbengine.xml]: {{ site.baseurl }}/docs/configuration/kbengine.html
-[Linux firewall settings]: {{ site.baseurl }}/docs/documentations/linuxfirewall.html
+[Linux防火墙设置]: {{ site.baseurl }}/docs/documentations/linuxfirewall.html

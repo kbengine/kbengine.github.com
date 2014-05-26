@@ -5,16 +5,16 @@ tab: docs
 docsitem: updating
 ---
 
-Updating
+更新
 ========
 
-New versions of KBEngine contain new features, more reliable code, bug fixes, and contributions from the community. Since version `0.2.0` KBEngine has an inbuilt command to download and install everything for you automatically. Don't worry, **it will ask for confirmation** before overwriting your files.
+新版本的KBEngine包含一些由开源社区贡献的新特性、更可靠的代码、bug的修复等。从`0.2.0`版本开始KBEngine将有内置的命令帮助你自动的下载和更新引擎，整个过程将是安全的，在改写一些文件之前请选择确认。
 
     python $KBE_ROOT/kbe/tools/server/install/installer.py update
 
-Check Your Version
+检查你的版本
 ------------------
 
     python $KBE_ROOT/kbe/tools/server/install/installer.py version
 
-The version command will return the current KBEngine version you have installed, useful for checking the upgrade was successful.
+version命令将返回当前已经安装的KBEngine的版本,可用于检查升级成功。

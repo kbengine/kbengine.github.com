@@ -86,7 +86,7 @@ Install mysql:
 		+------------------------+-------+
 		1 row in set (0.00 sec)
 
-Create a database account, username and password is "kbe"
+Create a database, name is "kbe"
 
 		mysql> create database kbe;
 
@@ -98,7 +98,7 @@ Delete anonymous user
 		mysql> FLUSH PRIVILEGES;
 
 
-Create a database account, name is kbe
+Create a database account, username and password is "kbe"
 
 		mysql> grant all privileges on *.* to kbe@'%' identified by 'kbe';
 		mysql> grant select,insert,update,delete,create,drop on *.* to kbe@'%' identified by 'kbe';
@@ -136,7 +136,7 @@ Defines the maximum send/receive window size:
 		[root@localhost ~]# echo 524288 > /proc/sys/net/core/rmem_max
 		[root@localhost ~]# echo 524288 > /proc/sys/net/core/wmem_max
 
-see: [High-performance linux server configuration]
+see: [High-performance Linux server configuration]
 
 
 
@@ -162,17 +162,12 @@ see: [Linux firewall settings]
 
 
 
-Check Out The Commands
-----------------------
-
-If stuck, you can always type `KBEngine help` for a quick list of all commands, or if you want to know more about a command read the [command documentation][commands].
-
 [config]: {{ site.baseurl }}/docs/configuration/
 [commands]: {{ site.baseurl }}/docs/commands/
 [versions]: https://github.com/kbengine/kbengine/blob/latest/versioning/versions.txt
 [layout]: {{ site.baseurl }}/docs/concepts/layout.html
 [issues]: https://github.com/kbengine/kbengine/issues
-[High-performance linux server configuration]: {{ site.baseurl }}/docs/documentations/linuxosconfig.html
+[High-performance Linux server configuration]: {{ site.baseurl }}/docs/documentations/linuxosconfig.html
 [kbengine_defs.xml]: {{ site.baseurl }}/docs/configuration/kbengine_defs.html
 [kbengine.xml]: {{ site.baseurl }}/docs/configuration/kbengine.html
 [Linux firewall settings]: {{ site.baseurl }}/docs/documentations/linuxfirewall.html
