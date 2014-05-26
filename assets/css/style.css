@@ -24,6 +24,12 @@ li {
 	margin: 10px 10px 10px 0;
 }
 
+.stargazers .stargazer img {
+  width: 80px;
+  height: 80px;
+}
+
+
 .fork {
 	float: left;
 	margin: 10px 10px 10px 0;
@@ -32,6 +38,11 @@ li {
 .forks {
 	float: left;
 	margin: 10px 10px 10px 0;
+}
+
+.forks .fork img {
+  width: 80px;
+  height: 80px;
 }
 
 .container {
@@ -177,8 +188,6 @@ li {
 .footer p {
   margin-bottom: 0;
 }
-
-
 
 .milestones {
   /*border-top: 1px solid #e5e5e5;*/
