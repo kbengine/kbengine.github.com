@@ -6,7 +6,7 @@ define(['jquery', 'underscore', 'backbone', 'app/collections/Stargazers'], funct
 			var stargazers = new Stargazers();
 			stargazers.url = this.get('stargazers_url');
 
-			stargazers.comparator = function(stargazer) {
+			stargazers.comparator = function(stargazer, stargazer1) {
 				return Math.random()>0.5?(-1):1;
 			};
 				
@@ -19,7 +19,7 @@ define(['jquery', 'underscore', 'backbone', 'app/collections/Stargazers'], funct
 			var forks = new Stargazers();
 			forks.url = this.get('forks_url');
 			
-			forks.comparator = function(fork) {
+			forks.comparator = function(fork, fork1) {
 				return Math.random()>0.5?(-1):1;
 			};
 			
