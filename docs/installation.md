@@ -127,7 +127,7 @@ Create a database account, username and password is "kbe"
 			[root@localhost ~] mysql -ukbe -pkbe -hlocalhost -P3306
 
 
-Modify the databaseName in res\server\[kbengine_defs.xml] of dbmgr section 
+If you want to modify the database name, Modify the databaseName in res\server\[kbengine_defs.xml] of dbmgr section 
   (recommended demo\res\server\[kbengine.xml] overloaded modifications).
 
 

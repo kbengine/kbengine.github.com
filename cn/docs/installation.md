@@ -122,7 +122,7 @@ KBEngine会读取系统中设置的(KBE_ROOT, KBE_RES_PATH, KBE_HYBRID_PATH)环�
 			[root@localhost ~] mysql -ukbe -pkbe -hlocalhost -P3306
 
 
-修改res\server\[kbengine_defs.xml]配置中dbmgr段的databaseName参数 
+如果要修改数据库名称请修改res\server\[kbengine_defs.xml]配置中dbmgr段的databaseName参数 
   (建议在demo\res\server\[kbengine.xml]中进行重载修改，这样kbengine在做改动后开发者更新时不会发生冲突)。
 
 
