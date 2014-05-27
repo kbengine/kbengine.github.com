@@ -1,11 +1,11 @@
 ---
-layout: docs_cn
+layout: docs
 title: Empty Project · Docs · KBEngine
 tab: docs
-docsitem: documentation-rpgexample1
+docsitem: documentation-gameexample4
 ---
 
-Empty Project
+RTS game
 ====================
 
 download: 

@@ -1,14 +1,16 @@
 ---
-layout: docs_cn
+layout: docs
 title: Empty Project · Docs · KBEngine
 tab: docs
-docsitem: documentation-room-game-example1
+docsitem: documentation-gameexample1
 ---
 
 Empty Project
 ====================
 
-download: 
+This is the smallest KBEngine game projects, including modules are indispensable.
+
+Download examples:
 [kbempty_project.tar]
 
 

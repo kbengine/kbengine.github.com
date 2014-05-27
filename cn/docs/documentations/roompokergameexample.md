@@ -1,11 +1,11 @@
 ---
-layout: docs
+layout: docs_cn
 title: Empty Project · Docs · KBEngine
 tab: docs
-docsitem: documentation-rpgexample1
+docsitem: documentation-gameexample3
 ---
 
-Empty Project
+棋牌房间类游戏例子
 ====================
 
 download: 
