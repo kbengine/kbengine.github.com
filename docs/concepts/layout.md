@@ -43,7 +43,7 @@ Server component
 			      |----------|
 
 
-Server-side component description
+Server component description
 ----------------------------------
 
 	· loginapp:
