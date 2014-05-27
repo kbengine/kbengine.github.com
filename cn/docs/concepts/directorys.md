@@ -70,7 +70,7 @@ docsitem: concepts-directorys
 					|- resourcemgr			(resourcemgr源代码)
 					|- tools			(服务端助手工具)
 						|- billing_system	(支持第三方计费、第三方账号等)
-						|- bots			(Stress test, the virtual client, sources)(压力测试， 虚拟客户端, 源码)
+						|- bots			(压力测试， 虚拟客户端, 源码)
 						|- guiconsole		(可视化的控制台工具源码)
 						|- message_log		(服务端log收集工具源码)
 			|- res						(引擎资源目录)
