@@ -14,26 +14,26 @@ there is no conflict in the development along with updated engine or multiple pr
 
 
 -----------------------------------------------------
-###配置文件详解:
+###Detailed configuration:
 
 
 	<root>
 		<gameUpdateHertz> 10 </gameUpdateHertz>
 		<bitsPerSecondToClient> 20000 </bitsPerSecondToClient> <!-- Type: Integer -->
 		
-		<!-- 非0则不优化， 不带包长信息的包强制都携带长度信息， 某些情况下方便某些前端对接协议
-		什么样的包不带长度信息? 所有能够预先计算出包大小的且永远不变的包不带长度信息， 
-		如果有可变字符串参数则一定需要带长度信息 -->
+		<!-- Non-0 is not optimized, Force all packets contain length information, Some convenient docking protocol client.
+		What of data packet length information does not? All packages can be calculated in advance 
+		and never change the size of the package with no length information. -->
 		<packetAlwaysContainLength>0</packetAlwaysContainLength>
 		
-		<!-- 是否需要将任何接收和发送的包以文本输出到log中提供调试
+		<!-- Whether the contents of the log output packet
 			debug_type:
-				0: 不输出
-				1: 16进制输出
-				2: 字符流输出
-				3: 10进制输出
+				0: Not output
+				1: 16 hexadecimal output
+				2: Stringstream output
+				3: 10 hexadecimal output
 			use_logfile:
-				是否独立一个log文件来记录包内容，文件名通常为
+				Whether the use of other log files ? such as:
 				appname_packetlogs.log
 			disable_msgs:
 				关闭某些包的输出
