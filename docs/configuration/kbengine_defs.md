@@ -18,7 +18,10 @@ there is no conflict in the development along with updated engine or multiple pr
 
 
 	<root>
+		<!-- Update frequency process -->
 		<gameUpdateHertz> 10 </gameUpdateHertz>
+
+		<!-- The data sent to the client, the second bandwidth limit (bit) -->
 		<bitsPerSecondToClient> 20000 </bitsPerSecondToClient> <!-- Type: Integer -->
 		
 		<!-- Non-0 is not optimized, Force all packets contain length information, Some convenient docking protocol client.
@@ -36,7 +39,7 @@ there is no conflict in the development along with updated engine or multiple pr
 				Whether the use of other log files ? such as:
 				appname_packetlogs.log
 			disable_msgs:
-				关闭某些包的输出
+				Some messages are not output
 		-->
 		<trace_packet>
 			<debug_type>0</debug_type>
@@ -75,14 +78,15 @@ there is no conflict in the development along with updated engine or multiple pr
 			</disables>
 		</trace_packet>
 		
-		<!-- 是否输出entity的创建， 脚本获取属性， 初始化属性等调试信息， 以及def信息 -->
+		<!-- Whether the output the logs: create the entity, Script get attributes, 
+			Initialization attributes information, Def information. -->
 		<debugEntity>0</debugEntity>
 
-		<!-- apps发布状态, 可在脚本中获取该值
+		<!-- apps released state, This value can be obtained in the script
 			Type: Integer8
 			0 : debug
 			1 : release
-			其他自定义
+			Other custom
 		-->
 		<app_publish>0</app_publish>
 		
@@ -90,66 +94,68 @@ there is no conflict in the development along with updated engine or multiple pr
 		<baseapps> 1 </baseapps>
 		
 		<channelCommon> 
-			<!-- 通道最后一次通信时间超过此时间则被认定为超时通道， 服务器将踢出该通道 -->
+			<!-- If long (configurable value) no communication, channel will be kicked out of the server. -->
 			<timeout> 
 				<internal> 60.0 </internal>
 				<external> 60.0 </external>
 			</timeout>
 
-			<!-- 通道send数据重试时间次数 -->
+			<!-- Send retry max-time and max-count -->
 			<resend> 
 				<internal> 
-					<interval> 10 </interval>					<!-- 毫秒 -->
-					<retries> 0 </retries>						<!-- 重试次数, 0无限 -->
+					<interval> 10 </interval>					<!-- Millisecond -->
+					<retries> 0 </retries>						<!-- Retry count, 0 is unlimited -->
 				</internal>
 				<external>
-					<interval> 10 </interval>					<!-- 毫秒 -->
-					<retries> 3 </retries>						<!-- 重试次数, 0无限 -->
+					<interval> 10 </interval>					<!-- Millisecond -->
+					<retries> 3 </retries>						<!-- Retry count, 0 is unlimited -->
 				</external>
 			</resend>
 			
 			<!-- socket读写缓冲大小 -->
 			<readBufferSize> 
-				<internal>	16777216	</internal> 			<!-- 16M -->
-				<external>	0			</external>				<!-- 系统默认 -->
+				<internal>	16777216	</internal> 				<!-- 16M -->
+				<external>	0		</external>				<!-- system default -->
 			</readBufferSize>
 			<writeBufferSize> 
 				<internal>	16777216	</internal>				<!-- 16M -->
-				<external>	0			</external>				<!-- 系统默认 -->
+				<external>	0		</external>				<!-- system default -->
 			</writeBufferSize>
 			
-			<!-- 一个tick内channel接收窗口溢出值 0无限制-->
+			<!-- A tick, the value of the receive window overflow, 0 is unlimited -->
 			<receiveWindowOverflow>
 				<messages>
 					<critical>	32			</critical>
-					<internal>	65535		</internal>
+					<internal>	65535			</internal>
 					<external>	256			</external>
 				</messages>
 				<bytes>
 					<internal>	0			</internal>
-					<external>	65535		</external>
+					<external>	65535			</external>
 				</bytes>
 			</receiveWindowOverflow>
 			
-			<!-- 加密通信，只对外部通道
-				可选加密:
-					0: 无加密
-					1: blowfish
-					2: rsa (res\key\kbengine_private.key)
+			<!-- Encrypted communication, channel-external only
+				Optional encryption:
+					0: No Encryption
+					1: Blowfish
+					2: RSA (res\key\kbengine_private.key)
 			 -->
 			<encrypt_type> 1 </encrypt_type>
 		</channelCommon> 
 		
-		<!-- 关服倒计时(秒) -->
+		<!-- Countdown to shutdown the server(seconds) -->
 		<shutdown_time> 60.0 </shutdown_time>
-		<!-- 关服等待任务结束tick(秒) -->
+
+		<!-- Shutdown the server, if you have not completed the task, the server needs to wait for the end of the mission.
+		Time(seconds) for each waiting. -->
 		<shutdown_waittick> 1.0 </shutdown_waittick>
 		
-		<!-- callback默认超时时间(秒) -->
+		<!-- The callback: default timeout(seconds) -->
 		<callback_timeout> 300.0 </callback_timeout>
 		
 		<thread_pool>
-			<!-- 默认超时时间(秒) -->
+			<!-- default timeout(seconds) -->
 			<timeout> 300.0 </timeout>
 			
 			<init_create> 1 </init_create>
@@ -157,96 +163,132 @@ there is no conflict in the development along with updated engine or multiple pr
 			<max_create> 8 </max_create>
 		</thread_pool>
 		
-		<!-- email 服务 -->
+		<!-- Email services, providing the account verification, password recovery, etc. -->
 		<email_service_config>server/email_service.xml</email_service_config>
 			
 		<billingSystem>
-			<!-- normal: 普通, thirdparty: 第三方此时需要提供ip地址 -->
+			<!-- 
+				Account Type:
+				normal: default handling the current process, 
+				thirdparty: handled by third-party service providers 
+			-->
 			<accountType> normal </accountType>
+			
+			<!-- 
+				Charge Type:
+				normal: default handling the current process, 
+				thirdparty: handled by third-party service providers 
+			-->
 			<chargeType> normal </chargeType>
 			
-			<!-- 进程地址 -->
+			<!-- billingSystem address, multiple gameserver can share a billingSystem -->
 			<host> localhost </host>
 			<port> 30099 	</port>
 			
-			<!-- 订单超时(secs) -->
+			<!-- Orders timeout(seconds) -->
 			<orders_timeout> 3600 	</orders_timeout>
 			
-			<!-- 第三方运营账号服务接口 如: www.google.com, 当type是thirdparty时有效 -->
+			<!-- Third-party account service interfaces, such as: www.google.com, 
+				When the accountType is thirdparty, is valid.
+			-->
 			<thirdpartyAccountService_addr></thirdpartyAccountService_addr>
 			<thirdpartyAccountService_port> 80 </thirdpartyAccountService_port>
 			
-			<!-- 第三方运营充值服务接口 如: www.google.com, 当type是thirdparty时有效 -->
+			<!-- Third-party charge service interfaces, such as: www.google.com, 
+				When the chargeType is thirdparty, is valid. 
+			-->
 			<thirdpartyChargeService_addr></thirdpartyChargeService_addr>
 			<thirdpartyChargeService_port> 80 </thirdpartyChargeService_port>
 			
-			<!-- 第三方运营回调端口，这个通道是一个未定义的协议通道， 相关协议需要开发者根据需要自己解析-->
+			<!-- billingSystem and third-party service providers collaborate callback address-->
 			<thirdpartyService_cbport> 30040 </thirdpartyService_cbport>
 			
-			<!-- listen监听队列最大值 -->
+			<!-- listen: Maximum listen queue -->
 			<SOMAXCONN> 128 </SOMAXCONN>
 		</billingSystem>
 		
 		<dbmgr>
+			<!-- Name of AccountEntity -->
 			<dbAccountEntityScriptType>	Account	</dbAccountEntityScriptType>
 			
-			<allowEmptyDigest> false </allowEmptyDigest>					<!-- Type: Boolean -->
+			<!-- Do not check defs-MD5 -->
+			<allowEmptyDigest> false </allowEmptyDigest>								<!-- Type: Boolean -->
 			
+			<!-- Name of the interface(NIC) -->
 			<internalInterface>  </internalInterface>
 			
-			<!-- 新账号默认标记(可叠加， 填写时按十进制格式) 
-				常规标记 = 0x00000000
-				锁定标记 = 0x000000001
-				未激活标记 = 0x000000002
+			<!-- Default flags a new account, Can be combined, Fill in decimal format when
+				normal flag	= 0x00000000
+				lock flag	= 0x000000001
+				normal flag	= 0x000000002
 			-->
-			<accountDefaultFlags> 0 </accountDefaultFlags>					<!-- Type: Integer -->
-			<!-- 新账号默认过期时间(秒, 引擎会加上当前时间) -->
-			<accountDefaultDeadline> 0 </accountDefaultDeadline>			<!-- Type: Integer -->
+			<accountDefaultFlags> 0 </accountDefaultFlags>								<!-- Type: Integer -->
+
+			<!-- New account default expiration time (seconds, the engine will add the current time) -->
+			<accountDefaultDeadline> 0 </accountDefaultDeadline>							<!-- Type: Integer -->
 			
+			<!-- Database type -->
 			<type> mysql </type>											<!-- Type: String -->
+
+			<!-- Database address -->
 			<host> localhost </host>										<!-- Type: String -->
-			<port> 0 </port>												<!-- Type: Integer -->
+			<port> 0 </port>											<!-- Type: Integer -->
+			
+			<!-- Database auth -->
 			<auth>  
 				<username> kbe </username>									<!-- Type: String -->
 				<password> kbe </password>									<!-- Type: String -->
-				<!-- 为true则表示password是加密(rsa)的, 可防止明文配置 -->
-				<encrypt>true</encrypt>
+
+				<!-- is true, password is RSA -->
+				<encrypt> true </encrypt>
 			</auth>
-			<databaseName> kbe </databaseName> 								<!-- Type: String -->
-			<numConnections> 5 </numConnections>							<!-- Type: Integer -->
 			
+			<!-- Database name -->
+			<databaseName> kbe </databaseName> 									<!-- Type: String -->
+
+			<!-- Number of connections allowed by the database -->
+			<numConnections> 5 </numConnections>									<!-- Type: Integer -->
+			
+			<!-- Character encoding type -->
 			<unicodeString>
-				<characterSet> utf8 </characterSet> 						<!-- Type: String -->
-				<collation> utf8_bin </collation> 							<!-- Type: String -->
+				<characterSet> utf8 </characterSet> 								<!-- Type: String -->
+				<collation> utf8_bin </collation> 								<!-- Type: String -->
 			</unicodeString>
 			
-			<!-- 登录合法时游戏数据库找不到游戏账号则自动创建 -->
+			<!-- When logged in, the game database can not find the game account is automatically created -->
 			<notFoundAccountAutoCreate> true </notFoundAccountAutoCreate>
 		</dbmgr>
 		
 		<cellapp>
+			<!-- Entry module, like the main-function -->
 			<entryScriptFile> kbengine </entryScriptFile>
 			
+			<!-- Default AOI radius, the script can change it -->
 			<defaultAoIRadius>			
 				<radius> 80.0 </radius>
 				<hysteresisArea> 5.0 </hysteresisArea>
 			</defaultAoIRadius>
 			
-			<!-- 优化EntityID，aoi范围内小于255个, EntityID传输到client时使用1字节别名ID -->
+			<!-- Optimization EntityID，AOI the Entity is less than 255, 
+			use an aliasID(1byte) transmitted to the client -->
 			<aliasEntityID> true </aliasEntityID>
 			
-			<!-- 优化entity属性和方法广播时占用的带宽，entity客户端属性或者客户端不超过255个时， 
-				方法uid和属性uid传输到client时使用1字节别名ID -->
+			<!-- Entity client (property or a method) is less than 256, using 1 byte transmission. -->
 			<entitydefAliasID>true</entitydefAliasID>
-		
+			
+			<!-- Name of the interface(NIC) -->
 			<internalInterface>  </internalInterface>
 			
+			<!-- The entityID allocator, enter the overflow area will get the new ID's. -->
 			<ids>
 				<criticallyLowSize> 500 </criticallyLowSize>				<!-- Type: Integer -->
 			</ids>
 			
+			<!-- Analysis of program performance -->
 			<profiles>
-				<!-- 如果设置为true，引擎启动时就会开始记录相关profile信息， 退出时导出一份记录 -->
+				<!-- if is true, Engine start is completed, start to record profile information, 
+					Process exit will export a report.
+				-->
 				<cprofile> false </cprofile>
 				<pyprofile> false </pyprofile>
 				<eventprofile> false </eventprofile>
@@ -257,28 +299,33 @@ there is no conflict in the development along with updated engine or multiple pr
 			<ghostingMaxPerCheck> 64 </ghostingMaxPerCheck> <!-- Type: Integer -->
 			<ghostUpdateHertz> 50 </ghostUpdateHertz> <!-- Type: Integer -->
 			
-			<!-- 是否使用坐标系统 如果为false， aoi、trap、 move等功能将不再维护 -->
+			<!-- Whether the use of coordinate-system, if is false, 
+			AOI, Trap, Move and other functions will not be available -->
 			<coordinate_system> 
 				<enable> true </enable>
 				
-				<!-- 范围管理器是管理Y轴， 注：有y轴则aoi、trap等功能有了高度， 
-					但y轴的管理会带来一定的消耗 -->
+				<!-- is maintenance Y axis? Note: Management y axis, AOI、Trap and other functions with the height,
+				When the entity space within little more useful when, Otherwise, 
+				the management of the y-axis will produce some consumption 
+				-->
 				<rangemgr_y> false </rangemgr_y>
 			</coordinate_system>
 			
-			<!-- 如果被占用则向后尝试50001.. -->
+			<!-- Telnet service, if the port is occupied backwards to try 50001 -->
 			<telnet_service>
 				<port> 50000 </port>
 				<password> kbe </password>
-				<!-- 命令默认层 -->
+				<!-- layer of default the command -->
 				<default_layer> python </default_layer>
 			</telnet_service>
 			
+			<!-- Parameter server shutdown process -->
 			<shutdown>
-				<!-- 每秒销毁有base的entity -->
+				<!-- In per-seconds, The destruction of the number of entity's(has base) -->
 				<perSecsDestroyEntitySize> 15 </perSecsDestroyEntitySize>
 			</shutdown>
 			
+			<!-- Who is witness? Player is witness, The observed information will be synchronized to the client -->
 			<witness>
 				<!-- 观察者 timeout超时(秒) Integer-->
 				<timeout> 15 </timeout>
@@ -288,8 +335,10 @@ there is no conflict in the development along with updated engine or multiple pr
 		<baseapp>
 			<entryScriptFile> kbengine </entryScriptFile>
 			
+			<!-- Name of the interface(NIC) -->
 			<internalInterface>  </internalInterface>
 			<externalInterface>  </externalInterface>						<!-- Type: String -->
+
 			<externalPorts_min> 20015 </externalPorts_min>					<!-- Type: Integer -->
 			<externalPorts_max> 20019 </externalPorts_max>					<!-- Type: Integer -->
 			
@@ -304,6 +353,7 @@ there is no conflict in the development along with updated engine or multiple pr
 				<bitsPerSecondPerClient> 100000 </bitsPerSecondPerClient>	<!-- Type: Int -->
 			</downloadStreaming>
 			
+			<!-- The entityID allocator, enter the overflow area will get the new ID's. -->
 			<ids>
 				<criticallyLowSize> 500 </criticallyLowSize>				<!-- Type: Integer -->
 			</ids>
@@ -319,7 +369,7 @@ there is no conflict in the development along with updated engine or multiple pr
 				<mercuryprofile> false </mercuryprofile>
 			</profiles>
 			
-			<!-- listen监听队列最大值 -->
+			<!-- listen: Maximum listen queue -->
 			<SOMAXCONN> 128 </SOMAXCONN>
 			
 			<!-- 如果被占用则向后尝试40001.. -->
@@ -330,44 +380,51 @@ there is no conflict in the development along with updated engine or multiple pr
 				<default_layer> python </default_layer>
 			</telnet_service>
 			
+			<!-- Parameter server shutdown process -->
 			<shutdown>
-				<!-- 每秒销毁base数量 -->
+				<!-- In per-seconds, The destruction of the number of base's -->
 				<perSecsDestroyEntitySize> 15 </perSecsDestroyEntitySize>
 			</shutdown>
 			
 			<respool>
 				<!-- 缓冲区大小也等于资源大小， 在这个KB大小范围以内的资源才可以进入资源池 -->
 				<buffer_size> 1024 </buffer_size>
+
 				<!-- 资源池中的资源超过这个时间未被访问则销毁(秒) -->
 				<timeout> 600 </timeout>
+
 				<!-- 资源池检查tick(秒) -->
 				<checktick>60</checktick>
 			</respool>
 		</baseapp>
 		
 		<cellappmgr>
+			<!-- Name of the interface(NIC) -->
 			<internalInterface>  </internalInterface>
 		</cellappmgr>
 		
 		<baseappmgr>
+			<!-- Name of the interface(NIC) -->
 			<internalInterface>  </internalInterface>
 		</baseappmgr>
 		
 		<loginapp>
+			<!-- Name of the interface(NIC) -->
 			<internalInterface>  </internalInterface>
 			<externalInterface>  </externalInterface>						<!-- Type: String -->
+
 			<externalPorts_min> 20013 </externalPorts_min>					<!-- Type: Integer -->
 			<externalPorts_max> 0 </externalPorts_max>						<!-- Type: Integer -->
 			
-			<!-- 加密登录信息
-				可选加密:
-					0: 无加密
-					1: blowfish
-					2: rsa (res\key\kbengine_private.key)
+			<!-- The encrypted user login information
+				Optional encryption:
+					0: No Encryption
+					1: Blowfish
+					2: RSA (res\key\kbengine_private.key)
 			 -->
 			<encrypt_login> 2 </encrypt_login>
 			
-			<!-- listen监听队列最大值 -->
+			<!-- listen: Maximum listen queue -->
 			<SOMAXCONN> 128 </SOMAXCONN>
 			
 			<!-- 
@@ -387,12 +444,11 @@ there is no conflict in the development along with updated engine or multiple pr
 			<externalPorts_max> 0 </externalPorts_max>						<!-- Type: Integer -->
 		</kbmachine>
 		
-		<kbcenter>
-			<internalInterface>  </internalInterface>
-		</kbcenter>
-		
 		<bots>
+			<!-- Name of the interface(NIC) -->
 			<internalInterface>  </internalInterface>
+
+			<!-- loginapp address -->
 			<host> localhost </host>										<!-- Type: String -->
 			<port> 20013 </port>											<!-- Type: Integer -->
 			
@@ -409,10 +465,12 @@ there is no conflict in the development along with updated engine or multiple pr
 		</bots>
 		
 		<messagelog>
+			<!-- Name of the interface(NIC) -->
 			<internalInterface>  </internalInterface>
 		</messagelog>
 		
 		<resourcemgr>
+			<!-- Name of the interface(NIC) -->
 			<internalInterface>  </internalInterface>
 			
 			<downloadStreaming>
@@ -420,7 +478,7 @@ there is no conflict in the development along with updated engine or multiple pr
 				<bitsPerSecondPerClient> 100000 </bitsPerSecondPerClient>	<!-- Type: Int -->
 			</downloadStreaming>
 			
-			<!-- listen监听队列最大值 -->
+			<!-- listen: Maximum listen queue -->
 			<SOMAXCONN> 128 </SOMAXCONN>
 			
 			<respool>
