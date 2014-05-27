@@ -17,8 +17,8 @@ Example:
 	UDP broadcast: (20086-20088)
 
 Download: 
-[centos_firewall.tar]
+[Centos_Firewall.tar]
 
 
 
-[centos_firewall.tar]: {{ site.baseurl }}/assets/other/centos_firewall.tar
+[Centos_Firewall.tar]: {{ site.baseurl }}/assets/other/centos_firewall.tar

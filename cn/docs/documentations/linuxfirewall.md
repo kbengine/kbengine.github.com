@@ -17,8 +17,8 @@ Linux防火墙设置
 	UDP 广播端口: (20086-20088)
 
 下载: 
-[centos_firewall.tar]
+[Centos_Firewall.tar]
 
 
 
-[centos_firewall.tar]: {{ site.baseurl }}/assets/other/centos_firewall.tar
+[Centos_Firewall.tar]: {{ site.baseurl }}/assets/other/centos_firewall.tar

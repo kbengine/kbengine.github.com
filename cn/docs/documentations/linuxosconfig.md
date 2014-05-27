@@ -9,8 +9,8 @@ docsitem: documentation-linuxosconfig
 ====================
 
 下载: 
-[centos_config.tar]
+[Centos_Config.tar]
 
 
 
-[centos_config.tar]: {{ site.baseurl }}/assets/other/centos_config.tar
+[Centos_Config.tar]: {{ site.baseurl }}/assets/other/centos_config.tar
