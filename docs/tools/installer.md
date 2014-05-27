@@ -2,10 +2,10 @@
 layout: docs
 title: Installer · Docs · KBEngine
 tab: docs
-docsitem: commands-installer
+docsitem: tools-installer
 ---
 
-Installer Commands
+Installer tools
 ==============
 
 

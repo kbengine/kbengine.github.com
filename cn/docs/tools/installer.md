@@ -2,7 +2,7 @@
 layout: docs_cn
 title: Installer · Docs · KBEngine
 tab: docs
-docsitem: commands-installer
+docsitem: tools-installer
 ---
 
 安装命令

@@ -1,8 +1,8 @@
 ---
 layout: docs_cn
-title: Guiconsole Commands · Docs · KBEngine
+title: Guiconsole Tools · Docs · KBEngine
 tab: docs
-docsitem: commands-guiconsole
+docsitem: tools-guiconsole
 ---
 
 GUIConsole 工具

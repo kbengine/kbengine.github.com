@@ -1,11 +1,11 @@
 ---
 layout: docs
-title: Pycluster Commands · Docs · KBEngine
+title: Pycluster Tools · Docs · KBEngine
 tab: docs
-docsitem: commands-pycluster
+docsitem: tools-pycluster
 ---
 
-Pycluster Commands
+Pycluster tools
 ================
 
 path: 

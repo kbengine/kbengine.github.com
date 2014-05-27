@@ -1,11 +1,11 @@
 ---
 layout: docs
-title: Commands Overview · Docs · KBEngine
+title: Tools Overview · Docs · KBEngine
 tab: docs
-docsitem: commands-overview
+docsitem: tools-overview
 ---
 
-Commands
+Tools
 ========
 
 ### pycluster([cluster_controller]):
@@ -24,5 +24,5 @@ Commands
 
 
 
-[cluster_controller]: {{ site.baseurl }}/docs/commands/pycluster
+[cluster_controller]: {{ site.baseurl }}/docs/tools/pycluster
 	

@@ -1,8 +1,8 @@
 ---
 layout: docs_cn
-title: Pycluster Commands · Docs · KBEngine
+title: Pycluster Tools · Docs · KBEngine
 tab: docs
-docsitem: commands-pycluster
+docsitem: tools-pycluster
 ---
 
 集群控制命令
