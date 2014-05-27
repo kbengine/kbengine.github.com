@@ -55,6 +55,8 @@ KBEngine can read KBE_ROOT, KBE_RES_PATH, KBE_HYBRID_PATH system environment var
 		
 		UID = 1
 
+Environment variables description
+
 	KBE_ROOT:
 
 		kbe root directory path.

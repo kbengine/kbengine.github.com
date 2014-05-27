@@ -51,6 +51,8 @@ KBEngine会读取系统中设置的(KBE_ROOT, KBE_RES_PATH, KBE_HYBRID_PATH)环�
 
 		UID = 1
 
+环境变量的意义
+
 	KBE_ROOT:
 
 		引擎根目录。
