@@ -8,7 +8,25 @@ docsitem: documentation-getlogs
 Get the runtime logs
 ====================
 
+###There are two ways to view the server running log: 
 
+1: Use visualization console tool ([GUIConsole]) (must be open [messagelog] Service).
+
+2: View log files.
+Path: [KBE_HYBRID_PATH]/[logs]/*.log. 
+
+
+-----------------------------------------------------------------------------------------------
+
+###Log types: 
+
+	DEBUG		: Debug Log 
+	WARRING		: Warning log 
+	ERROR		: Error Log 
+	INFO		: general log 
+	S_DBG		: Script-layer debug log 
+	S_ERR		: Script-layer error log 
+	S_INFO		: Script-layer general log 
 
 
 
