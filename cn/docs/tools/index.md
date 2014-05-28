@@ -5,7 +5,7 @@ tab: docs
 docsitem: tools-overview
 ---
 
-命令
+工具
 ========
 
 ### 集群控制([cluster_controller]):
