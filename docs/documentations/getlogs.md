@@ -10,10 +10,10 @@ Get the runtime logs
 
 ###There are two ways to view the server running log: 
 
-1: Use visualization console tool ([GUIConsole]) (must be open [messagelog] Service)
+1: Use visualization console tool ([GUIConsole]) (must be open [messagelog] Service).
 
-2: View log file
-	Path: [KBE_HYBRID_PATH]/[logs]/*.log. 
+2: View log file.
+Path: [KBE_HYBRID_PATH]/[logs]/*.log. 
 
 
 -----------------------------------------------------------------------------------------------
@@ -27,6 +27,7 @@ Get the runtime logs
 	S_DBG		: Script-layer debug log 
 	S_ERR		: Script-layer error log 
 	S_INFO		: Script-layer general log 
+
 
 
 [GUIConsole]: {{ site.baseurl }}/docs/commands/guiconsole.html

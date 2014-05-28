@@ -10,10 +10,10 @@ docsitem: documentation-getlogs
 
 ###有二种办法查看服务端运行日志:
 
-1: 使用可视化的控制台工具([GUIConsole])(必须开启[messagelog]服务)
+1: 使用可视化的控制台工具([GUIConsole])(必须开启[messagelog]服务)。
 
-2: 查看log文件
-	目录地址: [KBE_HYBRID_PATH]/[logs]/*.log
+2: 查看log文件。
+目录地址: [KBE_HYBRID_PATH]/[logs]/*.log
 
 
 -----------------------------------------------------------------------------------------------
@@ -27,6 +27,7 @@ docsitem: documentation-getlogs
 	S_DBG		: 脚本层调试日志
 	S_ERR		: 脚本层错误日志
 	S_INFO		: 脚本层常规日志
+
 
 
 [GUIConsole]: {{ site.baseurl }}/cn/docs/commands/guiconsole.html
