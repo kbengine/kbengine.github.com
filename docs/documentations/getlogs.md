@@ -10,16 +10,9 @@ Get the runtime logs
 
 ###There are two ways to view the server running log: 
 
-1. Use visualization console tool ([GUIConsole]).
+1. Use visualization console tool ([GUIConsole]), must be open [messagelog] Service.
 
-must be open [messagelog] Service.
-
-
-2. View log files.
-
-Path: 
-
-[KBE_HYBRID_PATH]/[logs]/xxx.log. 
+2. View log files([KBE_HYBRID_PATH]/[logs]/xxx.log). 
 
 
 -----------------------------------------------------------------------------------------------
