@@ -93,23 +93,23 @@ docsitem: documentation-online-debugging
 
 引擎性能分析
 
-	[GUIConsole]->profile选项卡	: 选择cprofile进行分析。
-	[Cluster Controller]		: 使用":cprofile"命令。
+* [GUIConsole]->profile选项卡	: 选择cprofile进行分析。
+* [Cluster Controller]		: 使用":cprofile"命令。
 
 脚本性能分析
 
-	[GUIConsole]->profile选项卡	: 选择pyprofile进行分析。
-	[Cluster Controller]		: 使用":pyprofile"命令。
+* [GUIConsole]->profile选项卡	: 选择pyprofile进行分析。
+* [Cluster Controller]		: 使用":pyprofile"命令。
 
 网络状态分析
 
-	[GUIConsole]->profile选项卡	: 选择mercuryprofile进行分析。
-	[Cluster Controller]		: 使用":mercuryprofile"命令。
+* [GUIConsole]->profile选项卡	: 选择mercuryprofile进行分析。
+* [Cluster Controller]		: 使用":mercuryprofile"命令。
 
 事件处理分析
 
-	[GUIConsole]->profile选项卡	: 选择eventprofile进行分析。
-	[Cluster Controller]		: 使用":eventprofile"命令。
+* [GUIConsole]->profile选项卡	: 选择eventprofile进行分析。
+* [Cluster Controller]		: 使用":eventprofile"命令。
 
 
 
