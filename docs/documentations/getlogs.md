@@ -13,7 +13,7 @@ Get the runtime logs
 1: Use visualization console tool ([GUIConsole]) 
 
 2: View log files.
-Path: ([KBE_HYBRID_PATH])/([logs])/*.log. 
+Path: 
 
 
 -----------------------------------------------------------------------------------------------
