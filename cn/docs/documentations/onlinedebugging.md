@@ -21,8 +21,9 @@ docsitem: documentation-online-debugging
 断点调试:
 --------------------------------------
 
-	仅引擎层c++代码可以使用断点调试，断点调试请先关闭服务端心跳机制[kbengine_defs.xml]->channelCommon->timeout.
-	脚本层只能输出log，或者使用Python命令行来调试，由于是分布式服务程序没有增加断点的功能。
+仅引擎层c++代码可以使用断点调试，断点调试请先关闭服务端心跳机制[kbengine_defs.xml]->channelCommon->timeout.
+
+脚本层只能查看输出日志，或者使用Python命令行来调试，由于是分布式服务程序没有增加断点的功能。
 
 
 使用可视化工具 ([GUIConsole]):
@@ -117,7 +118,7 @@ docsitem: documentation-online-debugging
 
 ### 监视变量:
 
-引擎允许使用工具监视当前服务端上的一些默认提供的变量(例如:总发包数，当前在线的玩家数)，同时用户也可以在脚本中添加需要监视的变量。
+引擎允许使用工具监视当前进程上默认提供的变量(例如:总发包数，当前在线的玩家数)，同时用户也可以在脚本中添加需要监视的变量。
 
 查看方式: [GUIConsole]->watcher选项卡。
 
