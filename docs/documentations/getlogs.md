@@ -13,7 +13,7 @@ Get the runtime logs
 1: Use visualization console tool ([GUIConsole]) (must be open [messagelog] Service).
 
 2: View log files.
-Path: /[logs]/*.log. 
+Path: [logs] 
 
 
 -----------------------------------------------------------------------------------------------
