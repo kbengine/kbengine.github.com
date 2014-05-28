@@ -93,23 +93,23 @@ You can be in the Python command line, the execution of any Python code.
 
 Engine performance analysis
 
-	[GUIConsole]->profile-tab	: use cprofile.
-	[Cluster Controller]		: use":cprofile"command.
+* [GUIConsole]->profile-tab	: use cprofile.
+* [Cluster Controller]		: use":cprofile"command.
 
 Script performance analysis
 
-	[GUIConsole]->profile-tab	: use pyprofile.
-	[Cluster Controller]		: use":pyprofile"command.
+* [GUIConsole]->profile-tab	: use pyprofile.
+* [Cluster Controller]		: use":pyprofile"command.
 
 Network state analysis
 
-	[GUIConsole]->profile-tab	: use mercuryprofile.
-	[Cluster Controller]		: use":mercuryprofile"command.
+* [GUIConsole]->profile-tab	: use mercuryprofile.
+* [Cluster Controller]		: use":mercuryprofile"command.
 
 Event processing analysis
 
-	[GUIConsole]->profile-tab	: use eventprofile.
-	[Cluster Controller]		: use":eventprofile"command.
+* [GUIConsole]->profile-tab	: use eventprofile.
+* [Cluster Controller]		: use":eventprofile"command.
 
 
 
