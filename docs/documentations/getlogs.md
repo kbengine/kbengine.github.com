@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Get the runtime logs · Docs · KBEngine
+title: 1 · Docs · KBEngine
 tab: docs
 docsitem: documentation-getlogs
 ---
