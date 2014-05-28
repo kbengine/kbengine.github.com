@@ -8,6 +8,15 @@ docsitem: tools-overview
 工具
 ========
 
+### 安装住手([installer]):
+
+	python kbengine/kbe/tools/server/install/installer.py install
+	python kbengine/kbe/tools/server/install/installer.py uninstall
+
+	详细请参考: [installer]
+
+
+
 ### 集群控制([cluster_controller]):
 
 	python cluster_controller.py query: 
@@ -24,5 +33,14 @@ docsitem: tools-overview
 
 
 
+### 可视化控制台([GUIConsole]):
+
+	<img class="screenshots-img" src="{{ site.baseurl }}/assets/img/screenshots/guiconsole_debug.jpg">
+
+	详细请参考: [GUIConsole]
+
+
+
+[installer]: {{ site.baseurl }}/cn/docs/tools/installer
 [cluster_controller]: {{ site.baseurl }}/cn/docs/tools/pycluster
-	
+[GUIConsole]: {{ site.baseurl }}/cn/docs/tools/guiconsole

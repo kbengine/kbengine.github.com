@@ -24,5 +24,8 @@ Tools
 
 
 
+
+[installer]: {{ site.baseurl }}/docs/tools/installer
 [cluster_controller]: {{ site.baseurl }}/docs/tools/pycluster
+[guiconsole]: {{ site.baseurl }}/docs/tools/guiconsole
 	
