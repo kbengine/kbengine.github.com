@@ -13,7 +13,7 @@ docsitem: documentation-getlogs
 1: 使用可视化的控制台工具([GUIConsole])(必须开启[messagelog]服务)。
 
 2: 查看log文件。
-目录地址: [KBE_HYBRID_PATH]/[logs]/*.log
+目录地址: [KBE_HYBRID_PATH]/[logs]/xxx.log. 
 
 
 -----------------------------------------------------------------------------------------------
