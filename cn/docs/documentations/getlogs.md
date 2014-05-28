@@ -28,6 +28,9 @@ docsitem: documentation-getlogs
 	S_INFO		: 脚本层常规日志
 
 
+<img class="screenshots-img" src="{{ site.baseurl }}/assets/img/screenshots/guiconsole_log.jpg">
+
+
 
 [GUIConsole]: {{ site.baseurl }}/cn/docs/commands/guiconsole.html
 [messagelog]: {{ site.baseurl }}/cn/docs/concepts/layout.html

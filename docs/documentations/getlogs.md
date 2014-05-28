@@ -28,6 +28,9 @@ Get the runtime logs
 	S_INFO		: Script-layer general log 
 
 
+<img class="screenshots-img" src="{{ site.baseurl }}/assets/img/screenshots/guiconsole_log.jpg">
+
+
 
 [GUIConsole]: {{ site.baseurl }}/docs/commands/guiconsole.html
 [messagelog]: {{ site.baseurl }}/docs/concepts/layout.html

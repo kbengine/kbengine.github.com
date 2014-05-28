@@ -112,6 +112,10 @@ Event processing analysis
 * [Cluster Controller]		: use":eventprofile"command.
 
 
+<img class="screenshots-img" src="{{ site.baseurl }}/assets/img/screenshots/guiconsole_pyprofile.jpg">
+<img class="screenshots-img" src="{{ site.baseurl }}/assets/img/screenshots/guiconsole_cprofile.jpg">
+
+
 
 ------------------------------------------------------------------------------------------------------------
 
@@ -140,6 +144,11 @@ Examples: add a variable to be monitored in the script(the current number of pla
 
 		...
 		...
+
+
+
+<img class="screenshots-img" src="{{ site.baseurl }}/assets/img/screenshots/guiconsole_watcher.jpg">
+
 
 
 

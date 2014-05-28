@@ -112,6 +112,10 @@ docsitem: documentation-online-debugging
 * [Cluster Controller]		: 使用":eventprofile"命令。
 
 
+<img class="screenshots-img" src="{{ site.baseurl }}/assets/img/screenshots/guiconsole_pyprofile.jpg">
+<img class="screenshots-img" src="{{ site.baseurl }}/assets/img/screenshots/guiconsole_cprofile.jpg">
+
+
 
 ------------------------------------------------------------------------------------------------------------
 
@@ -139,6 +143,10 @@ docsitem: documentation-online-debugging
 
 		...
 		...
+
+
+<img class="screenshots-img" src="{{ site.baseurl }}/assets/img/screenshots/guiconsole_watcher.jpg">
+
 
 
 
