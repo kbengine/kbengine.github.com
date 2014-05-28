@@ -8,7 +8,7 @@ docsitem: tools-guiconsole
 GUIConsole 工具
 ===============
 
-路径: 
+目录地址: 
 	kbe/tools/server/guiconsole/guiconsole.exe
 
 这个图形工具只能在Windows运行

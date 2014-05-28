@@ -8,7 +8,7 @@ docsitem: tools-guiconsole
 GUIConsole Tools
 ===============
 
-path: 
+Path: 
 	kbe/tools/server/guiconsole/guiconsole.exe
 
 This is a visual software application running on Windows.

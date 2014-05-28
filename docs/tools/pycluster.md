@@ -8,7 +8,7 @@ docsitem: tools-pycluster
 Pycluster tools
 ================
 
-path: 
+Path: 
 	kbe/tools/server/pycluster/cluster_controller.py
 
 
