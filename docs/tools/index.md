@@ -8,7 +8,14 @@ docsitem: tools-overview
 Tools
 ========
 
-### pycluster([cluster_controller]):
+### Installation Assistant([installer]):
+
+	python kbengine/kbe/tools/server/install/installer.py install
+	python kbengine/kbe/tools/server/install/installer.py uninstall
+
+
+
+### Python version of the cluster control([cluster_controller]):
 
 	python cluster_controller.py query: 
 		Information query servers
@@ -22,6 +29,11 @@ Tools
 	python cluster_controller.py console: 
 		Online debugging, python console.
 
+
+
+### Visual console([GUIConsole]):
+
+<img class="screenshots-img" src="{{ site.baseurl }}/assets/img/screenshots/guiconsole_debug.jpg">
 
 
 
