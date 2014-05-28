@@ -15,7 +15,7 @@ Get the runtime logs
 2: View log files.
 Path: [KBE_HYBRID_PATH]
 
-/logs/*.log. 
+/logs/xx.log. 
 
 
 -----------------------------------------------------------------------------------------------
