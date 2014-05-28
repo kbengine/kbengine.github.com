@@ -1,6 +1,6 @@
 ---
 layout: docs_cn
-title: Create World · Docs · KBEngine
+title: Multiplayer online RPG · Docs · KBEngine
 tab: docs
 docsitem: documentation-gameexample2
 ---

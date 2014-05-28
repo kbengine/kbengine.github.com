@@ -1,14 +1,14 @@
 ---
 layout: docs
-title: Create World · Docs · KBEngine
+title: Multiplayer online RPG · Docs · KBEngine
 tab: docs
 docsitem: documentation-gameexample2
 ---
 
-multiplayer online RPG
+Multiplayer online RPG
 ====================
 
-download: 
+Download: 
 [rpgdemo_project.tar]
 
 

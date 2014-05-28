@@ -1,6 +1,6 @@
 ---
 layout: docs_cn
-title: Script Programming · Docs · KBEngine
+title: API Docs · Docs · KBEngine
 tab: docs
 docsitem: api-script-programming
 ---

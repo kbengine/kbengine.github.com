@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: Empty Project · Docs · KBEngine
+title: The poker room games · Docs · KBEngine
 tab: docs
 docsitem: documentation-gameexample3
 ---
@@ -8,7 +8,7 @@ docsitem: documentation-gameexample3
 The poker room games
 ====================
 
-download: 
+Download: 
 [kbempty_project.tar]
 
 

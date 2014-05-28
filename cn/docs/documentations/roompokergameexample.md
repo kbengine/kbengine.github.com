@@ -1,6 +1,6 @@
 ---
 layout: docs_cn
-title: Empty Project · Docs · KBEngine
+title: The poker room games · Docs · KBEngine
 tab: docs
 docsitem: documentation-gameexample3
 ---
