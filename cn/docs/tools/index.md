@@ -11,7 +11,16 @@ docsitem: tools-overview
 ### 安装助手([installer]):
 
 	python kbengine/kbe/tools/server/install/installer.py install
+	Automatic installation KBEngine. 
+
 	python kbengine/kbe/tools/server/install/installer.py uninstall
+	Automatic uninstallation KBEngine. 
+
+	python kbengine/kbe/tools/server/install/installer.py update
+	Update KBEngine. 
+
+	python kbengine/kbe/tools/server/install/installer.py version
+	Get the KBEngine current version.
 
 
 

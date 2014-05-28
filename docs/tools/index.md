@@ -11,7 +11,16 @@ Tools
 ### Installation Assistant([installer]):
 
 	python kbengine/kbe/tools/server/install/installer.py install
+	自动安装KBEngine。
+
 	python kbengine/kbe/tools/server/install/installer.py uninstall
+	自动卸载KBEngine。
+
+	python kbengine/kbe/tools/server/install/installer.py update
+	更新KBEngine。
+
+	python kbengine/kbe/tools/server/install/installer.py version
+	查看KBEngine当前版本。
 
 
 
