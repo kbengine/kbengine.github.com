@@ -10,9 +10,9 @@ docsitem: documentation-getlogs
 
 ###有二种办法查看服务端运行日志:
 
-2: 使用可视化的控制台工具([GUIConsole]), 必须开启[messagelog]服务。
+1: 使用可视化的控制台工具[GUIConsole], 必须开启[messagelog]服务。
 
-1: 查看log文件([KBE_HYBRID_PATH]/[logs]/xxx.log)。
+2: 查看log文件([KBE_HYBRID_PATH]/[logs]/xxx.log)。
 
 
 -----------------------------------------------------------------------------------------------
