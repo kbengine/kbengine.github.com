@@ -281,7 +281,7 @@ there is no conflict in the development along with updated engine or multiple pr
 			
 			<!-- The entityID allocator, enter the overflow area will get the new ID's. -->
 			<ids>
-				<criticallyLowSize> 500 </criticallyLowSize>				<!-- Type: Integer -->
+				<criticallyLowSize> 500 </criticallyLowSize>					<!-- Type: Integer -->
 			</ids>
 			
 			<!-- Analysis of program performance -->
@@ -325,44 +325,59 @@ there is no conflict in the development along with updated engine or multiple pr
 				<perSecsDestroyEntitySize> 15 </perSecsDestroyEntitySize>
 			</shutdown>
 			
-			<!-- Who is witness? Player is witness, The observed information will be synchronized to the client -->
+			<!-- Who is witness? Player is witness, The observed information will be synchronized to the client.
+			Developers can be designed to: Activation (NPC / Monster) AI was observed when, This can reduce server CPU consumption.
+			see also: Entity.onWitnessed. -->
 			<witness>
-				<!-- 观察者 timeout超时(秒) Integer-->
-				<timeout> 15 </timeout>
+				<!-- When the observer to stop observing entity, Entity does not recovery immediately to the initial-state,
+				Not observed before timeout again, the recovery state. -->
+				<timeout> 15 </timeout>								<!-- Type: Integer -->
 			</witness>
 		</cellapp>
 		
 		<baseapp>
+			<!-- Entry module, like the main-function -->
 			<entryScriptFile> kbengine </entryScriptFile>
 			
 			<!-- Name of the interface(NIC) -->
 			<internalInterface>  </internalInterface>
 			<externalInterface>  </externalInterface>						<!-- Type: String -->
 
-			<externalPorts_min> 20015 </externalPorts_min>					<!-- Type: Integer -->
-			<externalPorts_max> 20019 </externalPorts_max>					<!-- Type: Integer -->
+			<!-- Exposed to the client port range -->
+			<externalPorts_min> 20015 </externalPorts_min>						<!-- Type: Integer -->
+			<externalPorts_max> 20019 </externalPorts_max>						<!-- Type: Integer -->
 			
+			<!-- Automatic archiving time period -->
 			<archivePeriod> 100 </archivePeriod> 							<!-- Type: Float -->
-			<backupPeriod> 10 </backupPeriod>								<!-- Type: Float -->
-			<backUpUndefinedProperties> 0 </backUpUndefinedProperties>		<!-- Type: Boolean -->
+
+			<!-- Automatic backup time period -->
+			<backupPeriod> 10 </backupPeriod>							<!-- Type: Float -->
+
+			<!-- Whether backup undefined property -->
+			<backUpUndefinedProperties> 0 </backUpUndefinedProperties>				<!-- Type: Boolean -->
 			
+			<!-- Load balancing Smoothing Bias value -->
 			<loadSmoothingBias> 0.01 </loadSmoothingBias>
 			
+			<!-- Download bandwidth limits -->
 			<downloadStreaming>
-				<bitsPerSecondTotal> 1000000 </bitsPerSecondTotal>			<!-- Type: Int -->
-				<bitsPerSecondPerClient> 100000 </bitsPerSecondPerClient>	<!-- Type: Int -->
+				<bitsPerSecondTotal> 1000000 </bitsPerSecondTotal>				<!-- Type: Int -->
+				<bitsPerSecondPerClient> 100000 </bitsPerSecondPerClient>			<!-- Type: Int -->
 			</downloadStreaming>
 			
 			<!-- The entityID allocator, enter the overflow area will get the new ID's. -->
 			<ids>
-				<criticallyLowSize> 500 </criticallyLowSize>				<!-- Type: Integer -->
+				<criticallyLowSize> 500 </criticallyLowSize>					<!-- Type: Integer -->
 			</ids>
 			
-			<!-- entity restore每tick数量 -->
+			<!-- When after the disaster, When baseapp recovery, Each time the number of recovery entity's -->
 			<entityRestoreSize> 32 </entityRestoreSize>
 			
+			<!-- Analysis of program performance -->
 			<profiles>
-				<!-- 如果设置为true，引擎启动时就会开始记录相关profile信息， 退出时导出一份记录 -->
+				<!-- if is true, Engine start is completed, start to record profile information, 
+					Process exit will export a report.
+				-->
 				<cprofile> false </cprofile>
 				<pyprofile> false </pyprofile>
 				<eventprofile> false </eventprofile>
@@ -372,11 +387,11 @@ there is no conflict in the development along with updated engine or multiple pr
 			<!-- listen: Maximum listen queue -->
 			<SOMAXCONN> 128 </SOMAXCONN>
 			
-			<!-- 如果被占用则向后尝试40001.. -->
+			<!-- Telnet service, if the port is occupied backwards to try 40001 -->
 			<telnet_service>
 				<port> 40000 </port>
 				<password> kbe </password>
-				<!-- 命令默认层 -->
+				<!-- layer of default the command -->
 				<default_layer> python </default_layer>
 			</telnet_service>
 			
@@ -387,13 +402,15 @@ there is no conflict in the development along with updated engine or multiple pr
 			</shutdown>
 			
 			<respool>
-				<!-- 缓冲区大小也等于资源大小， 在这个KB大小范围以内的资源才可以进入资源池 -->
+				<!-- Buffer size is equal to the size of resources, 
+					Less than the buffer resources before they can enter the resource pool.
+				-->
 				<buffer_size> 1024 </buffer_size>
-
-				<!-- 资源池中的资源超过这个时间未被访问则销毁(秒) -->
+				
+				<!-- Resources have not been accessed overtime will be destroyed (s) -->
 				<timeout> 600 </timeout>
-
-				<!-- 资源池检查tick(秒) -->
+				
+				<!-- Resource pool check tick (secs) -->
 				<checktick>60</checktick>
 			</respool>
 		</baseapp>
@@ -413,7 +430,8 @@ there is no conflict in the development along with updated engine or multiple pr
 			<internalInterface>  </internalInterface>
 			<externalInterface>  </externalInterface>						<!-- Type: String -->
 
-			<externalPorts_min> 20013 </externalPorts_min>					<!-- Type: Integer -->
+			<!-- Exposed to the client port range -->
+			<externalPorts_min> 20013 </externalPorts_min>						<!-- Type: Integer -->
 			<externalPorts_max> 0 </externalPorts_max>						<!-- Type: Integer -->
 			
 			<!-- The encrypted user login information
@@ -427,20 +445,21 @@ there is no conflict in the development along with updated engine or multiple pr
 			<!-- listen: Maximum listen queue -->
 			<SOMAXCONN> 128 </SOMAXCONN>
 			
-			<!-- 
-				1: 普通账号
-				2: email账号(需要激活)
-				3: 智能账号(自动识别email， 普通号码等) 
+			<!-- Account types
+				1: Normal Account
+				2: Email Account, Note: activation required.
+				3: Smart Account (Email or Normal, etc.)
 			-->
 			<account_type> 3 </account_type>
 			
-			<!-- 用户http回调接口，处理认证、密码重置等 -->
+			<!-- Http-callback interface, handling authentication, password reset, etc. -->
 			<http_cbhost> localhost </http_cbhost>
 			<http_cbport> 21103 </http_cbport>
 		</loginapp>		
 		
 		<kbmachine>
-			<externalPorts_min> 20099 </externalPorts_min>					<!-- Type: Integer -->
+			<!-- Exposed to the tools port range -->
+			<externalPorts_min> 20099 </externalPorts_min>						<!-- Type: Integer -->
 			<externalPorts_max> 0 </externalPorts_max>						<!-- Type: Integer -->
 		</kbmachine>
 		
@@ -449,13 +468,13 @@ there is no conflict in the development along with updated engine or multiple pr
 			<internalInterface>  </internalInterface>
 
 			<!-- loginapp address -->
-			<host> localhost </host>										<!-- Type: String -->
-			<port> 20013 </port>											<!-- Type: Integer -->
+			<host> localhost </host>								<!-- Type: String -->
+			<port> 20013 </port>									<!-- Type: Integer -->
 			
-			<!-- 默认启动进程后自动添加这么多个bots 
-				totalcount： 添加总数量
-				ticktime： 每次添加所用时间(s)
-				tickcount： 每次添加数量
+			<!-- After starting the process, automatically add some robots
+				totalcount	: Add the total-number
+				ticktime	: Interval time-secs
+				tickcount	: Each time you add the number of
 			-->
 			<defaultAddBots> 
 				<totalcount> 10  </totalcount> <!-- Type: Integer -->
@@ -473,20 +492,25 @@ there is no conflict in the development along with updated engine or multiple pr
 			<!-- Name of the interface(NIC) -->
 			<internalInterface>  </internalInterface>
 			
+			<!-- Download bandwidth limits -->
 			<downloadStreaming>
-				<bitsPerSecondTotal> 1000000 </bitsPerSecondTotal>			<!-- Type: Int -->
-				<bitsPerSecondPerClient> 100000 </bitsPerSecondPerClient>	<!-- Type: Int -->
+				<bitsPerSecondTotal> 1000000 </bitsPerSecondTotal>				<!-- Type: Int -->
+				<bitsPerSecondPerClient> 100000 </bitsPerSecondPerClient>			<!-- Type: Int -->
 			</downloadStreaming>
 			
 			<!-- listen: Maximum listen queue -->
 			<SOMAXCONN> 128 </SOMAXCONN>
 			
 			<respool>
-				<!-- 缓冲区大小也等于资源大小， 在这个KB大小范围以内的资源才可以进入资源池 -->
+				<!-- Buffer size is equal to the size of resources, 
+					Less than the buffer resources before they can enter the resource pool.
+				-->
 				<buffer_size> 1024 </buffer_size>
-				<!-- 资源池中的资源超过这个时间未被访问则销毁(秒) -->
+				
+				<!-- Resources have not been accessed overtime will be destroyed (s) -->
 				<timeout> 600 </timeout>
-				<!-- 资源池检查tick(秒) -->
+				
+				<!-- Resource pool check tick (secs) -->
 				<checktick>60</checktick>
 			</respool>
 		</resourcemgr>
