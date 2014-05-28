@@ -29,6 +29,9 @@ docsitem: tools-overview
 	python cluster_controller.py console: 
 		在线调试，Python控制台等。
 
+<img class="screenshots-img" src="{{ site.baseurl }}/assets/img/screenshots/pyconsole1.jpg">
+<img class="screenshots-img" src="{{ site.baseurl }}/assets/img/screenshots/pyconsole_stop.jpg">
+
 
 
 ### 可视化控制台([GUIConsole]):

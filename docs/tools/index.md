@@ -29,6 +29,9 @@ Tools
 	python cluster_controller.py console: 
 		Online debugging, python console.
 
+<img class="screenshots-img" src="{{ site.baseurl }}/assets/img/screenshots/pyconsole1.jpg">
+<img class="screenshots-img" src="{{ site.baseurl }}/assets/img/screenshots/pyconsole_stop.jpg">
+
 
 
 ### Visual console([GUIConsole]):
