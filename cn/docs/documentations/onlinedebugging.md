@@ -8,8 +8,37 @@ docsitem: documentation-online-debugging
 在线调试
 ====================
 
-允许系统产生core文件(仅Linux):
+
+###工具介绍:
 --------------------------------------
+
+使用可视化工具[GUIConsole]:
+
+<img class="screenshots-img" src="{{ site.baseurl }}/assets/img/screenshots/guiconsole_debug.jpg">
+
+
+
+使用脚本命令工具[Cluster Controller]:
+
+* 你可以使用这个工具查看服务端运行的一些状态信息 (参看: [Information query servers][Cluster Controller])
+
+* 你可以使用这个工具进入Python命令行调试 (参看: [Console][Cluster Controller])
+
+
+
+使用telnet服务[kbengine_defs.xml]->telnet_service:
+
+	cellapp	: telnet localhost 50000
+	baseapp	: telnet localhost 40000
+	client	: telnet localhost 51000
+
+
+
+------------------------------------------------------------------------------------------------------------
+
+
+
+###允许系统产生core文件(仅Linux):
 
 	在~/.bashrc中添加如下命令:
 		ulimit -c unlimited
@@ -18,32 +47,23 @@ docsitem: documentation-online-debugging
 		[root@gameserver ~]# echo '%e.core.%p' > /proc/sys/kernel/core_pattern
 
 
-断点调试:
---------------------------------------
+------------------------------------------------------------------------------------------------------------
+
+
+
+###断点调试:
 
 仅引擎层c++代码可以使用断点调试，断点调试请先关闭服务端心跳机制[kbengine_defs.xml]->channelCommon->timeout.
 
 脚本层只能查看输出日志，或者使用Python命令行来调试，由于是分布式服务程序没有增加断点的功能。
 
 
-使用可视化工具 ([GUIConsole]):
---------------------------------------
-
-详细请参考: [GUIConsole]
-
-<img class="screenshots-img" src="{{ site.baseurl }}/assets/img/screenshots/guiconsole_debug.jpg">
-
-使用脚本命令工具([Cluster Controller]):
---------------------------------------
-
-* 你可以使用这个工具查看服务端运行的一些状态信息 (参看: [Information query servers][Cluster Controller])
-
-* 你可以使用这个工具进入Python命令行调试 (参看: [Console][Cluster Controller])
-
 
 ------------------------------------------------------------------------------------------------------------
 
-### Python命令行调试游戏逻辑例子(在Python命令行输入):
+
+
+###Python命令行调试游戏逻辑例子(在Python命令行输入):
 
 查看当前进程上的所有Entity:
 
@@ -89,7 +109,7 @@ docsitem: documentation-online-debugging
 ------------------------------------------------------------------------------------------------------------
 
 
-### 性能分析:
+###性能分析:
 
 引擎性能分析
 
@@ -120,7 +140,7 @@ docsitem: documentation-online-debugging
 ------------------------------------------------------------------------------------------------------------
 
 
-### 监视变量:
+###监视变量:
 
 引擎允许使用工具监视当前进程上默认提供的变量(例如:总发包数，当前在线的玩家数)，同时用户也可以在脚本中添加需要监视的变量。
 
