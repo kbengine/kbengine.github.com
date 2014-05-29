@@ -5,11 +5,11 @@ tab: docs
 docsitem: documentation-online-debugging
 ---
 
-Online debugging
+
+
+Online debugging tools:
 ====================
 
-###Tools:
---------------------------------------
 
 Use visualization tools[GUIConsole]:
 
@@ -33,8 +33,12 @@ The use of Telnet services[kbengine_defs.xml]->telnet_service:
 
 
 
-###Debugging skills:
---------------------------------------
+------------------------------------------------------------------------------------------------------------
+
+
+
+Debugging skills:
+====================
 
 
 ###Allows the generation of core files(Linux only):
