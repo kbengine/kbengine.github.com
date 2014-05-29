@@ -8,8 +8,36 @@ docsitem: documentation-online-debugging
 Online debugging
 ====================
 
-Allows the generation of core files(Linux only):
+###Tools:
 --------------------------------------
+
+Use visualization tools[GUIConsole]:
+
+<img class="screenshots-img" src="{{ site.baseurl }}/assets/img/screenshots/guiconsole_debug.jpg">
+
+
+
+Use script tools[Cluster Controller]:
+
+* you can use this tool to view status information for running the server (see: [Information query servers][Cluster Controller])
+
+* You can enter the python command line tools for debugging (see: [Console][Cluster Controller])
+
+
+
+The use of Telnet services[kbengine_defs.xml]->telnet_service:
+
+	cellapp	: telnet localhost 50000
+	baseapp	: telnet localhost 40000
+	client	: telnet localhost 51000
+
+
+
+###Debugging skills:
+--------------------------------------
+
+
+###Allows the generation of core files(Linux only):
 
 	Adding ~/.bashrc file:
 		ulimit -c unlimited
@@ -18,32 +46,20 @@ Allows the generation of core files(Linux only):
 		[root@gameserver ~]# echo '%e.core.%p' > /proc/sys/kernel/core_pattern
 
 
-Breakpoint debugging:
---------------------------------------
+
+------------------------------------------------------------------------------------------------------------
+
+
+
+###Breakpoint debugging:
 
 Only engine layer c + + code can use breakpoint debugging, Turn off the breakpoint debugging server heartbeat[kbengine_defs.xml]->channelCommon->timeout.
 
 Script layer can only view the output log, or use the Python command line to debug, Because it is a distributed service program, so I do not support breakpoint.
 
-
-Use visualization tools([GUIConsole]):
---------------------------------------
-
-For details, please see: [GUIConsole]
-
-<img class="screenshots-img" src="{{ site.baseurl }}/assets/img/screenshots/guiconsole_debug.jpg">
-
-Use script tools([Cluster Controller]):
---------------------------------------
-
-* you can use this tool to view status information for running the server (see: [Information query servers][Cluster Controller])
-
-* You can enter the python command line tools for debugging (see: [Console][Cluster Controller])
-
-
 ------------------------------------------------------------------------------------------------------------
 
-### Python debugging the game logic(Python command line input):
+###Python debugging the game logic(Python command line input):
 
 Print all entities:
 
@@ -89,7 +105,7 @@ You can be in the Python command line, the execution of any Python code.
 ------------------------------------------------------------------------------------------------------------
 
 
-### The performance analysis:
+###The performance analysis:
 
 Engine performance analysis
 
