@@ -32,4 +32,11 @@ docsitem: documentation-stresstest
 
 
 
+机器人编程
+====================
+
+参考: demo/res/scripts/[bots]脚本源代码。
+
+
 [kbengine_defs.xml]: {{ site.baseurl }}/cn/docs/configuration/kbengine_defs.html
+[bots]: {{ site.baseurl }}/cn/docs/concepts/directorys.html

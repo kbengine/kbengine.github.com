@@ -33,4 +33,12 @@ see also [kbengine_defs.xml]->`bots`
 
 
 
+Robot programming
+====================
+
+Reference: demo/res/scripts/[bots] script-sources.
+
+
+
 [kbengine_defs.xml]: {{ site.baseurl }}/docs/configuration/kbengine_defs.html
+[bots]: {{ site.baseurl }}/docs/concepts/directorys.html
