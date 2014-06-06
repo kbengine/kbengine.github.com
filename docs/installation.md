@@ -47,8 +47,8 @@ KBEngine can read KBE_ROOT, KBE_RES_PATH, KBE_HYBRID_PATH system environment var
 		The right mouse button: "My Computer"->"Advanced"->"Environment Variables" Set up(If installed in C drive).
 
 		KBE_ROOT = C:/kbengine/
-		KBE_RES_PATH = $KBE_ROOT/kbe/res/;$KBE_ROOT/demo/;$KBE_ROOT/demo/res/
-		KBE_HYBRID_PATH = $KBE_ROOT/kbe/bin/Hybrid64/
+		KBE_RES_PATH =%KBE_ROOT%/kbe/res;%KBE_ROOT%/demo/;%KBE_ROOT%/demo/res/
+		KBE_HYBRID_PATH = %KBE_ROOT%/kbe/bin/Hybrid64/
 
 		(Note: Windows system account no UID attribute, Users need to add this environment variable, 
 		UID must be greater than 0 and less than 32767)
