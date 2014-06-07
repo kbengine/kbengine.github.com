@@ -5,8 +5,8 @@ tab: docs
 docsitem: startup-shutdown
 ---
 
-Startup
-==============
+Startup(nonsupport)
+-------------------
 
 	python $KBE_ROOT/kbe/tools/server/pycluster/cluster_controller.py start
 	(Note: The initial start mysql server will automatically build the table, you may need to wait for some time.)
