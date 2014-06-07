@@ -44,8 +44,8 @@ KBEngine会读取系统中设置的(KBE_ROOT, KBE_RES_PATH, KBE_HYBRID_PATH)环�
 		鼠标右键点击: "我的电脑"->"高级"->"环境变量"， 然后设置(假如安装在C盘)
 
 		KBE_ROOT = C:/kbengine/
-		KBE_RES_PATH = $KBE_ROOT/kbe/res/;$KBE_ROOT/demo/;$KBE_ROOT/demo/res/
-		KBE_HYBRID_PATH = $KBE_ROOT/kbe/bin/Hybrid64/
+		KBE_RES_PATH =%KBE_ROOT%/kbe/res;%KBE_ROOT%/demo/;%KBE_ROOT%/demo/res/
+		KBE_HYBRID_PATH = %KBE_ROOT%/kbe/bin/Hybrid64/
 
 		(注意: Windows系统账号没有UID属性， 需要用户自己添加这个环境变量, UID必须大于0, 小于32767)
 
