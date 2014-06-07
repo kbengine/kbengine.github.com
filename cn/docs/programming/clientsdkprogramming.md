@@ -2,10 +2,10 @@
 layout: docs_cn
 title: Script Programming · Docs · KBEngine
 tab: docs
-docsitem: api-script-programming
+docsitem: sdk-client-programming
 ---
 
-脚本编程
+客户端SDK编程
 ====================
 
 下载: 
