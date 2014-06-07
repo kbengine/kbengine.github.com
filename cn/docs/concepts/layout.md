@@ -87,6 +87,10 @@ docsitem: concepts-layout
 	如：CPU、内存等。 这些信息会提供给一些对此比较感兴趣的组件。 
 
 
+	· billingsystem: 
+	支持快速接入第三方计费、第三方账号、第三方数据， 快速与运营系统耦合。
+
+
 	· guiconsole: 
 	这是一个可视化的图形界面控制台工具，可以实时的观察服务端运行状态，实时观测不同Space中Entity的动态，
 	并支持动态调试服务端Python逻辑层以及查看各个组件的日志，启动服务端与关闭等。 
@@ -94,6 +98,7 @@ docsitem: concepts-layout
 
 	· messagelog: 
 	收集和备份各个组件的运行日志。
+
 
 
 [config-server]: {{ site.baseurl }}/cn/docs/configuration/kbengine_defs.html
