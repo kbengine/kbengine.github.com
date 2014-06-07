@@ -5,7 +5,7 @@ tab: docs
 docsitem: startup-shutdown
 ---
 
-启动服务端
+启动服务端(暂不支持)
 ==============
 
 	python $KBE_ROOT/kbe/tools/server/pycluster/cluster_controller.py start
