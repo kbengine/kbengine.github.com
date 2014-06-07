@@ -6,7 +6,7 @@ docsitem: startup-shutdown
 ---
 
 启动服务端(暂不支持)
-==============
+-------------------
 
 	python $KBE_ROOT/kbe/tools/server/pycluster/cluster_controller.py start
 	(注意: 初次启动kbe时，mysql需要初始化一些表结构， 可能会花上几分钟请耐心等待完成。)
