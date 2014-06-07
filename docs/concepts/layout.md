@@ -90,6 +90,10 @@ Server component description
 	such as: CPU, Memory, cellapp, etc. This information is provided to the component of interest. 
 
 
+	· billingsystem: 
+	Quick access to third-party billing, third-party accounts, third-party datas.
+
+
 	· guiconsole: 
 	This is a visual GUI console tools, real-time observation of the server running, 
 	real-time observation of the dynamics of different Space in Entity, 
