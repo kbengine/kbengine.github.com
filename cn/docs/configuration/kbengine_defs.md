@@ -399,6 +399,9 @@ docsitem: configuration-kbengine-defs
 					the management of the y-axis will produce some consumption
 					-->
 				<rangemgr_y> false </rangemgr_y>
+
+				<!-- 实体位置停止发生改变后，引擎继续向客户端更新tick次的位置信息，为0则总是更新。-->
+				<entity_posdir_additional_updates> 5 </entity_posdir_additional_updates>
 			</coordinate_system>
 			
 			<!-- Telnet服务, 如果端口被占用则向后尝试50001.. 

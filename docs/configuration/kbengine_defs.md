@@ -309,6 +309,12 @@ there is no conflict in the development along with updated engine or multiple pr
 				the management of the y-axis will produce some consumption 
 				-->
 				<rangemgr_y> false </rangemgr_y>
+
+				<!-- After stopping to change the position/direction, 
+					the engine continued to update client information(position/direction) ticks
+					If 0, then always update.
+				-->
+				<entity_posdir_additional_updates> 5 </entity_posdir_additional_updates>
 			</coordinate_system>
 			
 			<!-- Telnet service, if the port is occupied backwards to try 50001 -->
