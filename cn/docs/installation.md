@@ -69,11 +69,12 @@ KBEngine会读取系统中设置的(KBE_ROOT, KBE_RES_PATH, KBE_HYBRID_PATH)环�
 		引擎二进制文件所在目录。
 
 
-### 2. 安装数据库:
+## 2. 安装MySQL数据库:
 
-安装Mysql:
-	2.1 Linux CentOS MySQL 安装和配置
-		2.1.1 安装MySql
+
+### 	2.1 Linux CentOS MySQL 安装和配置
+		
+        2.1.1 安装MySql
 		yum install mysql-server mysql
 		(命令解释 yum install 包名 ，安装mysql,如果之前执行了安装mysql,那么命令行会提示已经安装了最新版本)
 
@@ -100,7 +101,7 @@ KBEngine会读取系统中设置的(KBE_ROOT, KBE_RES_PATH, KBE_HYBRID_PATH)环�
 		SET PASSWORD FOR 'root'@'localhost' = PASSWORD('mySetNewPassword');
 		(请注意，把上述命令中的mySetNewPassword替换成你想要设置的密码)
 
-2.2 Windows MySQL
+### 2.2 Windows MySQL
 
 		如果是Windows环境，Mysql默认是忽略大小写的，请在my.ini添加如下命令设置大小写敏感
 
