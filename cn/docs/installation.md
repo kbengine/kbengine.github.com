@@ -69,9 +69,39 @@ KBEngine会读取系统中设置的(KBE_ROOT, KBE_RES_PATH, KBE_HYBRID_PATH)环�
 		引擎二进制文件所在目录。
 
 
-### 2. 安装数据库:
+## 2. 安装MySQL数据库:
 
-安装Mysql:
+
+### 	2.1 Linux CentOS MySQL 安装和配置
+		
+        2.1.1 安装MySql
+		yum install mysql-server mysql
+		(命令解释 yum install 包名 ，安装mysql,如果之前执行了安装mysql,那么命令行会提示已经安装了最新版本)
+
+		2.1.2 启动和停止MySQL
+		启动mysql
+		/etc/rc.d/init.d/mysqld start
+
+		停止mysql
+		/etc/rc.d/init.d/mysqld stop
+		(在搭建安装kbengine服务端引擎的时候，不要停止Mysql)
+
+		2.1.3 启动系统时运行MySQL
+		chkconfig mysqld on
+
+		2.1.4 使用mysqladmin验证服务器是否正在运行
+		mysqladmin version
+		(如果看到命令行提示MySQL版本号，则表示安装成功)
+
+		2.1.5 启动MySQL客户端
+		mysql -u root
+		(第一次启动MySQL客户端只能使用MySQL管理员权限，即root用户，root用户密码为空，所以我们必须把空密码修改)
+
+		2.1.6 修改root密码
+		SET PASSWORD FOR 'root'@'localhost' = PASSWORD('mySetNewPassword');
+		(请注意，把上述命令中的mySetNewPassword替换成你想要设置的密码)
+
+### 2.2 Windows MySQL
 
 		如果是Windows环境，Mysql默认是忽略大小写的，请在my.ini添加如下命令设置大小写敏感
 
@@ -91,19 +121,19 @@ KBEngine会读取系统中设置的(KBE_ROOT, KBE_RES_PATH, KBE_HYBRID_PATH)环�
 		+------------------------+-------+
 		1 row in set (0.00 sec)
 
-创建数据库，假设是数据库名为"kbe"
+### 2.3 创建数据库，假设是数据库名为"kbe"
 
 		mysql> create database kbe;
 
 
-删除匿名用户
+### 2.4 删除匿名用户
 		
 		mysql> use mysql 
 		mysql> delete from user where user=''; 
 		mysql> FLUSH PRIVILEGES;
 
 
-创建数据库用户，用户名和密码假设是"kbe"
+### 2.5 创建数据库用户，用户名和密码假设是"kbe"
 
 		mysql> grant all privileges on *.* to kbe@'%' identified by 'kbe';
 		mysql> grant select,insert,update,delete,create,drop on *.* to kbe@'%' identified by 'kbe';
