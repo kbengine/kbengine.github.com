@@ -12,17 +12,36 @@ docsitem: installation
 
 	python kbengine/kbe/tools/server/install/installer.py install
 
-如果你不信任脚本， 你也可以选择手动安装:
+如果你不信任脚本， 你也可以选择手动安装。
 
+- - -
 手动安装
 -------------------
 
 
 
+### 1. 创建kbe系统用户
 
-### 1. 设置环境变量:
+创建一个独立的用户来运行KBEngine将会更加安全可靠以及便于维护。
 
-KBEngine会读取系统中设置的(KBE_ROOT, KBE_RES_PATH, KBE_HYBRID_PATH)环境变量, 按照如下步骤设置环境变量.
+如果您对此比较了解也可以省略这一步, 直接使用您的当前用户。
+
+	Linux:
+
+		[root@localhost ~]# useradd kbe
+		[root@localhost ~]# passwd kbe
+
+		New UNIX password: kbe
+		Retype new UNIX password: kbe
+		passwd: all authentication tokens updated successfully 
+
+	Windows:
+		"控制面板" -> "用户帐户" -> "创建一个新帐户"
+
+
+### 2. 设置环境变量:
+
+KBEngine会读取系统中设置的(KBE_ROOT, KBE_RES_PATH, KBE_HYBRID_PATH)环境变量, 按照如下步骤设置环境变量。
 
 	Linux: (假如kbe被安装在~/目录)
 
@@ -73,7 +92,7 @@ KBEngine会读取系统中设置的(KBE_ROOT, KBE_RES_PATH, KBE_HYBRID_PATH)环�
 		引擎二进制文件所在目录。
 
 
-### 2. 安装数据库:
+### 3. 安装数据库:
 
 安装Mysql:
 
@@ -131,7 +150,7 @@ KBEngine会读取系统中设置的(KBE_ROOT, KBE_RES_PATH, KBE_HYBRID_PATH)环�
 
 
 
-### 3. 优化操作系统(仅Linux) (可选)
+### 4. 优化操作系统(仅Linux) (可选)
 
 设置允许打开的最大文件数 /etc/security/limits.conf:
 
@@ -147,7 +166,7 @@ KBEngine会读取系统中设置的(KBE_ROOT, KBE_RES_PATH, KBE_HYBRID_PATH)环�
 
 
 
-### 4: 多网卡环境配置: (可选)
+### 5: 多网卡环境配置: (可选)
 
 如果eth0是外部网卡地址, eth1是内部网卡地址执行如下命令设置广播地址为内部网卡地址:
 

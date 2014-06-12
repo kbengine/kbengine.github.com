@@ -12,19 +12,39 @@ Install KBEngine on a (Centos/Debian/Ubuntu etc.) server, in your terminal input
 
 	python kbengine/kbe/tools/server/install/installer.py install
 
-if you don't want to trust a script, install KBEngine manually:
+if you don't want to trust a script, install KBEngine manually.
 
+- - -
 Manual Installation
 -------------------
 
 
+
+### 1. Create user kbe
+
+Create a separate user to run KBEngine will be more secure and reliable, and easy to maintain. 
+
+If you have a better understanding, you can ignore this section, the direct use of your current user. 
+
+	Linux:
+
+		[root @ localhost ~] # useradd kbe
+		[root @ localhost ~] # passwd kbe
+
+		New UNIX password: kbe
+		Retype new UNIX password: kbe
+		passwd: all authentication tokens updated successfully
+
+	Windows:
+
+		"Control Panel" -> "User Accounts" -> "Create a new account"
 
 
 ### 1. To set environment variables:
 
 KBEngine can read KBE_ROOT, KBE_RES_PATH, KBE_HYBRID_PATH system environment variables to do something.
 
-	Linux: (assuming kbe be placed in the ~/ directory)
+	Linux: (if kbe be installed in ~/ directory)
 
 		[kbe@localhost ~]# vim ~/.bashrc
 
