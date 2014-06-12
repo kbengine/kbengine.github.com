@@ -26,14 +26,18 @@ KBEngine会读取系统中设置的(KBE_ROOT, KBE_RES_PATH, KBE_HYBRID_PATH)环�
 
 	Linux: (假如kbe被安装在~/目录)
 
-		[kbe@localhost ~]# vim ~/.bashrc
+		[kbe@localhost ~]$ vim ~/.bashrc
 
 		ulimit -c unlimited
 		export KBE_ROOT=~/kbengine/
 		export KBE_RES_PATH=$KBE_ROOT/kbe/res/:$KBE_ROOT/demo/:$KBE_ROOT/demo/res/
 		export KBE_HYBRID_PATH=$KBE_ROOT/kbe/bin/Hybrid64/
+		
+		使环境变量生效:
+		[kbe@localhost ~]$ source ~/.bashrc
 
-		[root@localhost ~]# vim /etc/passwd
+		root权限设置用户kbe的uid:
+		[root@localhost ~]# usermod -u 10103 kbe
 		
 		操作系统账号的uid将被用于不同的服务器组来区分， 如果是多台硬件服务器共同维护一组服务，
 		那么每一台机器上的系统uid环境变量都应该保持一致，否则无法形成服务组。

@@ -29,14 +29,15 @@ KBEngine can read KBE_ROOT, KBE_RES_PATH, KBE_HYBRID_PATH system environment var
 		[kbe@localhost ~]# vim ~/.bashrc
 
 		ulimit -c unlimited
-
 		export KBE_ROOT=~/kbengine/
-
 		export KBE_RES_PATH=$KBE_ROOT/kbe/res/:$KBE_ROOT/demo/:$KBE_ROOT/demo/res/
-
 		export KBE_HYBRID_PATH=$KBE_ROOT/kbe/bin/Hybrid64/
 
-		[root@localhost ~]# vim /etc/passwd
+		The environmental variables are available:
+		[kbe@localhost ~]$ source ~/.bashrc
+
+		Root to set the user-kbe uid:
+		[root@localhost ~]# usermod -u 10103 kbe
 		
 		uid is used to distinguish between different server groups, 
 		if multiple servers distributed server maintenance KBE then uid must be the same on each server, 
