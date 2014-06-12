@@ -112,12 +112,16 @@ Environment variables description
 		Service mysql start
 		[root @ localhost ~]# /etc/init.d/mysqld start
 
+		Check the status of the service
+		[root@localhost ~]# /etc/init.d/mysqld status
+		mysqld (pid  9234) is running...
+
 	Windows:
 
 		Download and install the latest version of:
 		http://dev.mysql.com/downloads/windows/
 
-		If the Windows then add the following code to make my.ini mysql case sensitive
+		If the Windows then add the following code to make my.ini Mysql case sensitive
 
 		[mysqld]
 		lower_case_table_names = 0
@@ -126,14 +130,19 @@ Environment variables description
 		net stop mysql
 		net start mysql
 
-		Check lower_case_table_names, must be is 0:
-		mysql> SHOW VARIABLES like "lower_case_table_names";
-		+------------------------+-------+
-		| Variable_name          | Value |
-		+------------------------+-------+
-		| lower_case_table_names | 0     |
-		+------------------------+-------+
-		1 row in set (0.00 sec)
+		Check whether Mysql case sensitive:
+		mysql> create database NEWTEST;
+		mysql> show databases;
+		+--------------------+
+		| Database           |
+		+--------------------+
+		| information_schema |
+		| NEWTEST            |
+		| mysql              |
+		| test               |
+		+--------------------+
+		4 row in set (0.00 sec)
+
 
 * Create a database, name is "kbe"
 

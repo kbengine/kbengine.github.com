@@ -109,6 +109,10 @@ KBEngine会读取系统中设置的(KBE_ROOT, KBE_RES_PATH, KBE_HYBRID_PATH)环�
 		启动mysql服务
 		[root @ localhost ~]# /etc/init.d/mysqld start
 
+		检查是否启动成功
+		[root@localhost ~]# /etc/init.d/mysqld status
+		mysqld (pid  9234) is running...
+
 	Windows:
 
 		下载并安装最新版本:
@@ -123,14 +127,19 @@ KBEngine会读取系统中设置的(KBE_ROOT, KBE_RES_PATH, KBE_HYBRID_PATH)环�
 		net stop mysql
 		net start mysql
 
-		检查Mysql变量 lower_case_table_names必须等于0, 使用如下命令检查:
-		mysql> SHOW VARIABLES like "lower_case_table_names";
-		+------------------------+-------+
-		| Variable_name          | Value |
-		+------------------------+-------+
-		| lower_case_table_names | 0     |
-		+------------------------+-------+
-		1 row in set (0.00 sec)
+		检查Mysql大小写是否敏感:
+		mysql> create database NEWTEST;
+		mysql> show databases;
+		+--------------------+
+		| Database           |
+		+--------------------+
+		| information_schema |
+		| NEWTEST            |
+		| mysql              |
+		| test               |
+		+--------------------+
+		4 row in set (0.00 sec)
+
 
 * 创建数据库，假设是数据库名为"kbe"
 
