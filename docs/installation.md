@@ -99,7 +99,7 @@ Environment variables description
 
 ### 3. Set up the database:
 
-* Install Mysql:
+Install Mysql:
 
 	Linux:
 
@@ -144,19 +144,19 @@ Environment variables description
 		4 row in set (0.00 sec)
 
 
-* Create a database, name is "kbe"
+Create a database, name is "kbe"
 
 		mysql> create database kbe;
 
 
-* Delete anonymous user
+Delete anonymous user
 		
 		mysql> use mysql 
 		mysql> delete from user where user=''; 
 		mysql> FLUSH PRIVILEGES;
 
 
-* Create a database account, username and password is "kbe"
+Create a database account, username and password is "kbe"
 
 		mysql> grant all privileges on *.* to kbe@'%' identified by 'kbe';
 		mysql> grant select,insert,update,delete,create,drop on *.* to kbe@'%' identified by 'kbe';
