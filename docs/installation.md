@@ -40,7 +40,7 @@ If you have a better understanding, you can ignore this section, the direct use 
 		"Control Panel" -> "User Accounts" -> "Create a new account"
 
 
-### 1. To set environment variables:
+### 2. To set environment variables:
 
 KBEngine can read KBE_ROOT, KBE_RES_PATH, KBE_HYBRID_PATH system environment variables to do something.
 
@@ -95,7 +95,7 @@ Environment variables description
 
 
 
-### 2. Set up the database:
+### 3. Set up the database:
 
 Install mysql:
 
@@ -153,7 +153,7 @@ If you want to modify the database name, Modify the databaseName in res\server\[
 
 
 
-### 3. Optimization of the operating system(Linux) (Optional)
+### 4. Optimization of the operating system(Linux) (Optional)
 
 Set /etc/security/limits.conf:
 
@@ -169,7 +169,7 @@ see: [High-performance Linux server configuration]
 
 
 
-### 4: Multi-card configurations: (Optional)
+### 5: Multi-card configurations: (Optional)
 
 If eth0 is external, eth1 is the internal:
 
@@ -185,7 +185,7 @@ Please set ([kbengine.xml] | [kbengine_defs.xml]):
 
 
 
-### 5. Linux firewall: (Optional)
+### 6. Linux firewall: (Optional)
 
 see: [Linux firewall settings]
 
