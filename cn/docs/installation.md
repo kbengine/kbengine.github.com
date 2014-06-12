@@ -96,9 +96,25 @@ KBEngine会读取系统中设置的(KBE_ROOT, KBE_RES_PATH, KBE_HYBRID_PATH)环�
 
 ### 3. 安装数据库:
 
-安装Mysql:
+* 安装Mysql:
 
-		如果是Windows环境，Mysql默认是忽略大小写的，请在my.ini添加如下命令设置大小写敏感
+	Linux:
+
+		安装
+		[root @ localhost ~]# yum install mysql-server
+		
+		设定为开机自动启动
+		[root @ localhost ~]# chkconfig mysqld on
+
+		启动mysql服务
+		[root @ localhost ~]# /etc/init.d/mysqld start
+
+	Windows:
+
+		下载并安装最新版本:
+		http://dev.mysql.com/downloads/windows/
+
+		Windows环境，Mysql默认是忽略大小写的，请在my.ini添加如下命令设置大小写敏感
 
 		[mysqld]
 		lower_case_table_names = 0
@@ -116,19 +132,19 @@ KBEngine会读取系统中设置的(KBE_ROOT, KBE_RES_PATH, KBE_HYBRID_PATH)环�
 		+------------------------+-------+
 		1 row in set (0.00 sec)
 
-创建数据库，假设是数据库名为"kbe"
+* 创建数据库，假设是数据库名为"kbe"
 
 		mysql> create database kbe;
 
 
-删除匿名用户
+* 删除匿名用户
 		
 		mysql> use mysql 
 		mysql> delete from user where user=''; 
 		mysql> FLUSH PRIVILEGES;
 
 
-创建数据库用户，用户名和密码假设是"kbe"
+* 创建数据库用户，用户名和密码假设是"kbe"
 
 		mysql> grant all privileges on *.* to kbe@'%' identified by 'kbe';
 		mysql> grant select,insert,update,delete,create,drop on *.* to kbe@'%' identified by 'kbe';

@@ -99,7 +99,23 @@ Environment variables description
 
 ### 3. Set up the database:
 
-Install mysql:
+* Install Mysql:
+
+	Linux:
+
+		Install
+		[root @ localhost ~]# yum install mysql-server
+		
+		Set to start automatically
+		[root @ localhost ~]# chkconfig mysqld on
+
+		Service mysql start
+		[root @ localhost ~]# /etc/init.d/mysqld start
+
+	Windows:
+
+		Download and install the latest version of:
+		http://dev.mysql.com/downloads/windows/
 
 		If the Windows then add the following code to make my.ini mysql case sensitive
 
@@ -119,19 +135,19 @@ Install mysql:
 		+------------------------+-------+
 		1 row in set (0.00 sec)
 
-Create a database, name is "kbe"
+* Create a database, name is "kbe"
 
 		mysql> create database kbe;
 
 
-Delete anonymous user
+* Delete anonymous user
 		
 		mysql> use mysql 
 		mysql> delete from user where user=''; 
 		mysql> FLUSH PRIVILEGES;
 
 
-Create a database account, username and password is "kbe"
+* Create a database account, username and password is "kbe"
 
 		mysql> grant all privileges on *.* to kbe@'%' identified by 'kbe';
 		mysql> grant select,insert,update,delete,create,drop on *.* to kbe@'%' identified by 'kbe';
