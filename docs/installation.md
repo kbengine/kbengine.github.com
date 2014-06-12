@@ -15,6 +15,8 @@ Install KBEngine on a (Centos/Debian/Ubuntu etc.) server, in your terminal input
 if you don't want to trust a script, install KBEngine manually.
 
 - - -
+
+
 Manual Installation
 -------------------
 
