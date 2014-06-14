@@ -33,8 +33,8 @@ If you have a better understanding, you can ignore this section, the direct use 
 		[root @ localhost ~] # useradd kbe
 		[root @ localhost ~] # passwd kbe
 
-		New UNIX password: kbe
-		Retype new UNIX password: kbe
+		New UNIX password: kbengine
+		Retype new UNIX password: kbengine
 		passwd: all authentication tokens updated successfully
 
 	Windows:

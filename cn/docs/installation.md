@@ -33,8 +33,8 @@ docsitem: installation
 		[root@localhost ~]# useradd kbe
 		[root@localhost ~]# passwd kbe
 
-		New UNIX password: kbe
-		Retype new UNIX password: kbe
+		New UNIX password: kbengine
+		Retype new UNIX password: kbengine
 		passwd: all authentication tokens updated successfully 
 
 	Windows:
