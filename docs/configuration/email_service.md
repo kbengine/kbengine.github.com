@@ -5,6 +5,6 @@ tab: docs
 docsitem: configuration-emailservice
 ---
 
-email_service.xml
+kbengine/kbe/res/server/email_service.xml
 ===================
 

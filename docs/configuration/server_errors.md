@@ -5,12 +5,8 @@ tab: docs
 docsitem: configuration-servererrors
 ---
 
-server_errors.xml
+Server-error description(kbengine/kbe/res/server/server_errors.xml)
 ===================
-
-Server-error description.
-
-Defined in kbengine/kbe/res/server/server_errors.xml:
 
 		<SUCCESS>
 			<id>0</id>

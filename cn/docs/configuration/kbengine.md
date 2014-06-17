@@ -5,7 +5,7 @@ tab: docs
 docsitem: configuration-kbengine
 ---
 
-kbengine.xml
+服务端配置({newproject}/res/server/kbengine.xml)
 ===================
 
 如果你需要改变引擎设置, 请在({newproject}/res/server/kbengine.xml)中覆盖kbe/res/server/[kbengine_defs.xml]的对应参数来修改, 

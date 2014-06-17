@@ -5,12 +5,8 @@ tab: docs
 docsitem: configuration-servererrors
 ---
 
-server_errors.xml
+服务端错误码描述(kbengine/kbe/res/server/server_errors.xml)
 ===================
-
-错误码描述.
-
-定义在kbengine/kbe/res/server/server_errors.xml:
 
 		<SUCCESS>
 			<id>0</id>

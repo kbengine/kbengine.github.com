@@ -5,7 +5,7 @@ tab: docs
 docsitem: configuration-kbengine
 ---
 
-kbengine.xml
+Server Configuration(demo/res/server/kbengine.xml)
 ===================
 
 If you need to change the configuration of the engine, as long as the inheritance ({newproject}/res/server/kbengine.xml) 
