@@ -208,6 +208,9 @@ there is no conflict in the development along with updated engine or multiple pr
 		</billingSystem>
 		
 		<dbmgr>
+			<!-- Debug mode can output the read and write informations -->
+			<debug> false </debug>
+
 			<!-- Name of AccountEntity -->
 			<dbAccountEntityScriptType>	Account	</dbAccountEntityScriptType>
 			

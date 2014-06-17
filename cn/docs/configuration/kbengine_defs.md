@@ -253,6 +253,11 @@ docsitem: configuration-kbengine-defs
 		</billingSystem>
 		
 		<dbmgr>
+			<!-- debug模式下可输出读写操作信息
+			    (Debug mode can output the read and write informations)
+			 -->
+			<debug> false </debug>
+
 			<!-- 账号Entity的名称
 			    (Name of AccountEntity)
 			 -->
