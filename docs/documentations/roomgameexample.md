@@ -1,11 +1,11 @@
 ---
 layout: docs
-title: The poker room games · Docs · KBEngine
+title: The room games · Docs · KBEngine
 tab: docs
 docsitem: documentation-gameexample3
 ---
 
-The poker room games
+The room games
 ====================
 
 Download: 
