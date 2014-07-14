@@ -25,7 +25,7 @@ docsitem: configuration-kbengine-defs
 		<!-- 每秒发送到客户端的带宽限制(bit) 
 			(The data sent to the client, the second bandwidth limit (bit))
 		-->
-		<bitsPerSecondToClient> 20000 </bitsPerSecondToClient>				<!-- Type: Integer -->
+		<bitsPerSecondToClient> 20000 </bitsPerSecondToClient>							<!-- Type: Integer -->
 		
 		<!-- 非0则不优化， 不带包长信息的包强制都携带长度信息， 某些情况下方便某些前端对接协议
 		什么样的包不带长度信息? 所有能够预先计算出包大小的且永远不变的包不带长度信息， 
@@ -121,12 +121,12 @@ docsitem: configuration-kbengine-defs
 			-->
 			<resend> 
 				<internal> 
-					<interval> 10 </interval>					<!-- 毫秒(Millisecond) -->
-					<retries> 0 </retries>						<!-- 重试次数(Retry count), 0无限(0 is unlimited) -->
+					<interval> 10 </interval>						<!-- 毫秒(Millisecond) -->
+					<retries> 0 </retries>							<!-- 重试次数(Retry count), 0无限(0 is unlimited) -->
 				</internal>
 				<external>
-					<interval> 10 </interval>					<!-- 毫秒 -->
-					<retries> 3 </retries>						<!-- 重试次数, 0无限(0 is unlimited) -->
+					<interval> 10 </interval>						<!-- 毫秒 -->
+					<retries> 3 </retries>							<!-- 重试次数, 0无限(0 is unlimited) -->
 				</external>
 			</resend>
 			
@@ -134,11 +134,11 @@ docsitem: configuration-kbengine-defs
 				(socket send/recv buffer size)
 			-->
 			<readBufferSize> 
-				<internal>	16777216	</internal> 			<!-- 16M -->
+				<internal>	16777216		</internal> 				<!-- 16M -->
 				<external>	0			</external>				<!-- 系统默认(system default) -->
 			</readBufferSize>
 			<writeBufferSize> 
-				<internal>	16777216	</internal>				<!-- 16M -->
+				<internal>	16777216		</internal>				<!-- 16M -->
 				<external>	0			</external>				<!-- 系统默认(system default) -->
 			</writeBufferSize>
 			
@@ -148,12 +148,12 @@ docsitem: configuration-kbengine-defs
 			<receiveWindowOverflow>
 				<messages>
 					<critical>	32			</critical>
-					<internal>	65535		</internal>
+					<internal>	65535			</internal>
 					<external>	256			</external>
 				</messages>
 				<bytes>
 					<internal>	0			</internal>
-					<external>	65535		</external>
+					<external>	65535			</external>
 				</bytes>
 			</receiveWindowOverflow>
 			
@@ -266,7 +266,7 @@ docsitem: configuration-kbengine-defs
 			<!-- 不检查defs-MD5
 				(Do not check defs-MD5) 
 			-->
-			<allowEmptyDigest> false </allowEmptyDigest>					<!-- Type: Boolean -->
+			<allowEmptyDigest> false </allowEmptyDigest>								<!-- Type: Boolean -->
 			
 			<!-- 接口网卡的名称
 				（Name of the interface(NIC)） 
@@ -279,12 +279,12 @@ docsitem: configuration-kbengine-defs
 				锁定标记(lock flag)	= 0x000000001
 				未激活标记(normal flag)	= 0x000000002
 			-->
-			<accountDefaultFlags> 0 </accountDefaultFlags>					<!-- Type: Integer -->
+			<accountDefaultFlags> 0 </accountDefaultFlags>								<!-- Type: Integer -->
 			
 			<!-- 新账号默认过期时间(秒, 引擎会加上当前时间) 
 				(New account default expiration time (seconds, the engine will add the current time))
 			-->
-			<accountDefaultDeadline> 0 </accountDefaultDeadline>			<!-- Type: Integer -->
+			<accountDefaultDeadline> 0 </accountDefaultDeadline>							<!-- Type: Integer -->
 			
 			<!-- 数据库类型 
 				（Database type)
@@ -295,7 +295,7 @@ docsitem: configuration-kbengine-defs
 				（Database address)
 			-->
 			<host> localhost </host>										<!-- Type: String -->
-			<port> 0 </port>												<!-- Type: Integer -->
+			<port> 0 </port>											<!-- Type: Integer -->
 			
 			<!-- 数据库账号验证 
 				（Database auth)
@@ -313,19 +313,19 @@ docsitem: configuration-kbengine-defs
 			<!-- 数据库名称 
 				(Database name)
 			-->
-			<databaseName> kbe </databaseName> 								<!-- Type: String -->
+			<databaseName> kbe </databaseName> 									<!-- Type: String -->
 			
 			<!-- 数据库允许的连接数 
 				(Number of connections allowed by the database)
 			-->
-			<numConnections> 5 </numConnections>							<!-- Type: Integer -->
+			<numConnections> 5 </numConnections>									<!-- Type: Integer -->
 			
 			<!-- 字符编码类型 
 				(Character encoding type)
 			-->
 			<unicodeString>
-				<characterSet> utf8 </characterSet> 						<!-- Type: String -->
-				<collation> utf8_bin </collation> 							<!-- Type: String -->
+				<characterSet> utf8 </characterSet> 								<!-- Type: String -->
+				<collation> utf8_bin </collation> 								<!-- Type: String -->
 			</unicodeString>
 			
 			<!-- 登录合法时游戏数据库找不到游戏账号则自动创建 
@@ -369,7 +369,7 @@ docsitem: configuration-kbengine-defs
 				(The entityID allocator, enter the overflow area will get the new ID's)
 			-->
 			<ids>
-				<criticallyLowSize> 500 </criticallyLowSize>				<!-- Type: Integer -->
+				<criticallyLowSize> 500 </criticallyLowSize>							<!-- Type: Integer -->
 			</ids>
 			
 			<!-- 程序的性能分析
@@ -459,16 +459,25 @@ docsitem: configuration-kbengine-defs
 			<internalInterface>  </internalInterface>
 			<externalInterface>  </externalInterface>						<!-- Type: String -->
 
+			<!-- 外部IP地址，在某些机房的环境下，可能会使用端口映射的方式来访问内部kbe服务器，那么kbe在当前
+				的机器上获得的外部地址可能也是局域网地址，此时某些功能将会不正常。例如：账号激活邮件中给出的回调
+				地址。
+				(External IP address, In some server environment, May use the port mapping to access KBE,
+				So KBE on current machines on the external IP address may be a LAN IP address, Then some functions will not normal.
+				For example: account activation email address given callback.)
+			-->
+			<externalAddress>  </externalAddress>								<!-- Type: String -->
+
 			<!-- 暴露给客户端的端口范围
 				（Exposed to the client port range） 
 			-->
-			<externalPorts_min> 20015 </externalPorts_min>					<!-- Type: Integer -->
-			<externalPorts_max> 20019 </externalPorts_max>					<!-- Type: Integer -->
+			<externalPorts_min> 20015 </externalPorts_min>							<!-- Type: Integer -->
+			<externalPorts_max> 20019 </externalPorts_max>							<!-- Type: Integer -->
 
 			<!-- 自动存档的时间周期
 				（Automatic archiving time period） 
 			-->
-			<archivePeriod> 100 </archivePeriod> 							<!-- Type: Float -->
+			<archivePeriod> 100 </archivePeriod> 								<!-- Type: Float -->
 			
 			<!-- 自动备份的时间
 				（Automatic backup time period） 
@@ -478,7 +487,7 @@ docsitem: configuration-kbengine-defs
 			<!-- 是否备份未定义的属性
 				（Whether backup undefined property） 
 			-->
-			<backUpUndefinedProperties> 0 </backUpUndefinedProperties>		<!-- Type: Boolean -->
+			<backUpUndefinedProperties> 0 </backUpUndefinedProperties>					<!-- Type: Boolean -->
 
 			<!-- 负载平衡滤波器指标值
 				（Load balancing Smoothing Bias value） 
@@ -489,15 +498,15 @@ docsitem: configuration-kbengine-defs
 				（Download bandwidth limits） 
 			-->
 			<downloadStreaming>
-				<bitsPerSecondTotal> 1000000 </bitsPerSecondTotal>			<!-- Type: Int -->
-				<bitsPerSecondPerClient> 100000 </bitsPerSecondPerClient>	<!-- Type: Int -->
+				<bitsPerSecondTotal> 1000000 </bitsPerSecondTotal>					<!-- Type: Int -->
+				<bitsPerSecondPerClient> 100000 </bitsPerSecondPerClient>				<!-- Type: Int -->
 			</downloadStreaming>
 
 			<!-- entityID分配器，进入溢出范围则请求获取新的ID资源 
 				(The entityID allocator, enter the overflow area will get the new ID's)
 			-->
 			<ids>
-				<criticallyLowSize> 500 </criticallyLowSize>				<!-- Type: Integer -->
+				<criticallyLowSize> 500 </criticallyLowSize>						<!-- Type: Integer -->
 			</ids>
 			
 			<!-- 当灾难发生后，baseapp进行灾难恢复时，每次恢复entity的数量 
@@ -586,10 +595,19 @@ docsitem: configuration-kbengine-defs
 			<internalInterface>  </internalInterface>
 			<externalInterface>  </externalInterface>						<!-- Type: String -->
 			
+			<!-- 外部IP地址，在某些机房的环境下，可能会使用端口映射的方式来访问内部kbe服务器，那么kbe在当前
+				的机器上获得的外部地址可能也是局域网地址，此时某些功能将会不正常。例如：账号激活邮件中给出的回调
+				地址。
+				(External IP address, In some server environment, May use the port mapping to access KBE,
+				So KBE on current machines on the external IP address may be a LAN IP address, Then some functions will not normal.
+				For example: account activation email address given callback.)
+			-->
+			<externalAddress>  </externalAddress>							<!-- Type: String -->
+
 			<!-- 暴露给客户端的端口范围
 				（Exposed to the client port range） 
 			-->
-			<externalPorts_min> 20013 </externalPorts_min>					<!-- Type: Integer -->
+			<externalPorts_min> 20013 </externalPorts_min>						<!-- Type: Integer -->
 			<externalPorts_max> 0 </externalPorts_max>						<!-- Type: Integer -->
 			
 			<!-- 加密登录信息
@@ -607,9 +625,9 @@ docsitem: configuration-kbengine-defs
 			 -->
 			<SOMAXCONN> 128 </SOMAXCONN>
 			
-			<!-- 账号的类型								(Account types)
-				1: 普通账号								(Normal Account)
-				2: email账号(需要激活)					(Email Account, Note: activation required.)
+			<!-- 账号的类型					(Account types)
+				1: 普通账号				(Normal Account)
+				2: email账号(需要激活)			(Email Account, Note: activation required.)
 				3: 智能账号(自动识别Email， 普通号码等)	(Smart Account (Email or Normal, etc.))
 			-->
 			<account_type> 3 </account_type>
@@ -625,7 +643,7 @@ docsitem: configuration-kbengine-defs
 			<!-- 暴露给客户端的端口范围
 				（Exposed to the tools port range） 
 			-->
-			<externalPorts_min> 20099 </externalPorts_min>					<!-- Type: Integer -->
+			<externalPorts_min> 20099 </externalPorts_min>						<!-- Type: Integer -->
 			<externalPorts_max> 0 </externalPorts_max>						<!-- Type: Integer -->
 		</kbmachine>
 		
@@ -638,8 +656,8 @@ docsitem: configuration-kbengine-defs
 			<!-- loginapp地址 
 				（loginapp address)
 			-->
-			<host> localhost </host>										<!-- Type: String -->
-			<port> 20013 </port>											<!-- Type: Integer -->
+			<host> localhost </host>								<!-- Type: String -->
+			<port> 20013 </port>									<!-- Type: Integer -->
 			
 			
 			<!-- 默认启动进程后自动添加这么多个机器人 
@@ -649,9 +667,9 @@ docsitem: configuration-kbengine-defs
 				tickcount	： 每次添加数量			(Each time you add the number of)
 			-->
 			<defaultAddBots> 
-				<totalcount> 10  </totalcount>								<!-- Type: Integer -->
-				<ticktime> 0.1  </ticktime>									<!-- Type: Float -->
-				<tickcount> 2  </tickcount>									<!-- Type: Integer -->
+				<totalcount> 10  </totalcount>							<!-- Type: Integer -->
+				<ticktime> 0.1  </ticktime>							<!-- Type: Float -->
+				<tickcount> 2  </tickcount>							<!-- Type: Integer -->
 			</defaultAddBots>							
 		</bots>
 		
@@ -669,8 +687,8 @@ docsitem: configuration-kbengine-defs
 			<internalInterface>  </internalInterface>
 			
 			<downloadStreaming>
-				<bitsPerSecondTotal> 1000000 </bitsPerSecondTotal>			<!-- Type: Int -->
-				<bitsPerSecondPerClient> 100000 </bitsPerSecondPerClient>	<!-- Type: Int -->
+				<bitsPerSecondTotal> 1000000 </bitsPerSecondTotal>				<!-- Type: Int -->
+				<bitsPerSecondPerClient> 100000 </bitsPerSecondPerClient>			<!-- Type: Int -->
 			</downloadStreaming>
 			
 			<!-- listen监听队列最大值
