@@ -501,7 +501,16 @@ there is no conflict in the development along with updated engine or multiple pr
 				<totalcount> 10  </totalcount> <!-- Type: Integer -->
 				<ticktime> 0.1  </ticktime> <!-- Type: Float -->
 				<tickcount> 2  </tickcount> <!-- Type: Integer -->
-			</defaultAddBots>							
+			</defaultAddBots>
+
+			<!-- about bots-accounts -->
+			<account_infos>
+				<!-- The account name prefix -->
+				<account_name_prefix>		bot_	</account_name_prefix>
+				
+				<!-- The account name suffix, 0 is the use of random number, Otherwise, use baseNum and increasing. -->
+				<account_name_suffix_inc>	0		</account_name_suffix_inc><!-- Type: Integer -->
+			</account_infos>							
 		</bots>
 		
 		<messagelog>
