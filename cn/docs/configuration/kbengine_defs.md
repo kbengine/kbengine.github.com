@@ -17,7 +17,7 @@ docsitem: configuration-kbengine-defs
 
 
 	<root>
-		<!-- 进程处理频率 
+		<!-- 游戏逻辑处理频率 
 			(Update frequency process)
 		-->
 		<gameUpdateHertz> 10 </gameUpdateHertz>
@@ -387,8 +387,12 @@ docsitem: configuration-kbengine-defs
 			</profiles>
 			
 			<ghostDistance> 500.0 </ghostDistance>
-			<ghostingMaxPerCheck> 64 </ghostingMaxPerCheck> <!-- Type: Integer -->
-			<ghostUpdateHertz> 50 </ghostUpdateHertz> <!-- Type: Integer -->
+			<ghostingMaxPerCheck> 64 </ghostingMaxPerCheck>								<!-- Type: Integer -->
+
+			<!-- ghost更新频率 
+				(Update frequency process)
+			-->
+			<ghostUpdateHertz> 30 </ghostUpdateHertz>								<!-- Type: Integer -->
 			
 			<!-- 是否使用坐标系统, 如果设置为false， 那么AOI、Trap、 Move等功能将不可用 
 				(Whether the use of coordinate-system, if is false, 
@@ -685,7 +689,19 @@ docsitem: configuration-kbengine-defs
 					(The account name suffix, 0 is the use of random number, Otherwise, use baseNum and increasing.)
 				-->
 				<account_name_suffix_inc>	0		</account_name_suffix_inc><!-- Type: Integer -->
-			</account_infos>							
+			</account_infos>
+
+			<!-- Telnet服务, 如果端口被占用则向后尝试51001.. 
+				(Telnet service, if the port is occupied backwards to try 51001)
+			-->
+			<telnet_service>
+				<port> 51000 </port>
+				<password> kbe </password>
+				<!-- 命令默认层 
+					(layer of default the command)
+				-->
+				<default_layer> python </default_layer>
+			</telnet_service>							
 		</bots>
 		
 		<messagelog>

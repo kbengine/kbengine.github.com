@@ -299,8 +299,10 @@ there is no conflict in the development along with updated engine or multiple pr
 			</profiles>
 			
 			<ghostDistance> 500.0 </ghostDistance>
-			<ghostingMaxPerCheck> 64 </ghostingMaxPerCheck> <!-- Type: Integer -->
-			<ghostUpdateHertz> 50 </ghostUpdateHertz> <!-- Type: Integer -->
+			<ghostingMaxPerCheck> 64 </ghostingMaxPerCheck>						<!-- Type: Integer -->
+
+			<!-- Update frequency process -->
+			<ghostUpdateHertz> 30 </ghostUpdateHertz>						<!-- Type: Integer -->
 			
 			<!-- Whether the use of coordinate-system, if is false, 
 			AOI, Trap, Move and other functions will not be available -->
@@ -510,7 +512,15 @@ there is no conflict in the development along with updated engine or multiple pr
 				
 				<!-- The account name suffix, 0 is the use of random number, Otherwise, use baseNum and increasing. -->
 				<account_name_suffix_inc>	0		</account_name_suffix_inc><!-- Type: Integer -->
-			</account_infos>							
+			</account_infos>
+
+			<!-- Telnet service, if the port is occupied backwards to try 51001 -->
+			<telnet_service>
+				<port> 51000 </port>
+				<password> kbe </password>
+				<!-- layer of default the command -->
+				<default_layer> python </default_layer>
+			</telnet_service>							
 		</bots>
 		
 		<messagelog>
