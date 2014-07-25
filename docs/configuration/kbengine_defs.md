@@ -526,6 +526,12 @@ there is no conflict in the development along with updated engine or multiple pr
 		<messagelog>
 			<!-- Name of the interface(NIC) -->
 			<internalInterface>  </internalInterface>
+
+			<!-- The number of single-process(baseapp, cellapp, etc..), The number of log a tick buffer. -->
+			<tick_max_buffered_logs> 65535 <tick_max_buffered_logs>
+
+			<!-- The number of single-process(baseapp, cellapp, etc..), A tick synchronization to the number of messagelog -->
+			<tick_sync_logs> 32 <tick_sync_logs>
 		</messagelog>
 		
 		<resourcemgr>
