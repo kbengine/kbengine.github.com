@@ -713,12 +713,12 @@ docsitem: configuration-kbengine-defs
 			<!-- 单个app(baseapp, cellapp, 等等..)进程上, 一个tick最多缓存的log数量
 				（The number of single-process(baseapp, cellapp, etc..), The number of log a tick buffer.） 
 			-->
-			<tick_max_buffered_logs> 65535 <tick_max_buffered_logs>
+			<tick_max_buffered_logs> 65535 </tick_max_buffered_logs>
 
 			<!-- 单个app(baseapp, cellapp, 等等..)进程上, 一个tick同步给messagelog的log数量
 				（The number of single-process(baseapp, cellapp, etc..), A tick synchronization to the number of messagelog） 
 			-->
-			<tick_sync_logs> 32 <tick_sync_logs>
+			<tick_sync_logs> 32 </tick_sync_logs>
 		</messagelog>
 		
 		<resourcemgr>
