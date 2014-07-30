@@ -210,25 +210,12 @@ there is no conflict in the development along with updated engine or multiple pr
 		<dbmgr>
 			<!-- Debug mode can output the read and write informations -->
 			<debug> false </debug>
-
-			<!-- Name of AccountEntity -->
-			<dbAccountEntityScriptType>	Account	</dbAccountEntityScriptType>
 			
-			<!-- Do not check defs-MD5 -->
+			<!-- Check whether the defs-MD5 -->
 			<allowEmptyDigest> false </allowEmptyDigest>								<!-- Type: Boolean -->
 			
 			<!-- Name of the interface(NIC) -->
 			<internalInterface>  </internalInterface>
-			
-			<!-- Default flags a new account, Can be combined, Fill in decimal format when
-				normal flag	= 0x00000000
-				lock flag	= 0x000000001
-				normal flag	= 0x000000002
-			-->
-			<accountDefaultFlags> 0 </accountDefaultFlags>								<!-- Type: Integer -->
-
-			<!-- New account default expiration time (seconds, the engine will add the current time) -->
-			<accountDefaultDeadline> 0 </accountDefaultDeadline>							<!-- Type: Integer -->
 			
 			<!-- Database type -->
 			<type> mysql </type>											<!-- Type: String -->
@@ -258,8 +245,30 @@ there is no conflict in the development along with updated engine or multiple pr
 				<collation> utf8_bin </collation> 								<!-- Type: String -->
 			</unicodeString>
 			
-			<!-- When logged in, the game database can not find the game account is automatically created -->
-			<notFoundAccountAutoCreate> true </notFoundAccountAutoCreate>
+			<!-- Account system -->
+			<account_system> 
+				<!-- Name of AccountEntity -->
+				<accountEntityScriptType>	Account	</accountEntityScriptType>
+				
+				<!-- Default flags a new account, Can be combined, Fill in decimal format when
+					normal flag	= 0x00000000
+					lock flag	= 0x000000001
+					normal flag	= 0x000000002
+				-->
+				<accountDefaultFlags> 0 </accountDefaultFlags>							<!-- Type: Integer -->
+				
+				<!-- New account default expiration time (seconds, the engine will add the current time) -->
+				<accountDefaultDeadline> 0 </accountDefaultDeadline>						<!-- Type: Integer -->
+
+				<!-- Account registration -->
+				<account_registration> 
+					<!-- Whether open registration -->
+					<enable>	true	</enable>
+					
+					<!-- When logged in, the game database can not find the game account is automatically created -->
+					<notFoundAutoCreate> true </notFoundAutoCreate>
+				</account_registration>
+			</account_system>
 		</dbmgr>
 		
 		<cellapp>

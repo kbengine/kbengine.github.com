@@ -257,34 +257,16 @@ docsitem: configuration-kbengine-defs
 			    (Debug mode can output the read and write informations)
 			 -->
 			<debug> false </debug>
-
-			<!-- 账号Entity的名称
-			    (Name of AccountEntity)
-			 -->
-			<dbAccountEntityScriptType>	Account	</dbAccountEntityScriptType>
 			
-			<!-- 不检查defs-MD5
-				(Do not check defs-MD5) 
+			<!-- 是否检查defs-MD5
+				(Check whether the defs-MD5) 
 			-->
-			<allowEmptyDigest> false </allowEmptyDigest>								<!-- Type: Boolean -->
+			<allowEmptyDigest> false </allowEmptyDigest>					<!-- Type: Boolean -->
 			
 			<!-- 接口网卡的名称
 				（Name of the interface(NIC)） 
 			-->
 			<internalInterface>  </internalInterface>
-			
-			<!-- 新账号默认标记(可组合，填写时按十进制格式) 
-				(Default flags a new account, Can be combined, Fill in decimal format when)
-				常规标记(normal flag)	= 0x00000000
-				锁定标记(lock flag)	= 0x000000001
-				未激活标记(normal flag)	= 0x000000002
-			-->
-			<accountDefaultFlags> 0 </accountDefaultFlags>								<!-- Type: Integer -->
-			
-			<!-- 新账号默认过期时间(秒, 引擎会加上当前时间) 
-				(New account default expiration time (seconds, the engine will add the current time))
-			-->
-			<accountDefaultDeadline> 0 </accountDefaultDeadline>							<!-- Type: Integer -->
 			
 			<!-- 数据库类型 
 				（Database type)
@@ -295,7 +277,7 @@ docsitem: configuration-kbengine-defs
 				（Database address)
 			-->
 			<host> localhost </host>										<!-- Type: String -->
-			<port> 0 </port>											<!-- Type: Integer -->
+			<port> 0 </port>												<!-- Type: Integer -->
 			
 			<!-- 数据库账号验证 
 				（Database auth)
@@ -313,25 +295,58 @@ docsitem: configuration-kbengine-defs
 			<!-- 数据库名称 
 				(Database name)
 			-->
-			<databaseName> kbe </databaseName> 									<!-- Type: String -->
+			<databaseName> kbe </databaseName> 								<!-- Type: String -->
 			
 			<!-- 数据库允许的连接数 
 				(Number of connections allowed by the database)
 			-->
-			<numConnections> 5 </numConnections>									<!-- Type: Integer -->
+			<numConnections> 5 </numConnections>							<!-- Type: Integer -->
 			
 			<!-- 字符编码类型 
 				(Character encoding type)
 			-->
 			<unicodeString>
-				<characterSet> utf8 </characterSet> 								<!-- Type: String -->
-				<collation> utf8_bin </collation> 								<!-- Type: String -->
+				<characterSet> utf8 </characterSet> 						<!-- Type: String -->
+				<collation> utf8_bin </collation> 							<!-- Type: String -->
 			</unicodeString>
 			
-			<!-- 登录合法时游戏数据库找不到游戏账号则自动创建 
-				(When logged in, the game database can not find the game account is automatically created)
+			<!-- 账号系统
+				(Account system)
 			-->
-			<notFoundAccountAutoCreate> true </notFoundAccountAutoCreate>
+			<account_system> 
+				<!-- 账号Entity的名称
+				    (Name of AccountEntity)
+				 -->
+				<accountEntityScriptType>	Account	</accountEntityScriptType>
+				
+				<!-- 新账号默认标记(可组合，填写时按十进制格式) 
+					(Default flags a new account, Can be combined, Fill in decimal format when)
+					常规标记(normal flag)	= 0x00000000
+					锁定标记(lock flag)	= 0x000000001
+					未激活标记(normal flag)	= 0x000000002
+				-->
+				<accountDefaultFlags> 0 </accountDefaultFlags>							<!-- Type: Integer -->
+				
+				<!-- 新账号默认过期时间(秒, 引擎会加上当前时间) 
+					(New account default expiration time (seconds, the engine will add the current time))
+				-->
+				<accountDefaultDeadline> 0 </accountDefaultDeadline>						<!-- Type: Integer -->
+
+				<!-- 账号注册相关
+					(Account registration)
+				-->
+				<account_registration> 
+					<!-- 是否开放注册 
+						(Whether open registration)
+					-->
+					<enable>	true	</enable>
+					
+					<!-- 登录合法时游戏数据库找不到游戏账号则自动创建 
+						(When logged in, the game database can not find the game account is automatically created)
+					-->
+					<notFoundAutoCreate> true </notFoundAutoCreate>
+				</account_registration>
+			</account_system>
 		</dbmgr>
 		
 		<cellapp>
