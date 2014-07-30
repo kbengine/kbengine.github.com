@@ -266,7 +266,7 @@ there is no conflict in the development along with updated engine or multiple pr
 					<enable>	true	</enable>
 					
 					<!-- When logged in, the game database can not find the game account is automatically created -->
-					<notFoundAutoCreate> true </notFoundAutoCreate>
+					<loginAutoCreate> true </loginAutoCreate>
 				</account_registration>
 			</account_system>
 		</dbmgr>

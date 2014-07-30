@@ -344,7 +344,7 @@ docsitem: configuration-kbengine-defs
 					<!-- 登录合法时游戏数据库找不到游戏账号则自动创建 
 						(When logged in, the game database can not find the game account is automatically created)
 					-->
-					<notFoundAutoCreate> true </notFoundAutoCreate>
+					<loginAutoCreate> true </loginAutoCreate>
 				</account_registration>
 			</account_system>
 		</dbmgr>
