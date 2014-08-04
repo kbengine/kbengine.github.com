@@ -136,7 +136,7 @@ docsitem: documentation-alias
         AVATAR_INFOS_LIST = {"values" : [{"dbid" : 1, "name" : "kbengine", "roleType" : 1, "level" : 0}, 
 				{"dbid" : 2, "name" : "kbengine1", "roleType" : 2, "level" : 1}]}
 	
-如果实现implementedBy， 用户可以将其在内存中存储为如下(参考demo中的代码demo\res\scripts\user_type\AVATAR_INFOS.py):
+如果实现implementedBy， 用户可以将其在内存中存储为如下:
 
         AVATAR_INFOS_LIST = {"kbengine" : {"dbid" : 1, "name" : "kbengine", "roleType" : 1, "level" : 0}, 
 				"kbengine1" : {"dbid" : 2, "name" : "kbengine1", "roleType" : 2, "level" : 1}}
