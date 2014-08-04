@@ -88,7 +88,7 @@ docsitem: documentation-alias
 			</keyName>
 
 	       </Properties>
-	</typename>
+	</类型名称>
 	
 关于implementedBy机制:
 参看: [自定义类型]
@@ -160,4 +160,4 @@ docsitem: documentation-alias
 
 
 
-[自定义类型]: {{ site.baseurl }}/cn/docs/documentations/customtypes.html
+[自定义类型]: {{ site.baseurl }}/cn/docs/programming/customtypes.html

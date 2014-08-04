@@ -161,4 +161,4 @@ The default format in memory(If you do not implementedBy):
 
 
 
-[Custom types]: {{ site.baseurl }}/docs/documentations/customtypes.html
+[Custom types]: {{ site.baseurl }}/docs/programming/customtypes.html
