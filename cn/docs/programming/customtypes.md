@@ -96,6 +96,6 @@ res\scripts\user_type\XXX_PICKLER.py:
 			return obj.asDict()
 
 		def isSameType(self, obj):
-			return isinstance(obj, TAvatarData)
+			return isinstance(obj, XXX_TYPE)
 
 	inst = XXX_PICKLER()
