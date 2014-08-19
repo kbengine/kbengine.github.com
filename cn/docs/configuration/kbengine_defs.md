@@ -95,17 +95,21 @@ docsitem: configuration-kbengine-defs
 		-->
 		<debugEntity>0</debugEntity>
 
-		<!-- apps发布状态, 可在脚本中获取该值
-			(apps released state, This value can be obtained in the script)
-			Type: Integer8
-			0 : debug
-			1 : release
-			其他自定义(Other custom)
-		-->
-		<app_publish>0</app_publish>
-		
-		<cellapps> 1 </cellapps>
-		<baseapps> 1 </baseapps>
+		<publish>
+			<!-- 发布状态, 可在脚本中获取该值。 KBEngine.publish()
+				(apps released state, This value can be obtained in the script. KBEngine.publish())
+				Type: Integer8
+				0 : debug
+				1 : release
+				其他自定义(Other custom)
+			-->
+			<state>0</state>
+
+			<!-- 脚本层发布的版本号
+				(Script layer released version number)
+			 -->
+			<script_version> 0.1.0 </script_version>
+		</publish>
 		
 		<channelCommon> 
 			<!-- 最后一次通信时间超过此时间则被认定为超时通道， 服务器将踢出该通道 

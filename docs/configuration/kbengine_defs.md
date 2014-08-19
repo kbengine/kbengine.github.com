@@ -82,16 +82,18 @@ there is no conflict in the development along with updated engine or multiple pr
 			Initialization attributes information, Def information. -->
 		<debugEntity>0</debugEntity>
 
-		<!-- apps released state, This value can be obtained in the script
-			Type: Integer8
-			0 : debug
-			1 : release
-			Other custom
-		-->
-		<app_publish>0</app_publish>
-		
-		<cellapps> 1 </cellapps>
-		<baseapps> 1 </baseapps>
+		<publish>
+			<!-- apps released state, This value can be obtained in the script, KBEngine.publish()
+				Type: Integer8
+				0 : debug
+				1 : release
+				Other custom
+			-->
+			<state>0</state>
+
+			<!-- Script layer released version number -->
+			<script_version> 0.1.0 </script_version>
+		</publish>
 		
 		<channelCommon> 
 			<!-- If long (configurable value) no communication, channel will be kicked out of the server. -->
