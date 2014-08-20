@@ -63,20 +63,30 @@ docsitem: documentation-entitydef
 			<accountName>
 				// 属性类型
 				<Type>			UNICODE				</Type>
+				
+				// (可选)
+				// 属性的自定义协议ID，如果客户端不使用kbe配套的SDK来开发，客户端需要开发跟kbe对接的协议,
+				// 开发者可以定义属性的ID便于识别，c++协议层使用一个uint16来描述，如果不定义ID则引擎会使用
+				// 自身规则所生成的协议ID, 这个ID必须所有def文件中唯一
+				<Utype>			1000				</Utype>
 
 				// 属性的作用域
 				<Flags>			BASE				</Flags>
-
-				// 是否存储到数据库 (可选)
+				
+				// (可选)
+				// 是否存储到数据库 
 				<Persistent>		true				</Persistent>
-
-				// 存储到数据库中的最大长度 (可选)
+				
+				// (可选)
+				// 存储到数据库中的最大长度 
 				<DatabaseLength> 	100				</DatabaseLength>
-
-				// 默认值 (可选， 不清楚最好不要设置)
+				
+				// (可选， 不清楚最好不要设置)
+				// 默认值 
 				<Default>		kbengine			</Default>
-
-				// Mysql Identifier (可选)
+				
+				// (可选)
+				// Mysql Identifier 
 				<Identifier>		true				</Identifier>
 			</accountName>
 			
@@ -88,7 +98,8 @@ docsitem: documentation-entitydef
 			// 客户端暴露的远程方法名称
 			<onReqAvatarList>
 				// 远程方法的参数
-				<Arg>	AVATAR_INFOS_LIST	</Arg>
+				<Arg>			AVATAR_INFOS_LIST		</Arg>
+				<Utype>			1001				</Utype>
 			</onReqAvatarList>
 
 			...
@@ -98,7 +109,9 @@ docsitem: documentation-entitydef
 		<BaseMethods>
 			// Baseapp暴露的远程方法名称
 			<reqAvatarList>
-				<Exposed/> // cell暴露方法必须存在这个标记
+				// cell暴露方法必须存在这个标记
+				<Exposed/> 
+				<Utype>			1002				</Utype>
 			</reqAvatarList>
 			
 			...
@@ -108,6 +121,7 @@ docsitem: documentation-entitydef
 		<CellMethods>
 			// Cellapp暴露的远程方法名称
 			<hello>
+				<Utype>			1003				</Utype>
 			</hello>
 		</CellMethods>
 
