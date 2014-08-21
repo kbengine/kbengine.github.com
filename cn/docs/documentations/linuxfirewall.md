@@ -19,7 +19,7 @@ Linux防火墙设置
 				外部TCP端口 : 21103		// Email账号激活、密码重置等等处理的回调接口
 
 			baseapp x N:
-				外部TCP端口 : 20015, ...	// 网关端口(externalPorts_min->externalPorts_max)
+				外部TCP端口 : 20015, ...		// 网关端口(externalPorts_min->externalPorts_max)
 				内部TCP端口 : 40000		// Telnet服务端口(用于调试等)
 
 	server2: 
