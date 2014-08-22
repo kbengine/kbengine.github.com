@@ -213,24 +213,27 @@ KBEngine会读取系统中设置的(KBE_ROOT, KBE_RES_PATH, KBE_HYBRID_PATH)环�
 
 参考: [Linux防火墙设置]
 
-### 7. 局域网内部署多组kbe服务器设置: (可选)
+### 7. 局域网内部署多组KBE服务器设置: (可选)
 
-这里假设有A,B两个用户在同一个局域网并且都想部署一套自己的kbe服务器，那么需要注意两个地方:
+何为一组KBE服务器? 共同维护一个游戏世界的服务器, 含整个[KBE架构]。
+
+这里假设有A,B两个用户在同一个局域网并且都想部署一套自己的KBE服务器，那么需要注意两个地方:
 
 	1: 环境变量中的UID必须不能相同(查看系统中是否有设置过UID)
 		UID用于区分不同的服务组。
 
 	2: 启动脚本中的cid必须唯一(kbengine\kbe\bin\Hybrid\start***)
 		*** --cid=必须唯一 --grouporder=1  --globalorder=1
-		cid既componentID, 用于标识一个APP, 如果探测到2个一样的cid必然会引起冲突。
+		cid既componentID, 用于标识一个KBE-APP, 如果探测到2个一样的cid必然会引起冲突。
 
 
-[config]: {{ site.baseurl }}/docs/configuration/
-[commands]: {{ site.baseurl }}/docs/commands/
+[config]: {{ site.baseurl }}/cn/docs/configuration/
+[commands]: {{ site.baseurl }}/cn/docs/commands/
 [versions]: https://github.com/kbengine/kbengine/blob/latest/versioning/versions.txt
-[layout]: {{ site.baseurl }}/docs/concepts/layout.html
+[layout]: {{ site.baseurl }}/cn/docs/concepts/layout.html
 [issues]: https://github.com/kbengine/kbengine/issues
-[高性能Linux服务器配置]: {{ site.baseurl }}/docs/documentations/linuxosconfig.html
-[kbengine_defs.xml]: {{ site.baseurl }}/docs/configuration/kbengine_defs.html
-[kbengine.xml]: {{ site.baseurl }}/docs/configuration/kbengine.html
-[Linux防火墙设置]: {{ site.baseurl }}/docs/documentations/linuxfirewall.html
+[高性能Linux服务器配置]: {{ site.baseurl }}/cn/docs/documentations/linuxosconfig.html
+[kbengine_defs.xml]: {{ site.baseurl }}/cn/docs/configuration/kbengine_defs.html
+[kbengine.xml]: {{ site.baseurl }}/cn/docs/configuration/kbengine.html
+[Linux防火墙设置]: {{ site.baseurl }}/cn/docs/documentations/linuxfirewall.html
+[KBE架构]: {{ site.baseurl }}/cn/docs/concepts/layout.html
