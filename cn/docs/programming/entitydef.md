@@ -70,7 +70,7 @@ docsitem: documentation-entitydef
 				// 自身规则所生成的协议ID, 这个ID必须所有def文件中唯一
 				<Utype>			1000				</Utype>
 
-				// 属性的作用域
+				// 属性的作用域 (参考下方:属性作用域章节)
 				<Flags>			BASE				</Flags>
 				
 				// (可选)
@@ -86,7 +86,7 @@ docsitem: documentation-entitydef
 				<Default>		kbengine			</Default>
 				
 				// (可选)
-				// Mysql Identifier 
+				// 数据库Identifier 
 				<Identifier>		true				</Identifier>
 			</accountName>
 			
