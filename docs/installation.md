@@ -216,6 +216,18 @@ Please set ([kbengine.xml] | [kbengine_defs.xml]):
 
 see: [Linux firewall settings]
 
+### 7. The LAN, the deployment of multiple KBE server settings: (optional)
+
+What is the KBE server group? The maintenance of a game world server group, The server contains the entire [KBE-layout].
+
+Multiple users in the same LAN, And they want to install KBE-server, Then they need to pay attention to:
+
+	1: Environment variables UID must not be the same (see the system if there are set too UID)
+		UID is used to distinguish between different server groups.
+
+	2: cid startup script must be unique(kbengine\kbe\bin\Hybrid\start***)
+		*** --cid=(must be unique) --grouporder=1  --globalorder=1
+		cid is componentID, Used to identify a KBE-APP, If two different cid exist, will inevitably lead to conflict.
 
 
 [config]: {{ site.baseurl }}/docs/configuration/
@@ -227,3 +239,4 @@ see: [Linux firewall settings]
 [kbengine_defs.xml]: {{ site.baseurl }}/docs/configuration/kbengine_defs.html
 [kbengine.xml]: {{ site.baseurl }}/docs/configuration/kbengine.html
 [Linux firewall settings]: {{ site.baseurl }}/docs/documentations/linuxfirewall.html
+[KBE-layout]: {{ site.baseurl }}/docs/concepts/layout.html
