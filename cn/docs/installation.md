@@ -209,10 +209,20 @@ KBEngine会读取系统中设置的(KBE_ROOT, KBE_RES_PATH, KBE_HYBRID_PATH)环�
 
 
 
-### 5. Linux 防火墙设置: (可选)
+### 6. Linux 防火墙设置: (可选)
 
 参考: [Linux防火墙设置]
 
+### 7. 局域网内部署多组kbe服务器设置: (可选)
+
+这里假设有A,B两个用户在同一个局域网并且都想部署一套自己的kbe服务器，那么需要注意两个地方:
+
+	1: 环境变量中的UID必须不能相同(查看系统中是否有设置过UID)
+		UID用于区分不同的服务组。
+
+	2: 启动脚本中的cid必须唯一(kbengine\kbe\bin\Hybrid\start***)
+		*** --cid=必须唯一 --grouporder=1  --globalorder=1
+		cid既componentID, 用于标识一个APP, 如果探测到2个一样的cid必然会引起冲突。
 
 
 [config]: {{ site.baseurl }}/docs/configuration/
