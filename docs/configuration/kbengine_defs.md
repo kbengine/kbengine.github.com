@@ -544,33 +544,6 @@ there is no conflict in the development along with updated engine or multiple pr
 			<!-- The number of single-process(baseapp, cellapp, etc..), A tick synchronization to the number of messagelog -->
 			<tick_sync_logs> 32 </tick_sync_logs>
 		</messagelog>
-		
-		<resourcemgr>
-			<!-- Name of the interface(NIC) -->
-			<internalInterface>  </internalInterface>
-			
-			<!-- Download bandwidth limits -->
-			<downloadStreaming>
-				<bitsPerSecondTotal> 1000000 </bitsPerSecondTotal>				<!-- Type: Int -->
-				<bitsPerSecondPerClient> 100000 </bitsPerSecondPerClient>			<!-- Type: Int -->
-			</downloadStreaming>
-			
-			<!-- listen: Maximum listen queue -->
-			<SOMAXCONN> 128 </SOMAXCONN>
-			
-			<respool>
-				<!-- Buffer size is equal to the size of resources, 
-					Less than the buffer resources before they can enter the resource pool.
-				-->
-				<buffer_size> 1024 </buffer_size>
-				
-				<!-- Resources have not been accessed overtime will be destroyed (s) -->
-				<timeout> 600 </timeout>
-				
-				<!-- Resource pool check tick (secs) -->
-				<checktick>60</checktick>
-			</respool>
-		</resourcemgr>
 	</root>
 
 
