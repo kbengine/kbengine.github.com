@@ -65,7 +65,7 @@ docsitem: documentation-alias
 	<ENTITY_FORBID_COUNTER> ARRAY <of> INT8		</of>		</ENTITY_FORBID_COUNTER>
 	<ENTITYID_LIST> 	ARRAY <of> ENTITY_ID	</of>		</ENTITYID_LIST>
 
-### 固定字典类型定义
+### 定义固定字典类型(FIXED_DICT)
 
 数据结构可以是一个类似于Python字典的结构，引擎可以根据用户的定义将这样一个结构的数据通过网络传输到目的地并还原成该结构，或者存储到数据库中以及从数据库中还原。
 
