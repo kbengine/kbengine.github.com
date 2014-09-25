@@ -32,8 +32,7 @@ Linux:
 Windows:
 
 	KBE_ROOT\kbengine\kbe\src\kbengine_vs100.sln
-	(Note: vs2010 need to install sp1(Otherwise an error will occur: LINK: fatal error LNK1123: failure during conversion to COFF: file invalid or corrupt), 
-	you can upgrade to a higher version of VC compiler)
+	(Note: vs2010 need to install sp1(Otherwise an error will occur: LINK: fatal error LNK1123: failure during conversion to COFF: file invalid or corrupt), you can upgrade to a higher version of VC compiler)
 
 
 Note: 
