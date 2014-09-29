@@ -27,6 +27,7 @@ Linux:
 	[root @ localhost ~]# yum install mysql-devel 
 
 	[root @ localhost ~]# cd $KBE_ROOT/kbe/src
+	[root @ localhost/ src]# chmod -R 755 .
 	[root @ localhost/ src]# make
 
 Windows:
