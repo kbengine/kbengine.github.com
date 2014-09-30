@@ -482,7 +482,7 @@ docsitem: configuration-kbengine-defs
 			<internalInterface>  </internalInterface>
 			<externalInterface>  </externalInterface>						<!-- Type: String -->
 
-			<!-- 外部IP地址，在某些机房的环境下，可能会使用端口映射的方式来访问内部kbe服务器，那么kbe在当前
+			<!-- 外部IP地址或者域名，在某些机房的环境下，可能会使用端口映射的方式来访问内部kbe服务器，那么kbe在当前
 				的机器上获得的外部地址可能也是局域网地址，此时某些功能将会不正常。例如：账号激活邮件中给出的回调
 				地址。
 				(External IP address, In some server environment, May use the port mapping to access KBE,
@@ -618,7 +618,7 @@ docsitem: configuration-kbengine-defs
 			<internalInterface>  </internalInterface>
 			<externalInterface>  </externalInterface>						<!-- Type: String -->
 			
-			<!-- 外部IP地址，在某些机房的环境下，可能会使用端口映射的方式来访问内部kbe服务器，那么kbe在当前
+			<!-- 外部IP地址或者域名，在某些机房的环境下，可能会使用端口映射的方式来访问内部kbe服务器，那么kbe在当前
 				的机器上获得的外部地址可能也是局域网地址，此时某些功能将会不正常。例如：账号激活邮件中给出的回调
 				地址。
 				(External IP address, In some server environment, May use the port mapping to access KBE,

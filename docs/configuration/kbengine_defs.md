@@ -365,7 +365,7 @@ there is no conflict in the development along with updated engine or multiple pr
 			<internalInterface>  </internalInterface>
 			<externalInterface>  </externalInterface>						<!-- Type: String -->
 
-			<!-- External IP address, In some server environment, May use the port mapping to access KBE,
+			<!-- External IP-address or Domain-name, In some server environment, May use the port mapping to access KBE,
 				So KBE on current machines on the external IP address may be a LAN IP address, Then some functions will not normal.
 				For example: account activation email address given callback.
 			-->
@@ -458,7 +458,7 @@ there is no conflict in the development along with updated engine or multiple pr
 			<internalInterface>  </internalInterface>
 			<externalInterface>  </externalInterface>						<!-- Type: String -->
 
-			<!-- External IP address, In some server environment, May use the port mapping to access KBE,
+			<!-- External IP-address or Domain-name, In some server environment, May use the port mapping to access KBE,
 				So KBE on current machines on the external IP address may be a LAN IP address, Then some functions will not normal.
 				For example: account activation email address given callback.
 			-->
