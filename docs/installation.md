@@ -97,7 +97,7 @@ Environment variables description
 
 
 
-### 3. Set up the database:
+### 3. Setup the database:
 
 Install Mysql:
 
