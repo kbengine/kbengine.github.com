@@ -19,6 +19,19 @@ What needs to be defined Entity:
 * When a disaster recovery server can automatically recover
 
 
+What needs to be defined Entity-attribute:
+
+* Stored in the database
+
+* Entities are after migration data is still valid (only cellapp Migrating Entities, such as teleport-scene)
+
+* When a disaster recovery server can automatically recover
+
+What needs to be defined Entity-method:
+
+* Ability to facilitate remote access
+
+
 You need to perform the following steps:
 -----------------------------------------
 
