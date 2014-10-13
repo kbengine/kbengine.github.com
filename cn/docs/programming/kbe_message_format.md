@@ -14,14 +14,14 @@ docsitem: kbe-engine-messages
 
 		 |-----------------------------------------------------------------|
 	Packet = |      Len: 2Bytes            |            Len: N                 |
-		 |     (Packet_Head: uint16)   |   (Packet_Body: Binary-stream)    |
+		 |     (Message-ID: uint16)    |   (Message-Body: Binary-stream)   |
 		 |-----------------------------------------------------------------|
 
 不固定长度类型:
 
 		 |--------------------------------------------------------------------------------------------|
-	Packet = |      Len: 2Bytes            |       Len: 2Bytes         |           Len: N                 |
-		 |     (Packet_Head: uint16)   |   (Packet_Length: uint16) |   (Packet_Body: Binary-stream)   |
+	Packet = |      Len: 2Bytes            |       Len: 2Bytes          |           Len: N                |
+		 |     (Message-ID: uint16)    |   (Message-Length: uint16) |   (Message-Body: Binary-stream) |
 		 |--------------------------------------------------------------------------------------------|
 
 (注意: 测试协议请关闭数据包加密, 修改[kbengine.xml]或[kbengine_defs.xml]->channelCommon->encrypt_type)
@@ -40,8 +40,8 @@ docsitem: kbe-engine-messages
 		packet.writeInt64(1);
 
 		 |--------------------------------------------------------------------------------|
-	Packet = |      Len: 2Bytes                           |            Len: 1, 8              |
-		 |     (Packet_Head(client_funcXX): uint16)   |   (Packet_Body: p1, p2)           |
+	Packet = |      Len: 2Bytes                                |            Len: 1, 8         |
+		 |     (Message-ID(client_funcXX): uint16)         |       (Message-Body: p1, p2) |
 		 |--------------------------------------------------------------------------------|
 
 
@@ -59,8 +59,8 @@ docsitem: kbe-engine-messages
 		packet.writeString("123456");
 
 		 |--------------------------------------------------------------------------------------------|
-	Packet = |      Len: 2Bytes            |       Len: 2Bytes         |           Len: 1, 8, 7           |
-		 |     (Packet_Head: uint16)   |   (Packet_Length: uint16) |   (Packet_Body: p1, p2, p3)      |
+	Packet = |      Len: 2Bytes            |       Len: 2Bytes          |           Len: 1, 8, 7          |
+		 |     (Message-ID: uint16)    |   (Message-Length: uint16) |   (Message-Body: p1, p2, p3)    |
 		 |--------------------------------------------------------------------------------------------|
 
 
