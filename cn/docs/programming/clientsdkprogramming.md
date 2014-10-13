@@ -38,7 +38,7 @@ Please to see: [server_errors.xml]
 
 ###对接服务端引擎级协议
 
-以下协议为客户端需要提供给服务端调用的协议:
+以下协议为客户端需要提供给服务端调用的协议: 
 
 	onVersionNotMatch
 		
