@@ -13,7 +13,7 @@ Path:
 
 
 
-A simple Python script tools can be: installation, uninstallation, Update, Get the version, etc.
+A simple Python script tools can be(installation, uninstallation, Update, Get the version, etc).
 ---------------------------------------------------------------------
 
 ###Commands:
