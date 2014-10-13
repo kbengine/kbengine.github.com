@@ -36,8 +36,8 @@ docsitem: kbe-engine-messages
 	
 	void server_funcXXX()
 		packet.newMessage(ClientInterface::client_funcXX);
-		packet.writeUint8(1)
-		packet.writeInt64(1)
+		packet.writeUint8(1);
+		packet.writeInt64(1);
 
 		 |--------------------------------------------------------------------------------|
 	Packet = |      Len: 2Bytes                           |            Len: 1, 8              |
@@ -54,9 +54,9 @@ docsitem: kbe-engine-messages
 	
 	void server_funcXXX()
 		packet.newMessage(ClientInterface::client_funcXX);
-		packet.writeUint8(1)
-		packet.writeInt64(1)
-		packet.writeString("123456")
+		packet.writeUint8(1);
+		packet.writeInt64(1);
+		packet.writeString("123456");
 
 		 |--------------------------------------------------------------------------------------------|
 	Packet = |      Len: 2Bytes            |       Len: 2Bytes         |           Len: 1, 8, 7           |
