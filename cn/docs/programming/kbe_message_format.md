@@ -1,5 +1,5 @@
 ---
-layout: docs
+layout: docs_cn
 title: Communication protocol format · Docs · KBEngine
 tab: docs
 docsitem: kbe-engine-messages
