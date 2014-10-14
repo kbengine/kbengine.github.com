@@ -10,21 +10,21 @@ Defining the Entity
 
 What needs to be defined Entity:
 
-	Stored in the database
-	Ability to facilitate remote access
+	Stored in the database.
+	Ability to facilitate remote access.
 	Need to manage and monitor its engines, such as: AOI, Trap, etc...
-	When a disaster recovery server can automatically recover
+	When a disaster recovery server can automatically recover.
 
 
 What needs to be defined Entity-attribute:
 
-	Stored in the database
-	Entities are after migration data is still valid (only cellapp Migrating Entities, such as teleport-scene)
-	When a disaster recovery server can automatically recover
+	Stored in the database.
+	Entities are after migration data is still valid (only cellapp Migrating Entities, such as teleport-scene).
+	When a disaster recovery server can automatically recover.
 
 What needs to be defined Entity-method:
 
-	Ability to facilitate remote access
+	Ability to facilitate remote access.
 
 
 You need to perform the following steps:
