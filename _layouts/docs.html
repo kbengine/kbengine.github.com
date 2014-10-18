@@ -46,6 +46,7 @@ tab: docs
 
 				<li class="divider"></li>
 				<li class="nav-header">Engine Programming</li>
+				<li{% if page.docsitem == "kbe-engine-messages" %} class="active"{% endif %}><a href="{{ site.baseurl }}/docs/programming/kbe_message_format.html">Communication protocol format</a></li>
 				<li{% if page.docsitem == "server-engine-programming" %} class="active"{% endif %}><a href="{{ site.baseurl }}/docs/programming/serverengineprogramming.html">Server-Engine Programming</a></li>
 				<li{% if page.docsitem == "sdk-client-programming" %} class="active"{% endif %}><a href="{{ site.baseurl }}/docs/programming/clientsdkprogramming.html">Client-SDK Programming</a></li>
 				
@@ -64,7 +65,7 @@ tab: docs
 				<li class="nav-header">Game making tutorials</li>
 				<li{% if page.docsitem == "documentation-gameexample1" %} class="active"{% endif %}><a href="{{ site.baseurl }}/docs/documentations/emptyproject.html">Empty Project</a></li>
 				<li{% if page.docsitem == "documentation-gameexample2" %} class="active"{% endif %}><a href="{{ site.baseurl }}/docs/documentations/rpggameexample.html">Multiplayer online RPG</a></li>
-				<li{% if page.docsitem == "documentation-gameexample3" %} class="active"{% endif %}><a href="{{ site.baseurl }}/docs/documentations/roompokergameexample.html">The poker room games</a></li>
+				<li{% if page.docsitem == "documentation-gameexample3" %} class="active"{% endif %}><a href="{{ site.baseurl }}/docs/documentations/roomgameexample.html">The room games</a></li>
 				<li{% if page.docsitem == "documentation-gameexample4" %} class="active"{% endif %}><a href="{{ site.baseurl }}/docs/documentations/rtsgameexample.html">RTS games</a></li>
 			</ul>
 		</div>

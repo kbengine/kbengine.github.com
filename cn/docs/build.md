@@ -27,13 +27,13 @@ Linux:
 	[root @ localhost ~]# yum install mysql-devel 
 
 	[root @ localhost ~]# cd $KBE_ROOT/kbe/src
+	[root @ localhost/ src]# chmod -R 755 .
 	[root @ localhost/ src]# make
 
 Windows:
 
-	KBE_ROOT\kbengine\kbe\src\kbengine_vs90.sln  
-	(注意: vs2008 需要安装sp1, 否则会出现"无法打开包括文件:“unordered_map”"之类的错误,
-	你也可以升级到高版本的VC编译器, 高版本已经包含了相关支持。)
+	KBE_ROOT\kbengine\kbe\src\kbengine_vs100.sln  
+	(注意: vs2010 需要安装sp1(否则会出现错误: error LNK1123: 转换到 COFF 期间失败: 文件无效或损坏), 你也可以升级到高版本的VC编译器, 高版本已经包含了相关支持。)
 
 	点击VC开始编译，等待完成即可。
 

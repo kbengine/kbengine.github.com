@@ -17,7 +17,7 @@ docsitem: configuration-kbengine-defs
 
 
 	<root>
-		<!-- 进程处理频率 
+		<!-- 游戏逻辑处理频率 
 			(Update frequency process)
 		-->
 		<gameUpdateHertz> 10 </gameUpdateHertz>
@@ -25,7 +25,7 @@ docsitem: configuration-kbengine-defs
 		<!-- 每秒发送到客户端的带宽限制(bit) 
 			(The data sent to the client, the second bandwidth limit (bit))
 		-->
-		<bitsPerSecondToClient> 20000 </bitsPerSecondToClient>				<!-- Type: Integer -->
+		<bitsPerSecondToClient> 20000 </bitsPerSecondToClient>							<!-- Type: Integer -->
 		
 		<!-- 非0则不优化， 不带包长信息的包强制都携带长度信息， 某些情况下方便某些前端对接协议
 		什么样的包不带长度信息? 所有能够预先计算出包大小的且永远不变的包不带长度信息， 
@@ -95,17 +95,21 @@ docsitem: configuration-kbengine-defs
 		-->
 		<debugEntity>0</debugEntity>
 
-		<!-- apps发布状态, 可在脚本中获取该值
-			(apps released state, This value can be obtained in the script)
-			Type: Integer8
-			0 : debug
-			1 : release
-			其他自定义(Other custom)
-		-->
-		<app_publish>0</app_publish>
-		
-		<cellapps> 1 </cellapps>
-		<baseapps> 1 </baseapps>
+		<publish>
+			<!-- 发布状态, 可在脚本中获取该值。 KBEngine.publish()
+				(apps released state, This value can be obtained in the script. KBEngine.publish())
+				Type: Integer8
+				0 : debug
+				1 : release
+				其他自定义(Other custom)
+			-->
+			<state>0</state>
+
+			<!-- 脚本层发布的版本号
+				(Script layer released version number)
+			 -->
+			<script_version> 0.1.0 </script_version>
+		</publish>
 		
 		<channelCommon> 
 			<!-- 最后一次通信时间超过此时间则被认定为超时通道， 服务器将踢出该通道 
@@ -121,12 +125,12 @@ docsitem: configuration-kbengine-defs
 			-->
 			<resend> 
 				<internal> 
-					<interval> 10 </interval>					<!-- 毫秒(Millisecond) -->
-					<retries> 0 </retries>						<!-- 重试次数(Retry count), 0无限(0 is unlimited) -->
+					<interval> 10 </interval>						<!-- 毫秒(Millisecond) -->
+					<retries> 0 </retries>							<!-- 重试次数(Retry count), 0无限(0 is unlimited) -->
 				</internal>
 				<external>
-					<interval> 10 </interval>					<!-- 毫秒 -->
-					<retries> 3 </retries>						<!-- 重试次数, 0无限(0 is unlimited) -->
+					<interval> 10 </interval>						<!-- 毫秒 -->
+					<retries> 3 </retries>							<!-- 重试次数, 0无限(0 is unlimited) -->
 				</external>
 			</resend>
 			
@@ -134,11 +138,11 @@ docsitem: configuration-kbengine-defs
 				(socket send/recv buffer size)
 			-->
 			<readBufferSize> 
-				<internal>	16777216	</internal> 			<!-- 16M -->
+				<internal>	16777216		</internal> 				<!-- 16M -->
 				<external>	0			</external>				<!-- 系统默认(system default) -->
 			</readBufferSize>
 			<writeBufferSize> 
-				<internal>	16777216	</internal>				<!-- 16M -->
+				<internal>	16777216		</internal>				<!-- 16M -->
 				<external>	0			</external>				<!-- 系统默认(system default) -->
 			</writeBufferSize>
 			
@@ -148,12 +152,12 @@ docsitem: configuration-kbengine-defs
 			<receiveWindowOverflow>
 				<messages>
 					<critical>	32			</critical>
-					<internal>	65535		</internal>
+					<internal>	65535			</internal>
 					<external>	256			</external>
 				</messages>
 				<bytes>
 					<internal>	0			</internal>
-					<external>	65535		</external>
+					<external>	65535			</external>
 				</bytes>
 			</receiveWindowOverflow>
 			
@@ -257,14 +261,9 @@ docsitem: configuration-kbengine-defs
 			    (Debug mode can output the read and write informations)
 			 -->
 			<debug> false </debug>
-
-			<!-- 账号Entity的名称
-			    (Name of AccountEntity)
-			 -->
-			<dbAccountEntityScriptType>	Account	</dbAccountEntityScriptType>
 			
-			<!-- 不检查defs-MD5
-				(Do not check defs-MD5) 
+			<!-- 是否检查defs-MD5
+				(Check whether the defs-MD5) 
 			-->
 			<allowEmptyDigest> false </allowEmptyDigest>					<!-- Type: Boolean -->
 			
@@ -272,19 +271,6 @@ docsitem: configuration-kbengine-defs
 				（Name of the interface(NIC)） 
 			-->
 			<internalInterface>  </internalInterface>
-			
-			<!-- 新账号默认标记(可组合，填写时按十进制格式) 
-				(Default flags a new account, Can be combined, Fill in decimal format when)
-				常规标记(normal flag)	= 0x00000000
-				锁定标记(lock flag)	= 0x000000001
-				未激活标记(normal flag)	= 0x000000002
-			-->
-			<accountDefaultFlags> 0 </accountDefaultFlags>					<!-- Type: Integer -->
-			
-			<!-- 新账号默认过期时间(秒, 引擎会加上当前时间) 
-				(New account default expiration time (seconds, the engine will add the current time))
-			-->
-			<accountDefaultDeadline> 0 </accountDefaultDeadline>			<!-- Type: Integer -->
 			
 			<!-- 数据库类型 
 				（Database type)
@@ -328,10 +314,43 @@ docsitem: configuration-kbengine-defs
 				<collation> utf8_bin </collation> 							<!-- Type: String -->
 			</unicodeString>
 			
-			<!-- 登录合法时游戏数据库找不到游戏账号则自动创建 
-				(When logged in, the game database can not find the game account is automatically created)
+			<!-- 账号系统
+				(Account system)
 			-->
-			<notFoundAccountAutoCreate> true </notFoundAccountAutoCreate>
+			<account_system> 
+				<!-- 账号Entity的名称
+				    (Name of AccountEntity)
+				 -->
+				<accountEntityScriptType>	Account	</accountEntityScriptType>
+				
+				<!-- 新账号默认标记(可组合，填写时按十进制格式) 
+					(Default flags a new account, Can be combined, Fill in decimal format when)
+					常规标记(normal flag)	= 0x00000000
+					锁定标记(lock flag)	= 0x000000001
+					未激活标记(normal flag)	= 0x000000002
+				-->
+				<accountDefaultFlags> 0 </accountDefaultFlags>							<!-- Type: Integer -->
+				
+				<!-- 新账号默认过期时间(秒, 引擎会加上当前时间) 
+					(New account default expiration time (seconds, the engine will add the current time))
+				-->
+				<accountDefaultDeadline> 0 </accountDefaultDeadline>						<!-- Type: Integer -->
+
+				<!-- 账号注册相关
+					(Account registration)
+				-->
+				<account_registration> 
+					<!-- 是否开放注册 
+						(Whether open registration)
+					-->
+					<enable>	true	</enable>
+					
+					<!-- 登录合法时游戏数据库找不到游戏账号则自动创建 
+						(When logged in, the game database can not find the game account is automatically created)
+					-->
+					<loginAutoCreate> true </loginAutoCreate>
+				</account_registration>
+			</account_system>
 		</dbmgr>
 		
 		<cellapp>
@@ -369,7 +388,7 @@ docsitem: configuration-kbengine-defs
 				(The entityID allocator, enter the overflow area will get the new ID's)
 			-->
 			<ids>
-				<criticallyLowSize> 500 </criticallyLowSize>				<!-- Type: Integer -->
+				<criticallyLowSize> 500 </criticallyLowSize>							<!-- Type: Integer -->
 			</ids>
 			
 			<!-- 程序的性能分析
@@ -387,8 +406,12 @@ docsitem: configuration-kbengine-defs
 			</profiles>
 			
 			<ghostDistance> 500.0 </ghostDistance>
-			<ghostingMaxPerCheck> 64 </ghostingMaxPerCheck> <!-- Type: Integer -->
-			<ghostUpdateHertz> 50 </ghostUpdateHertz> <!-- Type: Integer -->
+			<ghostingMaxPerCheck> 64 </ghostingMaxPerCheck>								<!-- Type: Integer -->
+
+			<!-- ghost更新频率 
+				(Update frequency process)
+			-->
+			<ghostUpdateHertz> 30 </ghostUpdateHertz>								<!-- Type: Integer -->
 			
 			<!-- 是否使用坐标系统, 如果设置为false， 那么AOI、Trap、 Move等功能将不可用 
 				(Whether the use of coordinate-system, if is false, 
@@ -459,16 +482,25 @@ docsitem: configuration-kbengine-defs
 			<internalInterface>  </internalInterface>
 			<externalInterface>  </externalInterface>						<!-- Type: String -->
 
+			<!-- 外部IP地址或者域名，在某些机房的环境下，可能会使用端口映射的方式来访问内部kbe服务器，那么kbe在当前
+				的机器上获得的外部地址可能也是局域网地址，此时某些功能将会不正常。例如：账号激活邮件中给出的回调
+				地址。
+				(External IP address, In some server environment, May use the port mapping to access KBE,
+				So KBE on current machines on the external IP address may be a LAN IP address, Then some functions will not normal.
+				For example: account activation email address given callback.)
+			-->
+			<externalAddress>  </externalAddress>								<!-- Type: String -->
+
 			<!-- 暴露给客户端的端口范围
 				（Exposed to the client port range） 
 			-->
-			<externalPorts_min> 20015 </externalPorts_min>					<!-- Type: Integer -->
-			<externalPorts_max> 20019 </externalPorts_max>					<!-- Type: Integer -->
+			<externalPorts_min> 20015 </externalPorts_min>							<!-- Type: Integer -->
+			<externalPorts_max> 20019 </externalPorts_max>							<!-- Type: Integer -->
 
 			<!-- 自动存档的时间周期
 				（Automatic archiving time period） 
 			-->
-			<archivePeriod> 100 </archivePeriod> 							<!-- Type: Float -->
+			<archivePeriod> 100 </archivePeriod> 								<!-- Type: Float -->
 			
 			<!-- 自动备份的时间
 				（Automatic backup time period） 
@@ -478,7 +510,7 @@ docsitem: configuration-kbengine-defs
 			<!-- 是否备份未定义的属性
 				（Whether backup undefined property） 
 			-->
-			<backUpUndefinedProperties> 0 </backUpUndefinedProperties>		<!-- Type: Boolean -->
+			<backUpUndefinedProperties> 0 </backUpUndefinedProperties>					<!-- Type: Boolean -->
 
 			<!-- 负载平衡滤波器指标值
 				（Load balancing Smoothing Bias value） 
@@ -489,15 +521,15 @@ docsitem: configuration-kbengine-defs
 				（Download bandwidth limits） 
 			-->
 			<downloadStreaming>
-				<bitsPerSecondTotal> 1000000 </bitsPerSecondTotal>			<!-- Type: Int -->
-				<bitsPerSecondPerClient> 100000 </bitsPerSecondPerClient>	<!-- Type: Int -->
+				<bitsPerSecondTotal> 1000000 </bitsPerSecondTotal>					<!-- Type: Int -->
+				<bitsPerSecondPerClient> 100000 </bitsPerSecondPerClient>				<!-- Type: Int -->
 			</downloadStreaming>
 
 			<!-- entityID分配器，进入溢出范围则请求获取新的ID资源 
 				(The entityID allocator, enter the overflow area will get the new ID's)
 			-->
 			<ids>
-				<criticallyLowSize> 500 </criticallyLowSize>				<!-- Type: Integer -->
+				<criticallyLowSize> 500 </criticallyLowSize>						<!-- Type: Integer -->
 			</ids>
 			
 			<!-- 当灾难发生后，baseapp进行灾难恢复时，每次恢复entity的数量 
@@ -586,10 +618,19 @@ docsitem: configuration-kbengine-defs
 			<internalInterface>  </internalInterface>
 			<externalInterface>  </externalInterface>						<!-- Type: String -->
 			
+			<!-- 外部IP地址或者域名，在某些机房的环境下，可能会使用端口映射的方式来访问内部kbe服务器，那么kbe在当前
+				的机器上获得的外部地址可能也是局域网地址，此时某些功能将会不正常。例如：账号激活邮件中给出的回调
+				地址。
+				(External IP address, In some server environment, May use the port mapping to access KBE,
+				So KBE on current machines on the external IP address may be a LAN IP address, Then some functions will not normal.
+				For example: account activation email address given callback.)
+			-->
+			<externalAddress>  </externalAddress>							<!-- Type: String -->
+
 			<!-- 暴露给客户端的端口范围
 				（Exposed to the client port range） 
 			-->
-			<externalPorts_min> 20013 </externalPorts_min>					<!-- Type: Integer -->
+			<externalPorts_min> 20013 </externalPorts_min>						<!-- Type: Integer -->
 			<externalPorts_max> 0 </externalPorts_max>						<!-- Type: Integer -->
 			
 			<!-- 加密登录信息
@@ -607,9 +648,9 @@ docsitem: configuration-kbengine-defs
 			 -->
 			<SOMAXCONN> 128 </SOMAXCONN>
 			
-			<!-- 账号的类型								(Account types)
-				1: 普通账号								(Normal Account)
-				2: email账号(需要激活)					(Email Account, Note: activation required.)
+			<!-- 账号的类型					(Account types)
+				1: 普通账号				(Normal Account)
+				2: email账号(需要激活)			(Email Account, Note: activation required.)
 				3: 智能账号(自动识别Email， 普通号码等)	(Smart Account (Email or Normal, etc.))
 			-->
 			<account_type> 3 </account_type>
@@ -625,7 +666,7 @@ docsitem: configuration-kbengine-defs
 			<!-- 暴露给客户端的端口范围
 				（Exposed to the tools port range） 
 			-->
-			<externalPorts_min> 20099 </externalPorts_min>					<!-- Type: Integer -->
+			<externalPorts_min> 20099 </externalPorts_min>						<!-- Type: Integer -->
 			<externalPorts_max> 0 </externalPorts_max>						<!-- Type: Integer -->
 		</kbmachine>
 		
@@ -638,8 +679,8 @@ docsitem: configuration-kbengine-defs
 			<!-- loginapp地址 
 				（loginapp address)
 			-->
-			<host> localhost </host>										<!-- Type: String -->
-			<port> 20013 </port>											<!-- Type: Integer -->
+			<host> localhost </host>								<!-- Type: String -->
+			<port> 20013 </port>									<!-- Type: Integer -->
 			
 			
 			<!-- 默认启动进程后自动添加这么多个机器人 
@@ -649,10 +690,37 @@ docsitem: configuration-kbengine-defs
 				tickcount	： 每次添加数量			(Each time you add the number of)
 			-->
 			<defaultAddBots> 
-				<totalcount> 10  </totalcount>								<!-- Type: Integer -->
-				<ticktime> 0.1  </ticktime>									<!-- Type: Float -->
-				<tickcount> 2  </tickcount>									<!-- Type: Integer -->
-			</defaultAddBots>							
+				<totalcount> 10  </totalcount>							<!-- Type: Integer -->
+				<ticktime> 0.1  </ticktime>							<!-- Type: Float -->
+				<tickcount> 2  </tickcount>							<!-- Type: Integer -->
+			</defaultAddBots>
+
+			<!-- 机器人账号相关 
+				(about bots-accounts)
+			-->
+			<account_infos>
+				<!-- 机器人账号名称的前缀 
+					(The account name prefix)
+				-->
+				<account_name_prefix>		bot_	</account_name_prefix>
+				
+				<!-- 机器人账号名称的后缀递增, 0使用随机数递增， 否则按照baseNum填写的数递增 
+					(The account name suffix, 0 is the use of random number, Otherwise, use baseNum and increasing.)
+				-->
+				<account_name_suffix_inc>	0		</account_name_suffix_inc><!-- Type: Integer -->
+			</account_infos>
+
+			<!-- Telnet服务, 如果端口被占用则向后尝试51001.. 
+				(Telnet service, if the port is occupied backwards to try 51001)
+			-->
+			<telnet_service>
+				<port> 51000 </port>
+				<password> kbe </password>
+				<!-- 命令默认层 
+					(layer of default the command)
+				-->
+				<default_layer> python </default_layer>
+			</telnet_service>							
 		</bots>
 		
 		<messagelog>
@@ -660,42 +728,17 @@ docsitem: configuration-kbengine-defs
 				（Name of the interface(NIC)） 
 			-->
 			<internalInterface>  </internalInterface>
-		</messagelog>
-		
-		<resourcemgr>
-			<!-- 接口网卡的名称
-				（Name of the interface(NIC)） 
+
+			<!-- 单个app(baseapp, cellapp, 等等..)进程上, 一个tick最多缓存的log数量
+				（The number of single-process(baseapp, cellapp, etc..), The number of log a tick buffer.） 
 			-->
-			<internalInterface>  </internalInterface>
-			
-			<downloadStreaming>
-				<bitsPerSecondTotal> 1000000 </bitsPerSecondTotal>			<!-- Type: Int -->
-				<bitsPerSecondPerClient> 100000 </bitsPerSecondPerClient>	<!-- Type: Int -->
-			</downloadStreaming>
-			
-			<!-- listen监听队列最大值
-			    (listen: Maximum listen queue)
-			 -->
-			<SOMAXCONN> 128 </SOMAXCONN>
-			
-			<respool>
-				<!-- 缓冲区大小也等于资源大小， 在这个KB大小范围以内的资源才可以进入资源池 
-					(Buffer size is equal to the size of resources, 
-					Less than the buffer resources before they can enter the resource pool)
-				-->
-				<buffer_size> 1024 </buffer_size>
-				
-				<!-- 资源池中的资源超过这个时间未被访问则销毁(秒) 
-				(Resources have not been accessed overtime will be destroyed (s))
-				-->
-				<timeout> 600 </timeout>
-				
-				<!-- 资源池检查tick(秒) 
-					(Resource pool check tick (secs))
-				-->
-				<checktick>60</checktick>
-			</respool>
-		</resourcemgr>
+			<tick_max_buffered_logs> 65535 </tick_max_buffered_logs>
+
+			<!-- 单个app(baseapp, cellapp, 等等..)进程上, 一个tick同步给messagelog的log数量
+				（The number of single-process(baseapp, cellapp, etc..), A tick synchronization to the number of messagelog） 
+			-->
+			<tick_sync_logs> 32 </tick_sync_logs>
+		</messagelog>
 	</root>
 
 

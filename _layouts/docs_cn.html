@@ -46,6 +46,7 @@ tab: docs
 				
 				<li class="divider"></li>
 				<li class="nav-header">引擎编程</li>
+				<li{% if page.docsitem == "kbe-engine-messages" %} class="active"{% endif %}><a href="{{ site.baseurl }}/cn/docs/programming/kbe_message_format.html">通讯协议格式</a></li>
 				<li{% if page.docsitem == "server-engine-programming" %} class="active"{% endif %}><a href="{{ site.baseurl }}/cn/docs/programming/serverengineprogramming.html">服务端引擎编程</a></li>
 				<li{% if page.docsitem == "sdk-client-programming" %} class="active"{% endif %}><a href="{{ site.baseurl }}/cn/docs/programming/clientsdkprogramming.html">客户端SDK编程</a></li>
 				
@@ -64,7 +65,7 @@ tab: docs
 				<li class="nav-header">游戏制作教程</li>
 				<li{% if page.docsitem == "documentation-gameexample1" %} class="active"{% endif %}><a href="{{ site.baseurl }}/cn/docs/documentations/emptyproject.html">空项目</a></li>
 				<li{% if page.docsitem == "documentation-gameexample2" %} class="active"{% endif %}><a href="{{ site.baseurl }}/cn/docs/documentations/rpggameexample.html">RPG多人在线</a></li>
-				<li{% if page.docsitem == "documentation-gameexample2" %} class="active"{% endif %}><a href="{{ site.baseurl }}/cn/docs/documentations/roompokergameexample.html">棋牌房间类游戏</a></li>
+				<li{% if page.docsitem == "documentation-gameexample2" %} class="active"{% endif %}><a href="{{ site.baseurl }}/cn/docs/documentations/roomgameexample.html">房间类游戏</a></li>
 				<li{% if page.docsitem == "documentation-gameexample4" %} class="active"{% endif %}><a href="{{ site.baseurl }}/cn/docs/documentations/rtsgameexample.html">即时战略类游戏</a></li>
 			</ul>
 		</div>

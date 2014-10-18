@@ -1,11 +1,11 @@
 ---
 layout: docs_cn
-title: The poker room games · Docs · KBEngine
+title: The room games · Docs · KBEngine
 tab: docs
 docsitem: documentation-gameexample3
 ---
 
-棋牌房间类游戏例子
+房间类游戏例子
 ====================
 
 download: 

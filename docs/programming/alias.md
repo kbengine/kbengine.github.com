@@ -64,7 +64,7 @@ Path definition file : `demo/res/scripts/entity_defs/alias.xml`
 	<ENTITY_FORBID_COUNTER> ARRAY <of> INT8		</of>		</ENTITY_FORBID_COUNTER>
 	<ENTITYID_LIST> 	ARRAY <of> ENTITY_ID	</of>		</ENTITYID_LIST>
 
-### Fixed dictionary type alias
+### Fixed dictionary type alias(FIXED_DICT)
 
 Data structures can be used as a dictionary like Python, the engine can be identified in the storage and network transmission based on the definition.
 
@@ -161,4 +161,4 @@ The default format in memory(If you do not implementedBy):
 
 
 
-[Custom types]: {{ site.baseurl }}/docs/documentations/customtypes.html
+[Custom types]: {{ site.baseurl }}/docs/programming/customtypes.html

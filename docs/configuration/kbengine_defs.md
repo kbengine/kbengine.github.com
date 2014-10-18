@@ -82,16 +82,18 @@ there is no conflict in the development along with updated engine or multiple pr
 			Initialization attributes information, Def information. -->
 		<debugEntity>0</debugEntity>
 
-		<!-- apps released state, This value can be obtained in the script
-			Type: Integer8
-			0 : debug
-			1 : release
-			Other custom
-		-->
-		<app_publish>0</app_publish>
-		
-		<cellapps> 1 </cellapps>
-		<baseapps> 1 </baseapps>
+		<publish>
+			<!-- apps released state, This value can be obtained in the script, KBEngine.publish()
+				Type: Integer8
+				0 : debug
+				1 : release
+				Other custom
+			-->
+			<state>0</state>
+
+			<!-- Script layer released version number -->
+			<script_version> 0.1.0 </script_version>
+		</publish>
 		
 		<channelCommon> 
 			<!-- If long (configurable value) no communication, channel will be kicked out of the server. -->
@@ -210,25 +212,12 @@ there is no conflict in the development along with updated engine or multiple pr
 		<dbmgr>
 			<!-- Debug mode can output the read and write informations -->
 			<debug> false </debug>
-
-			<!-- Name of AccountEntity -->
-			<dbAccountEntityScriptType>	Account	</dbAccountEntityScriptType>
 			
-			<!-- Do not check defs-MD5 -->
+			<!-- Check whether the defs-MD5 -->
 			<allowEmptyDigest> false </allowEmptyDigest>								<!-- Type: Boolean -->
 			
 			<!-- Name of the interface(NIC) -->
 			<internalInterface>  </internalInterface>
-			
-			<!-- Default flags a new account, Can be combined, Fill in decimal format when
-				normal flag	= 0x00000000
-				lock flag	= 0x000000001
-				normal flag	= 0x000000002
-			-->
-			<accountDefaultFlags> 0 </accountDefaultFlags>								<!-- Type: Integer -->
-
-			<!-- New account default expiration time (seconds, the engine will add the current time) -->
-			<accountDefaultDeadline> 0 </accountDefaultDeadline>							<!-- Type: Integer -->
 			
 			<!-- Database type -->
 			<type> mysql </type>											<!-- Type: String -->
@@ -258,8 +247,30 @@ there is no conflict in the development along with updated engine or multiple pr
 				<collation> utf8_bin </collation> 								<!-- Type: String -->
 			</unicodeString>
 			
-			<!-- When logged in, the game database can not find the game account is automatically created -->
-			<notFoundAccountAutoCreate> true </notFoundAccountAutoCreate>
+			<!-- Account system -->
+			<account_system> 
+				<!-- Name of AccountEntity -->
+				<accountEntityScriptType>	Account	</accountEntityScriptType>
+				
+				<!-- Default flags a new account, Can be combined, Fill in decimal format when
+					normal flag	= 0x00000000
+					lock flag	= 0x000000001
+					normal flag	= 0x000000002
+				-->
+				<accountDefaultFlags> 0 </accountDefaultFlags>							<!-- Type: Integer -->
+				
+				<!-- New account default expiration time (seconds, the engine will add the current time) -->
+				<accountDefaultDeadline> 0 </accountDefaultDeadline>						<!-- Type: Integer -->
+
+				<!-- Account registration -->
+				<account_registration> 
+					<!-- Whether open registration -->
+					<enable>	true	</enable>
+					
+					<!-- When logged in, the game database can not find the game account is automatically created -->
+					<loginAutoCreate> true </loginAutoCreate>
+				</account_registration>
+			</account_system>
 		</dbmgr>
 		
 		<cellapp>
@@ -299,8 +310,10 @@ there is no conflict in the development along with updated engine or multiple pr
 			</profiles>
 			
 			<ghostDistance> 500.0 </ghostDistance>
-			<ghostingMaxPerCheck> 64 </ghostingMaxPerCheck> <!-- Type: Integer -->
-			<ghostUpdateHertz> 50 </ghostUpdateHertz> <!-- Type: Integer -->
+			<ghostingMaxPerCheck> 64 </ghostingMaxPerCheck>						<!-- Type: Integer -->
+
+			<!-- Update frequency process -->
+			<ghostUpdateHertz> 30 </ghostUpdateHertz>						<!-- Type: Integer -->
 			
 			<!-- Whether the use of coordinate-system, if is false, 
 			AOI, Trap, Move and other functions will not be available -->
@@ -351,6 +364,12 @@ there is no conflict in the development along with updated engine or multiple pr
 			<!-- Name of the interface(NIC) -->
 			<internalInterface>  </internalInterface>
 			<externalInterface>  </externalInterface>						<!-- Type: String -->
+
+			<!-- External IP-address or Domain-name, In some server environment, May use the port mapping to access KBE,
+				So KBE on current machines on the external IP address may be a LAN IP address, Then some functions will not normal.
+				For example: account activation email address given callback.
+			-->
+			<externalAddress>  </externalAddress>							<!-- Type: String -->
 
 			<!-- Exposed to the client port range -->
 			<externalPorts_min> 20015 </externalPorts_min>						<!-- Type: Integer -->
@@ -439,6 +458,12 @@ there is no conflict in the development along with updated engine or multiple pr
 			<internalInterface>  </internalInterface>
 			<externalInterface>  </externalInterface>						<!-- Type: String -->
 
+			<!-- External IP-address or Domain-name, In some server environment, May use the port mapping to access KBE,
+				So KBE on current machines on the external IP address may be a LAN IP address, Then some functions will not normal.
+				For example: account activation email address given callback.
+			-->
+			<externalAddress>  </externalAddress>							<!-- Type: String -->
+
 			<!-- Exposed to the client port range -->
 			<externalPorts_min> 20013 </externalPorts_min>						<!-- Type: Integer -->
 			<externalPorts_max> 0 </externalPorts_max>						<!-- Type: Integer -->
@@ -489,40 +514,36 @@ there is no conflict in the development along with updated engine or multiple pr
 				<totalcount> 10  </totalcount> <!-- Type: Integer -->
 				<ticktime> 0.1  </ticktime> <!-- Type: Float -->
 				<tickcount> 2  </tickcount> <!-- Type: Integer -->
-			</defaultAddBots>							
+			</defaultAddBots>
+
+			<!-- about bots-accounts -->
+			<account_infos>
+				<!-- The account name prefix -->
+				<account_name_prefix>		bot_	</account_name_prefix>
+				
+				<!-- The account name suffix, 0 is the use of random number, Otherwise, use baseNum and increasing. -->
+				<account_name_suffix_inc>	0		</account_name_suffix_inc><!-- Type: Integer -->
+			</account_infos>
+
+			<!-- Telnet service, if the port is occupied backwards to try 51001 -->
+			<telnet_service>
+				<port> 51000 </port>
+				<password> kbe </password>
+				<!-- layer of default the command -->
+				<default_layer> python </default_layer>
+			</telnet_service>							
 		</bots>
 		
 		<messagelog>
 			<!-- Name of the interface(NIC) -->
 			<internalInterface>  </internalInterface>
+
+			<!-- The number of single-process(baseapp, cellapp, etc..), The number of log a tick buffer. -->
+			<tick_max_buffered_logs> 65535 </tick_max_buffered_logs>
+
+			<!-- The number of single-process(baseapp, cellapp, etc..), A tick synchronization to the number of messagelog -->
+			<tick_sync_logs> 32 </tick_sync_logs>
 		</messagelog>
-		
-		<resourcemgr>
-			<!-- Name of the interface(NIC) -->
-			<internalInterface>  </internalInterface>
-			
-			<!-- Download bandwidth limits -->
-			<downloadStreaming>
-				<bitsPerSecondTotal> 1000000 </bitsPerSecondTotal>				<!-- Type: Int -->
-				<bitsPerSecondPerClient> 100000 </bitsPerSecondPerClient>			<!-- Type: Int -->
-			</downloadStreaming>
-			
-			<!-- listen: Maximum listen queue -->
-			<SOMAXCONN> 128 </SOMAXCONN>
-			
-			<respool>
-				<!-- Buffer size is equal to the size of resources, 
-					Less than the buffer resources before they can enter the resource pool.
-				-->
-				<buffer_size> 1024 </buffer_size>
-				
-				<!-- Resources have not been accessed overtime will be destroyed (s) -->
-				<timeout> 600 </timeout>
-				
-				<!-- Resource pool check tick (secs) -->
-				<checktick>60</checktick>
-			</respool>
-		</resourcemgr>
 	</root>
 
 

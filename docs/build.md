@@ -27,12 +27,13 @@ Linux:
 	[root @ localhost ~]# yum install mysql-devel 
 
 	[root @ localhost ~]# cd $KBE_ROOT/kbe/src
+	[root @ localhost/ src]# chmod -R 755 .
 	[root @ localhost/ src]# make
 
 Windows:
 
-	KBE_ROOT\kbengine\kbe\src\kbengine_vs90.sln
-	(Note: vs2008 need to install sp1, you can upgrade to a higher version of VC compiler)
+	KBE_ROOT\kbengine\kbe\src\kbengine_vs100.sln
+	(Note: vs2010 need to install sp1(Otherwise an error will occur: LINK: fatal error LNK1123: failure during conversion to COFF: file invalid or corrupt), you can upgrade to a higher version of VC compiler)
 
 
 Note: 
