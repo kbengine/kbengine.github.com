@@ -2,10 +2,10 @@
 layout: docs_cn
 title: Global Configuration · Docs · KBEngine
 tab: docs
-docsitem: configuration-fixedmercurymessages
+docsitem: configuration-messages_fixed
 ---
 
-kbengine/kbe/res/server/fixed_mercury_messages.xml
+kbengine/kbe/res/server/messages_fixed.xml
 ===================
 
 由于KBEngine中的网络协议ID都由系统自动生成，如果不是用配套的SDK将很难与服务端对接协议。
