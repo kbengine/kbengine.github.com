@@ -228,16 +228,17 @@ KBEngine会读取系统中设置的(KBE_ROOT, KBE_RES_PATH, KBE_HYBRID_PATH)环�
 
 ### 8. IP与端口设置: (可选)
 	
-	数据库IP：[kbengine_defs.xml]->dbmgr->ip
-	数据库端口：[kbengine_defs.xml]->dbmgr->port
+	数据库IP：[kbengine.xml|kbengine_defs.xml]->dbmgr->ip
+	数据库端口：[kbengine.xml|kbengine_defs.xml]->dbmgr->port
 	
-	登录：
-	登录IP：[kbengine_defs.xml]->loginapp->externalInterface（由于读取的是网卡地址，某些环境下无法获得正确的ip地址，例如端口映射方式与外网交互，此时应该设置[kbengine_defs.xml]->loginapp->externalAddress）
-	登录端口：[kbengine_defs.xml]->loginapp->externalPorts_min
+	登录IP：[kbengine.xml|kbengine_defs.xml]->loginapp->externalInterface
+	（由于读取的是网卡地址，某些环境下无法获得正确的ip地址，例如端口映射方式与外网交互，此时应该设置[kbengine_defs.xml]->loginapp->externalAddress）
 
-	网关：
-	网关IP：[kbengine_defs.xml]->baseapp->externalInterface（由于读取的是网卡地址，某些环境下无法获得正确的ip地址，例如端口映射方式与外网交互，此时应该设置[kbengine_defs.xml]->loginapp->externalAddress）
-	网关端口：[kbengine_defs.xml]->baseapp->externalPorts_min
+	登录端口：[kbengine.xml|kbengine_defs.xml]->loginapp->externalPorts_min
+
+	网关IP：[kbengine.xml|kbengine_defs.xml]->baseapp->externalInterface
+	（由于读取的是网卡地址，某些环境下无法获得正确的ip地址，例如端口映射方式与外网交互，此时应该设置[kbengine_defs.xml]->loginapp->externalAddress）
+	网关端口：[kbengine.xml|kbengine_defs.xml]->baseapp->externalPorts_min
 
 
 [config]: {{ site.baseurl }}/cn/docs/configuration/
