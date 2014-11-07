@@ -260,11 +260,11 @@ HTTP回调（EMAIL认证、密码重置）:
 
 	[kbengine.xml]->baseapp->externalPorts_min
 
-Telnet服务端口：
+Telnet服务端口(baseapp)：
 
-	[kbengine.xml]->telnet_service->port
+	[kbengine.xml]->baseapp->telnet_service->port
 
-Telnet服务端口：
+Telnet服务端口(cellapp)：
 
 	[kbengine.xml]->cellapp->telnet_service->port
 
@@ -292,15 +292,15 @@ Telnet服务端口：
 
 	[kbengine.xml]->billingSystem->port
 
-第三方运营交互地址（计费，登录，等等）：
+第三方计费服务的请求地址（计费，登录，等等）：
 
 	[kbengine.xml]->billingSystem->thirdpartyChargeService_addr
 
-第三方运营交互端口（计费，登录，等等）：
+第三方计费服务的请求端口（计费，登录，等等）：
 
 	[kbengine.xml]->billingSystem->thirdpartyChargeService_port
 
-第三方运营回调端口（计费，登录，等等）：
+第三方服务回调端口（计费，登录，等等）：
 
 	[kbengine.xml]->billingSystem->thirdpartyService_cbport
 

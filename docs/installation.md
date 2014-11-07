@@ -230,6 +230,85 @@ Multiple users in the same LAN, And they want to install KBE-server, Then they n
 		cid is componentID, Used to identify a KBE-APP, If two different cid exist, will inevitably lead to conflict.
 
 
+### 8. IP and port settings: (optional)
+	
+The detailed configuration:[kbengine.xml]
+
+Database IP:
+
+	[kbengine.xml]->dbmgr->ip
+
+Database port:
+
+	[kbengine.xml]->dbmgr->port
+
+Login IP:
+
+	[kbengine.xml]->loginapp->externalInterface
+	（Because reading is the address of network card, some reasons may not be able to obtain the correct IP address. For example, port mapping mode with the network interaction, this should be set to [kbengine_defs.xml]->loginapp->externalAddress）
+
+Login port:
+
+	[kbengine.xml]->loginapp->externalPorts_min
+
+The HTTP callback (EMAIL authentication, the password reset, etc.):
+
+	[kbengine.xml]->loginapp->externalPorts_min
+
+Gateway IP:
+
+	[kbengine.xml]->baseapp->externalInterface
+	（Because reading is the address of network card, some reasons may not be able to obtain the correct IP address. For example, port mapping mode with the network interaction, this should be set to [kbengine_defs.xml]->loginapp->externalAddress）
+
+Gateway port:
+
+	[kbengine.xml]->baseapp->externalPorts_min
+
+The Telnet service port(baseapp):
+
+	[kbengine.xml]->baseapp->telnet_service->port
+
+The Telnet service port(cellapp):
+
+	[kbengine.xml]->cellapp->telnet_service->port
+
+Virtual client, log on to the server side IP (stress testing):
+
+	[kbengine.xml]->bots->ip
+
+Virtual client, log on to the server side port (stress testing):
+
+	[kbengine.xml]->bots->port
+
+Virtual client, Telnet service port:
+
+	[kbengine.xml]->bots->telnet_service->port
+
+Provide tools explicit connection port:
+
+	[kbengine.xml]->kbmachine->externalPorts_min
+
+Billing access system IP:
+
+	[kbengine.xml]->billingSystem->ip
+
+Billing access system port:
+
+	[kbengine.xml]->billingSystem->port
+
+Request address third party billing service (billing, login, etc.):
+
+	[kbengine.xml]->billingSystem->thirdpartyChargeService_addr
+
+Request port third party billing service (billing, login, etc.):
+
+	[kbengine.xml]->billingSystem->thirdpartyChargeService_port
+
+Third party service callback port (billing, login, etc.):
+
+	[kbengine.xml]->billingSystem->thirdpartyService_cbport
+
+
 [config]: {{ site.baseurl }}/docs/configuration/
 [commands]: {{ site.baseurl }}/docs/commands/
 [versions]: https://github.com/kbengine/kbengine/blob/latest/versioning/versions.txt
