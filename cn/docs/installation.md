@@ -228,110 +228,77 @@ KBEngine会读取系统中设置的(KBE_ROOT, KBE_RES_PATH, KBE_HYBRID_PATH)环�
 
 ### 8. IP与端口设置: (可选)
 	
+参考详细配置说明：[kbengine.xml]
 
 数据库IP：
 
 	[kbengine.xml]->dbmgr->ip
 
-* 
-
 数据库端口：
 
 	[kbengine.xml]->dbmgr->port
-
-* 
 
 登录IP：
 
 	[kbengine.xml]->loginapp->externalInterface
 	（由于读取的是网卡地址，某些环境下无法获得正确的ip地址，例如端口映射方式与外网交互，此时应该设置[kbengine_defs.xml]->loginapp->externalAddress）
 
-* 
-
 登录端口：
 
 	[kbengine.xml]->loginapp->externalPorts_min
 
-* 
-
 HTTP回调（EMAIL认证、密码重置）:
 
 	[kbengine.xml]->loginapp->externalPorts_min
-
-* 
 
 网关IP：
 
 	[kbengine.xml]->baseapp->externalInterface
 	（由于读取的是网卡地址，某些环境下无法获得正确的ip地址，例如端口映射方式与外网交互，此时应该设置[kbengine_defs.xml]->loginapp->externalAddress）
 
-* 
-
 网关端口：
 
 	[kbengine.xml]->baseapp->externalPorts_min
-
-* 
 
 Telnet服务端口：
 
 	[kbengine.xml]->telnet_service->port
 
-* 
-
 Telnet服务端口：
 
 	[kbengine.xml]->cellapp->telnet_service->port
-
-* 
 
 压力测试虚拟客户端登录服务端的IP：
 
 	[kbengine.xml]->bots->ip
 
-* 
-
 压力测试虚拟客户端登录服务端的端口：
 
-[kbengine.xml]->bots->port
-
-* 
+	[kbengine.xml]->bots->port
 
 压力测试虚拟客户端Telnet服务端口：
 
 	[kbengine.xml]->bots->telnet_service->port
 
-* 
-
 提供给工具明确连接的端口：
 
 	[kbengine.xml]->kbmachine->externalPorts_min
-
-* 
 
 运营接入服务监听的IP：
 
 	[kbengine.xml]->billingSystem->ip
 
-* 
-
 运营接入服务监听的端口：
 
 	[kbengine.xml]->billingSystem->port
-
-* 
 
 第三方运营交互地址（计费，登录，等等）：
 
 	[kbengine.xml]->billingSystem->thirdpartyChargeService_addr
 
-* 
-
 第三方运营交互端口（计费，登录，等等）：
 
 	[kbengine.xml]->billingSystem->thirdpartyChargeService_port
-
-* 
 
 第三方运营回调端口（计费，登录，等等）：
 
