@@ -63,7 +63,8 @@ docsitem: concepts-layout
 	· baseapp:
 	客户端与服务端的交互只能通过loginapp分配的baseapp来完成。
 	定时写entity的数据到数据库、baseapp数据相互备份、灾难恢复。
-	可在多台机器部署多个baseapp进程来均衡负载。 
+	可在多台机器部署多个baseapp进程来均衡负载。
+	脚本层通常会选择在baseapp上实现如：社交系统、广播聊天、排行、游戏大厅、等等逻辑系统。
 
 
 	· cellappmgr:
@@ -71,7 +72,7 @@ docsitem: concepts-layout
 
 
 	· cellapp:
-	处理游戏实时逻辑，如：AOI、Navigate、AI、战斗等等。
+	处理游戏与空间和位置有关的逻辑，如：AOI、Navigate、AI、战斗等等。
 	可在多台机器部署多个cellapp进程来动态均衡负载。 
 
 

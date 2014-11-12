@@ -65,7 +65,7 @@ Server component description
 	Scheduled Backup entity to the database, baseapp mutual backup, Disaster Recovery.
 	Baseapp can deploy multiple processes on multiple machines, 
 	Multiple processes can be automated load balancing.
-
+	Script layer usually choose as implemented in baseapp: Social system, radio chat, games hall, etc.
 
 	· cellappmgr:
 	Coordinate all cellapp work, including load balancing processing.
@@ -75,7 +75,7 @@ Server component description
 	Real-time processing logic game, such as: AOI, Navigate, AI, Fighting, etc.
 	Cellapp can deploy multiple processes on multiple machines, 
 	Multiple processes can be automated load balancing.
-
+	The game logic processing related to space and position.
 
 	· client:
 	Our client will provide the basic framework, Excluding rendering and input/output, 
