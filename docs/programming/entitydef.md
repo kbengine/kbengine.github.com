@@ -95,8 +95,8 @@ Def file format
 				<Default>		kbengine			</Default>
 
 				// (optional)
-				// DB Identifier
-				<Identifier>		true				</Identifier>
+				// DB index, Support for UNIQUE and INDEX
+				<Index>			UNIQUE				</Index>
 			</accountName>
 			
 			...

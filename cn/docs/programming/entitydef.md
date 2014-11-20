@@ -95,8 +95,8 @@ docsitem: documentation-entitydef
 				<Default>		kbengine			</Default>
 				
 				// (可选)
-				// 数据库Identifier 
-				<Identifier>		true				</Identifier>
+				// 数据库索引， 支持UNIQUE与INDEX
+				<Index>			UNIQUE				</Index>
 			</accountName>
 			
 			...
