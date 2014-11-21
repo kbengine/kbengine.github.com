@@ -12,7 +12,7 @@ Get the runtime logs
 
 1. Use visualization console tool [GUIConsole], must be open [messagelog] Service.
 
-2. View log files([KBE_HYBRID_PATH]/[logs]/xxx.log). 
+2. View log files([KBE_BIN_PATH]/[logs]/xxx.log). 
 
 
 -----------------------------------------------------------------------------------------------
@@ -35,4 +35,4 @@ Get the runtime logs
 [GUIConsole]: {{ site.baseurl }}/docs/commands/guiconsole.html
 [messagelog]: {{ site.baseurl }}/docs/concepts/layout.html
 [logs]: {{ site.baseurl }}/docs/concepts/directorys.html
-[KBE_HYBRID_PATH]: {{ site.baseurl }}/docs/installation.html
+[KBE_BIN_PATH]: {{ site.baseurl }}/docs/installation.html

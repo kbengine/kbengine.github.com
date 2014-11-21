@@ -30,11 +30,11 @@ Quick Startup and Shutdown
 -------------------
 
 	Linux:
-		[kbe @gameserver ~]$ cd $KBE_HYBRID_PATH
+		[kbe @gameserver ~]$ cd $KBE_BIN_PATH
 		[kbe @gameserver ~]$ sh start.sh
 		[kbe @gameserver ~]$ sh kill.sh
 
 	Windows:
-		cd KBE_HYBRID_PATH
+		cd KBE_BIN_PATH
 		!(win)fixedstart.bat
 		!(win)kill.bat

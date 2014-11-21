@@ -20,8 +20,8 @@ docsitem: documentation-stresstest
 或者使用脚本启动:
 --------------------------------------
 
-	kbe/bin/Hybrid/!warringstart_bots.bat
-	kbe/bin/Hybrid64/bots_start.sh
+	kbe/bin/server/!(win)start_bots.bat
+	kbe/bin/server/bots_start.sh
 
 
 

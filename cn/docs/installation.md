@@ -43,7 +43,7 @@ docsitem: installation
 
 ### 2. 设置环境变量:
 
-KBEngine会读取系统中设置的(KBE_ROOT, KBE_RES_PATH, KBE_HYBRID_PATH)环境变量, 按照如下步骤设置环境变量。
+KBEngine会读取系统中设置的(KBE_ROOT, KBE_RES_PATH, KBE_BIN_PATH)环境变量, 按照如下步骤设置环境变量。
 
 	Linux: (假如kbe被安装在~/目录)
 
@@ -52,7 +52,7 @@ KBEngine会读取系统中设置的(KBE_ROOT, KBE_RES_PATH, KBE_HYBRID_PATH)环�
 		ulimit -c unlimited
 		export KBE_ROOT=~/kbengine/
 		export KBE_RES_PATH=$KBE_ROOT/kbe/res/:$KBE_ROOT/demo/:$KBE_ROOT/demo/res/
-		export KBE_HYBRID_PATH=$KBE_ROOT/kbe/bin/Hybrid64/
+		export KBE_BIN_PATH=$KBE_ROOT/kbe/bin/server/
 		
 		使环境变量生效:
 		[kbe@localhost ~]$ source ~/.bashrc
@@ -70,7 +70,7 @@ KBEngine会读取系统中设置的(KBE_ROOT, KBE_RES_PATH, KBE_HYBRID_PATH)环�
 
 		KBE_ROOT = C:/kbengine/
 		KBE_RES_PATH =%KBE_ROOT%/kbe/res;%KBE_ROOT%/demo/;%KBE_ROOT%/demo/res/
-		KBE_HYBRID_PATH = %KBE_ROOT%/kbe/bin/Hybrid64/
+		KBE_BIN_PATH = %KBE_ROOT%/kbe/bin/server/
 
 		(注意: Windows系统账号没有UID属性， 需要用户自己添加这个环境变量, UID必须大于0, 小于32767)
 
@@ -89,9 +89,9 @@ KBEngine会读取系统中设置的(KBE_ROOT, KBE_RES_PATH, KBE_HYBRID_PATH)环�
 		是引擎的资源路径， 第二个资源路径是用户脚本的资源路径。
 
 
-	KBE_HYBRID_PATH:
+	KBE_BIN_PATH:
 
-		引擎二进制文件所在目录。
+		引擎可执行文件所在目录。
 
 
 ### 3. 安装数据库:
@@ -222,7 +222,7 @@ KBEngine会读取系统中设置的(KBE_ROOT, KBE_RES_PATH, KBE_HYBRID_PATH)环�
 	1: 环境变量中的UID必须不能相同(查看系统中是否有设置过UID)
 		UID用于区分不同的服务组。
 
-	2: 启动脚本中的cid必须唯一(kbengine\kbe\bin\Hybrid\start***)
+	2: 启动脚本中的cid必须唯一(kbengine\kbe\bin\server\start***)
 		*** --cid=必须唯一 --grouporder=1  --globalorder=1
 		cid既componentID, 用于标识一个KBE-APP, 如果探测到2个一样的cid必然会引起冲突。
 

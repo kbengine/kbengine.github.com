@@ -12,7 +12,7 @@ docsitem: documentation-getlogs
 
 1: 使用可视化的控制台工具[GUIConsole], 必须开启[messagelog]服务。
 
-2: 查看log文件([KBE_HYBRID_PATH]/[logs]/xxx.log)。
+2: 查看log文件([KBE_BIN_PATH]/[logs]/xxx.log)。
 
 
 -----------------------------------------------------------------------------------------------
@@ -35,5 +35,5 @@ docsitem: documentation-getlogs
 [GUIConsole]: {{ site.baseurl }}/cn/docs/commands/guiconsole.html
 [messagelog]: {{ site.baseurl }}/cn/docs/concepts/layout.html
 [logs]: {{ site.baseurl }}/cn/docs/concepts/directorys.html
-[KBE_HYBRID_PATH]: {{ site.baseurl }}/cn/docs/installation.html
+[KBE_BIN_PATH]: {{ site.baseurl }}/cn/docs/installation.html
 

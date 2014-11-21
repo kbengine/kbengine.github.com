@@ -44,7 +44,7 @@ If you have a better understanding, you can ignore this section, the direct use 
 
 ### 2. To set environment variables:
 
-KBEngine can read KBE_ROOT, KBE_RES_PATH, KBE_HYBRID_PATH system environment variables to do something.
+KBEngine can read KBE_ROOT, KBE_RES_PATH, KBE_BIN_PATH system environment variables to do something.
 
 	Linux: (if kbe be installed in ~/ directory)
 
@@ -53,7 +53,7 @@ KBEngine can read KBE_ROOT, KBE_RES_PATH, KBE_HYBRID_PATH system environment var
 		ulimit -c unlimited
 		export KBE_ROOT=~/kbengine/
 		export KBE_RES_PATH=$KBE_ROOT/kbe/res/:$KBE_ROOT/demo/:$KBE_ROOT/demo/res/
-		export KBE_HYBRID_PATH=$KBE_ROOT/kbe/bin/Hybrid64/
+		export KBE_BIN_PATH=$KBE_ROOT/kbe/bin/server/
 
 		The environmental variables are available:
 		[kbe@localhost ~]$ source ~/.bashrc
@@ -71,7 +71,7 @@ KBEngine can read KBE_ROOT, KBE_RES_PATH, KBE_HYBRID_PATH system environment var
 
 		KBE_ROOT = C:/kbengine/
 		KBE_RES_PATH =%KBE_ROOT%/kbe/res;%KBE_ROOT%/demo/;%KBE_ROOT%/demo/res/
-		KBE_HYBRID_PATH = %KBE_ROOT%/kbe/bin/Hybrid64/
+		KBE_BIN_PATH = %KBE_ROOT%/kbe/bin/server/
 
 		(Note: Windows system account no UID attribute, Users need to add this environment variable, 
 		UID must be greater than 0 and less than 32767)
@@ -91,7 +91,7 @@ Environment variables description
 		the second "respath" must be the root user scripts, others without limitation.
 
 
-	KBE_HYBRID_PATH:
+	KBE_BIN_PATH:
 
 		kbe binary file directory path.
 
@@ -225,7 +225,7 @@ Multiple users in the same LAN, And they want to install KBE-server, Then they n
 	1: Environment variables UID must not be the same (see the system if there are set too UID)
 		UID is used to distinguish between different server groups.
 
-	2: cid startup script must be unique(kbengine\kbe\bin\Hybrid\start***)
+	2: cid startup script must be unique(kbengine\kbe\bin\server\start***)
 		*** --cid=(must be unique) --grouporder=1  --globalorder=1
 		cid is componentID, Used to identify a KBE-APP, If two different cid exist, will inevitably lead to conflict.
 

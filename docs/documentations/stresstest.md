@@ -21,8 +21,8 @@ Start bots
 Or use script:
 --------------------------------------
 
-	kbe/bin/Hybrid/!warringstart_bots.bat
-	kbe/bin/Hybrid64/bots_start.sh
+	kbe/bin/server/!(win)start_bots.bat
+	kbe/bin/server/bots_start.sh
 
 
 
