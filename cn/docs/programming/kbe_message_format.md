@@ -27,6 +27,10 @@ docsitem: kbe-engine-messages
 (注意: 测试协议请关闭数据包加密, 修改[kbengine.xml]或[kbengine_defs.xml]->channelCommon->encrypt_type)
 
 
+-------------------------------------------------------------------
+
+
+
 举列1: 
 -----------------
 
@@ -43,6 +47,9 @@ docsitem: kbe-engine-messages
 	Packet = |      Len: 2Bytes                                |            Len: 1, 8         |
 		 |     (Message-ID(client_funcXX): uint16)         |       (Message-Body: p1, p2) |
 		 |--------------------------------------------------------------------------------|
+
+
+-------------------------------------------------------------------
 
 
 举列2: 
@@ -62,6 +69,10 @@ docsitem: kbe-engine-messages
 	Packet = |      Len: 2Bytes            |       Len: 2Bytes          |           Len: 1, 8, 7          |
 		 |     (Message-ID: uint16)    |   (Message-Length: uint16) |   (Message-Body: p1, p2, p3)    |
 		 |--------------------------------------------------------------------------------------------|
+
+
+
+-------------------------------------------------------------------
 
 
 [kbengine_defs.xml]: {{ site.baseurl }}/cn/docs/configuration/kbengine_defs.html

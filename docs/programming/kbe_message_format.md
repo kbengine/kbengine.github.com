@@ -27,6 +27,10 @@ Variable-length types:
 (Note: The test protocol Turn off packet-encryption, modify[kbengine.xml]or[kbengine_defs.xml]->channelCommon->encrypt_type)
 
 
+
+-------------------------------------------------------------------
+
+
 Examples 1:
 -----------------
 
@@ -43,6 +47,10 @@ Examples 1:
 	Packet = |      Len: 2Bytes                                |            Len: 1, 8         |
 		 |     (Message-ID(client_funcXX): uint16)         |       (Message-Body: p1, p2) |
 		 |--------------------------------------------------------------------------------|
+
+
+
+-------------------------------------------------------------------
 
 
 Examples 2:
@@ -63,6 +71,9 @@ Examples 2:
 		 |     (Message-ID: uint16)    |   (Message-Length: uint16) |   (Message-Body: p1, p2, p3)    |
 		 |--------------------------------------------------------------------------------------------|
 
+
+
+-------------------------------------------------------------------
 
 
 [kbengine_defs.xml]: {{ site.baseurl }}/docs/configuration/kbengine_defs.html
