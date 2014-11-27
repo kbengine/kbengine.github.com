@@ -116,7 +116,7 @@ ERROR loginapp [2014-11-05 09:22:47,199] - Channel::condemn[0x4aa81d8]: channel(
 [其他]:
 ========
 
-◇ KBEngine uses what protocol?
+◇ KBEngine uses what network protocol?
 ---------------------
 
 	cluster built using the UDP, other TCP.
