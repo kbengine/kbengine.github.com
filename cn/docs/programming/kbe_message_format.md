@@ -31,7 +31,7 @@ docsitem: kbe-engine-messages
 
 
 
-举列1: 
+举列一: 
 -----------------
 
 	void client_funcXX(uint8 p1, int64 p2)
@@ -52,7 +52,7 @@ docsitem: kbe-engine-messages
 -------------------------------------------------------------------
 
 
-举列2: 
+举列二: 
 -----------------
 
 	void client_funcXX(uint8 p1, int64 p2, string p3)
