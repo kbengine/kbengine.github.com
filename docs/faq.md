@@ -8,7 +8,7 @@ docsitem: faq
 FAQ
 ========
 
-`VS 2010 - error LNK1123: failure during conversion to COFF: file invalid or corrupt:`
+<h1>`VS 2010 - error LNK1123: failure during conversion to COFF: file invalid or corrupt:`</h1>
 -----------------
 
 	* Either disable incremental linking, by going to 
