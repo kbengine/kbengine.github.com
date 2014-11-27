@@ -12,7 +12,7 @@ Errors:
 -----------------
 
 
-* VS 2010 - error LNK1123: failure during conversion to COFF: file invalid or corrupt:
+VS 2010 - error LNK1123: failure during conversion to COFF: file invalid or corrupt:
 
 	Causes:
 		* this error appear because you have installed Visual C++ 2012 after you have actually installed Visual C++ 2010 in your system;
