@@ -104,7 +104,8 @@ FAQ
 ERROR loginapp [2014-11-05 09:22:47,199] - Channel::condemn[0x4aa81d8]: channel(127.0.0.1:5631/0/1/0).
 --------------------
 
-	This error occurred during logon，Very has the possibility is the server and the client version mismatch，Please ensure consistent version. The server and the demo source code: https://github.com/kbengine/
+	This error occurred during logon，Very has the possibility is the server and the client version mismatch，Please ensure consistent version. 
+	The server and the demo source code: https://github.com/kbengine/
 
 
 -----------------------------------------------------
