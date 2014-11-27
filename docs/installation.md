@@ -196,7 +196,7 @@ see: [High-performance Linux server configuration]
 
 
 
-### 5: Multi-card configurations: (Optional)
+### 5: Multi-card(NIC) configurations: (Optional)
 
 If eth0 is external, eth1 is the internal:
 
@@ -245,7 +245,7 @@ Database port:
 Login IP:
 
 	[kbengine.xml]->loginapp->externalInterface
-	（Because reading is the address of network card, some reasons may not be able to obtain the correct IP address. For example, port mapping mode with the network interaction, this should be set to [kbengine_defs.xml]->loginapp->externalAddress）
+	（Because reading is the address of NIC, some reasons may not be able to obtain the correct IP address. For example, port mapping mode with the network interaction, this should be set to [kbengine_defs.xml]->loginapp->externalAddress）
 
 Login port:
 
@@ -258,7 +258,7 @@ The HTTP callback (EMAIL authentication, the password reset, etc.):
 Gateway IP:
 
 	[kbengine.xml]->baseapp->externalInterface
-	（Because reading is the address of network card, some reasons may not be able to obtain the correct IP address. For example, port mapping mode with the network interaction, this should be set to [kbengine_defs.xml]->loginapp->externalAddress）
+	（Because reading is the address of NIC, some reasons may not be able to obtain the correct IP address. For example, port mapping mode with the network interaction, this should be set to [kbengine_defs.xml]->loginapp->externalAddress）
 
 Gateway port:
 

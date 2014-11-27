@@ -37,9 +37,8 @@ FAQ
 ◇ kbengine\kbe\src\lib\dependencies\apr\encoding\apr_escape.c(109): error C2065: “test_char_table”: undeclared identifier
 --------------------
 
-	你的360杀掉了apr产生一个头文件的exe，你恢复kbe项目关掉360重新编译试试。
-	或者你去360中调整忽略。
-
+	May be the anti-virus software to kill kbengine\kbe\src\lib\dependencies\apr\LibD\gen_test_char.exe (APR for the generation of header files).
+	Please make sure that the safety, adjustment of antivirus software, ignore the check gen_test_char.exe.
 
 -----------------------------------------------------
 
@@ -90,9 +89,10 @@ FAQ
 
 ◇ ERROR loginapp [2014-11-04 11:40:08,780] - BundleBroadcast::receive: is failed(please check {firewall rule => broadcastaddr not is LAN ?})!
 ---------------------
-
-	请检查防火墙是否导致内网UDP广播不能正确接收，可尝试先关闭防火墙重新启动一次服务端，如果关闭防火墙后能够正确运行起来说明就是防火墙问题。如果不是防火墙问题请检查是否存在多块网卡，如果存在多块网卡的情况需要对使用的网卡进行配置。其他任何情况检查网络是否通顺等等。
-	参考：http://www.kbengine.org/cn/docs/installation.html
+	* Turn off the firewall.
+	* Firewall settings, to ensure that the internal network can receive and send UDP packets.
+	* If multiple card(NIC) environment, you need to set up KBEngine.
+		see also：http://www.kbengine.org/docs/installation.html
 
 
 -----------------------------------------------------
@@ -104,7 +104,7 @@ FAQ
 ERROR loginapp [2014-11-05 09:22:47,199] - Channel::condemn[0x4aa81d8]: channel(127.0.0.1:5631/0/1/0).
 --------------------
 
-	登录时loginapp日志出现类似的错误，这种情况很有可能是服务端和客户端的版本不匹配而造成的，请确保服务端与客户端版本一致。服务端与demo客户端都能够在此下载到源码：https://github.com/kbengine/
+	This error occurred during logon，Very has the possibility is the server and the client version mismatch，Please ensure consistent version. The server and the demo source code: https://github.com/kbengine/
 
 
 -----------------------------------------------------

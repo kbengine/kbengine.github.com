@@ -31,7 +31,7 @@ FAQ
 ◇ kbengine\kbe\src\lib\dependencies\apr\encoding\apr_escape.c(109): error C2065: “test_char_table”: undeclared identifier
 --------------------
 
-	* 通常是360等杀毒软件杀掉了apr用于产生头文件的exe，请恢复KBE项目文件并关掉360重新编译试试。
+	* 通常是360等杀毒软件杀掉了apr用于产生头文件的exe(kbengine\kbe\src\lib\dependencies\apr\LibD\gen_test_char.exe)，请恢复KBE项目文件并关掉360重新编译试试。
 	* 或者去360中调整策略忽略检查这个exe。
 
 
@@ -44,14 +44,14 @@ FAQ
 -------------------
 
 	* 更新kbengine插件库(https://github.com/kbengine/kbengine_unity3d_plugins):
-	    * 使用git命令行，进入到kbengine_unity3d_warring目录执行：
-	        git submodule update --init
+		* 使用git命令行，进入到kbengine_unity3d_warring目录执行：
+			git submodule update --init
 
-	    * 或者使用 TortoiseGit(选择菜单): TortoiseGit -> Submodule Update:
+		* 或者使用 TortoiseGit(选择菜单): TortoiseGit -> Submodule Update:
 
 	* 也可以手动更新kbengine插件
-	git clone https://github.com/kbengine/kbengine_unity3d_plugins.git
-	插件源码请放置在: Assets/plugins/kbengine/kbengine_unity3d_plugins
+		git clone https://github.com/kbengine/kbengine_unity3d_plugins.git
+		插件源码请放置在: Assets/plugins/kbengine/kbengine_unity3d_plugins
 
 
 -----------------------------------------------------
@@ -60,14 +60,14 @@ FAQ
 ----------------------
 
 	* 更新kbengine插件库(https://github.com/kbengine/kbengine_unity3d_plugins):
-	    * 使用git命令行，进入到kbengine_unity3d_warring目录执行：
-	        git submodule update --init
+		* 使用git命令行，进入到kbengine_unity3d_warring目录执行：
+			git submodule update --init
 
-	    * 或者使用 TortoiseGit(选择菜单): TortoiseGit -> Submodule Update:
+		* 或者使用 TortoiseGit(选择菜单): TortoiseGit -> Submodule Update:
 
 	* 也可以手动更新kbengine插件
-	git clone https://github.com/kbengine/kbengine_unity3d_plugins.git
-	插件源码请放置在: Assets/plugins/kbengine/kbengine_unity3d_plugins
+		git clone https://github.com/kbengine/kbengine_unity3d_plugins.git
+		插件源码请放置在: Assets/plugins/kbengine/kbengine_unity3d_plugins
 
 
 -----------------------------------------------------
