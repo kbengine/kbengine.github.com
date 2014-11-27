@@ -29,7 +29,7 @@ FAQ
 
 -----------------------------------------------------
 
-`clientapp.cs(30,94): error CS1729: The type `KBEngine.KBEngineApp* does not contain a constructor that takes `3* arguments`
+`clientapp.cs(30,94): error CS1729: The type ``KBEngine.KBEngineApp* does not contain a constructor that takes ``3* arguments`
 -------------------
 
 	1: Use git to update the KBE plugin(https://github.com/kbengine/kbengine_unity3d_plugins):
@@ -46,7 +46,7 @@ FAQ
 
 -----------------------------------------------------
 
-`if_Entity_error_use______git_submodule_update_____kbengine_plugins_______open_this_file_and_I_will_tell_you.cs(9,128): error CS0246: The type or namespace name `Entity* could not be found. Are you missing a using directive or an assembly reference?`
+`if_Entity_error_use______git_submodule_update_____kbengine_plugins_______open_this_file_and_I_will_tell_you.cs(9,128): error CS0246: The type or namespace name ``Entity* could not be found. Are you missing a using directive or an assembly reference?``
 ----------------------
 
 	1: Use git to update the KBE plugin(https://github.com/kbengine/kbengine_unity3d_plugins):
