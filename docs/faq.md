@@ -34,6 +34,9 @@ FAQ
 	http://msdn.microsoft.com/en-us/library/7dz62kfh.aspx
 
 
+-----------------------------------------------------
+
+
 ◇ kbengine\kbe\src\lib\dependencies\apr\encoding\apr_escape.c(109): error C2065: “test_char_table”: undeclared identifier
 --------------------
 
