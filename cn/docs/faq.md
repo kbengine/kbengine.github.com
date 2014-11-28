@@ -118,7 +118,7 @@ ERROR loginapp [2014-11-05 09:22:47,199] - Channel::condemn[0x4aa81d8]: channel(
 ◇ KBEngine使用什么网络协议？
 ---------------------
 
-	集群建立使用UDP，其他使用TCP。
+	集群组建使用UDP协议，其他使用TCP协议。
 
 
 
