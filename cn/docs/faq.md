@@ -42,7 +42,6 @@ FAQ
 -----------------------------------------------------
 
 
------------------------------------------------------
 
 ◇ clientapp.cs(30,94): error CS1729: The type KBEngine.KBEngineApp* does not contain a constructor that takes 3* arguments
 -------------------
