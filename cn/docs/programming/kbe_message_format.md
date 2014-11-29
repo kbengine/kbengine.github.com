@@ -24,6 +24,7 @@ docsitem: kbe-engine-messages
 		 |     (Message-ID: uint16)    |   (Message-Length: uint16) |   (Message-Body: Binary-stream) |
 		 |--------------------------------------------------------------------------------------------|
 
+(注意: 如果消息长度超过65534，Message-Length固定被填充为65535，协议层会在Message-Length区段之后再额外增加4字节，来描述更大的长度信息)
 (注意: 测试协议请关闭数据包加密, 修改[kbengine.xml]或[kbengine_defs.xml]->channelCommon->encrypt_type)
 
 

@@ -24,6 +24,7 @@ Variable-length types:
 		 |     (Message-ID: uint16)    |   (Message-Length: uint16) |   (Message-Body: Binary-stream) |
 		 |--------------------------------------------------------------------------------------------|
 
+(Note: If the message length of more than 65534, The Message-Length is fixed fill to 65535, Protocol layer in Message-Length segment after the extra 4 bytes, To describe the larger data)
 (Note: The test protocol Turn off packet-encryption, modify[kbengine.xml]or[kbengine_defs.xml]->channelCommon->encrypt_type)
 
 
