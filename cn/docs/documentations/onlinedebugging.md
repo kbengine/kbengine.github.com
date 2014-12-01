@@ -153,7 +153,7 @@ docsitem: documentation-online-debugging
 
 添加脚本监视变量的例子(监视在线玩家数):
 	
-	baseapp->kbengine.py:
+	baseapp->watcher.py:
 		...
 		...
 		def countPlayers():
@@ -163,8 +163,10 @@ docsitem: documentation-online-debugging
 					i += 1
 			return i
 
-		def onBaseAppReady(bootstrapIdx):
-			KBEngine.addWatcher("scripts/countPlayers", "UINT32", countPlayers)
+		...
+		...
+
+		KBEngine.addWatcher("scripts/countPlayers", "UINT32", countPlayers)
 
 		...
 		...

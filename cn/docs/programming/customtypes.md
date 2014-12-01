@@ -23,7 +23,7 @@ alias.xml中基本声明格式类似如下:
 		// (必须实现)
 		// 使用此模块(xxx.inst)允许用户重定义该数据结构在内存中存在的形式，
 		// 当引擎进行数据存储或进行网络传输时必须还原成引擎原本的数据结构，引擎才可以识别和进行相关操作。
-		// implementedBy中指定的模块可以实现在res\scripts\user_type目录中
+		// implementedBy中指定的模块可以实现在demo\scripts\user_type目录中
 		<implementedBy> XXX_PICKLER.inst </implementedBy>
 
 		// 这个数据结构的成员
@@ -39,7 +39,7 @@ alias.xml中基本声明格式类似如下:
 
 一个例子:
 
-res\scripts\entity_defs\alias.xml:
+demo\scripts\entity_defs\alias.xml:
 
 	<XXX> FIXED_DICT
 	       <implementedBy> XXX_PICKLER.inst </implementedBy>
@@ -53,7 +53,7 @@ res\scripts\entity_defs\alias.xml:
 	       </Properties>
 	</XXX>
 
-res\scripts\user_type\XXX_PICKLER.py:
+demo\scripts\user_type\XXX_PICKLER.py:
 
 	// 内存中的类型
 	class XXX_TYPE(list):

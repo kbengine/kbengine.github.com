@@ -159,7 +159,9 @@ Examples: add a variable to be monitored in the script(the current number of pla
 					i += 1
 			return i
 
-		def onBaseAppReady(bootstrapIdx):
+		...
+		...
+
 			KBEngine.addWatcher("scripts/countPlayers", "UINT32", countPlayers)
 
 		...

@@ -39,7 +39,7 @@ see also [kbengine_defs.xml]->`bots`
 Robot programming
 ====================
 
-Reference: demo/res/scripts/[bots] script-sources.
+Reference: demo/scripts/[bots] script-sources.
 
 
 

@@ -32,7 +32,7 @@ You need to perform the following steps:
 
 1. Registration of Entity
 
-	Path definition file : `demo/res/scripts/entities.xml`
+	Path definition file : `demo/scripts/entities.xml`
 
 	Example:
 
@@ -47,14 +47,14 @@ You need to perform the following steps:
 		</root>
 
 
-2. Def file to create a directory in `res/scripts/entity_defs`
+2. Def file to create a directory in `demo/scripts/entity_defs`
 
 	For example: Account.def
 
 
 3. You may also need to define some properties and methods
 
-	1. In the `demo/res/scripts/` directory has three subdirectories (base, cell, client), you can add Account.py needed.
+	1. In the `demo/scripts/` directory has three subdirectories (base, cell, client), you can add Account.py needed.
 
 	2. Not every entity needs to create three parts(client, base, cell), press need to select.
 

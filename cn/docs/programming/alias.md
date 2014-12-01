@@ -54,7 +54,7 @@ docsitem: documentation-alias
 * 引擎可以自动识别数据类型进行网络传输和存储
 
 
-文件目录地址 : `demo/res/scripts/entity_defs/alias.xml`
+文件目录地址 : `demo/scripts/entity_defs/alias.xml`
 
 ------------------------------------------
 ### 简单的别名
