@@ -147,15 +147,18 @@ docsitem: documentation-entitydef
 属性作用域
 -----------------------------------------
 
-	[类型]			[client]		[base]			[cell]
-	BASE			-			*			-
-	BASE_AND_CLIENT		*			*			-
-	CELL_PRIVATE		-			-			*(cell)
-	CELL_PUBLIC		-			-			*(cells)
-	CELL_PUBLIC_AND_OWN	*(client)		-			*(cells)
-	ALL_CLIENTS		*(clients)		-			*(cells)
-	OWN_CLIENT		*(client)		-			*(cell)
-	OTHER_CLIENTS		*(other clients)	-			*(cells)
+如果一个属性的作用域分为好几部分，那么在实体的对应部分都存在该属性。存在与实体多个部分的属性只能从属性的源头进行修改，其他部分会得到同步。
+请参考如下表：（S与SC或者C都代表属性包含这个部分，不同的是S代表属性的源头，C代表数据由源头同步，SC代表实体的real部分才是源头，ghosts部分也是被同步过去的）
+
+	[类型]			[Client]		[Base]			[Cell]
+	BASE			-			S			-
+	BASE_AND_CLIENT		S			C			-
+	CELL_PRIVATE		-			-			S
+	CELL_PUBLIC		-			-			SC
+	CELL_PUBLIC_AND_OWN	C			-			SC
+	ALL_CLIENTS		C(All Clients)		-			SC
+	OWN_CLIENT		C			-			S
+	OTHER_CLIENTS		C(Other Clients)	-			SC
 
 
 
