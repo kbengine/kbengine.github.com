@@ -151,15 +151,23 @@ For example: Call the base method in the client to get a list of roles (Account.
 Propertie Scopes
 -----------------------------------------
 
-	[type]			[client]		[base]			[cell]
-	BASE			-			*			-
-	BASE_AND_CLIENT		*			*			-
-	CELL_PRIVATE		-			-			*(cell)
-	CELL_PUBLIC		-			-			*(cells)
-	CELL_PUBLIC_AND_OWN	*(client)		-			*(cells)
-	ALL_CLIENTS		*(clients)		-			*(cells)
-	OWN_CLIENT		*(client)		-			*(cell)
-	OTHER_CLIENTS		*(other clients)	-			*(cells)
+If the scope of a property have multiple parts, then in the entity of the associated part are the property.
+
+If the scope of a property have multiple parts, this property can only have one source can be modified, other parts will be synchronized.
+
+Please refer to the following table: (S and SC or C, represents a property contains the part, The difference is S means property source, 
+C means by the source data synchronization, SC means real entity is the source, ghosts part, also be synchronized)
+
+
+	[Type]			[ClientEntity]		[BaseEntity]		[CellEntity]
+	BASE			-			S			-
+	BASE_AND_CLIENT		S			C			-
+	CELL_PRIVATE		-			-			S
+	CELL_PUBLIC		-			-			SC
+	CELL_PUBLIC_AND_OWN	C			-			SC
+	ALL_CLIENTS		C(All Clients)		-			SC
+	OWN_CLIENT		C			-			S
+	OTHER_CLIENTS		C(Other Clients)	-			SC
 
 
 
