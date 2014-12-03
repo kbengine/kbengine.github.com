@@ -126,4 +126,11 @@ ERROR loginapp [2014-11-05 09:22:47,199] - Channel::condemn[0x4aa81d8]: channel(
 
 -----------------------------------------------------
 
+◇ KBEngine uses what network programming model？
+---------------------
 
+	Usually run on Linux system, so in Linux is `epoll`, the production environment in Windows is more convenient, so KBEngine also support Windows system, the network model is a simple `select`.
+
+
+
+-----------------------------------------------------
