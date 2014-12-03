@@ -135,7 +135,7 @@ ERROR loginapp [2014-11-05 09:22:47,199] - Channel::condemn[0x4aa81d8]: channel(
 
 -----------------------------------------------------
 
-◇ The limit load of KBEngine?？
+◇ The limit load of KBEngine?
 ---------------------
 
 	Frequently asked load-limit, KBEngine is designed to be multi-process distributed dynamic load balancing scheme, in theory only need to expand hardware can increase load-limit, the single machine load-limit depends on complexity of logic of the game itself.
