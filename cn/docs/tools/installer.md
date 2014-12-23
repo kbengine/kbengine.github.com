@@ -5,7 +5,7 @@ tab: docs
 docsitem: tools-installer
 ---
 
-安装命令
+安装工具
 ==============
 
 ###下载: [installer.py]
