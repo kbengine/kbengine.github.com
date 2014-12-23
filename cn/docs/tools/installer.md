@@ -10,8 +10,11 @@ docsitem: tools-installer
 
 ###下载: [installer.py]
 
-###最新代码: https://github.com/kbengine/kbengine/blob/master/kbe/tools/server/install/installer.py
+最新代码: https://github.com/kbengine/kbengine/blob/master/kbe/tools/server/install/installer.py
 
+
+
+-------------------------------------------------------------------------------
 
 
 一款简单的Python脚本工具, 能够进行安装、卸载、更新、查看版本等等。
