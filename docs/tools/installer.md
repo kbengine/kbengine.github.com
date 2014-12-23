@@ -9,11 +9,14 @@ Installer tools
 ==============
 
 Download installer: 
------------------------
 
 [installer.py]
-[latest]
 
+
+
+latest:
+
+https://github.com/kbengine/kbengine/blob/master/kbe/tools/server/install/installer.py
 
 A simple Python script tools can be(installation, uninstallation, Update, Get the version, etc).
 ---------------------------------------------------------------------
@@ -51,4 +54,3 @@ A simple Python script tools can be(installation, uninstallation, Update, Get th
 		List all of the command descriptions.
 
 [installer.py]: {{ site.baseurl }}/assets/other/py/installer.py
-[latest]: https://github.com/kbengine/kbengine/blob/master/kbe/tools/server/install/installer.py
