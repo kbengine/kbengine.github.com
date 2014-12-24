@@ -310,7 +310,7 @@ Third party service callback port (billing, login, etc.):
 
 
 [config]: {{ site.baseurl }}/docs/configuration/
-[commands]: {{ site.baseurl }}/docs/commands/
+[tools]: {{ site.baseurl }}/docs/tools/
 [versions]: https://github.com/kbengine/kbengine/blob/latest/versioning/versions.txt
 [layout]: {{ site.baseurl }}/docs/concepts/layout.html
 [issues]: https://github.com/kbengine/kbengine/issues

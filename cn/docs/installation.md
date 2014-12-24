@@ -306,7 +306,7 @@ Telnet服务端口(cellapp)：
 
 
 [config]: {{ site.baseurl }}/cn/docs/configuration/
-[commands]: {{ site.baseurl }}/cn/docs/commands/
+[tools]: {{ site.baseurl }}/cn/docs/tools/
 [versions]: https://github.com/kbengine/kbengine/blob/latest/versioning/versions.txt
 [layout]: {{ site.baseurl }}/cn/docs/concepts/layout.html
 [issues]: https://github.com/kbengine/kbengine/issues

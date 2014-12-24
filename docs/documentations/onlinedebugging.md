@@ -174,6 +174,6 @@ Examples: add a variable to be monitored in the script(the current number of pla
 
 
 
-[GUIConsole]: {{ site.baseurl }}/docs/commands/guiconsole.html
-[Cluster Controller]: {{ site.baseurl }}/docs/commands/pycluster.html
+[GUIConsole]: {{ site.baseurl }}/docs/tools/guiconsole.html
+[Cluster Controller]: {{ site.baseurl }}/docs/tools/pycluster.html
 [kbengine_defs.xml]: {{ site.baseurl }}/docs/configuration/kbengine_defs.html

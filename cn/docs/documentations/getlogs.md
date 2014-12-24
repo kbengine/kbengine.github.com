@@ -32,7 +32,7 @@ docsitem: documentation-getlogs
 
 
 
-[GUIConsole]: {{ site.baseurl }}/cn/docs/commands/guiconsole.html
+[GUIConsole]: {{ site.baseurl }}/cn/docs/tools/guiconsole.html
 [messagelog]: {{ site.baseurl }}/cn/docs/concepts/layout.html
 [logs]: {{ site.baseurl }}/cn/docs/concepts/directorys.html
 [KBE_BIN_PATH]: {{ site.baseurl }}/cn/docs/installation.html

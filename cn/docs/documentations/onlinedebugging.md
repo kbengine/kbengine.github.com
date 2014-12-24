@@ -177,6 +177,6 @@ docsitem: documentation-online-debugging
 
 
 
-[GUIConsole]: {{ site.baseurl }}/cn/docs/commands/guiconsole.html
-[Cluster Controller]: {{ site.baseurl }}/cn/docs/commands/pycluster.html
+[GUIConsole]: {{ site.baseurl }}/cn/docs/tools/guiconsole.html
+[Cluster Controller]: {{ site.baseurl }}/cn/docs/tools/pycluster.html
 [kbengine_defs.xml]: {{ site.baseurl }}/cn/docs/configuration/kbengine_defs.html
