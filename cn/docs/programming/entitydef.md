@@ -67,6 +67,28 @@ docsitem: documentation-entitydef
 -----------------------------------------
 
 	<root>
+		// 易变属性同步控制
+		<Volatile>
+			// 这样设置则总是同步到客户端
+			<position/>
+			
+			// 没有显示的设置则总是同步到客户端
+			<!-- <yaw/> -->
+
+			// 设置为0则不同步到客户端
+			<!--<pitch> 0 </pitch> Don't update-->
+			
+			// 距离10米及以内同步到客户端
+			<roll> 10 </roll>
+		</Volatile>
+
+		// 注册接口实现，类似于C#中的接口
+		// 这个标签只在Entity.def中有效，如果本身就是一个接口def则该标签被忽略
+		<Implements>
+			// 所有的接口def必须写在entity_defs/interfaces中
+			<Interface>	GameObject		</Interface>
+		</Implements>
+
 		<Properties>
 			// 属性名称
 			<accountName>
