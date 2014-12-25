@@ -81,3 +81,5 @@ docsitem: startup-shutdown
 		这个顺序如果能在多个服务组内保持唯一性，那么在合服的时候能够带来一定的便利性。
 		例如：游戏服A和游戏服B中的物品在数据库中存储的ID都使用genUUID64生成，那么在合服的时候能够直接向一张表中合并数据。
 		(注意：值如果超过255，genUUID64将只能保证该进程唯一)
+
+	(注意：如果启动时没有附带参数，那么进程将随机生成一个cid，grouporder和globalorder会从kbmachine得到。)

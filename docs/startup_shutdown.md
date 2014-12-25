@@ -81,3 +81,5 @@ Starting the process parameters of mean:
 		then in the composite service can bring convenience for certain.
 		For example: gameserver-A and gameserver-B items in the database storage of ID are generated using genUUID64, 
 		so when the composite service can merge the data directly to a table.
+
+	(Note: if there is no incidental parameters when starting, the process will generate a random CID, grouporder and globalorder can be obtained from the kbmachine.)
