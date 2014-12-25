@@ -10,7 +10,7 @@ build
 
 Download sources:
 
-https://github.com/kbengine/kbengine/releases/latest
+[!kbengine sources](https://github.com/kbengine/kbengine/releases/latest)
 
 
 - - -

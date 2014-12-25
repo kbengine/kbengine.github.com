@@ -10,7 +10,7 @@ docsitem: build
 
 源码下载:
 
-https://github.com/kbengine/kbengine/releases/latest
+[!kbengine sources](https://github.com/kbengine/kbengine/releases/latest)
 
 
 - - -
