@@ -70,7 +70,7 @@ docsitem: startup-shutdown
 	start %KBE_BIN_PATH%/loginapp.exe	--cid=8129652375332859700 --grouporder=1  --globalorder=11
 
 	--cid:
-		每个进程都有一个唯一ID，唯一ID在合适的使用用于区分他们之间的身份。
+		每个进程都有一个唯一ID，唯一ID在合适的时候用于区分他们之间的身份。
 
 	--grouporder:
 		多个相同名称的进程能形成一个进程组，这个参数描述了进程启动的先后顺序。
