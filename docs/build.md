@@ -13,6 +13,9 @@ Download sources:
 https://github.com/kbengine/kbengine/releases/latest
 
 
+- - -
+
+
 You can easily build:
 
 Linux:
@@ -31,31 +34,31 @@ Linux:
 	[root @ localhost ~]# yum install mysql-server
 	[root @ localhost ~]# yum install mysql-devel 
 
-	[root @ localhost ~]# cd $KBE_ROOT/kbe/src
+	[root @ localhost ~]# cd kbengine/kbe/src
 	[root @ localhost/ src]# chmod -R 755 .
 	[root @ localhost/ src]# make
 
 Windows:
 
-	KBE_ROOT\kbengine\kbe\src\kbengine_vs100.sln
-	(Note: vs2010 need to install sp1(Otherwise an error will occur: LINK: fatal error LNK1123: failure during conversion to COFF: file invalid or corrupt), you can upgrade to a higher version of VC compiler)
+	kbengine\kbe\src\kbengine_vs100.sln
+	(Note: vs2010 need to install SP1(Otherwise an error will occur: LINK: fatal error LNK1123: failure during conversion to COFF: file invalid or corrupt), you can upgrade to a higher version of VC compiler)
 
 
 Note: 
 
-	1: If using other versions of the compiler is best to openssl, log4cxx (kbe\src\libs\*a.) Have to be recompiled.
+	1: If using other versions of the compiler is best to openssl, log4cxx (kbengine/kbe/src/libs/*a.) Have to be recompiled.
 
 
-	2: mysql path on some platforms may not /usr/lib64/mysql/mysql_config
+	2: mysql path on some platforms may not /usr/bin/mysql_config
 
-		Modify kbe\src\build\common.mak the MYSQL_CONFIG_PATH=/usr/lib64/mysql/mysql_config
+		Modify kbengine/kbe/src/build/common.mak the MYSQL_CONFIG_PATH=/usr/bin/mysql_config
 
 
 	3: On Linux compiled as python Unable to initialize because the situation can not be normal operation (this is a bug http://bugs.python.org/issue11320):
 		
 		You can execute the following command to solve this problem
 
-		[root @ localhost ~] cd src\lib\python
+		[root @ localhost ~] cd kbengine/kbe/src/lib/python
 		[root @ localhost ~] ./configure
 		[root @ localhost ~] make
 		[root @ localhost ~] make install
