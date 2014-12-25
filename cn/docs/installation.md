@@ -25,7 +25,7 @@ docsitem: installation
 
 
 
-### 1. 创建kbe系统用户
+### 1. 创建kbe系统用户(可选)
 
 创建一个独立的用户来运行KBEngine将会更加安全可靠以及便于维护。
 
@@ -42,6 +42,9 @@ docsitem: installation
 
 	Windows:
 		"控制面板" -> "用户帐户" -> "创建一个新帐户"
+
+
+- - -
 
 
 ### 2. 设置环境变量:
@@ -72,7 +75,7 @@ KBEngine会读取系统中设置的(KBE_ROOT, KBE_RES_PATH, KBE_BIN_PATH)环境�
 		鼠标右键点击: "我的电脑"->"高级"->"环境变量"， 然后设置(假如安装在C盘)
 
 		KBE_ROOT = C:/kbengine/
-		KBE_RES_PATH =%KBE_ROOT%/kbe/res;%KBE_ROOT%/demo/;%KBE_ROOT%/demo/res/
+		KBE_RES_PATH = %KBE_ROOT%/kbe/res;%KBE_ROOT%/demo/;%KBE_ROOT%/demo/res/
 		KBE_BIN_PATH = %KBE_ROOT%/kbe/bin/server/
 
 		(注意: Windows系统账号没有UID属性， 需要用户自己添加这个环境变量, UID必须大于0, 小于32767)
@@ -95,6 +98,9 @@ KBEngine会读取系统中设置的(KBE_ROOT, KBE_RES_PATH, KBE_BIN_PATH)环境�
 	KBE_BIN_PATH:
 
 		引擎可执行文件所在目录。
+
+
+- - -
 
 
 ### 3. 安装数据库:
@@ -179,6 +185,8 @@ KBEngine会读取系统中设置的(KBE_ROOT, KBE_RES_PATH, KBE_BIN_PATH)环境�
   (建议在demo\res\server\[kbengine.xml]中进行重载修改，这样kbengine在做改动后开发者更新时不会发生冲突)。
 
 
+- - -
+
 
 ### 4. 优化操作系统(仅Linux) (可选)
 
@@ -194,6 +202,8 @@ KBEngine会读取系统中设置的(KBE_ROOT, KBE_RES_PATH, KBE_BIN_PATH)环境�
 
 参考: [高性能Linux服务器配置]
 
+
+- - -
 
 
 ### 5: 多网卡环境配置: (可选)
@@ -211,10 +221,16 @@ KBEngine会读取系统中设置的(KBE_ROOT, KBE_RES_PATH, KBE_BIN_PATH)环境�
 		[others]	: externalInterface = eth1, internalInterface = eth1
 
 
+- - -
+
 
 ### 6. Linux 防火墙设置: (可选)
 
 参考: [Linux防火墙设置]
+
+
+- - -
+
 
 ### 7. 局域网内部署多组KBE服务器设置: (可选)
 
@@ -228,6 +244,10 @@ KBEngine会读取系统中设置的(KBE_ROOT, KBE_RES_PATH, KBE_BIN_PATH)环境�
 	2: 启动脚本中的cid必须唯一(kbengine\kbe\bin\server\start***)
 		*** --cid=必须唯一 --grouporder=1  --globalorder=1
 		cid既componentID, 用于标识一个KBE-APP, 如果探测到2个一样的cid必然会引起冲突。
+
+
+- - -
+
 
 ### 8. IP与端口设置: (可选)
 	

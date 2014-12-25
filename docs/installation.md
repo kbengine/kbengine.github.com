@@ -25,7 +25,7 @@ Manual Installation
 
 
 
-### 1. Create user kbe
+### 1. Create user kbe(optional)
 
 Create a separate user to run KBEngine will be more secure and reliable, and easy to maintain. 
 
@@ -73,7 +73,7 @@ KBEngine can read KBE_ROOT, KBE_RES_PATH, KBE_BIN_PATH system environment variab
 		The right mouse button: "My Computer"->"Advanced"->"Environment Variables" Set up(If installed in C drive).
 
 		KBE_ROOT = C:/kbengine/
-		KBE_RES_PATH =%KBE_ROOT%/kbe/res;%KBE_ROOT%/demo/;%KBE_ROOT%/demo/res/
+		KBE_RES_PATH = %KBE_ROOT%/kbe/res;%KBE_ROOT%/demo/;%KBE_ROOT%/demo/res/
 		KBE_BIN_PATH = %KBE_ROOT%/kbe/bin/server/
 
 		(Note: Windows system account no UID attribute, Users need to add this environment variable, 
