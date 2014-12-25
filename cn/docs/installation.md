@@ -168,11 +168,15 @@ KBEngine会读取系统中设置的(KBE_ROOT, KBE_RES_PATH, KBE_BIN_PATH)环境�
 		mysql> grant select,insert,update,delete,create,drop on *.* to kbe@'%' identified by 'kbe';
 		mysql> FLUSH PRIVILEGES;
 
-		在CMD中测试一下是否能使用这个账号登陆Mysql(请注意默认Mysql端口为3306， 
-		如不一致请修改kbengine_defs.xml->dbmgr-><port>330x</port>)， 
-		如果没有提示错误则账号配置完毕， 有错误请google
+		在CMD中测试一下是否能使用这个账号登陆Mysql(请注意默认Mysql端口为3306， 如不一致请修改
+		kbengine_defs.xml->dbmgr-><port>330x</port>)。
+
+		另外请不要使用其他任何第三方工具来测试，必须使用mysql进行测试，第三方工具为了能够正确的连接到
+		Mysql可能会采用一些兼容的方式，但这对于游戏服务端来说是不可靠的方式，权限应该由用户明确的设置。
+
 		进入你的mysql安装目录找到mysql.exe所在目录, 然后cmd进入这个目录中执行如下语句:
-		
+		(如果没有提示错误则账号配置完毕，有错误请google)
+
 		Windows:
 			进入你的mysql安装目录找到mysql.exe, 然后在CMD执行如下命令:
 			C:\mysql\bin> mysql -ukbe -pkbe -hlocalhost -P3306
@@ -199,6 +203,8 @@ KBEngine会读取系统中设置的(KBE_ROOT, KBE_RES_PATH, KBE_BIN_PATH)环境�
 
 		[root@localhost ~]# echo 524288 > /proc/sys/net/core/rmem_max
 		[root@localhost ~]# echo 524288 > /proc/sys/net/core/wmem_max
+		
+		可适当调整[kbengine_defs.xml]->channelCommon->***BufferSize
 
 参考: [高性能Linux服务器配置]
 

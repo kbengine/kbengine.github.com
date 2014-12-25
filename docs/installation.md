@@ -45,6 +45,9 @@ If you have a better understanding, you can ignore this section, the direct use 
 		"Control Panel" -> "User Accounts" -> "Create a new account"
 
 
+- - -
+
+
 ### 2. To set environment variables:
 
 KBEngine can read KBE_ROOT, KBE_RES_PATH, KBE_BIN_PATH system environment variables to do something.
@@ -98,6 +101,8 @@ Environment variables description
 
 		kbe binary file directory path.
 
+
+- - -
 
 
 ### 3. Setup the database:
@@ -182,6 +187,8 @@ If you want to modify the database name, Modify the databaseName in res\server\[
   (recommended demo\res\server\[kbengine.xml] overloaded modifications).
 
 
+- - -
+
 
 ### 4. Optimization of the operating system(Linux) (Optional)
 
@@ -195,8 +202,12 @@ Defines the maximum send/receive window size:
 		[root@localhost ~]# echo 524288 > /proc/sys/net/core/rmem_max
 		[root@localhost ~]# echo 524288 > /proc/sys/net/core/wmem_max
 
+		Can be adjusted[kbengine_defs.xml]->channelCommon->***BufferSize
+
 see: [High-performance Linux server configuration]
 
+
+- - -
 
 
 ### 5: Multi-card(NIC) configurations: (Optional)
@@ -214,10 +225,16 @@ Please set ([kbengine.xml] | [kbengine_defs.xml]):
 		[others]	: externalInterface = eth1, internalInterface = eth1
 
 
+- - -
+
 
 ### 6. Linux firewall: (Optional)
 
 see: [Linux firewall settings]
+
+
+- - -
+
 
 ### 7. The LAN, the deployment of multiple KBE server settings: (optional)
 
@@ -231,6 +248,9 @@ Multiple users in the same LAN, And they want to install KBE-server, Then they n
 	2: cid startup script must be unique(kbengine\kbe\bin\server\start***)
 		*** --cid=(must be unique) --grouporder=1  --globalorder=1
 		cid is componentID, Used to identify a KBE-APP, If two different cid exist, will inevitably lead to conflict.
+
+
+- - -
 
 
 ### 8. IP and port settings: (optional)
