@@ -12,7 +12,7 @@ docsitem: build
 
 [https://github.com/kbengine/kbengine/releases/latest](https://github.com/kbengine/kbengine/releases/latest)
 
-还可以加入KBEngine项目随时获得更新哦。[watchers](https://github.com/kbengine/kbengine/watchers),[star](https://github.com/kbengine/kbengine/stargazers),[fork](https://github.com/kbengine/kbengine/fork)
+还可以加入KBEngine项目随时获得更新哦。[stargazers](https://github.com/kbengine/kbengine/stargazers),[fork](https://github.com/kbengine/kbengine/fork)
 
 
 - - -
