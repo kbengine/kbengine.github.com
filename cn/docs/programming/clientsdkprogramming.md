@@ -10,7 +10,7 @@ docsitem: sdk-client-programming
 
 ###客户端类型
 
-	定义在kbengine/kbe/src/lib/cstdkbe/cstdkbe.hpp中:
+	定义在kbengine/kbe/src/lib/common/common.hpp中:
 	enum COMPONENT_CLIENT_TYPE
 	{
 		// 移动类，手机，平板电脑(可不包含Python脚本，entitydefs协议可使用网络导入)
@@ -31,14 +31,19 @@ docsitem: sdk-client-programming
 	};
 
 
+- - -
+
 
 ###服务端错误码
-Please to see: [server_errors.xml]
+参看: [server_errors.xml]
 
 
-###对接服务端引擎级协议
+- - -
 
-以下协议为客户端需要提供给服务端调用的协议: 
+
+###对接服务端引擎级协议接口
+
+以下为客户端需要提供给服务端调用的协议接口: 
 
 	onVersionNotMatch
 		
@@ -185,7 +190,7 @@ Please to see: [server_errors.xml]
 		请求账号新密码回调(忘记密码类功能)
 
 
-以下为服务端允许客户端调用的协议:
+以下为服务端允许客户端调用的协议接口:
 
 	loginapp:
 		hello
