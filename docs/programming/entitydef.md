@@ -66,6 +66,10 @@ Def file format
 -----------------------------------------
 
 	<root>
+		// The entity of the parent class-def
+		// This tag is only valid in the Entity.def，If itself is a def interface, the tag are ignored
+		<Parent>	Avatar		</Parent>
+
 		// Volatile attribute synchronization control
 		<Volatile>
 			// This setting is always synchronized to the client

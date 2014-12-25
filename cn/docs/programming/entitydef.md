@@ -67,6 +67,10 @@ docsitem: documentation-entitydef
 -----------------------------------------
 
 	<root>
+		// 该实体的父类def
+		// 这个标签只在Entity.def中有效，如果本身就是一个接口def则该标签被忽略
+		<Parent>	Avatar		</Parent>
+
 		// 易变属性同步控制
 		<Volatile>
 			// 这样设置则总是同步到客户端
@@ -82,7 +86,7 @@ docsitem: documentation-entitydef
 			<roll> 10 </roll>
 		</Volatile>
 
-		// 注册接口实现，类似于C#中的接口
+		// 注册接口def，类似于C#中的接口
 		// 这个标签只在Entity.def中有效，如果本身就是一个接口def则该标签被忽略
 		<Implements>
 			// 所有的接口def必须写在entity_defs/interfaces中
