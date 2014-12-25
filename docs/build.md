@@ -12,6 +12,8 @@ Download sources:
 
 [https://github.com/kbengine/kbengine/releases/latest](https://github.com/kbengine/kbengine/releases/latest)
 
+You can also join the KBEngine project at any time to get the update.[watchers](https://github.com/kbengine/kbengine/watchers),[star](https://github.com/kbengine/kbengine/stargazers),[fork](https://github.com/kbengine/kbengine/fork)
+
 
 - - -
 
