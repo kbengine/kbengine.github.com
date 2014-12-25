@@ -66,6 +66,28 @@ Def file format
 -----------------------------------------
 
 	<root>
+		// Volatile attribute synchronization control
+		<Volatile>
+			// This setting is always synchronized to the client
+			<position/>
+
+			// No explicit settings are always synchronized to the client
+			<!-- <yaw/> -->
+
+			// Set to 0 is not synchronized to the client
+			<pitch> 0 </pitch>
+			
+			// Distance of 10 meters or less and the synchronization to the client
+			<roll> 10 </roll>
+		</Volatile>
+
+		// Registration interface, similar to the C# interface
+		// This tag is only valid in the Entity.def，If itself is a def interface, the tag are ignored
+		<Implements>
+			// All interface-defs must be written in entity_defs/interfaces
+			<Interface>	GameObject		</Interface>
+		</Implements>
+
 		<Properties>
 			// Property Name
 			<accountName>

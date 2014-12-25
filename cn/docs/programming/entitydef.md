@@ -72,11 +72,11 @@ docsitem: documentation-entitydef
 			// 这样设置则总是同步到客户端
 			<position/>
 			
-			// 没有显示的设置则总是同步到客户端
+			// 没有显式的设置则总是同步到客户端
 			<!-- <yaw/> -->
 
 			// 设置为0则不同步到客户端
-			<!--<pitch> 0 </pitch> Don't update-->
+			<pitch> 0 </pitch>
 			
 			// 距离10米及以内同步到客户端
 			<roll> 10 </roll>
