@@ -52,6 +52,33 @@ If you have a better understanding, you can ignore this section, the direct use 
 
 KBEngine can read KBE_ROOT, KBE_RES_PATH, KBE_BIN_PATH system environment variables to do something.
 
+Environment variables description:
+
+	UID:
+		uid is used to distinguish between different server groups, 
+		if multiple servers distributed server maintenance KBE then uid must be the same on each server, 
+		uid must be greater than 0 and less than 32767.
+		(Note: Windows system account no UID attribute, Users need to add this environment variable)
+
+	KBE_ROOT:
+
+		kbe root directory path.
+
+
+	KBE_RES_PATH:
+
+		Related Resources path with ':' or ';' separated, the first "respath" is kbe engine "respath", 
+		the second "respath" must be the root user scripts, others without limitation.
+
+
+	KBE_BIN_PATH:
+
+		kbe binary file directory path.
+
+
+
+To set environment variables:
+
 	Linux: (if kbe be installed in ~/ directory)
 
 		[kbe@localhost ~]# vim ~/.bashrc
@@ -79,27 +106,14 @@ KBEngine can read KBE_ROOT, KBE_RES_PATH, KBE_BIN_PATH system environment variab
 		KBE_RES_PATH = %KBE_ROOT%/kbe/res;%KBE_ROOT%/demo/;%KBE_ROOT%/demo/scripts;%KBE_ROOT%/demo/res/
 		KBE_BIN_PATH = %KBE_ROOT%/kbe/bin/server/
 
+		uid is used to distinguish between different server groups, 
+		if multiple servers distributed server maintenance KBE then uid must be the same on each server, 
+		uid must be greater than 0 and less than 32767.
+
 		(Note: Windows system account no UID attribute, Users need to add this environment variable, 
 		UID must be greater than 0 and less than 32767)
 		
-		UID = 1
-
-Environment variables description
-
-	KBE_ROOT:
-
-		kbe root directory path.
-
-
-	KBE_RES_PATH:
-
-		Related Resources path with ':' or ';' separated, the first "respath" is kbe engine "respath", 
-		the second "respath" must be the root user scripts, others without limitation.
-
-
-	KBE_BIN_PATH:
-
-		kbe binary file directory path.
+		UID = 10103
 
 
 - - -

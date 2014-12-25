@@ -49,40 +49,14 @@ docsitem: installation
 
 ### 2. 设置环境变量:
 
-KBEngine会读取系统中设置的(KBE_ROOT, KBE_RES_PATH, KBE_BIN_PATH)环境变量, 按照如下步骤设置环境变量。
+KBEngine会读取系统中设置的(KBE_ROOT, KBE_RES_PATH, KBE_BIN_PATH)环境变量, 环境变量的意义:
 
-	Linux: (假如kbe被安装在~/目录)
+	UID:
 
-		[kbe@localhost ~]$ vim ~/.bashrc
-
-		ulimit -c unlimited
-		export KBE_ROOT=~/kbengine/
-		export KBE_RES_PATH=$KBE_ROOT/kbe/res/:$KBE_ROOT/demo/:$KBE_ROOT/demo/scripts/:$KBE_ROOT/demo/res/
-		export KBE_BIN_PATH=$KBE_ROOT/kbe/bin/server/
-		
-		使环境变量生效:
-		[kbe@localhost ~]$ source ~/.bashrc
-
-		root权限设置用户kbe的uid:
-		[root@localhost ~]# usermod -u 10103 kbe
-		
-		操作系统账号的uid将被用于不同的服务器组来区分， 如果是多台硬件服务器共同维护一组服务，
+		操作系统用户账号的uid将被用于区分不同的服务器组，如果是多台硬件服务器共同维护一组服务，
 		那么每一台机器上的系统uid环境变量都应该保持一致，否则无法形成服务组。
 		另外uid必须大于0, 小于32767.
-
-	Windows:
-
-		鼠标右键点击: "我的电脑"->"高级"->"环境变量"， 然后设置(假如安装在C盘)
-
-		KBE_ROOT = C:/kbengine/
-		KBE_RES_PATH = %KBE_ROOT%/kbe/res;%KBE_ROOT%/demo/;%KBE_ROOT%/demo/scripts;%KBE_ROOT%/demo/res/
-		KBE_BIN_PATH = %KBE_ROOT%/kbe/bin/server/
-
-		(注意: Windows系统账号没有UID属性， 需要用户自己添加这个环境变量, UID必须大于0, 小于32767)
-
-		UID = 1
-
-环境变量的意义
+		(注意: Windows系统账号没有UID属性， 需要用户自己添加这个环境变量)
 
 	KBE_ROOT:
 
@@ -98,6 +72,46 @@ KBEngine会读取系统中设置的(KBE_ROOT, KBE_RES_PATH, KBE_BIN_PATH)环境�
 	KBE_BIN_PATH:
 
 		引擎可执行文件所在目录。
+
+
+
+按照如下步骤设置环境变量:
+
+	Linux: (假如kbe被安装在~/目录)
+
+		[kbe@localhost ~]$ vim ~/.bashrc
+
+		ulimit -c unlimited
+		export KBE_ROOT=~/kbengine/
+		export KBE_RES_PATH=$KBE_ROOT/kbe/res/:$KBE_ROOT/demo/:$KBE_ROOT/demo/scripts/:$KBE_ROOT/demo/res/
+		export KBE_BIN_PATH=$KBE_ROOT/kbe/bin/server/
+		
+		使环境变量生效:
+		[kbe@localhost ~]$ source ~/.bashrc
+
+		操作系统用户账号的uid将被用于区分不同的服务器组，如果是多台硬件服务器共同维护一组服务，
+		那么每一台机器上的系统uid环境变量都应该保持一致，否则无法形成服务组。
+		另外uid必须大于0, 小于32767.
+
+		root权限设置用户kbe的uid(假如设置为10103):
+		[root@localhost ~]# usermod -u 10103 kbe
+		
+
+	Windows:
+
+		鼠标右键点击: "我的电脑"->"高级"->"环境变量"， 然后设置(假如安装在C盘)
+
+		KBE_ROOT = C:/kbengine/
+		KBE_RES_PATH = %KBE_ROOT%/kbe/res;%KBE_ROOT%/demo/;%KBE_ROOT%/demo/scripts;%KBE_ROOT%/demo/res/
+		KBE_BIN_PATH = %KBE_ROOT%/kbe/bin/server/
+		
+		操作系统用户账号的uid将被用于区分不同的服务器组，如果是多台硬件服务器共同维护一组服务，
+		那么每一台机器上的系统uid环境变量都应该保持一致，否则无法形成服务组。
+		另外uid必须大于0, 小于32767.
+
+		(注意: 在Linux上系统账号的id就是uid，Windows系统账号没有UID属性，需要用户自己添加这个环境变量，这里假如设置成10103)
+
+		UID = 10103
 
 
 - - -
