@@ -8,6 +8,12 @@ docsitem: build
 建立
 ==============
 
+源码下载:
+
+https://github.com/kbengine/kbengine/releases/latest
+
+
+
 只需简单的几步:
 
 Linux:

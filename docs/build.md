@@ -8,6 +8,11 @@ docsitem: build
 build
 ==============
 
+Download sources:
+
+https://github.com/kbengine/kbengine/releases/latest
+
+
 You can easily build:
 
 Linux:
