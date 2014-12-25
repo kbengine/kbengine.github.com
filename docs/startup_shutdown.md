@@ -51,10 +51,8 @@ Quick Startup and Shutdown
 - - -
 
 
-启动参数的意义:
+Starting the process parameters of mean:
 -------------------
-
-打开!(win)fixedstart.bat可以看到进程启动时附带了一些参数:
 
 	start %KBE_BIN_PATH%/kbmachine.exe	--cid=2129652375332859700 --grouporder=1  --globalorder=1
 	start %KBE_BIN_PATH%/messagelog.exe	--cid=1129653375331859700 --grouporder=1 --globalorder=2
@@ -69,13 +67,17 @@ Quick Startup and Shutdown
 	start %KBE_BIN_PATH%/loginapp.exe	--cid=8129652375332859700 --grouporder=1  --globalorder=11
 
 	--cid:
-		每个进程都有一个唯一ID，唯一ID在合适的使用用于区分他们之间的身份。
+		Each process has a unique ID, used to distinguish between their identity.
 
 	--grouporder:
-		多个相同名称的进程能形成一个进程组，这个参数描述了进程启动的先后顺序。
-		这个顺序在脚本中也会用到，例如：在第一个启动的baseapp进程上创建某个实体。
+		The same name process form a group, this parameter describes process startup order.
+		This order will be used in the script, For example: create an entity in the first start the baseapp process.
 
 	--globalorder:
-		全局启动顺序，描述了该进程在该服务组内启动的顺序，这个值也会被引擎genUUID64之类的函数用到。
-		这个顺序如果能在多个服务组内唯一那么在合服的时候能够带来一定的便利性。
-		例如：游戏服A和游戏服B中的道具在数据库中存储的ID都使用genUUID64生成，那么在合服的时候能够直接向一张表中合并数据。
+		Global startup order, describes the process starts in the servers group within the sequence, 
+		this value will be a function of engine such as genUUID64 use.
+
+		This order if we can maintain the uniqueness in the multi service group, 
+		then in the composite service can bring convenience for certain.
+		For example: gameserver-A and gameserver-B items in the database storage of ID are generated using genUUID64, 
+		so when the composite service can merge the data directly to a table.
