@@ -8,10 +8,13 @@ docsitem: installation
 安装
 ============
 
-在Linux上安装(Centos/Debian/Ubuntu etc.) 服务端, 请在终端输入:
+(注意：使用这种方式安装必须已经完成[建立]步骤)
+
+
+在一个(Windows/Centos/Redhat/Debian/Ubuntu 等等)系统中安装KBEngine服务端, 请在命令行输入:
 
 	python kbengine/kbe/tools/server/install/installer.py install
-
+	
 如果你不信任脚本， 你也可以选择手动安装。
 
 - - -
@@ -315,3 +318,4 @@ Telnet服务端口(cellapp)：
 [kbengine.xml]: {{ site.baseurl }}/cn/docs/configuration/kbengine.html
 [Linux防火墙设置]: {{ site.baseurl }}/cn/docs/documentations/linuxfirewall.html
 [KBE架构]: {{ site.baseurl }}/cn/docs/concepts/layout.html
+[建立]:{{ site.baseurl }}/cn/docs/build.html

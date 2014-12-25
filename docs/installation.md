@@ -8,9 +8,12 @@ docsitem: installation
 Installation
 ============
 
-Install KBEngine on a (Centos/Debian/Ubuntu etc.) server, in your terminal input:
+(Note: use this way to install must have been completed [build] steps)
 
-	python kbengine/kbe/tools/server/install/installer.py install
+
+Install KBEngine on a (Windows/Centos/Redhat/Debian/Ubuntu etc.) server, in your terminal input:
+
+	python kbengine/kbe/tools/server/install/installer.py install=remotesrc
 
 if you don't want to trust a script, install KBEngine manually.
 
@@ -319,3 +322,4 @@ Third party service callback port (billing, login, etc.):
 [kbengine.xml]: {{ site.baseurl }}/docs/configuration/kbengine.html
 [Linux firewall settings]: {{ site.baseurl }}/docs/documentations/linuxfirewall.html
 [KBE-layout]: {{ site.baseurl }}/docs/concepts/layout.html
+[build]:{{ site.baseurl }}/docs/build.html
