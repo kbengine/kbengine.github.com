@@ -58,7 +58,7 @@ KBEngine can read KBE_ROOT, KBE_RES_PATH, KBE_BIN_PATH system environment variab
 
 		ulimit -c unlimited
 		export KBE_ROOT=~/kbengine/
-		export KBE_RES_PATH=$KBE_ROOT/kbe/res/:$KBE_ROOT/demo/:$KBE_ROOT/demo/res/
+		export KBE_RES_PATH=$KBE_ROOT/kbe/res/:$KBE_ROOT/demo/:$KBE_ROOT/demo/scripts/:$KBE_ROOT/demo/res/
 		export KBE_BIN_PATH=$KBE_ROOT/kbe/bin/server/
 
 		The environmental variables are available:
@@ -76,7 +76,7 @@ KBEngine can read KBE_ROOT, KBE_RES_PATH, KBE_BIN_PATH system environment variab
 		The right mouse button: "My Computer"->"Advanced"->"Environment Variables" Set up(If installed in C drive).
 
 		KBE_ROOT = C:/kbengine/
-		KBE_RES_PATH = %KBE_ROOT%/kbe/res;%KBE_ROOT%/demo/;%KBE_ROOT%/demo/res/
+		KBE_RES_PATH = %KBE_ROOT%/kbe/res;%KBE_ROOT%/demo/;%KBE_ROOT%/demo/scripts;%KBE_ROOT%/demo/res/
 		KBE_BIN_PATH = %KBE_ROOT%/kbe/bin/server/
 
 		(Note: Windows system account no UID attribute, Users need to add this environment variable, 
