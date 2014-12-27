@@ -13,6 +13,12 @@ Get the runtime logs
 1. Use visualization console tool [GUIConsole], must be open [messagelog] Service.
 <img class="screenshots-img" src="{{ site.baseurl }}/assets/img/screenshots/guiconsole_log.jpg">
 
+
+
+- - - 
+
+
+
 2. View log files([KBE_BIN_PATH]/[logs]/xxx.log). 
 <img class="screenshots-img" src="{{ site.baseurl }}/assets/img/screenshots/windows_getlogs.png">
 
