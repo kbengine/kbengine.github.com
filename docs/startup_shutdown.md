@@ -51,6 +51,18 @@ Quick Startup and Shutdown
 - - -
 
 
+Check the startup status(KBEngine > v0.2.15)
+-------------------
+
+	If successful will find log "Components::process(): The required components have been found!".
+	Otherwise, please search the "ERROR" keyword in logs, according to the error description to try to solve.
+
+	get runtime logs: http://www.kbengine.org/docs/documentations/getlogs.html
+
+
+- - -
+
+
 Starting the process parameters of mean:
 -------------------
 

@@ -51,6 +51,18 @@ docsitem: startup-shutdown
 - - -
 
 
+检查启动状态(KBEngine > v0.2.15)
+-------------------
+
+	如果启动成功将会在日志中找到"Components::process(): The required components have been found!"。
+	任何其他情况请在日志中搜索"ERROR"关键字，根据错误描述尝试解决。
+
+	获得运行时日志: http://www.kbengine.org/cn/docs/documentations/getlogs.html
+
+
+- - - 
+
+
 
 启动参数的意义:
 -------------------
