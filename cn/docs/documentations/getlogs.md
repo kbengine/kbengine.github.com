@@ -11,9 +11,10 @@ docsitem: documentation-getlogs
 ###有二种办法查看服务端运行日志:
 
 1: 使用可视化的控制台工具[GUIConsole], 必须开启[messagelog]服务。
+<img class="screenshots-img" src="{{ site.baseurl }}/assets/img/screenshots/guiconsole_log.jpg">
 
 2: 查看log文件([KBE_BIN_PATH]/[logs]/xxx.log)。
-
+<img class="screenshots-img" src="{{ site.baseurl }}/assets/img/screenshots/windows_getlogs.png">
 
 -----------------------------------------------------------------------------------------------
 
@@ -28,7 +29,7 @@ docsitem: documentation-getlogs
 	S_INFO		: 脚本层常规日志
 
 
-<img class="screenshots-img" src="{{ site.baseurl }}/assets/img/screenshots/guiconsole_log.jpg">
+
 
 
 
