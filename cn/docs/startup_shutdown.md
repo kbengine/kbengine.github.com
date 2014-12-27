@@ -54,6 +54,8 @@ docsitem: startup-shutdown
 检查启动状态(KBEngine > v0.2.15)
 -------------------
 
+<img class="screenshots-img" src="{{ site.baseurl }}/assets/img/screenshots/startup_status.png">
+
 	如果启动成功将会在日志中找到"Components::process(): The required components have been found!"。
 	任何其他情况请在日志中搜索"ERROR"关键字，根据错误描述尝试解决。
 
