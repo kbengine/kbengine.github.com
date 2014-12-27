@@ -24,6 +24,8 @@ Get the runtime logs
 
 	Note: if the messagelog service is started, then the logs will be forwarded to the messagelog process, 
 	messagelog process will logs write "message_<process name>.*.log".
+	Start messagelog, you can modify the startup script or modify tools start-layout.
+	http://www.kbengine.org/cn/docs/startup_shutdown.html
 
 
 -----------------------------------------------------------------------------------------------

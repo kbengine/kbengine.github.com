@@ -23,6 +23,9 @@ docsitem: documentation-getlogs
 <img class="screenshots-img" src="{{ site.baseurl }}/assets/img/screenshots/windows_getlogs.png">
 	
 	注意：如果开启了messagelog服务，那么日志将被转发到messagelog进程，messagelog进程最终会将日志写到message_<进程名称>.*.log中。
+		开启messagelog可以通过修改启动脚本或者修改工具的启动方案来解决
+		http://www.kbengine.org/cn/docs/startup_shutdown.html。
+
 
 -----------------------------------------------------------------------------------------------
 

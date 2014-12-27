@@ -14,7 +14,7 @@ docsitem: startup-shutdown
 	Linux:
 		python $KBE_ROOT/kbe/tools/server/pycluster/cluster_controller.py start
 
-	(注意: 初次启动kbe时，mysql需要初始化一些表结构， 可能会花上几分钟请耐心等待完成。)
+	(注意: 初次启动KBEngine时，mysql需要初始化一些表结构，可能会花上几分钟请耐心等待完成。)
 
 
 - - -
@@ -43,7 +43,7 @@ docsitem: startup-shutdown
 		[kbe @gameserver ~]$ sh kill.sh
 
 	Windows:
-		cd KBE_BIN_PATH
+		cd %KBE_BIN_PATH%
 		!(win)fixedstart.bat
 		!(win)kill.bat
 
