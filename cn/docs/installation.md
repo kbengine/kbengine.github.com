@@ -281,12 +281,12 @@ KBEngine会读取系统中设置的(KBE_ROOT, KBE_RES_PATH, KBE_BIN_PATH)环境�
 
 	[kbengine.xml]->dbmgr->port
 
-登录IP：
+客户端登录IP：
 
 	[kbengine.xml]->loginapp->externalInterface
 	（由于读取的是网卡地址，某些环境下无法获得正确的ip地址，例如端口映射方式与外网交互，此时应该设置[kbengine_defs.xml]->loginapp->externalAddress）
 
-登录端口：
+客户端登录端口：
 
 	[kbengine.xml]->loginapp->externalPorts_min
 

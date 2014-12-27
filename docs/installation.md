@@ -279,12 +279,12 @@ Database port:
 
 	[kbengine.xml]->dbmgr->port
 
-Login IP:
+Login IP(Client):
 
 	[kbengine.xml]->loginapp->externalInterface
 	（Because reading is the address of NIC, some reasons may not be able to obtain the correct IP address. For example, port mapping mode with the network interaction, this should be set to [kbengine_defs.xml]->loginapp->externalAddress）
 
-Login port:
+Login port(Client):
 
 	[kbengine.xml]->loginapp->externalPorts_min
 
