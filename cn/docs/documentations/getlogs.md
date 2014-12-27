@@ -21,6 +21,8 @@ docsitem: documentation-getlogs
 
 2: 查看log文件([KBE_BIN_PATH]/[logs]/xxx.log)。
 <img class="screenshots-img" src="{{ site.baseurl }}/assets/img/screenshots/windows_getlogs.png">
+	
+	注意：如果开启了messagelog服务，那么日志将被转发到messagelog进程，messagelog进程最终会将日志写到message_<进程名称>.*.log中。
 
 -----------------------------------------------------------------------------------------------
 

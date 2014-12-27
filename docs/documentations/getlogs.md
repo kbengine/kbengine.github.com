@@ -22,6 +22,10 @@ Get the runtime logs
 2. View log files([KBE_BIN_PATH]/[logs]/xxx.log). 
 <img class="screenshots-img" src="{{ site.baseurl }}/assets/img/screenshots/windows_getlogs.png">
 
+	Note: if the messagelog service is started, then the logs will be forwarded to the messagelog process, 
+	messagelog process will logs write "message_<process name>.*.log".
+
+
 -----------------------------------------------------------------------------------------------
 
 ###Log types: 
