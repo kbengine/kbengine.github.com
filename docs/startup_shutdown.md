@@ -68,7 +68,7 @@ Check the startup status(KBEngine > v0.2.15)
 Starting the process parameters of mean:
 -------------------
 
-	start %KBE_BIN_PATH%/kbmachine.exe	--cid=2129652375332859700 --grouporder=1  --globalorder=1
+	start %KBE_BIN_PATH%/machine.exe	--cid=2129652375332859700 --grouporder=1  --globalorder=1
 	start %KBE_BIN_PATH%/messagelog.exe	--cid=1129653375331859700 --grouporder=1 --globalorder=2
 	start %KBE_BIN_PATH%/interfaces.exe	--cid=1129652375332859700 --grouporder=1 --globalorder=3
 	start %KBE_BIN_PATH%/dbmgr.exe		--cid=3129652375332859700 --grouporder=1 --globalorder=4
@@ -96,4 +96,4 @@ Starting the process parameters of mean:
 		For example: gameserver-A and gameserver-B items in the database storage of ID are generated using genUUID64, 
 		so when the composite service can merge the data directly to a table.
 
-	(Note: if there is no incidental parameters when starting, the process will generate a random CID, grouporder and globalorder can be obtained from the kbmachine.)
+	(Note: if there is no incidental parameters when starting, the process will generate a random CID, grouporder and globalorder can be obtained from the machine.)

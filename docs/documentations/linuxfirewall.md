@@ -11,7 +11,7 @@ Linux firewall settings
 Example:
 
 	server1: 
-			kbmachine:
+			machine:
 				internal(TCP) : 20099		// Tools to directly access interface
 
 			loginapp:
@@ -23,7 +23,7 @@ Example:
 				internal(TCP) : 40000		// Telnet service port
 
 	server2: 
-			kbmachine:
+			machine:
 				internal(TCP) : 20099		// Tools to directly access interface
 
 			cellapp x N
@@ -31,7 +31,7 @@ Example:
 
 
 	server3: 
-			kbmachine:
+			machine:
 				internal(TCP) : 20099		// Tools to directly access interface
 
 			cellappmgr

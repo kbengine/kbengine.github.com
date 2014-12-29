@@ -491,11 +491,11 @@ there is no conflict in the development along with updated engine or multiple pr
 			<http_cbport> 21103 </http_cbport>
 		</loginapp>		
 		
-		<kbmachine>
+		<machine>
 			<!-- Exposed to the tools port range -->
 			<externalPorts_min> 20099 </externalPorts_min>						<!-- Type: Integer -->
 			<externalPorts_max> 0 </externalPorts_max>						<!-- Type: Integer -->
-		</kbmachine>
+		</machine>
 		
 		<bots>
 			<!-- Name of the interface(NIC) -->

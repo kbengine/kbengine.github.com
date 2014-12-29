@@ -71,7 +71,7 @@ docsitem: startup-shutdown
 
 打开!(win)fixedstart.bat可以看到进程启动时附带了一些参数:
 
-	start %KBE_BIN_PATH%/kbmachine.exe	--cid=2129652375332859700 --grouporder=1  --globalorder=1
+	start %KBE_BIN_PATH%/machine.exe	--cid=2129652375332859700 --grouporder=1  --globalorder=1
 	start %KBE_BIN_PATH%/messagelog.exe	--cid=1129653375331859700 --grouporder=1 --globalorder=2
 	start %KBE_BIN_PATH%/interfaces.exe	--cid=1129652375332859700 --grouporder=1 --globalorder=3
 	start %KBE_BIN_PATH%/dbmgr.exe		--cid=3129652375332859700 --grouporder=1 --globalorder=4
@@ -96,4 +96,4 @@ docsitem: startup-shutdown
 		例如：游戏服A和游戏服B中的物品在数据库中存储的ID都使用genUUID64生成，那么在合服的时候能够直接向一张表中合并数据。
 		(注意：值如果超过255，genUUID64将只能保证该进程唯一)
 
-	(注意：如果启动时没有附带参数，那么进程将随机生成一个cid，grouporder和globalorder会从kbmachine得到。)
+	(注意：如果启动时没有附带参数，那么进程将随机生成一个cid，grouporder和globalorder会从machine得到。)

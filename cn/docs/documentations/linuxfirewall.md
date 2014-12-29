@@ -11,7 +11,7 @@ Linux防火墙设置
 例子:
 
 	server1: 
-			kbmachine:
+			machine:
 				内部TCP端口 : 20099		// 工具直接访问端口
 
 			loginapp:
@@ -23,7 +23,7 @@ Linux防火墙设置
 				内部TCP端口 : 40000		// Telnet服务端口(用于调试等)
 
 	server2: 
-			kbmachine:
+			machine:
 				内部TCP端口 : 20099		// 工具直接访问端口
 
 			cellapp x N
@@ -31,7 +31,7 @@ Linux防火墙设置
 
 
 	server3: 
-			kbmachine:
+			machine:
 				内部TCP端口 : 20099		// 工具直接访问端口
 
 			cellappmgr

@@ -84,7 +84,7 @@ Server component description
 	Unity3D, HTML5, Cocos2d and other technologies, we provide a plug-in to quickly and server docking.
 
 
-	· kbmachine:
+	· machine:
 	Abstract a server hardware node(A hardware server can only exist one such process).
 	Receive remote commands, Collect hardware information, Collection components status.
 	such as: CPU, Memory, cellapp, etc. This information is provided to the component of interest. 

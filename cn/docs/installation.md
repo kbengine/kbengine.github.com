@@ -325,7 +325,7 @@ Telnet服务端口(cellapp)：
 
 提供给工具明确连接的端口：
 
-	[kbengine.xml]->kbmachine->externalPorts_min
+	[kbengine.xml]->machine->externalPorts_min
 
 运营接入服务监听的IP：
 

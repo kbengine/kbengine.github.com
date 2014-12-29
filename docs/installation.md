@@ -323,7 +323,7 @@ Virtual client, Telnet service port:
 
 Provide tools explicit connection port:
 
-	[kbengine.xml]->kbmachine->externalPorts_min
+	[kbengine.xml]->machine->externalPorts_min
 
 Interfaces IP:
 
