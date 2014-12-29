@@ -101,7 +101,7 @@ Server component description
 	See server logs, Startup and Shutdown, etc.
 
 
-	· messagelog: 
+	· logger: 
 	Log collection and backup.
 
 

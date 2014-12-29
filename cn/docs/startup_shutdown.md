@@ -72,7 +72,7 @@ docsitem: startup-shutdown
 打开!(win)fixedstart.bat可以看到进程启动时附带了一些参数:
 
 	start %KBE_BIN_PATH%/machine.exe	--cid=2129652375332859700 --grouporder=1  --globalorder=1
-	start %KBE_BIN_PATH%/messagelog.exe	--cid=1129653375331859700 --grouporder=1 --globalorder=2
+	start %KBE_BIN_PATH%/logger.exe		--cid=1129653375331859700 --grouporder=1 --globalorder=2
 	start %KBE_BIN_PATH%/interfaces.exe	--cid=1129652375332859700 --grouporder=1 --globalorder=3
 	start %KBE_BIN_PATH%/dbmgr.exe		--cid=3129652375332859700 --grouporder=1 --globalorder=4
 	start %KBE_BIN_PATH%/baseappmgr.exe	--cid=4129652375332859700 --grouporder=1  --globalorder=5

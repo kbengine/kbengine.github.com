@@ -723,7 +723,7 @@ docsitem: configuration-kbengine-defs
 			</telnet_service>							
 		</bots>
 		
-		<messagelog>
+		<logger>
 			<!-- 接口网卡的名称
 				（Name of the interface(NIC)） 
 			-->
@@ -734,11 +734,11 @@ docsitem: configuration-kbengine-defs
 			-->
 			<tick_max_buffered_logs> 65535 </tick_max_buffered_logs>
 
-			<!-- 单个app(baseapp, cellapp, 等等..)进程上, 一个tick同步给messagelog的log数量
-				（The number of single-process(baseapp, cellapp, etc..), A tick synchronization to the number of messagelog） 
+			<!-- 单个app(baseapp, cellapp, 等等..)进程上, 一个tick同步给logger的log数量
+				（The number of single-process(baseapp, cellapp, etc..), A tick synchronization to the number of logger） 
 			-->
 			<tick_sync_logs> 32 </tick_sync_logs>
-		</messagelog>
+		</logger>
 	</root>
 
 

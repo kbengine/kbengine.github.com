@@ -97,7 +97,7 @@ docsitem: concepts-layout
 	并支持动态调试服务端Python逻辑层以及查看各个组件的日志，启动服务端与关闭等。 
 
 
-	· messagelog: 
+	· logger: 
 	收集和备份各个组件的运行日志。
 
 
