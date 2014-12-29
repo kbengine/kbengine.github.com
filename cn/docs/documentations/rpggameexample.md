@@ -8,7 +8,7 @@ docsitem: documentation-gameexample2
 RPG多人在线例子
 ====================
 
-###创建初始项目
+###创建一个新项目
 
 可以从这里下载已经创建好的[空项目]，包含了一些必不可少的目录和文件。 
 http://www.kbengine.org/cn/docs/documentations/emptyproject.html
@@ -43,7 +43,7 @@ http://www.kbengine.org/cn/docs/documentations/emptyproject.html
 
 
 
-[空项目]: {{ site.baseurl }}/cn/docs/documentations/emptyproject.html
+[最小项目]: {{ site.baseurl }}/cn/docs/documentations/minimum_project.html
 
 
 
