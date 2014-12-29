@@ -33,7 +33,7 @@ docsitem: documentation-entitydef
 
 1. 注册实体
 
-	目录地址 : `demo/scripts/entities.xml`
+	目录地址 : `assets/scripts/entities.xml`
 
 	例子:
 
@@ -48,14 +48,14 @@ docsitem: documentation-entitydef
 		</root>
 
 
-2. 在`demo/scripts/entity_defs`目录下创建一个定义文件
+2. 在`assets/scripts/entity_defs`目录下创建一个定义文件
 
 	例子: Account.def
 
 
 3. 你可能需要定义一些属性和方法
 
-	1. 在`demo/scripts/`目录下有三个子目录(base、cell、client)，你可以根据需要添加Account.py。
+	1. 在`assets/scripts/`目录下有三个子目录(base、cell、client)，你可以根据需要添加Account.py。
 
 	2. 不是每个实体都存在(client, base, cell)这三个部分, 你可以根据需要做出一些选择。
 
@@ -195,6 +195,8 @@ docsitem: documentation-entitydef
 
 下载例子代码: 
 [rpgdemo_project.tar]
+
+https://github.com/kbengine/kbengine_demos_assets
 
 
 

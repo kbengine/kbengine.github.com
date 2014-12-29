@@ -83,7 +83,7 @@ KBEngine会读取系统中设置的(KBE_ROOT, KBE_RES_PATH, KBE_BIN_PATH)环境�
 
 		ulimit -c unlimited
 		export KBE_ROOT=~/kbengine/
-		export KBE_RES_PATH=$KBE_ROOT/kbe/res/:$KBE_ROOT/demo/:$KBE_ROOT/demo/scripts/:$KBE_ROOT/demo/res/
+		export KBE_RES_PATH=$KBE_ROOT/kbe/res/:$KBE_ROOT/assets/:$KBE_ROOT/assets/scripts/:$KBE_ROOT/assets/res/
 		export KBE_BIN_PATH=$KBE_ROOT/kbe/bin/server/
 		
 		使环境变量生效:
@@ -102,7 +102,7 @@ KBEngine会读取系统中设置的(KBE_ROOT, KBE_RES_PATH, KBE_BIN_PATH)环境�
 		鼠标右键点击: "我的电脑"->"高级"->"环境变量"， 然后设置(假如安装在C盘)
 
 		KBE_ROOT = C:/kbengine/
-		KBE_RES_PATH = %KBE_ROOT%/kbe/res;%KBE_ROOT%/demo/;%KBE_ROOT%/demo/scripts;%KBE_ROOT%/demo/res/
+		KBE_RES_PATH = %KBE_ROOT%/kbe/res;%KBE_ROOT%/assets/;%KBE_ROOT%/assets/scripts;%KBE_ROOT%/assets/res/
 		KBE_BIN_PATH = %KBE_ROOT%/kbe/bin/server/
 		
 		操作系统用户账号的uid将被用于区分不同的服务器组，如果是多台硬件服务器共同维护一组服务，
@@ -200,7 +200,7 @@ KBEngine会读取系统中设置的(KBE_ROOT, KBE_RES_PATH, KBE_BIN_PATH)环境�
 
 
 如果要修改数据库名称请修改res\server\[kbengine_defs.xml]配置中dbmgr段的databaseName参数 
-  (建议在demo\res\server\[kbengine.xml]中进行重载修改，这样kbengine在做改动后开发者更新时不会发生冲突)。
+  (建议在assets\res\server\[kbengine.xml]中进行重载修改，这样kbengine在做改动后开发者更新时不会发生冲突)。
 
 
 - - -

@@ -53,7 +53,7 @@ Why use a type alias?
 * Engine can automatically identify the type of data for network transmission and storage
 
 
-Path definition file : `demo/scripts/entity_defs/alias.xml`
+Path definition file : `assets/scripts/entity_defs/alias.xml`
 
 ------------------------------------------
 ### Simple type alias

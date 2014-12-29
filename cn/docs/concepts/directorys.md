@@ -10,11 +10,11 @@ docsitem: concepts-directorys
 
 
 	|- kbengine							(KBE_ROOT 根目录)
-		|- demo							(游戏例子工程的根目录)
-			|- res						(工程的所有资源)
+		|- assets						(默认的游戏项目资产库，你可以添加新的资产库通过环境变量绑定)
+			|- res						(所有资源文件)
 				|- spaces				(通常存放游戏场景相关的资源，例如Navmesh)
 				|- server				(通常放置服务端相关的配置文件)
-			|- scripts				(所有的游戏逻辑，python文件)
+			|- scripts				(所有的游戏逻辑，Python文件)
 				|- base				(Base的Python逻辑)
 				|- cell				(Cell的Python逻辑)
 				|- client			(Client的Python逻辑)

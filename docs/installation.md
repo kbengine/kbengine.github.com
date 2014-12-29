@@ -85,7 +85,7 @@ To set environment variables:
 
 		ulimit -c unlimited
 		export KBE_ROOT=~/kbengine/
-		export KBE_RES_PATH=$KBE_ROOT/kbe/res/:$KBE_ROOT/demo/:$KBE_ROOT/demo/scripts/:$KBE_ROOT/demo/res/
+		export KBE_RES_PATH=$KBE_ROOT/kbe/res/:$KBE_ROOT/assets/:$KBE_ROOT/assets/scripts/:$KBE_ROOT/assets/res/
 		export KBE_BIN_PATH=$KBE_ROOT/kbe/bin/server/
 
 		The environmental variables are available:
@@ -103,7 +103,7 @@ To set environment variables:
 		The right mouse button: "My Computer"->"Advanced"->"Environment Variables" Set up(If installed in C drive).
 
 		KBE_ROOT = C:/kbengine/
-		KBE_RES_PATH = %KBE_ROOT%/kbe/res;%KBE_ROOT%/demo/;%KBE_ROOT%/demo/scripts;%KBE_ROOT%/demo/res/
+		KBE_RES_PATH = %KBE_ROOT%/kbe/res;%KBE_ROOT%/assets/;%KBE_ROOT%/assets/scripts;%KBE_ROOT%/assets/res/
 		KBE_BIN_PATH = %KBE_ROOT%/kbe/bin/server/
 
 		uid is used to distinguish between different server groups, 
@@ -198,7 +198,7 @@ Create a database account, username and password is "kbe"
 
 
 If you want to modify the database name, Modify the databaseName in res\server\[kbengine_defs.xml] of dbmgr section 
-  (recommended demo\res\server\[kbengine.xml] overloaded modifications).
+  (recommended assets\res\server\[kbengine.xml] overloaded modifications).
 
 
 - - -

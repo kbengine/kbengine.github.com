@@ -40,7 +40,7 @@ docsitem: documentation-stresstest
 机器人编程
 ====================
 
-参考: demo/scripts/[bots]脚本源代码。
+参考: assets/scripts/[bots]脚本源代码（https://github.com/kbengine/kbengine_demos_assets）。
 
 
 [kbengine_defs.xml]: {{ site.baseurl }}/cn/docs/configuration/kbengine_defs.html

@@ -10,7 +10,7 @@ The server directory structure
 
 
 	|- kbengine							(KBE_ROOT path)
-		|- demo							(Root of the game examples of projects)
+		|- assets						(Game project assets)
 			|- res						(All resource projects)
 				|- spaces				(Usually associated storage resource game scenes, such Navmesh)
 				|- server				(Usually placed Server Configuration)
