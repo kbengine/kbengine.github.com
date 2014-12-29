@@ -40,7 +40,7 @@ Linux防火墙设置
 
 			dbmgr
 
-			billing
+			interfaces
 				内部TCP端口 : 30040		// 第三方回调接口，用于计费、第三方账号等等
 
 	UDP 广播端口: 

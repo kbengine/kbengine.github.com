@@ -66,7 +66,7 @@ The server directory structure
 					|- machine			(Machine sources)
 					|- resourcemgr			(Resourcemgr sources)
 					|- tools			(The assistant tool)
-						|- billing_system	(Support for third-party billing, third-party accounts, etc.)
+						|- interfaces		(Support for third-party billing, third-party accounts, etc.)
 						|- bots			(Stress test, the virtual client, sources)
 						|- guiconsole		(Visualization tool for console, sources)
 						|- message_log		(Server log collection tool, sources)

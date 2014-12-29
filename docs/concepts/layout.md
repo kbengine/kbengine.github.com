@@ -33,7 +33,7 @@ Server component
 
 
 		|----------|            |----------|
-		|  dbmgr   | x 1	| billing  | x 1
+		|  dbmgr   | x 1	|interfaces| x 1
 		|----------|            |----------|
 
 	------------------------|-----|-------------------------------
@@ -90,7 +90,7 @@ Server component description
 	such as: CPU, Memory, cellapp, etc. This information is provided to the component of interest. 
 
 
-	· billingsystem: 
+	· interfaces: 
 	Quick access to third-party billing, third-party accounts, third-party datas.
 
 

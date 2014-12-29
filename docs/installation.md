@@ -235,7 +235,7 @@ Please set ([kbengine.xml] | [kbengine_defs.xml]):
 
 		baseapp 	: externalInterface = eth0, internalInterface = eth1
 		loginapp	: externalInterface = eth0, internalInterface = eth1
-		billingsystem 	: externalInterface = eth0, internalInterface = eth1
+		interfaces 	: externalInterface = eth0, internalInterface = eth1
 		[others]	: externalInterface = eth1, internalInterface = eth1
 
 
@@ -325,25 +325,25 @@ Provide tools explicit connection port:
 
 	[kbengine.xml]->kbmachine->externalPorts_min
 
-Billing access system IP:
+Interfaces IP:
 
-	[kbengine.xml]->billingSystem->ip
+	[kbengine.xml]->interfaces->ip
 
-Billing access system port:
+Interfaces port:
 
-	[kbengine.xml]->billingSystem->port
+	[kbengine.xml]->interfaces->port
 
 Request address third party billing service (billing, login, etc.):
 
-	[kbengine.xml]->billingSystem->thirdpartyChargeService_addr
+	[kbengine.xml]->interfaces->thirdpartyChargeService_addr
 
 Request port third party billing service (billing, login, etc.):
 
-	[kbengine.xml]->billingSystem->thirdpartyChargeService_port
+	[kbengine.xml]->interfaces->thirdpartyChargeService_port
 
 Third party service callback port (billing, login, etc.):
 
-	[kbengine.xml]->billingSystem->thirdpartyService_cbport
+	[kbengine.xml]->interfaces->thirdpartyService_cbport
 
 
 [config]: {{ site.baseurl }}/docs/configuration/

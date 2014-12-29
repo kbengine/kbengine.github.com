@@ -33,7 +33,7 @@ docsitem: concepts-layout
 
 
 		|----------|            |----------|
-		|  dbmgr   | x 1	| billing  | x 1
+		|  dbmgr   | x 1	|interfaces| x 1
 		|----------|            |----------|
 
 	------------------------|-----|-------------------------------
@@ -88,7 +88,7 @@ docsitem: concepts-layout
 	如：CPU、内存等。 这些信息会提供给一些对此比较感兴趣的组件。 
 
 
-	· billingsystem: 
+	· interfaces: 
 	支持快速接入第三方计费、第三方账号、第三方数据， 快速与运营系统耦合。
 
 

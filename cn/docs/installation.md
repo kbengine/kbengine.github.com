@@ -237,7 +237,7 @@ KBEngine会读取系统中设置的(KBE_ROOT, KBE_RES_PATH, KBE_BIN_PATH)环境�
 
 		baseapp 	: externalInterface = eth0, internalInterface = eth1
 		loginapp	: externalInterface = eth0, internalInterface = eth1
-		billingsystem 	: externalInterface = eth0, internalInterface = eth1
+		interfaces 	: externalInterface = eth0, internalInterface = eth1
 		[others]	: externalInterface = eth1, internalInterface = eth1
 
 
@@ -329,23 +329,23 @@ Telnet服务端口(cellapp)：
 
 运营接入服务监听的IP：
 
-	[kbengine.xml]->billingSystem->ip
+	[kbengine.xml]->interfaces->ip
 
 运营接入服务监听的端口：
 
-	[kbengine.xml]->billingSystem->port
+	[kbengine.xml]->interfaces->port
 
 第三方计费服务的请求地址（计费，登录，等等）：
 
-	[kbengine.xml]->billingSystem->thirdpartyChargeService_addr
+	[kbengine.xml]->interfaces->thirdpartyChargeService_addr
 
 第三方计费服务的请求端口（计费，登录，等等）：
 
-	[kbengine.xml]->billingSystem->thirdpartyChargeService_port
+	[kbengine.xml]->interfaces->thirdpartyChargeService_port
 
 第三方服务回调端口（计费，登录，等等）：
 
-	[kbengine.xml]->billingSystem->thirdpartyService_cbport
+	[kbengine.xml]->interfaces->thirdpartyService_cbport
 
 
 [config]: {{ site.baseurl }}/cn/docs/configuration/

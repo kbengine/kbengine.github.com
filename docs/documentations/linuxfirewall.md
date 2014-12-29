@@ -40,7 +40,7 @@ Example:
 
 			dbmgr
 
-			billing
+			interfaces
 				internal(TCP) : 30040		// Third party callback, charge, third party account etc.
 
 	UDP broadcast: 

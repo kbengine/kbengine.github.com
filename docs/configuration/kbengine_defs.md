@@ -168,7 +168,7 @@ there is no conflict in the development along with updated engine or multiple pr
 		<!-- Email services, providing the account verification, password recovery, etc. -->
 		<email_service_config>server/email_service.xml</email_service_config>
 			
-		<billingSystem>
+		<interfaces>
 			<!-- 
 				Account Type:
 				normal: default handling the current process, 
@@ -183,7 +183,7 @@ there is no conflict in the development along with updated engine or multiple pr
 			-->
 			<chargeType> normal </chargeType>
 			
-			<!-- billingSystem address, multiple gameserver can share a billingSystem -->
+			<!-- Interfaces address, multiple gameserver can share a Interfaces -->
 			<host> localhost </host>
 			<port> 30099 	</port>
 			
@@ -202,12 +202,12 @@ there is no conflict in the development along with updated engine or multiple pr
 			<thirdpartyChargeService_addr></thirdpartyChargeService_addr>
 			<thirdpartyChargeService_port> 80 </thirdpartyChargeService_port>
 			
-			<!-- billingSystem and third-party service providers collaborate callback address-->
+			<!-- interfaces and third-party service providers collaborate callback address-->
 			<thirdpartyService_cbport> 30040 </thirdpartyService_cbport>
 			
 			<!-- listen: Maximum listen queue -->
 			<SOMAXCONN> 128 </SOMAXCONN>
-		</billingSystem>
+		</interfaces>
 		
 		<dbmgr>
 			<!-- Debug mode can output the read and write informations -->
