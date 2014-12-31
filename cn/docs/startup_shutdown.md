@@ -69,6 +69,7 @@ docsitem: startup-shutdown
 	如果启动成功将会在日志中找到"Components::process(): Found all the components!"。
 	任何其他情况请在日志中搜索"ERROR"关键字，根据错误描述尝试解决。
 
+	FAQ: http://www.kbengine.org/cn/docs/faq.html
 	获得运行时日志: http://www.kbengine.org/cn/docs/documentations/getlogs.html
 
 
