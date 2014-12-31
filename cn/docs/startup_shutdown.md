@@ -5,14 +5,24 @@ tab: docs
 docsitem: startup-shutdown
 ---
 
+服务端项目资产库
+-------------------
+
+	开发者每创建一个新的游戏项目都需要一个文件夹来存放关于该项目的“脚本代码”、“资源文件”等等，这个文件夹称为服务端游戏项目资产库。
+	引擎根目录有一个默认的"assets"资产库文件夹，该资产库是一个最小的KBE项目，其中包含的文件夹与文件都是必不可少的。
+	如果用户没有设置任何环境变量，引擎会自动绑定到"assets"资产库启动。
+
+	(你也可以在引擎根目录创建一个新的项目资产库，拷贝"assets"并命名为"your_assets")
+
+
 启动服务端(暂不支持)
 -------------------
 
 	Windows:
-		python %KBE_ROOT%/kbe/tools/server/pycluster/cluster_controller.py start
+		%KBE_ROOT%/<你的资产库>/safe_start.bat
 
 	Linux:
-		python $KBE_ROOT/kbe/tools/server/pycluster/cluster_controller.py start
+		$KBE_ROOT/<你的资产库>/safe_start.sh
 
 	(注意: 初次启动KBEngine时，mysql需要初始化一些表结构，可能会花上几分钟请耐心等待完成。)
 
@@ -25,10 +35,10 @@ docsitem: startup-shutdown
 -------------------
 
 	Windows:
-		python %KBE_ROOT%/kbe/tools/server/pycluster/cluster_controller.py stop
+		%KBE_ROOT%/<你的资产库>/safe_kill.bat
 
 	Linux:
-		python $KBE_ROOT/kbe/tools/server/pycluster/cluster_controller.py stop
+		$KBE_ROOT/<你的资产库>/safe_kill.sh
 
 
 - - -
@@ -38,14 +48,14 @@ docsitem: startup-shutdown
 -------------------
 
 	Linux:
-		[kbe @gameserver ~]$ cd $KBE_BIN_PATH
-		[kbe @gameserver ~]$ sh start.sh
-		[kbe @gameserver ~]$ sh kill.sh
+		[kbe @gameserver ~]$ cd $KBE_ROOT/<你的资产库>
+		[kbe @gameserver ~]$ sh start_server_fixed.sh
+		[kbe @gameserver ~]$ sh kill_server.sh
 
 	Windows:
-		cd %KBE_BIN_PATH%
-		!(win)fixedstart.bat
-		!(win)kill.bat
+		cd %KBE_ROOT%/<你的资产目录>
+		start_server_fixed.bat
+		kill_server.bat
 
 
 - - -

@@ -5,14 +5,29 @@ tab: docs
 docsitem: startup-shutdown
 ---
 
+
+The server project assets Library
+-------------------
+
+	Developers to create a new game project, need a folder to store the project on the "script code", "resource file" and etc, 
+	this folder is the game project assets library.
+
+	Engine root directory has a default "assets" Asset Library folder, the asset library is a minimum of KBE projects, 
+	folders and files contained in it are essential.
+
+	If the user does not set any environment variables, the engine will automatically linked to the "assets" startup.
+
+	(you can also in the root directory of the engine to create a new project assets, copy "assets" and name it "your_assets")
+
+
 Startup(nonsupport)
 -------------------
 
 	Windows:
-		python %KBE_ROOT%/kbe/tools/server/pycluster/cluster_controller.py start
+		%KBE_ROOT%/<your assets>/safe_start.bat
 
 	Linux:
-		python $KBE_ROOT/kbe/tools/server/pycluster/cluster_controller.py start
+		$KBE_ROOT/<your assets>/safe_start.sh
 
 
 	(Note: The initial start mysql server will automatically build the table, you may need to wait for some time.)
@@ -25,10 +40,10 @@ Shutdown
 -------------------
 
 	Windows:
-		python %KBE_ROOT%/kbe/tools/server/pycluster/cluster_controller.py stop
+		%KBE_ROOT%/<your assets>/safe_kill.bat
 
 	Linux:
-		python $KBE_ROOT/kbe/tools/server/pycluster/cluster_controller.py stop
+		$KBE_ROOT/<your assets>/safe_kill.sh
 
 
 - - -
@@ -38,14 +53,14 @@ Quick Startup and Shutdown
 -------------------
 
 	Linux:
-		[kbe @gameserver ~]$ cd $KBE_BIN_PATH
-		[kbe @gameserver ~]$ sh start.sh
-		[kbe @gameserver ~]$ sh kill.sh
+		[kbe @gameserver ~]$ cd $KBE_ROOT/<your assets>
+		[kbe @gameserver ~]$ sh start_server_fixed.sh
+		[kbe @gameserver ~]$ sh kill_server.sh
 
 	Windows:
-		cd KBE_BIN_PATH
-		!(win)fixedstart.bat
-		!(win)kill.bat
+		cd %KBE_ROOT%/<your assets>
+		start_server_fixed.bat
+		kill_server.bat
 
 
 - - -
