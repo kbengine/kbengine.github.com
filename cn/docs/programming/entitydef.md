@@ -134,6 +134,11 @@ docsitem: documentation-entitydef
 			<onReqAvatarList>
 				// 远程方法的参数
 				<Arg>			AVATAR_INFOS_LIST		</Arg>
+
+				// (可选)
+				// 方法的自定义协议ID，如果客户端不使用kbe配套的SDK来开发，客户端需要开发跟kbe对接的协议,
+				// 开发者可以定义属性的ID便于识别，c++协议层使用一个uint16来描述，如果不定义ID则引擎会使用
+				// 自身规则所生成的协议ID, 这个ID必须所有def文件中唯一
 				<Utype>			1001				</Utype>
 			</onReqAvatarList>
 
@@ -144,8 +149,14 @@ docsitem: documentation-entitydef
 		<BaseMethods>
 			// Baseapp暴露的远程方法名称
 			<reqAvatarList>
-				// cell暴露方法必须存在这个标记
+				// (可选)
+				// 定义了此标记则允许客户端调用,否则仅服务端内部暴露
 				<Exposed/> 
+
+				// (可选)
+				// 方法的自定义协议ID，如果客户端不使用kbe配套的SDK来开发，客户端需要开发跟kbe对接的协议,
+				// 开发者可以定义属性的ID便于识别，c++协议层使用一个uint16来描述，如果不定义ID则引擎会使用
+				// 自身规则所生成的协议ID, 这个ID必须所有def文件中唯一
 				<Utype>			1002				</Utype>
 			</reqAvatarList>
 			
@@ -156,6 +167,14 @@ docsitem: documentation-entitydef
 		<CellMethods>
 			// Cellapp暴露的远程方法名称
 			<hello>
+				// (可选)
+				// 定义了此标记则允许客户端调用,否则仅服务端内部暴露
+				<Exposed/> 
+
+				// (可选)
+				// 方法的自定义协议ID，如果客户端不使用kbe配套的SDK来开发，客户端需要开发跟kbe对接的协议,
+				// 开发者可以定义属性的ID便于识别，c++协议层使用一个uint16来描述，如果不定义ID则引擎会使用
+				// 自身规则所生成的协议ID, 这个ID必须所有def文件中唯一
 				<Utype>			1003				</Utype>
 			</hello>
 		</CellMethods>
