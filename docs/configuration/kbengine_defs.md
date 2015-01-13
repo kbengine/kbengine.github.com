@@ -101,20 +101,8 @@ there is no conflict in the development along with updated engine or multiple pr
 				<internal> 60.0 </internal>
 				<external> 60.0 </external>
 			</timeout>
-
-			<!-- Send retry max-time and max-count -->
-			<resend> 
-				<internal> 
-					<interval> 10 </interval>					<!-- Millisecond -->
-					<retries> 0 </retries>						<!-- Retry count, 0 is unlimited -->
-				</internal>
-				<external>
-					<interval> 10 </interval>					<!-- Millisecond -->
-					<retries> 3 </retries>						<!-- Retry count, 0 is unlimited -->
-				</external>
-			</resend>
 			
-			<!-- socket读写缓冲大小 -->
+			<!-- socket send/recv buffer size -->
 			<readBufferSize> 
 				<internal>	16777216	</internal> 				<!-- 16M -->
 				<external>	0		</external>				<!-- system default -->
@@ -124,18 +112,32 @@ there is no conflict in the development along with updated engine or multiple pr
 				<external>	0		</external>				<!-- system default -->
 			</writeBufferSize>
 			
-			<!-- A tick, the value of the receive window overflow, 0 is unlimited -->
-			<receiveWindowOverflow>
-				<messages>
-					<critical>	32			</critical>
-					<internal>	65535			</internal>
-					<external>	256			</external>
-				</messages>
-				<bytes>
-					<internal>	0			</internal>
-					<external>	65535			</external>
-				</bytes>
-			</receiveWindowOverflow>
+			<!-- A tick, the value of the send/receive window overflow, 0 is unlimited -->
+			<windowOverflow>
+				<send>
+					<messages>
+						<critical>	128			</critical>
+						<internal>	65535		</internal>
+						<external>	256			</external>
+					</messages>
+					<bytes>
+						<internal>	0			</internal>
+						<external>	0			</external>
+					</bytes>
+				</send>
+				
+				<receive>
+					<messages>
+						<critical>	24			</critical>
+						<internal>	65535		</internal>
+						<external>	32			</external>
+					</messages>
+					<bytes>
+						<internal>	0			</internal>
+						<external>	2048		</external>
+					</bytes>
+				</receive>
+			</windowOverflow>
 			
 			<!-- Encrypted communication, channel-external only
 				Optional encryption:
