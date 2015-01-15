@@ -13,7 +13,7 @@ Installation
 
 Install KBEngine on a (Windows/Centos/Redhat/Debian/Ubuntu etc.) server, in your terminal input:
 
-	python kbengine/kbe/tools/server/install/installer.py install=remotesrc
+	python kbengine/kbe/tools/server/install/installer.py install
 
 if you don't want to trust a script, install KBEngine manually.
 
