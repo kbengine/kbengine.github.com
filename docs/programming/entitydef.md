@@ -30,14 +30,14 @@ What needs to be defined Entity-method:
 You need to perform the following steps:
 -----------------------------------------
 
-1. Registration of Entity
+1. Registration of Entity (reference:[entities.xml])
 
 	Path definition file : `assets/scripts/entities.xml`
 
 	Example:
 
 		<root>
-			<Account/>
+			<Account hasClient="true"></Account> <!-- <Account hasCell="true", hasBase="true", hasClient="true"></Account> -->
 			<Avatar/>
 			<Spaces/>
 			<Space/>
@@ -224,3 +224,4 @@ https://github.com/kbengine/kbengine_demos_assets
 
 
 [rpgdemo_project.tar]: {{ site.baseurl }}/assets/other/rpgdemo_project.tar
+[entities.xml]: {{ site.baseurl }}/docs/configuration/entities.html

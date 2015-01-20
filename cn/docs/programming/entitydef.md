@@ -31,14 +31,14 @@ docsitem: documentation-entitydef
 您需要执行以下步骤：
 -----------------------------------------
 
-1. 注册实体
+1. 注册实体（详细请参考：[entities.xml]）
 
 	目录地址 : `assets/scripts/entities.xml`
 
 	例子:
 
 		<root>
-			<Account/>
+			<Account hasClient="true"></Account> <!-- <Account hasCell="true", hasBase="true", hasClient="true"></Account> -->
 			<Avatar/>
 			<Spaces/>
 			<Space/>
@@ -220,3 +220,4 @@ https://github.com/kbengine/kbengine_demos_assets
 
 
 [rpgdemo_project.tar]: {{ site.baseurl }}/assets/other/rpgdemo_project.tar
+[entities.xml]: {{ site.baseurl }}/cn/docs/configuration/entities.html
