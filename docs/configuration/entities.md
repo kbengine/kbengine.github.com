@@ -5,7 +5,7 @@ tab: docs
 docsitem: configuration-entities
 ---
 
-Entity registration file(`<your assets>`/scripts/entities.xml)
+Entity registration file(<your_assets>/scripts/entities.xml)
 ===================
 
 	To add an entity type must be registered here, usually registered an entity only needs such as: <Avatar/>.

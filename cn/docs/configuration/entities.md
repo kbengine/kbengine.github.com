@@ -5,7 +5,7 @@ tab: docs
 docsitem: configuration-entities
 ---
 
-实体注册文件(`<h1><你的资产库></h1>`/scripts/entities.xml)
+实体注册文件(<你的资产库>/scripts/entities.xml)
 ===================
 
 	要新增一个实体类型必须在这个配置文件中注册该实体，通常注册一个实体只需如：<Avatar/>。
