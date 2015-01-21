@@ -18,7 +18,7 @@ Entity registration file( <<your_assets>>/scripts/entities.xml )
 
 	For example: 
 		In the Unity3D plugin game programming environment, the client part of the entity and not written scripts/client directory, 
-		and some parts of the entity client may indeed be no property or method, but entities need to be synchronized to the client, such as: Transfer gate
+		engine therefore determines the entity without the client part, but entities need to be synchronized to the client, such as: Transfer gate
 		Then when the plug from the server to import registered entity description, the results are not likely to want, you can force the specified tag to indicate the entity that contains a certain part.
 
 		<Account hasClient="true"></Account>
