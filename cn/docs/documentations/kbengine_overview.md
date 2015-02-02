@@ -49,16 +49,14 @@ PPT&PDF文档下载：
 
 
 
-2.KBEngine的逻辑脚本
+2.游戏基础对象(Entity)
 ---------------------------------------
 
 2.1 [游戏项目资产库]
 
-2.2 [个性化脚本(Personality)]
+2.2 [游戏基础对象(Entity)]
 
-2.3 [游戏基础对象(Entity)]
-
-2.4 [实现一个Entity]
+2.3 [实现一个Entity]
 
 
 
@@ -66,7 +64,7 @@ PPT&PDF文档下载：
 
 
 
-3. Entity的通信
+3.Entity的通信
 ---------------------------------------
 
 3.1 Mailbox
@@ -77,7 +75,7 @@ PPT&PDF文档下载：
 
 
 
-4. Entity核心部分
+4.Entity核心部件
 ---------------------------------------
 
 
@@ -142,11 +140,13 @@ PPT&PDF文档下载：
 
 
 [服务器的架构]: {{ site.baseurl }}/cn/docs/documentations/kbengine_overview/overview.html
-[2.实现一个Entity]: {{ site.baseurl }}/assets/other/KBEngine overview.zip
-[3.Entity的通信]: {{ site.baseurl }}/assets/other/KBEngine overview.zip
-[4.Entity核心部分]: {{ site.baseurl }}/assets/other/KBEngine overview.zip
-[5.Cell 功能集]: {{ site.baseurl }}/assets/other/KBEngine overview.zip
-[6.服务器设置和维护]: {{ site.baseurl }}/assets/other/KBEngine overview.zip
-[7.服务器调试]: {{ site.baseurl }}/assets/other/KBEngine overview.zip
-[8.服务器的profiling和压力测试]: {{ site.baseurl }}/assets/other/KBEngine overview.zip
+[Loginapp进程]: {{ site.baseurl }}/assets/other/KBEngine overview.zip
+[Baseapp进程]: {{ site.baseurl }}/assets/other/KBEngine overview.zip
+[Baseapp进程的管理器(BaseappMgr)]: {{ site.baseurl }}/assets/other/KBEngine overview.zip
+[Cellapp进程]: {{ site.baseurl }}/assets/other/KBEngine overview.zip
+[Cellapp进程的管理器(CellappMgr)]: {{ site.baseurl }}/assets/other/KBEngine overview.zip
+[数据库管理器(DBMgr)]: {{ site.baseurl }}/assets/other/KBEngine overview.zip
+[KBEngine的机器守护进程(Machine)]: {{ site.baseurl }}/assets/other/KBEngine overview.zip
+[日志收集器(Logger)]: {{ site.baseurl }}/assets/other/KBEngine overview.zip
+[第三方接口服务(Interfaces)]: {{ site.baseurl }}/assets/other/KBEngine overview.zip
 [KBEngine 技术概览.zip]: {{ site.baseurl }}/assets/other/KBEngine overview.zip
