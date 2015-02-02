@@ -149,4 +149,8 @@ PPT&PDF文档下载：
 [KBEngine的机器守护进程(Machine)]: {{ site.baseurl }}/assets/other/KBEngine overview.zip
 [日志收集器(Logger)]: {{ site.baseurl }}/assets/other/KBEngine overview.zip
 [第三方接口服务(Interfaces)]: {{ site.baseurl }}/assets/other/KBEngine overview.zip
+[用机器人做压力测试]: {{ site.baseurl }}/cn/docs/documentations/stresstest.html
+[服务端性能剖析工具(Profiling)]:  {{ site.baseurl }}/cn/docs/documentations/profile.html
+
+
 [KBEngine 技术概览.zip]: {{ site.baseurl }}/assets/other/KBEngine overview.zip
