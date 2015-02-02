@@ -140,15 +140,15 @@ PPT&PDF文档下载：
 
 
 [服务器的架构]: {{ site.baseurl }}/cn/docs/documentations/kbengine_overview/overview.html
-[Loginapp进程]: {{ site.baseurl }}/assets/other/KBEngine overview.zip
-[Baseapp进程]: {{ site.baseurl }}/assets/other/KBEngine overview.zip
-[Baseapp进程的管理器(BaseappMgr)]: {{ site.baseurl }}/assets/other/KBEngine overview.zip
-[Cellapp进程]: {{ site.baseurl }}/assets/other/KBEngine overview.zip
-[Cellapp进程的管理器(CellappMgr)]: {{ site.baseurl }}/assets/other/KBEngine overview.zip
-[数据库管理器(DBMgr)]: {{ site.baseurl }}/assets/other/KBEngine overview.zip
-[KBEngine的机器守护进程(Machine)]: {{ site.baseurl }}/assets/other/KBEngine overview.zip
-[日志收集器(Logger)]: {{ site.baseurl }}/assets/other/KBEngine overview.zip
-[第三方接口服务(Interfaces)]: {{ site.baseurl }}/assets/other/KBEngine overview.zip
+[Loginapp进程]: {{ site.baseurl }}/cn/docs/documentations/kbengine_overview/loginapp.html
+[Baseapp进程]: {{ site.baseurl }}/cn/docs/documentations/kbengine_overview/baseapp.html
+[Baseapp进程的管理器(BaseappMgr)]: {{ site.baseurl }}/cn/docs/documentations/kbengine_overview/baseappmgr.html
+[Cellapp进程]: {{ site.baseurl }}/cn/docs/documentations/kbengine_overview/cellapp.html
+[Cellapp进程的管理器(CellappMgr)]: {{ site.baseurl }}/cn/docs/documentations/kbengine_overview/cellappmgr.html
+[数据库管理器(DBMgr)]: {{ site.baseurl }}/cn/docs/documentations/kbengine_overview/dbmgr.html
+[KBEngine的机器守护进程(Machine)]: {{ site.baseurl }}/cn/docs/documentations/kbengine_overview/machine.html
+[日志收集器(Logger)]: {{ site.baseurl }}/cn/docs/documentations/kbengine_overview/logger.html
+[第三方接口服务(Interfaces)]: {{ site.baseurl }}/cn/docs/documentations/kbengine_overview/interfaces.html
 [用机器人做压力测试]: {{ site.baseurl }}/cn/docs/documentations/stresstest.html
 [服务端性能剖析工具(Profiling)]:  {{ site.baseurl }}/cn/docs/documentations/profile.html
 
