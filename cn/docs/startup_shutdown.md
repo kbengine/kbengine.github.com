@@ -82,29 +82,23 @@ docsitem: startup-shutdown
 
 打开!(win)fixedstart.bat可以看到进程启动时附带了一些参数:
 
-	start %KBE_BIN_PATH%/machine.exe	--cid=2129652375332859700 --grouporder=1  --globalorder=1
-	start %KBE_BIN_PATH%/logger.exe		--cid=1129653375331859700 --grouporder=1 --globalorder=2
-	start %KBE_BIN_PATH%/interfaces.exe	--cid=1129652375332859700 --grouporder=1 --globalorder=3
-	start %KBE_BIN_PATH%/dbmgr.exe		--cid=3129652375332859700 --grouporder=1 --globalorder=4
-	start %KBE_BIN_PATH%/baseappmgr.exe	--cid=4129652375332859700 --grouporder=1  --globalorder=5
-	start %KBE_BIN_PATH%/cellappmgr.exe	--cid=5129652375332859700 --grouporder=1  --globalorder=6
-	start %KBE_BIN_PATH%/baseapp.exe	--cid=6129652375332859700 --grouporder=1  --globalorder=7
-	start %KBE_BIN_PATH%/baseapp.exe	--cid=6129652375332859701 --grouporder=2  --globalorder=8
-	start %KBE_BIN_PATH%/cellapp.exe	--cid=7129652375332859700 --grouporder=1  --globalorder=9
-	start %KBE_BIN_PATH%/cellapp.exe	--cid=7129652375332859701 --grouporder=2  --globalorder=10
-	start %KBE_BIN_PATH%/loginapp.exe	--cid=8129652375332859700 --grouporder=1  --globalorder=11
+	start %KBE_BIN_PATH%/machine.exe	--cid=2129652375332859700 --gus=1
+	start %KBE_BIN_PATH%/logger.exe		--cid=1129653375331859700 --gus=2
+	start %KBE_BIN_PATH%/interfaces.exe	--cid=1129652375332859700 --gus=3
+	start %KBE_BIN_PATH%/dbmgr.exe		--cid=3129652375332859700 --gus=4
+	start %KBE_BIN_PATH%/baseappmgr.exe	--cid=4129652375332859700 --gus=5
+	start %KBE_BIN_PATH%/cellappmgr.exe	--cid=5129652375332859700 --gus=6
+	start %KBE_BIN_PATH%/baseapp.exe	--cid=6129652375332859700 --gus=7
+	start %KBE_BIN_PATH%/baseapp.exe	--cid=6129652375332859701 --gus=8
+	start %KBE_BIN_PATH%/cellapp.exe	--cid=7129652375332859700 --gus=9
+	start %KBE_BIN_PATH%/cellapp.exe	--cid=7129652375332859701 --gus=10
+	start %KBE_BIN_PATH%/loginapp.exe	--cid=8129652375332859700 --gus=11
 
-	--cid:
-		每个进程都有一个唯一ID，唯一ID在合适的时候用于区分他们之间的身份。
+	--cid:(必须设置)
+		类型为uint64, 全名component id, 每个进程都有一个唯一ID，唯一ID在合适的时候用于区分他们之间的身份。
 
-	--grouporder:
-		多个相同名称的进程能形成一个进程组，这个参数描述了进程启动的先后顺序。
-		这个顺序在脚本中也会用到，例如：在第一个启动的baseapp进程上创建某个实体。
-
-	--globalorder:
-		全局启动顺序，描述了该进程在该服务组内启动的顺序，这个值也会被引擎genUUID64之类的函数用到。
-		这个顺序如果能在多个服务组内保持唯一性，那么在合服的时候能够带来一定的便利性。
+	--gus:(可选设置)
+		类型为uint16, 全名genUUID64 sections，这个值会被引擎KBEngine.genUUID64函数用到，设置为不同的值genUUID64将在不同的区间产生唯一uuid。
+		这个值如果能在多个服务组进程之间保持唯一性，那么在合服的时候能够带来一定的便利性。
 		例如：游戏服A和游戏服B中的物品在数据库中存储的ID都使用genUUID64生成，那么在合服的时候能够直接向一张表中合并数据。
-		(注意：如果globalorder超过65535或者小于等于0，genUUID64将只能保证该进程唯一)
-
-	(注意：如果启动时没有附带参数，那么进程将随机生成一个cid，grouporder和globalorder会从machine得到。)
+		(注意：如果gus超过65535或者小于等于0，genUUID64将只能保证当前进程唯一)
