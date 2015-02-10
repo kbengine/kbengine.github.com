@@ -98,7 +98,10 @@ docsitem: startup-shutdown
 		类型为uint64, 全名component id, 每个进程都有一个唯一ID，唯一ID在合适的时候用于区分他们之间的身份。
 
 	--gus:(可选设置)
-		类型为uint16, 全名genUUID64 sections，这个值会被引擎KBEngine.genUUID64函数用到，设置为不同的值genUUID64将在不同的区间产生唯一uuid。
+		类型为uint16, 全名genUUID64 sections，这个值会被引擎KBEngine.genUUID64函数用到，设置为不同的值genUUID64将在
+		不同的区间产生唯一uuid。
+
 		这个值如果能在多个服务组进程之间保持唯一性，那么在合服的时候能够带来一定的便利性。
+
 		例如：游戏服A和游戏服B中的物品在数据库中存储的ID都使用genUUID64生成，那么在合服的时候能够直接向一张表中合并数据。
 		(注意：如果gus超过65535或者小于等于0，genUUID64将只能保证当前进程唯一)
