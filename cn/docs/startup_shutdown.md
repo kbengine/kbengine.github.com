@@ -19,10 +19,10 @@ docsitem: startup-shutdown
 -------------------
 
 	Windows:
-		%KBE_ROOT%/<你的资产库>/safe_start.bat
+		%KBE_ROOT%/<服务端项目资产库>/safe_start.bat
 
 	Linux:
-		$KBE_ROOT/<你的资产库>/safe_start.sh
+		$KBE_ROOT/<服务端项目资产库>/safe_start.sh
 
 	(注意: 初次启动KBEngine时，mysql需要初始化一些表结构，可能会花上几分钟请耐心等待完成。)
 
@@ -35,10 +35,10 @@ docsitem: startup-shutdown
 -------------------
 
 	Windows:
-		%KBE_ROOT%/<你的资产库>/safe_kill.bat
+		%KBE_ROOT%/<服务端项目资产库>/safe_kill.bat
 
 	Linux:
-		$KBE_ROOT/<你的资产库>/safe_kill.sh
+		$KBE_ROOT/<服务端项目资产库>/safe_kill.sh
 
 
 - - -
@@ -48,12 +48,12 @@ docsitem: startup-shutdown
 -------------------
 
 	Linux:
-		[kbe @gameserver ~]$ cd $KBE_ROOT/<你的资产库>
+		[kbe @gameserver ~]$ cd $KBE_ROOT/<服务端项目资产库>
 		[kbe @gameserver ~]$ sh start_server.sh
 		[kbe @gameserver ~]$ sh kill_server.sh
 
 	Windows:
-		cd %KBE_ROOT%/<你的资产库>
+		cd %KBE_ROOT%/<服务端项目资产库>
 		start_server.bat
 		kill_server.bat
 
