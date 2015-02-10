@@ -49,12 +49,12 @@ docsitem: startup-shutdown
 
 	Linux:
 		[kbe @gameserver ~]$ cd $KBE_ROOT/<你的资产库>
-		[kbe @gameserver ~]$ sh start_server_fixed.sh
+		[kbe @gameserver ~]$ sh start_server.sh
 		[kbe @gameserver ~]$ sh kill_server.sh
 
 	Windows:
-		cd %KBE_ROOT%/<你的资产目录>
-		start_server_fixed.bat
+		cd %KBE_ROOT%/<你的资产库>
+		start_server.bat
 		kill_server.bat
 
 
@@ -80,7 +80,7 @@ docsitem: startup-shutdown
 启动参数的意义:
 -------------------
 
-打开!(win)fixedstart.bat可以看到进程启动时附带了一些参数:
+打开<你的资产库>/start_server.bat可以看到进程启动时附带了一些参数:
 
 	start %KBE_BIN_PATH%/machine.exe	--cid=2129652375332859700 --gus=1
 	start %KBE_BIN_PATH%/logger.exe		--cid=1129653375331859700 --gus=2

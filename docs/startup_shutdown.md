@@ -54,12 +54,12 @@ Quick Startup and Shutdown
 
 	Linux:
 		[kbe @gameserver ~]$ cd $KBE_ROOT/<your assets>
-		[kbe @gameserver ~]$ sh start_server_fixed.sh
+		[kbe @gameserver ~]$ sh start_server.sh
 		[kbe @gameserver ~]$ sh kill_server.sh
 
 	Windows:
 		cd %KBE_ROOT%/<your assets>
-		start_server_fixed.bat
+		start_server.bat
 		kill_server.bat
 
 

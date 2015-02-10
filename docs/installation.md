@@ -143,7 +143,8 @@ Install Mysql:
 		Download and install the latest version of:
 		http://dev.mysql.com/downloads/windows/
 
-		If the Windows then add the following code to make my.ini Mysql case sensitive
+		If the Windows then add the following code to make my.ini Mysql case sensitive.
+		On the command line (SC QC MySQL|find ".ini") to view the my.ini file directory.
 
 		[mysqld]
 		lower_case_table_names = 0
