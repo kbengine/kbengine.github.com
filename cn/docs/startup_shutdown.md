@@ -13,7 +13,7 @@ docsitem: startup-shutdown
 	如果用户没有设置任何环境变量，引擎会自动绑定到"assets"资产库启动。
 
 	(你也可以在引擎根目录创建一个新的项目资产库，拷贝"assets"并命名为"your_assets")
-	(如果你是想运行KBE的demo，需要下载demo的服务端资产库（https://github.com/kbengine/kbengine_demos_assets），详见项目说明)
+	(如果想运行KBE的demos，需要下载demos的服务端资产库（https://github.com/kbengine/kbengine_demos_assets），详见项目说明)
 
 启动服务端(暂不支持)
 -------------------
