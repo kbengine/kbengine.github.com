@@ -6,19 +6,19 @@ docsitem: startup-shutdown
 ---
 
 
-The server project assets Library
+The server project "Assets"
 -------------------
 
 	Developers to create a new game project, need a folder to store the project on the "script code", "resource file" and etc, 
-	this folder is the game project assets library.
+	this folder is the game project assets.
 
-	Engine root directory has a default "assets" Asset Library folder, the asset library is a minimum of KBE projects, 
+	Engine root directory has a default "assets" Asset folder, the asset is a minimum of KBE projects, 
 	folders and files contained in it are essential.
 
 	If the user does not set any environment variables, the engine will automatically linked to the "assets" startup.
 
-	(you can also in the root directory of the engine to create a new project assets, copy "assets" and name it "your_assets")
-
+	(You can also in the root directory of the engine to create a new project assets, copy "assets" and name it "your_assets")
+	(If you want to run KBE demos, need to download the demos server assets (https://github.com/kbengine/kbengine_demos_assets), see the description of the project)
 
 Startup(nonsupport)
 -------------------
