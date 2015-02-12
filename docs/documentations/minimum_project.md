@@ -12,10 +12,7 @@ This is the smallest KBEngine game projects, including modules are indispensable
 
 Download examples:
 
-[kbassets(minimum).tar.gz]
-
 [kbassets(minimum).zip]
 
 
-[kbassets(minimum).tar.gz]: {{ site.baseurl }}/assets/other/kbassets(minimum).tar.gz
 [kbassets(minimum).zip]: {{ site.baseurl }}/assets/other/kbassets(minimum).zip

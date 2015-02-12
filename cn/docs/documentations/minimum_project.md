@@ -12,10 +12,6 @@ docsitem: documentation-gameexample1
 
 下载例子: 
 
-[kbassets(minimum).tar.gz]
-
 [kbassets(minimum).zip]
 
-
-[kbassets(minimum).tar.gz]: {{ site.baseurl }}/assets/other/kbassets(minimum).tar.gz
 [kbassets(minimum).zip]: {{ site.baseurl }}/assets/other/kbassets(minimum).zip
