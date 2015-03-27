@@ -25,7 +25,7 @@ Entity registration file( <<your_assets>>/scripts/entities.xml )
 		hasClient indicate whether to include the client part of the entity.
 
 	 <root>
-	     <Account hasClient="true"></Account><!-- <Account hasCell="true", hasBase="true", hasClient="true"></Account> -->
+	     <Account hasClient="true"></Account><!-- <Account hasCell="true" hasBase="true" hasClient="true"></Account> -->
 	     <Avatar/>
 	     <Spaces/>
 	     <Space/>

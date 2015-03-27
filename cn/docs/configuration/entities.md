@@ -23,7 +23,7 @@ docsitem: configuration-entities
 		hasClient表示实体是否包含客户端部分。
 
 	 <root>
-	     <Account hasClient="true"></Account><!-- <Account hasCell="true", hasBase="true", hasClient="true"></Account> -->
+	     <Account hasClient="true"></Account><!-- <Account hasCell="true" hasBase="true" hasClient="true"></Account> -->
 	     <Avatar/>
 	     <Spaces/>
 	     <Space/>
