@@ -229,7 +229,7 @@ KBEngine会读取系统中设置的(KBE_ROOT, KBE_RES_PATH, KBE_BIN_PATH)环境�
 
 ### 5: 多网卡环境配置: (可选)
 
-如果eth0是外部网卡地址, eth1是内部网卡地址执行如下命令设置广播地址为内部网卡地址:
+如果eth0是外部网卡地址, eth1是内部网卡地址执行如下命令设置广播地址为内部网卡地址（仅Linux）:
 
 		/sbin/ip route del broadcast 255.255.255.255 dev eth0
 		/sbin/ip route add broadcast 255.255.255.255 dev eth1
@@ -241,6 +241,7 @@ KBEngine会读取系统中设置的(KBE_ROOT, KBE_RES_PATH, KBE_BIN_PATH)环境�
 		interfaces 	: externalInterface = eth0, internalInterface = eth1
 		[others]	: externalInterface = eth1, internalInterface = eth1
 
+		（注意：eth0、eth1为网卡名称，也可以直接配置对应的IP地址或MAC地址）
 
 - - -
 

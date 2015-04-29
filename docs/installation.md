@@ -227,7 +227,7 @@ see: [High-performance Linux server configuration]
 
 ### 5: Multi-card(NIC) configurations: (Optional)
 
-If eth0 is external, eth1 is the internal:
+If eth0 is external, eth1 is the internal(Linux only):
 
 		/sbin/ip route del broadcast 255.255.255.255 dev eth0
 		/sbin/ip route add broadcast 255.255.255.255 dev eth1
@@ -239,6 +239,7 @@ Please set ([kbengine.xml] | [kbengine_defs.xml]):
 		interfaces 	: externalInterface = eth0, internalInterface = eth1
 		[others]	: externalInterface = eth1, internalInterface = eth1
 
+		(Note: eth0, eth1 is the card name, also can set the IP address or MAC address)
 
 - - -
 
