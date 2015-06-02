@@ -8,9 +8,9 @@ docsitem: documentation-gameexample3
 房间类游戏例子
 ====================
 
-download: 
-[kbempty_project.tar]
+下载: 
+[kbengine_rooms_assets.zip]
 
 
 
-[kbempty_project.tar]: {{ site.baseurl }}/assets/other/kbempty_project.tar
+[kbengine_rooms_assets.zip]: {{ site.baseurl }}/assets/other/kbengine_rooms_assets.zip
