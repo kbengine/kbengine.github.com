@@ -1,4 +1,4 @@
----
+﻿---
 layout: docs
 title: Get the runtime logs · Docs · KBEngine
 tab: docs

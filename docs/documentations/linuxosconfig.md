@@ -1,4 +1,4 @@
----
+﻿---
 layout: docs
 title: High-performance linux server configuration · Docs · KBEngine
 tab: docs

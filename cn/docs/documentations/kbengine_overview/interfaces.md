@@ -1,4 +1,4 @@
----
+﻿---
 layout: docs_cn
 title: Interfaces · Docs · KBEngine
 tab: docs
