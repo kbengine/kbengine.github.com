@@ -141,10 +141,10 @@ KBEngine会读取系统中设置的(KBE_ROOT, KBE_RES_PATH, KBE_BIN_PATH)环境�
 		下载并安装最新版本:
 		http://dev.mysql.com/downloads/windows/
 
-		Windows环境，Mysql默认是忽略大小写的，请在my.ini添加如下命令设置大小写敏感
-		在命令行使用(sc qc MySQL|find ".ini")查看my.ini文件所在目录
-        如果没有发现my.ini文件，而是发现了my-default.ini文件，对my-default.ini文件复制一份，
-        重命名为my.ini文件，在拷贝好的my.ini文件中操作。
+		Windows环境，Mysql默认是忽略大小写的，请在my.ini添加如下命令设置大小写敏感。
+		在命令行使用(sc qc MySQL|find ".ini")查看my.ini文件所在目录。
+		如果没有发现my.ini文件，而是发现了my-default.ini文件，对my-default.ini文件复制一份，
+		重命名为my.ini文件，在拷贝好的my.ini文件中操作。
 
 		[mysqld]
 		lower_case_table_names = 0
