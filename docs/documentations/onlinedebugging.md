@@ -1,4 +1,4 @@
-﻿---
+---
 layout: docs
 title: Online debugging · Docs · KBEngine
 tab: docs

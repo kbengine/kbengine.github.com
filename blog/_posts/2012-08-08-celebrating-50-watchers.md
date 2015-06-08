@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post
 title: Celebrating 50 Watchers!
 author: kbengine

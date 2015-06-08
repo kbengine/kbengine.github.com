@@ -1,4 +1,4 @@
-﻿---
+---
 layout: docs_cn
 title: Loginapp · Docs · KBEngine
 tab: docs

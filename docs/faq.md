@@ -1,4 +1,4 @@
-﻿---
+---
 layout: docs
 title: FAQ · Docs · KBEngine
 tab: docs

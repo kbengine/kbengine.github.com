@@ -1,4 +1,4 @@
-﻿---
+---
 layout: docs
 title: Server Configuration · Docs · KBEngine
 tab: docs

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: docs
 title: Build · Docs · KBEngine
 tab: docs

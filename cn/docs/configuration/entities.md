@@ -1,4 +1,4 @@
-﻿---
+---
 layout: docs_cn
 title: Entities · Docs · KBEngine
 tab: docs

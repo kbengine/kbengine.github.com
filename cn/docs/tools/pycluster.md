@@ -1,4 +1,4 @@
-﻿---
+---
 layout: docs_cn
 title: Pycluster Tools · Docs · KBEngine
 tab: docs

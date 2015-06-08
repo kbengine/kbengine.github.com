@@ -1,4 +1,4 @@
-﻿---
+---
 layout: docs_cn
 title: Machine · Docs · KBEngine
 tab: docs

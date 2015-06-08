@@ -1,4 +1,4 @@
-﻿---
+---
 layout: docs_cn
 title: Logger · Docs · KBEngine
 tab: docs

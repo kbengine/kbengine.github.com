@@ -1,4 +1,4 @@
-﻿---
+---
 layout: docs_cn
 title: Type the alias · Docs · KBEngine
 tab: docs

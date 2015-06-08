@@ -1,4 +1,4 @@
-﻿---
+---
 layout: docs
 title: Stress Test · Docs · KBEngine
 tab: docs

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: docs
 title: The room games · Docs · KBEngine
 tab: docs

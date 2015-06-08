@@ -1,4 +1,4 @@
-﻿---
+---
 layout: docs_cn
 title: Updating · Docs · KBEngine
 tab: docs

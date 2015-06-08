@@ -1,4 +1,4 @@
-﻿---
+---
 layout: docs_cn
 title: Server Engine Programming · Docs · KBEngine
 tab: docs

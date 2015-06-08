@@ -1,4 +1,4 @@
-﻿---
+---
 layout: docs_cn
 title: Global Configuration · Docs · KBEngine
 tab: docs

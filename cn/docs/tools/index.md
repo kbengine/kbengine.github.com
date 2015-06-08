@@ -1,4 +1,4 @@
-﻿---
+---
 layout: docs_cn
 title: Tools Overview · Docs · KBEngine
 tab: docs

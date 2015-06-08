@@ -1,4 +1,4 @@
-﻿---
+---
 layout: docs_cn
 title: BaseappMgr · Docs · KBEngine
 tab: docs

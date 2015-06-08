@@ -1,4 +1,4 @@
-﻿---
+---
 layout: docs
 title: Installation · Docs · KBEngine
 tab: docs

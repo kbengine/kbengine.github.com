@@ -1,4 +1,4 @@
-﻿---
+---
 layout: docs_cn
 title: Guiconsole Tools · Docs · KBEngine
 tab: docs

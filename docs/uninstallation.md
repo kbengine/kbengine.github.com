@@ -1,4 +1,4 @@
-﻿---
+---
 layout: docs
 title: Uninstallation · Docs · KBEngine
 tab: docs

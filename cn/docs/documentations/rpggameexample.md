@@ -1,4 +1,4 @@
-﻿---
+---
 layout: docs_cn
 title: Multiplayer online RPG · Docs · KBEngine
 tab: docs

@@ -1,4 +1,4 @@
-﻿---
+---
 layout: docs_cn
 title: API Docs · Docs · KBEngine
 tab: docs
