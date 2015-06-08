@@ -1,4 +1,4 @@
----
+﻿---
 layout: docs_cn
 title: Installer · Docs · KBEngine
 tab: docs

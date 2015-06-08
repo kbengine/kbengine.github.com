@@ -1,4 +1,4 @@
----
+﻿---
 layout: docs_cn
 title: DBMgr · Docs · KBEngine
 tab: docs

@@ -1,4 +1,4 @@
----
+﻿---
 layout: docs_cn
 title: Script Programming · Docs · KBEngine
 tab: docs

@@ -1,4 +1,4 @@
----
+﻿---
 layout: docs
 title: Server Layout · Docs · KBE
 tab: docs

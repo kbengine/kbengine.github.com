@@ -1,4 +1,4 @@
----
+﻿---
 layout: docs
 title: Defining the Entity · Docs · KBEngine
 tab: docs

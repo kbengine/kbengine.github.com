@@ -1,4 +1,4 @@
----
+﻿---
 layout: docs
 title: Communication protocol format · Docs · KBEngine
 tab: docs
