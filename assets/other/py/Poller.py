@@ -12,7 +12,7 @@ class Poller:
 	import Poller
 	poller = Poller()
 	
-	开启
+	开启(可在onBaseappReady执行)
 	poller.start("localhost", 12345)
 	
 	停止
@@ -30,12 +30,12 @@ class Poller:
 		self._socket.bind((addr, port))
 		self._socket.listen(10)
 		
-		KBEngine.registerFileDescriptor(self._socket.fileno(), self.onRecv)
+		KBEngine.registerReadFileDescriptor(self._socket.fileno(), self.onRecv)
 		# KBEngine.registerWriteFileDescriptor(self._socket.fileno(), self.onWrite)
 
 	def stop(self):
 		if self._socket:
-			KBEngine.deregisterFileDescriptor(self._socket.fileno())
+			KBEngine.deregisterReadFileDescriptor(self._socket.fileno())
 			self._socket.close()
 			self._socket = None
 		
@@ -46,7 +46,7 @@ class Poller:
 		if self._socket.fileno() == fileno:
 			sock, addr = self._socket.accept()
 			self._clients[sock.fileno()] = (sock, addr)
-			KBEngine.registerFileDescriptor(sock.fileno(), self.onRecv)
+			KBEngine.registerReadFileDescriptor(sock.fileno(), self.onRecv)
 			DEBUG_MSG("Poller::onRecv: new channel[%s/%i]" % (addr, sock.fileno()))
 		else:
 			sock, addr = self._clients.get(fileno, None)
@@ -56,7 +56,7 @@ class Poller:
 			data = sock.recv(2048)
 			DEBUG_MSG("Poller::onRecv: %s/%i get data, size=%i" % (addr, sock.fileno(), len(data)))
 			self.processData(sock, data)
-			KBEngine.deregisterFileDescriptor(sock.fileno())
+			KBEngine.deregisterReadFileDescriptor(sock.fileno())
 			sock.close()
 			del self._clients[fileno]
 			
