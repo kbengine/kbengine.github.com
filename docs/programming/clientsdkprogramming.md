@@ -17,20 +17,23 @@ Client-SDK Programming
 		// Mobile(Phone, Pad)
 		CLIENT_TYPE_MOBILE				= 1,
 
-		// Windows/Linux/Mac Application program
-		// Contains the Python-scripts, entitydefs parsing and check entitydefs-MD5, Native
-		CLIENT_TYPE_PC					= 2,
+		// Windows Application program
+		CLIENT_TYPE_WIN					= 2,
 
+		// Linux Application program
+		CLIENT_TYPE_LINUX				= 3,
+			
+		// Mac Application program
+		CLIENT_TYPE_MAC					= 4,
+			
 		// Web，HTML5，Flash
-		// not contain Python-scripts and entitydefs analysis, can be imported protocol from network
-		CLIENT_TYPE_BROWSER				= 3,
+		CLIENT_TYPE_BROWSER				= 5,
 
-		// bots(Contains the Python-scripts, entitydefs parsing and check entitydefs-MD5, Native)
-		CLIENT_TYPE_BOTS				= 4,
+		// bots
+		CLIENT_TYPE_BOTS				= 6,
 
 		// Mini-Client
-		// Allowing does not contain Python-scripts and entitydefs analysis, can be imported protocol from network
-		CLIENT_TYPE_MINI				= 5,
+		CLIENT_TYPE_MINI				= 7,
 		...
 	};
 
@@ -57,11 +60,11 @@ The following is the client needs to be provided to the server call protocol-int
 
 	onScriptVersionNotMatch
 		
-		脚本版本不匹配
+		Script version mismatch
 
 	onKicked
 		
-		Script version mismatch
+		Kicked of the current server
 
 	onImportServerErrorsDescr
 		
@@ -98,63 +101,63 @@ The following is the client needs to be provided to the server call protocol-int
 
 	onCreatedProxies
 		
-		服务端通知客户端创建一个能与服务端通讯的代理实体
+		Server to create player(Proxy entity with server)
 
 	onUpdatePropertysOptimized
 		
-		更新entity属性(优化的)
+		Update entity properties(Optimized)
 
 	onUpdatePropertys
 		
-		更新entity属性(非优化的)
+		Update entity properties
 
 	onRemoteMethodCallOptimized
 		
-		服务端调用entity的方法(优化的)
+		Server call entity method(Optimized)
 
 	onRemoteMethodCall
 		
-		服务端调用entity的方法(非优化的)
+		Server call entity method
 
 	onEntityEnterWorld
 		
-		entity进入世界, entity第一次在cellapp上的被创建
+		Entity enter the client-world
 
 	onEntityLeaveWorld
 		
-		entity离开世界了(非优化的)
+		Entity leave the client-world
 
 	onEntityLeaveWorldOptimized
 		
-		entity离开世界了(优化的)
+		Entity leave the client-world(Optimized)
 
 	onEntityEnterSpace
 		
-		entity进入空间了(进入了cellapp中的场景或者副本房间等)
+		Player enter the new space
 
 	onEntityLeaveSpace
 		
-		entity离开空间了
+		Player enter the space
 
 	onCreateAccountResult
 		
-		创建账号返回结果
+		Create account feedback results
 
 	initSpaceData
 		
-		当entity进入某个空间后，服务端初始化空间数据
+		Server spaceData initialization data
 
 	setSpaceData
 		
-		服务端设置空间数据
+		Server spaceData set data
 
 	delSpaceData
 		
-		服务端删除空间数据
+		Server spaceData delete data
 
 	onEntityDestroyed
 		
-		某个entity销毁了
+		Entity is destroyed
 
 	onUpdateBasePos
 		

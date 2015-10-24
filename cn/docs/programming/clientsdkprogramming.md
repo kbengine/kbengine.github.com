@@ -13,20 +13,26 @@ docsitem: sdk-client-programming
 	定义在kbengine/kbe/src/lib/common/common.hpp中:
 	enum COMPONENT_CLIENT_TYPE
 	{
-		// 移动类，手机，平板电脑(可不包含Python脚本，entitydefs协议可使用网络导入)
+		// Mobile(Phone, Pad)
 		CLIENT_TYPE_MOBILE				= 1,
 
-		// 独立的Windows/Linux/Mac应用程序(包含Python脚本，entitydefs解析与检查entitydefs的MD5，原生的)
-		CLIENT_TYPE_PC					= 2,
-		
-		// Web，HTML5，Flash(不包含Python脚本，entitydefs协议可使用网络导入)
-		CLIENT_TYPE_BROWSER				= 3,
+		// Windows Application program
+		CLIENT_TYPE_WIN					= 2,
 
-		// 包含Python脚本，entitydefs解析与检查entitydefs的MD5，原生的
-		CLIENT_TYPE_BOTS				= 4,
+		// Linux Application program
+		CLIENT_TYPE_LINUX				= 3,
+			
+		// Mac Application program
+		CLIENT_TYPE_MAC					= 4,
+			
+		// Web，HTML5，Flash
+		CLIENT_TYPE_BROWSER				= 5,
 
-		// 轻端类，可不包含Python脚本，entitydefs协议可使用网络导入
-		CLIENT_TYPE_MINI				= 5,
+		// bots
+		CLIENT_TYPE_BOTS				= 6,
+
+		// Mini-Client
+		CLIENT_TYPE_MINI				= 7,
 		...
 	};
 
