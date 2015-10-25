@@ -35,8 +35,7 @@ Linux:
 
 Windows:
 
-	kbengine\kbe\src\kbengine_vs100.sln  
-	(注意: vs2010 需要安装SP1(否则会出现错误: error LNK1123: 转换到 COFF 期间失败: 文件无效或损坏), 你也可以升级到高版本的VC编译器, 高版本已经包含了相关支持。)
+	kbengine\kbe\src\kbengine_vs120.sln  
 
 	点击VC开始编译，等待完成即可。
 
