@@ -294,14 +294,14 @@ KBEngine会读取系统中设置的(KBE_ROOT, KBE_RES_PATH, KBE_BIN_PATH)环境�
 
 HTTP回调（EMAIL认证、密码重置）:
 
-	[kbengine.xml]->loginapp->externalPorts_min
+	[kbengine.xml]->loginapp->http_cbport
 
-网关IP：
+BaseappIP：
 
 	[kbengine.xml]->baseapp->externalInterface
 	（由于读取的是网卡地址，某些环境下无法获得正确的ip地址，例如端口映射方式与外网交互，此时应该设置[kbengine_defs.xml]->loginapp->externalAddress）
 
-网关端口：
+BaseappIP端口：
 
 	[kbengine.xml]->baseapp->externalPorts_min
 

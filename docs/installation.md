@@ -292,14 +292,14 @@ Login port(Client):
 
 The HTTP callback (EMAIL authentication, the password reset, etc.):
 
-	[kbengine.xml]->loginapp->externalPorts_min
+	[kbengine.xml]->loginapp->http_cbport
 
-Gateway IP:
+Baseapp IP:
 
 	[kbengine.xml]->baseapp->externalInterface
 	（Because reading is the address of NIC, some reasons may not be able to obtain the correct IP address. For example, port mapping mode with the network interaction, this should be set to [kbengine_defs.xml]->loginapp->externalAddress）
 
-Gateway port:
+Baseapp port:
 
 	[kbengine.xml]->baseapp->externalPorts_min
 
