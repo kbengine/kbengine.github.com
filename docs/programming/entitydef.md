@@ -205,7 +205,7 @@ C means by the source data synchronization, SC means real entity is the source, 
 
 	[Type]			[ClientEntity]		[BaseEntity]		[CellEntity]
 	BASE			-			S			-
-	BASE_AND_CLIENT		S			C			-
+	BASE_AND_CLIENT		C			S			-
 	CELL_PRIVATE		-			-			S
 	CELL_PUBLIC		-			-			SC
 	CELL_PUBLIC_AND_OWN	C			-			SC
