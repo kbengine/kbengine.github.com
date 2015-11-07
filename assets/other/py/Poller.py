@@ -9,7 +9,7 @@ class Poller:
 	演示：
 	可以向kbengine注册一个socket，由引擎层的网络模块处理异步通知收发。
 	用法: 
-	import Poller
+	from Poller import Poller
 	poller = Poller()
 	
 	开启(可在onBaseappReady执行)
