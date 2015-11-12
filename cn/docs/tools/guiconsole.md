@@ -33,7 +33,7 @@ GUIConsole 工具
 
 	* eventprofile: 在一段时间内发生的事件的数据统计
 
-	* mercuryprofile: 在一段时间内的网络数据分析
+	* networkprofile: 在一段时间内的网络数据分析
 
 * Watcher选项卡, 你可以实时的观查服务端在运行的一些被监视的参数变化。
 

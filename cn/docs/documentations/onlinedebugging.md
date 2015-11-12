@@ -128,8 +128,8 @@ docsitem: documentation-online-debugging
 
 网络状态分析
 
-* [GUIConsole]->profile选项卡	: 选择mercuryprofile进行分析。
-* [Cluster Controller]		: 使用":mercuryprofile"命令。
+* [GUIConsole]->profile选项卡	: 选择networkprofile进行分析。
+* [Cluster Controller]		: 使用":networkprofile"命令。
 
 事件处理分析
 

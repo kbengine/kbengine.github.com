@@ -33,7 +33,7 @@ Description
 
 	* eventprofile: Events that occurred within a period of time statistics
 
-	* mercuryprofile: Processing of the network within a period of time for analysis
+	* networkprofile: Processing of the network within a period of time for analysis
 
 * Watcher tab, where you can monitor the status of various runtime server.
 

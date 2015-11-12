@@ -123,8 +123,8 @@ Script performance analysis
 
 Network state analysis
 
-* [GUIConsole]->profile-tab	: use mercuryprofile.
-* [Cluster Controller]		: use":mercuryprofile"command.
+* [GUIConsole]->profile-tab	: use networkprofile.
+* [Cluster Controller]		: use":networkprofile"command.
 
 Event processing analysis
 
