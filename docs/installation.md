@@ -147,7 +147,7 @@ Install Mysql:
 		On the command line (SC QC MySQL|find ".ini") to view the my.ini file directory.
 
 		[mysqld]
-		lower_case_table_names = 0
+		lower_case_table_names = 2
 
 		(Service MySQL restart, CMD input:)
 		net stop mysql

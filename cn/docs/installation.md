@@ -145,7 +145,7 @@ KBEngine会读取系统中设置的(KBE_ROOT, KBE_RES_PATH, KBE_BIN_PATH)环境�
 		在命令行使用(sc qc MySQL|find ".ini")查看my.ini文件所在目录
 
 		[mysqld]
-		lower_case_table_names = 0
+		lower_case_table_names = 2
 
 		(重启Mysql, CMD输入如下命令:)
 		net stop mysql
