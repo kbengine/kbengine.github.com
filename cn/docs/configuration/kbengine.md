@@ -24,8 +24,12 @@ docsitem: configuration-kbengine
 		
 		<!-- defined => kbe/res/server/kbengine_defs.xml -->
 		<dbmgr>
-			<host> localhost </host>
-			<databaseName> kbe </databaseName>
+			<databaseInterfaces>
+				<default>
+					<host> localhost </host>
+					<databaseName> kbe </databaseName>
+				</default>
+			</databaseInterfaces>
 		</dbmgr>
 	</root>
 

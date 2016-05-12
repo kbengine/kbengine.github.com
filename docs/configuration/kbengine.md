@@ -24,8 +24,12 @@ but doing so will not damage the engine settings, there is no conflict in the de
 		
 		<!-- defined => kbe/res/server/kbengine_defs.xml -->
 		<dbmgr>
-			<host> localhost </host>
-			<databaseName> kbe </databaseName>
+			<databaseInterfaces>
+				<default>
+					<host> localhost </host>
+					<databaseName> kbe </databaseName>
+				</default>
+			</databaseInterfaces>
 		</dbmgr>
 	</root>
 
