@@ -50,6 +50,8 @@ If you have a better understanding, you can ignore this section, the direct use 
 
 ### 2. To set environment variables:
 
+(Note: Scripts that start the server in [server-assets] can be used to automate temporary environment variables, so there are no particularly complex deployment requirements to skip this section.)
+
 KBEngine can read KBE_ROOT, KBE_RES_PATH, KBE_BIN_PATH system environment variables to do something.
 
 Environment variables description:
@@ -359,3 +361,4 @@ Third party service callback port (billing, login, etc.):
 [Linux firewall settings]: {{ site.baseurl }}/docs/documentations/linuxfirewall.html
 [KBE-layout]: {{ site.baseurl }}/docs/concepts/layout.html
 [build]:{{ site.baseurl }}/docs/build.html
+[server-assets]:{{ site.baseurl }}/docs/startup_shutdown.html
