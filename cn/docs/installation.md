@@ -49,6 +49,8 @@ docsitem: installation
 
 ### 2. 设置环境变量:
 
+（提醒：在[服务端资产库]启动服务器的脚本中已经具备自动化临时设置环境变量正确启动服务器功能，因此没有特别复杂的部署需求可略过该章节。）
+
 KBEngine会读取系统中设置的(KBE_ROOT, KBE_RES_PATH, KBE_BIN_PATH)环境变量, 环境变量的意义:
 
 	UID:
@@ -361,3 +363,5 @@ Telnet服务端口(cellapp)：
 [Linux防火墙设置]: {{ site.baseurl }}/cn/docs/documentations/linuxfirewall.html
 [KBE架构]: {{ site.baseurl }}/cn/docs/concepts/layout.html
 [建立]:{{ site.baseurl }}/cn/docs/build.html
+[服务端资产库]:{{ site.baseurl }}/cn/docs/startup_shutdown.html
+
