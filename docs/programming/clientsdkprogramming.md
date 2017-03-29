@@ -94,7 +94,7 @@ The following is the client needs to be provided to the server call protocol-int
 		
 		login to baseapp failed.
 
-	onReLoginGatewayFailed
+	onReloginGatewayFailed
 		
 		relogin to baseapp failed.
 
@@ -240,7 +240,7 @@ The following is the protocol-interfaces server allows clients to invoke:
 		importClientEntityDef
 			请求从baseapp导入脚本定义产生的协议
 
-		reLoginGateway
+		reloginGateway
 			请求重登陆baseapp(断线重连)
 
 		reqAccountBindEmail

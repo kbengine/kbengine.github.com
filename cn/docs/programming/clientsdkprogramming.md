@@ -91,7 +91,7 @@ docsitem: sdk-client-programming
 		
 		登录baseapp失败了
 
-	onReLoginGatewayFailed
+	onReloginGatewayFailed
 		
 		重登录baseapp失败了
 
@@ -236,7 +236,7 @@ docsitem: sdk-client-programming
 		importClientEntityDef
 			请求从baseapp导入脚本定义产生的协议
 
-		reLoginGateway
+		reloginGateway
 			请求重登陆baseapp(断线重连)
 
 		reqAccountBindEmail
