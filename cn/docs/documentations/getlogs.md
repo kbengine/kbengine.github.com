@@ -24,7 +24,7 @@ docsitem: documentation-getlogs
 	
 	注意：如果开启了logger服务，那么日志将被转发到logger进程，logger进程最终会将日志写到logger_<进程名称>.*.log中。
 		开启logger可以通过修改启动脚本或者修改工具的启动方案来解决
-		http://www.kbengine.org/cn/docs/startup_shutdown.html。
+		http://kbengine.org/cn/docs/startup_shutdown.html。
 
 
 -----------------------------------------------------------------------------------------------

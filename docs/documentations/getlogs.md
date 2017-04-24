@@ -25,7 +25,7 @@ Get the runtime logs
 	Note: if the logger service is started, then the logs will be forwarded to the logger process, 
 	logger process will logs write "logger_<process name>.*.log".
 	Start logger, you can modify the startup script or modify tools start-layout.
-	http://www.kbengine.org/cn/docs/startup_shutdown.html
+	http://kbengine.org/cn/docs/startup_shutdown.html
 
 
 -----------------------------------------------------------------------------------------------

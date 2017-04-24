@@ -8,7 +8,7 @@ I have had, since starting kbe, two or three people enquire about donations. It'
 
 If you're wishing to donate–and I by no means want to encourage you to do so (staring the project [on GitHub][star] is all the reward I need)–then now you can with the new [PayPal donation page][paypal].
 
-A link to this page can also be found at [www.kbengine.org](http://www.kbengine.org/) and, as a "Donate" button at the top of the GitHub project [readme page][readme].
+A link to this page can also be found at [kbengine.org](http://kbengine.org/) and, as a "Donate" button at the top of the GitHub project [readme page][readme].
 
 I'm not sure if it's possible to discern this information, but if donators would agree, I will have a page immortalising those kind few who did give so graciously to kbe, by listing their names.
 

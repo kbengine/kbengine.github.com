@@ -74,8 +74,8 @@ Check the startup status(KBEngine > v0.2.15)
 	If successful will find log "Components::process(): Found all the components!".
 	Otherwise, please search the "ERROR" keyword in logs, according to the error description to try to solve.
 
-	FAQ: http://www.kbengine.org/docs/faq.html
-	Get runtime logs: http://www.kbengine.org/docs/documentations/getlogs.html
+	FAQ: http://kbengine.org/docs/faq.html
+	Get runtime logs: http://kbengine.org/docs/documentations/getlogs.html
 
 
 - - -
