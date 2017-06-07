@@ -83,6 +83,11 @@ Def file format
 			
 			// Distance of 10 meters or less and the synchronization to the client
 			<roll> 10 </roll>
+			
+			// If true, when the entity is determined on the ground, the server does not synchronize the entity's Y axis coordinates. 
+			// Large amounts of bandwidth can be saved when synchronizing large numbers of entities
+			// The default is true.
+			<optimized> true </optimized>
 		</Volatile>
 
 		// Registration interface, similar to the C# interface

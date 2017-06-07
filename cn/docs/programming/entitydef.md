@@ -84,6 +84,10 @@ docsitem: documentation-entitydef
 			
 			// 距离10米及以内同步到客户端
 			<roll> 10 </roll>
+
+			// 如果为true，在一些行为(如：navigate)导致服务器能确定实体在地面时，服务器不同步实体的Y轴坐标。
+			// 当同步大量实体时能节省大量带宽。
+			<optimized> true </optimized>
 		</Volatile>
 
 		// 注册接口def，类似于C#中的接口
