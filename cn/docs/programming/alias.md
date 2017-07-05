@@ -26,9 +26,9 @@ docsitem: documentation-alias
 	FLOAT			4
 	DOUBLE			8
 
-	VECTOR2			12
-	VECTOR3			16
-	VECTOR4			20
+	VECTOR2			8
+	VECTOR3			12
+	VECTOR4			16
 
 	STRING			N
 	UNICODE			N
