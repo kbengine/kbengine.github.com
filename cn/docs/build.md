@@ -25,9 +25,9 @@ Linux:
 	仅测试了(x32/x64): Centos >= 5.x, Debian >= 5.x
 	GCC版本: >= 4.4.x
 
-	[root @ localhost ~]# yum install openssl-devel 
-	[root @ localhost ~]# yum install mysql-server
-	[root @ localhost ~]# yum install mysql-devel 
+	[root @ localhost ~]# yum install openssl-devel (在Ubuntu类系统上, 使用 "apt-get install libssl-dev")
+	[root @ localhost ~]# yum install mysql-server (在Ubuntu类系统上, 使用 "apt-get install mysql-server")
+	[root @ localhost ~]# yum install mysql-devel (在Ubuntu类系统上, 使用 "apt-get install libmysql-dev")
 
 	[root @ localhost ~]# cd kbengine/kbe/src
 	[root @ localhost/ src]# chmod -R 755 .

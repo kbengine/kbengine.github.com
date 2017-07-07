@@ -25,9 +25,9 @@ Linux:
 	Test System (x32/x64): Centos >= 5.x, Debian >= 5.x, Redhat, Ubuntu
 	The compiler GCC: >= 4.4.x
 
-	[root @ localhost ~]# yum install openssl-devel 
-	[root @ localhost ~]# yum install mysql-server
-	[root @ localhost ~]# yum install mysql-devel 
+	[root @ localhost ~]# yum install openssl-devel (On Ubuntu, use "apt-get install libssl-dev")
+	[root @ localhost ~]# yum install mysql-server (On Ubuntu, use "apt-get install mysql-server")
+	[root @ localhost ~]# yum install mysql-devel  (On Ubuntu, use "apt-get install libmysql-dev")
 
 	[root @ localhost ~]# cd kbengine/kbe/src
 	[root @ localhost/ src]# chmod -R 755 .
