@@ -45,10 +45,6 @@ li {
   height: 80px;
 }
 
-.container {
-	margin-top: 2em;
-}
-
 .section h1,
 .section .byline {
   text-align: center;
@@ -199,8 +195,7 @@ li {
 }
 
 .milestones {
-  /*border-top: 1px solid #e5e5e5;*/
-  /*padding-top: 50px;*/
+  padding-top: 50px;
   display: none;
 }
 .milestones h1 {
