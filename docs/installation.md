@@ -48,7 +48,7 @@ If you have a better understanding, you can ignore this section, the direct use 
 - - -
 
 
-### 2. To set environment variables:
+### 2. To set environment variables:(optional)
 
 (Note: Scripts that start the server in [server-assets] can be used to automate temporary environment variables, so there are no particularly complex deployment requirements to skip this section.)
 
