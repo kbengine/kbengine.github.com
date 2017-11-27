@@ -92,10 +92,10 @@ Def file format
 
 		// Registration interface, similar to the C# interface
 		// This tag is only valid in the Entity.def，If itself is a def interface, the tag are ignored
-		<Implements>
+		<Interfaces>
 			// All interface-defs must be written in entity_defs/interfaces
 			<Interface>	GameObject		</Interface>
-		</Implements>
+		</Interfaces>
 
 		<Properties>
 			// Property Name

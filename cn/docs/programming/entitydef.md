@@ -92,10 +92,10 @@ docsitem: documentation-entitydef
 
 		// 注册接口def，类似于C#中的接口
 		// 这个标签只在Entity.def中有效，如果本身就是一个接口def则该标签被忽略
-		<Implements>
+		<Interfaces>
 			// 所有的接口def必须写在entity_defs/interfaces中
 			<Interface>	GameObject		</Interface>
-		</Implements>
+		</Interfaces>
 
 		<Properties>
 			// 属性名称
