@@ -34,7 +34,7 @@ docsitem: installation
 	Linux:
 
 		[root@localhost ~]# useradd kbe
-		[root@localhost ~]# passwd kbe
+		[root@localhost ~]# passwd pwd123456
 
 		New UNIX password: ******
 		Retype new UNIX password: ******
@@ -172,17 +172,17 @@ KBEngine会读取系统中设置的(KBE_ROOT, KBE_RES_PATH, KBE_BIN_PATH)环境�
 		mysql> create database kbe;
 
 
-删除匿名用户
+删除匿名用户（一些系统中不删除匿名用户会出现使用kbe账号用本地IP登录mysql被拒绝访问）
 		
 		mysql> use mysql 
 		mysql> delete from user where user=''; 
 		mysql> FLUSH PRIVILEGES;
 
 
-创建数据库用户，用户名和密码假设是"kbe"
+创建数据库用户，用户名是"kbe"，密码假设是"pwd123456"
 
-		mysql> grant all privileges on *.* to kbe@'%' identified by 'kbe';
-		mysql> grant select,insert,update,delete,create,drop on *.* to kbe@'%' identified by 'kbe';
+		mysql> grant all privileges on *.* to kbe@'%' identified by 'pwd123456';
+		mysql> grant select,insert,update,delete,create,drop on *.* to kbe@'%' identified by 'pwd123456';
 		mysql> FLUSH PRIVILEGES;
 
 		在CMD中测试一下是否能使用这个账号登陆Mysql(请注意默认Mysql端口为3306， 如不一致请修改
@@ -196,10 +196,10 @@ KBEngine会读取系统中设置的(KBE_ROOT, KBE_RES_PATH, KBE_BIN_PATH)环境�
 
 		Windows:
 			进入你的mysql安装目录找到mysql.exe, 然后在CMD执行如下命令:
-			C:\mysql\bin> mysql -ukbe -pkbe -hlocalhost -P3306
+			C:\mysql\bin> mysql -ukbe -ppwd123456 -hlocalhost -P3306
 
 		Linux:
-			[root@localhost ~] mysql -ukbe -pkbe -hlocalhost -P3306
+			[root@localhost ~] mysql -ukbe -ppwd123456 -hlocalhost -P3306
 
 
 如果要修改数据库名称请修改res\server\[kbengine_defs.xml]配置中dbmgr段的databaseName参数 

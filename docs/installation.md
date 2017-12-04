@@ -34,7 +34,7 @@ If you have a better understanding, you can ignore this section, the direct use 
 	Linux:
 
 		[root @ localhost ~] # useradd kbe
-		[root @ localhost ~] # passwd kbe
+		[root @ localhost ~] # passwd pwd123456
 
 		New UNIX password: ******
 		Retype new UNIX password: ******
@@ -181,10 +181,10 @@ Delete anonymous user
 		mysql> FLUSH PRIVILEGES;
 
 
-Create a database account, username and password is "kbe"
+Create a database account, username is "kbe" and password is "pwd123456"
 
-		mysql> grant all privileges on *.* to kbe@'%' identified by 'kbe';
-		mysql> grant select,insert,update,delete,create,drop on *.* to kbe@'%' identified by 'kbe';
+		mysql> grant all privileges on *.* to kbe@'%' identified by 'pwd123456';
+		mysql> grant select,insert,update,delete,create,drop on *.* to kbe@'%' identified by 'pwd123456';
 		mysql> FLUSH PRIVILEGES;
 
 		Test whether the CMD can use this account login mysql(Note that the default mysql port is 3306, 
@@ -194,10 +194,10 @@ Create a database account, username and password is "kbe"
 		Windows:
 			Enter your mysql installation directory to find mysql.exe, 
 			enter the directory and then execute cmd following statement:
-			C:\mysql\bin> mysql -ukbe -pkbe -hlocalhost -P3306
+			C:\mysql\bin> mysql -ukbe -ppwd123456 -hlocalhost -P3306
 
 		Linux:
-			[root@localhost ~] mysql -ukbe -pkbe -hlocalhost -P3306
+			[root@localhost ~] mysql -ukbe -ppwd123456 -hlocalhost -P3306
 
 
 If you want to modify the database name, Modify the databaseName in res\server\[kbengine_defs.xml] of dbmgr section 
