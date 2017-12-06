@@ -2,10 +2,10 @@
 layout: docs_cn
 title: Global Configuration · Docs · KBEngine
 tab: docs
-docsitem: configuration-servererrors
+docsitem: configuration-servererrors-defaults
 ---
 
-服务端错误码描述(kbengine/kbe/res/server/server_errors.xml)
+服务端错误码描述(kbengine/kbe/res/server/server_errors_defaults.xml)
 ===================
 
 		<SUCCESS>

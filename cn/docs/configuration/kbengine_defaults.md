@@ -2,10 +2,10 @@
 layout: docs_cn
 title: Server Configuration · Docs · KBEngine
 tab: docs
-docsitem: configuration-kbengine-defs
+docsitem: configuration-kbengine-defaults
 ---
 
-服务端默认配置(kbe/res/server/kbengine_defs.xml)
+服务端默认配置(kbe/res/server/kbengine_defaults.xml)
 ====================
 
 如果你需要改变引擎设置, 请在({assets}/res/server/kbengine.xml)中覆盖kbe/res/server/[kbengine_defs.xml]的对应参数来修改, 
@@ -203,7 +203,7 @@ docsitem: configuration-kbengine-defs
 		<!-- Email服务, 提供账号验证， 密码找回等等。
 			(Email services, providing the account verification, password recovery, etc.)
 		-->
-		<email_service_config>server/email_service.xml</email_service_config>
+		<email_service_config>server/email_service_defaults.xml</email_service_config>
 			
 		<interfaces>
 			<!-- 

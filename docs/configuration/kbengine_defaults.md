@@ -2,10 +2,10 @@
 layout: docs
 title: Server Configuration · Docs · KBEngine
 tab: docs
-docsitem: configuration-kbengine-defs
+docsitem: configuration-kbengine-defaults
 ---
 
-Server Configuration(kbe/res/server/kbengine_defs.xml)
+Server Configuration(kbe/res/server/kbengine_defaults.xml)
 ====================
 
 If you need to change the configuration of the engine, as long as the inheritance ({assets}[/res/server/kbengine.xml]) 
@@ -168,7 +168,7 @@ there is no conflict in the development along with updated engine or multiple pr
 		</thread_pool>
 		
 		<!-- Email services, providing the account verification, password recovery, etc. -->
-		<email_service_config>server/email_service.xml</email_service_config>
+		<email_service_config>server/email_service_defaults.xml</email_service_config>
 			
 		<interfaces>
 			<!-- 

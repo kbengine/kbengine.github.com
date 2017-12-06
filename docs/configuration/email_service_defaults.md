@@ -1,11 +1,11 @@
 ---
-layout: docs_cn
+layout: docs
 title: Global Configuration · Docs · KBEngine
 tab: docs
-docsitem: configuration-emailservice
+docsitem: configuration-emailservice-defaults
 ---
 
-kbengine/kbe/res/server/email_service.xml
+kbengine/kbe/res/server/email_service_defaults.xml
 ===================
 
 	<root>
@@ -71,4 +71,3 @@ kbengine/kbe/res/server/email_service.xml
 			</backlink_fail_message>
 		</email_bind>
 	</root>
-

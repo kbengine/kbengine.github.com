@@ -2,10 +2,10 @@
 layout: docs_cn
 title: Global Configuration · Docs · KBEngine
 tab: docs
-docsitem: configuration-messages_fixed
+docsitem: configuration-messages-fixed-defaults
 ---
 
-kbengine/kbe/res/server/messages_fixed.xml
+kbengine/kbe/res/server/messages_fixed_defaults.xml
 ===================
 
 由于KBEngine中的网络协议ID都由系统自动生成，如果不是用配套的SDK将很难与服务端对接协议。

@@ -2,10 +2,10 @@
 layout: docs
 title: Global Configuration · Docs · KBEngine
 tab: docs
-docsitem: configuration-servererrors
+docsitem: configuration-servererrors-defaults
 ---
 
-Server-error description(kbengine/kbe/res/server/server_errors.xml)
+Server-error description(kbengine/kbe/res/server/server_errors_defaults.xml)
 ===================
 
 		<SUCCESS>
