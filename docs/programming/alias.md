@@ -1,11 +1,11 @@
 ---
 layout: docs
-title: Type the alias · Docs · KBEngine
+title: Custom types · Docs · KBEngine
 tab: docs
-docsitem: documentation-alias
+docsitem: documentation-types
 ---
 
-Type the alias
+Custom types
 ====================
 
 Base Script Types
@@ -53,7 +53,7 @@ Why use a type alias?
 * Engine can automatically identify the type of data for network transmission and storage
 
 
-Path definition file : `assets/scripts/entity_defs/alias.xml`
+Path definition file : `assets/scripts/entity_defs/types.xml`
 
 ------------------------------------------
 ### Simple type alias
@@ -64,7 +64,7 @@ Path definition file : `assets/scripts/entity_defs/alias.xml`
 	<ENTITY_FORBID_COUNTER> ARRAY <of> INT8		</of>		</ENTITY_FORBID_COUNTER>
 	<ENTITYID_LIST> 	ARRAY <of> ENTITY_ID	</of>		</ENTITYID_LIST>
 
-### Fixed dictionary type alias(FIXED_DICT)
+### Fixed dictionary type(FIXED_DICT)
 
 Data structures can be used as a dictionary like Python, the engine can be identified in the storage and network transmission based on the definition.
 

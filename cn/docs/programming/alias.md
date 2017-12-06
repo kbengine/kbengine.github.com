@@ -1,8 +1,8 @@
 ---
 layout: docs_cn
-title: Type the alias · Docs · KBEngine
+title: Custom types · Docs · KBEngine
 tab: docs
-docsitem: documentation-alias
+docsitem: documentation-types
 ---
 
 类型别名
@@ -54,7 +54,7 @@ docsitem: documentation-alias
 * 引擎可以自动识别数据类型进行网络传输和存储
 
 
-文件目录地址 : `assets/scripts/entity_defs/alias.xml`
+文件目录地址 : `assets/scripts/entity_defs/types.xml`
 
 ------------------------------------------
 ### 简单的别名

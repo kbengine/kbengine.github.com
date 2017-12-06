@@ -16,7 +16,7 @@ C++底层通常都不会去干涉内存里存储的是什么, 但当进行网络
 重定义固定字典(FIXED_DICT)
 -----------------------
 
-alias.xml中基本声明格式类似如下:
+types.xml中基本声明格式类似如下:
 
 	<类型名称> FIXED_DICT
 
@@ -39,7 +39,7 @@ alias.xml中基本声明格式类似如下:
 
 一个例子:
 
-assets\scripts\entity_defs\alias.xml:
+assets\scripts\entity_defs\types.xml:
 
 	<XXX> FIXED_DICT
 	       <implementedBy> XXX_PICKLER.inst </implementedBy>
