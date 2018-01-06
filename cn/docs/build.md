@@ -27,7 +27,7 @@ Linux:
 
 	[root @ localhost ~]# yum install openssl-devel (在Ubuntu类系统上, 使用 "apt-get install libssl-dev")
 	[root @ localhost ~]# yum install mysql-server (在Ubuntu类系统上, 使用 "apt-get install mysql-server")
-	[root @ localhost ~]# yum install mysql-devel (在Ubuntu类系统上, 使用 "apt-get install libmysql-dev")
+	[root @ localhost ~]# yum install mysql-devel (在Ubuntu类系统上, 使用 "apt-get install libmysqld-dev")
 
 	[root @ localhost ~]# cd kbengine/kbe/src
 	[root @ localhost/ src]# chmod -R 755 .

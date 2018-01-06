@@ -27,7 +27,7 @@ Linux:
 
 	[root @ localhost ~]# yum install openssl-devel (On Ubuntu, use "apt-get install libssl-dev")
 	[root @ localhost ~]# yum install mysql-server (On Ubuntu, use "apt-get install mysql-server")
-	[root @ localhost ~]# yum install mysql-devel  (On Ubuntu, use "apt-get install libmysql-dev")
+	[root @ localhost ~]# yum install mysql-devel  (On Ubuntu, use "apt-get install libmysqld-dev")
 
 	[root @ localhost ~]# cd kbengine/kbe/src
 	[root @ localhost/ src]# chmod -R 755 .
