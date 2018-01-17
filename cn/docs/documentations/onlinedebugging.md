@@ -26,7 +26,7 @@ docsitem: documentation-online-debugging
 
 
 
-使用telnet服务[kbengine_defs.xml]->telnet_service:
+使用telnet服务[kbengine_defaults.xml]->telnet_service:
 
 	cellapp	: telnet localhost 50000
 	baseapp	: telnet localhost 40000
@@ -58,7 +58,7 @@ docsitem: documentation-online-debugging
 
 ###断点调试:
 
-仅引擎层c++代码可以使用断点调试，断点调试请先关闭服务端心跳机制[kbengine_defs.xml]->channelCommon->timeout.
+仅引擎层c++代码可以使用断点调试，断点调试请先关闭服务端心跳机制[kbengine_defaults.xml]->channelCommon->timeout.
 
 脚本层只能查看输出日志，或者使用Python命令行来调试，由于是分布式服务程序没有增加断点的功能。
 
@@ -179,4 +179,4 @@ docsitem: documentation-online-debugging
 
 [GUIConsole]: {{ site.baseurl }}/cn/docs/tools/guiconsole.html
 [Cluster Controller]: {{ site.baseurl }}/cn/docs/tools/pycluster.html
-[kbengine_defs.xml]: {{ site.baseurl }}/cn/docs/configuration/kbengine_defs.html
+[kbengine_defaults.xml]: {{ site.baseurl }}/cn/docs/configuration/kbengine_defaults.html

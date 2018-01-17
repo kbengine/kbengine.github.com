@@ -25,7 +25,7 @@ docsitem: kbe-engine-messages
 		 |--------------------------------------------------------------------------------------------|
 
 (注意: 如果消息长度超过65534，Message-Length固定被填充为65535，协议层会在Message-Length区段之后再额外增加4字节，来描述更大的长度信息)
-(注意: 测试协议请关闭数据包加密, 修改[kbengine.xml]或[kbengine_defs.xml]->channelCommon->encrypt_type)
+(注意: 测试协议请关闭数据包加密, 修改[kbengine.xml]或[kbengine_defaults.xml]->channelCommon->encrypt_type)
 
 
 -------------------------------------------------------------------
@@ -76,5 +76,5 @@ docsitem: kbe-engine-messages
 -------------------------------------------------------------------
 
 
-[kbengine_defs.xml]: {{ site.baseurl }}/cn/docs/configuration/kbengine_defs.html
+[kbengine_defaults.xml]: {{ site.baseurl }}/cn/docs/configuration/kbengine_defaults.html
 [kbengine.xml]: {{ site.baseurl }}/cn/docs/configuration/kbengine.html

@@ -25,7 +25,7 @@ Use script tools[Cluster Controller]:
 
 
 
-The use of Telnet services[kbengine_defs.xml]->telnet_service:
+The use of Telnet services[kbengine_defaults.xml]->telnet_service:
 
 	cellapp	: telnet localhost 50000
 	baseapp	: telnet localhost 40000
@@ -57,7 +57,7 @@ Debugging skills:
 
 ###Breakpoint debugging:
 
-Only engine layer c + + code can use breakpoint debugging, Turn off the breakpoint debugging server heartbeat[kbengine_defs.xml]->channelCommon->timeout.
+Only engine layer c + + code can use breakpoint debugging, Turn off the breakpoint debugging server heartbeat[kbengine_defaults.xml]->channelCommon->timeout.
 
 Script layer can only view the output log, or use the Python command line to debug, Because it is a distributed service program, so I do not support breakpoint.
 
@@ -176,4 +176,4 @@ Examples: add a variable to be monitored in the script(the current number of pla
 
 [GUIConsole]: {{ site.baseurl }}/docs/tools/guiconsole.html
 [Cluster Controller]: {{ site.baseurl }}/docs/tools/pycluster.html
-[kbengine_defs.xml]: {{ site.baseurl }}/docs/configuration/kbengine_defs.html
+[kbengine_defaults.xml]: {{ site.baseurl }}/docs/configuration/kbengine_defaults.html

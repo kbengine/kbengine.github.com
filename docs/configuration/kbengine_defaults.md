@@ -9,7 +9,7 @@ Server Configuration(kbe/res/server/kbengine_defaults.xml)
 ====================
 
 If you need to change the configuration of the engine, as long as the inheritance ({assets}[/res/server/kbengine.xml]) 
-this configuration file and overwrite the corresponding section kbengine_defs.xml, but doing so will not damage the engine settings, 
+this configuration file and overwrite the corresponding section kbengine_defaults.xml, but doing so will not damage the engine settings, 
 there is no conflict in the development along with updated engine or multiple projects.
 
 

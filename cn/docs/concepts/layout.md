@@ -102,4 +102,4 @@ docsitem: concepts-layout
 
 
 
-[config-server]: {{ site.baseurl }}/cn/docs/configuration/kbengine_defs.html
+[config-server]: {{ site.baseurl }}/cn/docs/configuration/kbengine_defaults.html

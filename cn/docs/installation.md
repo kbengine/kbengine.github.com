@@ -186,7 +186,7 @@ KBEngine会读取系统中设置的(KBE_ROOT, KBE_RES_PATH, KBE_BIN_PATH)环境�
 		mysql> FLUSH PRIVILEGES;
 
 		在CMD中测试一下是否能使用这个账号登陆Mysql(请注意默认Mysql端口为3306， 如不一致请修改
-		kbengine_defs.xml->dbmgr-><port>330x</port>)。
+		kbengine_defaults.xml->dbmgr-><port>330x</port>)。
 
 		另外请不要使用其他任何第三方工具来测试，必须使用mysql进行测试，第三方工具为了能够正确的连接到
 		Mysql可能会采用一些兼容的方式，但这对于游戏服务端来说是不可靠的方式，权限应该由用户明确的设置。
@@ -202,7 +202,7 @@ KBEngine会读取系统中设置的(KBE_ROOT, KBE_RES_PATH, KBE_BIN_PATH)环境�
 			[root@localhost ~] mysql -ukbe -ppwd123456 -hlocalhost -P3306
 
 
-如果要修改数据库名称请修改res\server\[kbengine_defs.xml]配置中dbmgr段的databaseName参数 
+如果要修改数据库名称请修改res\server\[kbengine_defaults.xml]配置中dbmgr段的databaseName参数 
   (建议在assets\res\server\[kbengine.xml]中进行重载修改，这样kbengine在做改动后开发者更新时不会发生冲突)。
 
 
@@ -221,7 +221,7 @@ KBEngine会读取系统中设置的(KBE_ROOT, KBE_RES_PATH, KBE_BIN_PATH)环境�
 		[root@localhost ~]# echo 524288 > /proc/sys/net/core/rmem_max
 		[root@localhost ~]# echo 524288 > /proc/sys/net/core/wmem_max
 		
-		可适当调整[kbengine_defs.xml]->channelCommon->***BufferSize
+		可适当调整[kbengine_defaults.xml]->channelCommon->***BufferSize
 
 参考: [高性能Linux服务器配置]
 
@@ -236,7 +236,7 @@ KBEngine会读取系统中设置的(KBE_ROOT, KBE_RES_PATH, KBE_BIN_PATH)环境�
 		/sbin/ip route del broadcast 255.255.255.255 dev eth0
 		/sbin/ip route add broadcast 255.255.255.255 dev eth1
 
-同时请设置引擎配置([kbengine.xml] | [kbengine_defs.xml])中的相关选项为如下:
+同时请设置引擎配置([kbengine.xml] | [kbengine_defaults.xml])中的相关选项为如下:
 
 		baseapp 	: externalInterface = eth0, internalInterface = eth1
 		loginapp	: externalInterface = eth0, internalInterface = eth1
@@ -288,7 +288,7 @@ KBEngine会读取系统中设置的(KBE_ROOT, KBE_RES_PATH, KBE_BIN_PATH)环境�
 客户端登录IP：
 
 	[kbengine.xml]->loginapp->externalInterface
-	（由于读取的是网卡地址，某些环境下无法获得正确的ip地址，例如端口映射方式与外网交互，此时应该设置[kbengine_defs.xml]->loginapp->externalAddress）
+	（由于读取的是网卡地址，某些环境下无法获得正确的ip地址，例如端口映射方式与外网交互，此时应该设置[kbengine_defaults.xml]->loginapp->externalAddress）
 
 客户端登录端口：
 
@@ -301,7 +301,7 @@ HTTP回调（EMAIL认证、密码重置）:
 BaseappIP：
 
 	[kbengine.xml]->baseapp->externalInterface
-	（由于读取的是网卡地址，某些环境下无法获得正确的ip地址，例如端口映射方式与外网交互，此时应该设置[kbengine_defs.xml]->loginapp->externalAddress）
+	（由于读取的是网卡地址，某些环境下无法获得正确的ip地址，例如端口映射方式与外网交互，此时应该设置[kbengine_defaults.xml]->loginapp->externalAddress）
 
 BaseappIP端口：
 
@@ -358,7 +358,7 @@ Telnet服务端口(cellapp)：
 [layout]: {{ site.baseurl }}/cn/docs/concepts/layout.html
 [issues]: https://github.com/kbengine/kbengine/issues
 [高性能Linux服务器配置]: {{ site.baseurl }}/cn/docs/documentations/linuxosconfig.html
-[kbengine_defs.xml]: {{ site.baseurl }}/cn/docs/configuration/kbengine_defs.html
+[kbengine_defaults.xml]: {{ site.baseurl }}/cn/docs/configuration/kbengine_defaults.html
 [kbengine.xml]: {{ site.baseurl }}/cn/docs/configuration/kbengine.html
 [Linux防火墙设置]: {{ site.baseurl }}/cn/docs/documentations/linuxfirewall.html
 [KBE架构]: {{ site.baseurl }}/cn/docs/concepts/layout.html

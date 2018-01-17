@@ -188,7 +188,7 @@ Create a database account, username is "kbe" and password is "pwd123456"
 		mysql> FLUSH PRIVILEGES;
 
 		Test whether the CMD can use this account login mysql(Note that the default mysql port is 3306, 
-		you can modify kbengine_defs.xml->dbmgr-><port>330x</port>),
+		you can modify kbengine_defaults.xml->dbmgr-><port>330x</port>),
 		If an error occurs, please google mysql error code.
 		
 		Windows:
@@ -200,7 +200,7 @@ Create a database account, username is "kbe" and password is "pwd123456"
 			[root@localhost ~] mysql -ukbe -ppwd123456 -hlocalhost -P3306
 
 
-If you want to modify the database name, Modify the databaseName in res\server\[kbengine_defs.xml] of dbmgr section 
+If you want to modify the database name, Modify the databaseName in res\server\[kbengine_defaults.xml] of dbmgr section 
   (recommended assets\res\server\[kbengine.xml] overloaded modifications).
 
 
@@ -219,7 +219,7 @@ Defines the maximum send/receive window size:
 		[root@localhost ~]# echo 524288 > /proc/sys/net/core/rmem_max
 		[root@localhost ~]# echo 524288 > /proc/sys/net/core/wmem_max
 
-		Can be adjusted[kbengine_defs.xml]->channelCommon->***BufferSize
+		Can be adjusted[kbengine_defaults.xml]->channelCommon->***BufferSize
 
 see: [High-performance Linux server configuration]
 
@@ -234,7 +234,7 @@ If eth0 is external, eth1 is the internal(Linux only):
 		/sbin/ip route del broadcast 255.255.255.255 dev eth0
 		/sbin/ip route add broadcast 255.255.255.255 dev eth1
 
-Please set ([kbengine.xml] | [kbengine_defs.xml]):
+Please set ([kbengine.xml] | [kbengine_defaults.xml]):
 
 		baseapp 	: externalInterface = eth0, internalInterface = eth1
 		loginapp	: externalInterface = eth0, internalInterface = eth1
@@ -286,7 +286,7 @@ Database port:
 Login IP(Client):
 
 	[kbengine.xml]->loginapp->externalInterface
-	（Because reading is the address of NIC, some reasons may not be able to obtain the correct IP address. For example, port mapping mode with the network interaction, this should be set to [kbengine_defs.xml]->loginapp->externalAddress）
+	（Because reading is the address of NIC, some reasons may not be able to obtain the correct IP address. For example, port mapping mode with the network interaction, this should be set to [kbengine_defaults.xml]->loginapp->externalAddress）
 
 Login port(Client):
 
@@ -299,7 +299,7 @@ The HTTP callback (EMAIL authentication, the password reset, etc.):
 Baseapp IP:
 
 	[kbengine.xml]->baseapp->externalInterface
-	（Because reading is the address of NIC, some reasons may not be able to obtain the correct IP address. For example, port mapping mode with the network interaction, this should be set to [kbengine_defs.xml]->loginapp->externalAddress）
+	（Because reading is the address of NIC, some reasons may not be able to obtain the correct IP address. For example, port mapping mode with the network interaction, this should be set to [kbengine_defaults.xml]->loginapp->externalAddress）
 
 Baseapp port:
 
@@ -356,7 +356,7 @@ Third party service callback port (billing, login, etc.):
 [layout]: {{ site.baseurl }}/docs/concepts/layout.html
 [issues]: https://github.com/kbengine/kbengine/issues
 [High-performance Linux server configuration]: {{ site.baseurl }}/docs/documentations/linuxosconfig.html
-[kbengine_defs.xml]: {{ site.baseurl }}/docs/configuration/kbengine_defs.html
+[kbengine_defaults.xml]: {{ site.baseurl }}/docs/configuration/kbengine_defaults.html
 [kbengine.xml]: {{ site.baseurl }}/docs/configuration/kbengine.html
 [Linux firewall settings]: {{ site.baseurl }}/docs/documentations/linuxfirewall.html
 [KBE-layout]: {{ site.baseurl }}/docs/concepts/layout.html

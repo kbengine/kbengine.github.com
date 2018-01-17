@@ -29,7 +29,7 @@ Or use script:
 Configuration Bots
 --------------------------------------
 
-see also [kbengine_defs.xml]->`bots`
+see also [kbengine_defaults.xml]->`bots`
 
 
 
@@ -43,5 +43,5 @@ Reference: assets/scripts/[bots] script-sources(https://github.com/kbengine/kben
 
 
 
-[kbengine_defs.xml]: {{ site.baseurl }}/docs/configuration/kbengine_defs.html
+[kbengine_defaults.xml]: {{ site.baseurl }}/docs/configuration/kbengine_defaults.html
 [bots]: {{ site.baseurl }}/docs/concepts/directorys.html

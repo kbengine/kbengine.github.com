@@ -28,7 +28,7 @@ docsitem: documentation-stresstest
 配置机器人程序
 --------------------------------------
 
-参考: [kbengine_defs.xml]->`bots`
+参考: [kbengine_defaults.xml]->`bots`
 
 
 
@@ -43,5 +43,5 @@ docsitem: documentation-stresstest
 参考: assets/scripts/[bots]脚本源代码（https://github.com/kbengine/kbengine_demos_assets）。
 
 
-[kbengine_defs.xml]: {{ site.baseurl }}/cn/docs/configuration/kbengine_defs.html
+[kbengine_defaults.xml]: {{ site.baseurl }}/cn/docs/configuration/kbengine_defaults.html
 [bots]: {{ site.baseurl }}/cn/docs/concepts/directorys.html

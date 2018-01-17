@@ -9,7 +9,7 @@ Server Configuration(assets/res/server/kbengine.xml)
 ===================
 
 If you need to change the configuration of the engine, as long as the inheritance ({assets}/res/server/kbengine.xml) 
-this configuration file and overwrite the corresponding section kbe/res/server/[kbengine_defs.xml], 
+this configuration file and overwrite the corresponding section kbe/res/server/[kbengine_defaults.xml], 
 but doing so will not damage the engine settings, there is no conflict in the development along with updated engine or multiple projects.
 
 ----------------------------------------
@@ -22,7 +22,7 @@ but doing so will not damage the engine settings, there is no conflict in the de
 		
 		<app_publish>0</app_publish>
 		
-		<!-- defined => kbe/res/server/kbengine_defs.xml -->
+		<!-- defined => kbe/res/server/kbengine_defaults.xml -->
 		<dbmgr>
 			<databaseInterfaces>
 				<default>
@@ -33,4 +33,4 @@ but doing so will not damage the engine settings, there is no conflict in the de
 		</dbmgr>
 	</root>
 
-[kbengine_defs.xml]: {{ site.baseurl }}/docs/configuration/kbengine_defs.html
+[kbengine_defaults.xml]: {{ site.baseurl }}/docs/configuration/kbengine_defaults.html

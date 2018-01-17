@@ -25,7 +25,7 @@ Variable-length types:
 		 |--------------------------------------------------------------------------------------------|
 
 (Note: If the message length of more than 65534, the Message-Length is fixed fill to 65535, protocol layer in Message-Length segment after the extra 4 bytes, to describe the larger data)
-(Note: The test protocol Turn off packet-encryption, modify[kbengine.xml]or[kbengine_defs.xml]->channelCommon->encrypt_type)
+(Note: The test protocol Turn off packet-encryption, modify[kbengine.xml]or[kbengine_defaults.xml]->channelCommon->encrypt_type)
 
 
 
@@ -77,5 +77,5 @@ Examples 2:
 -------------------------------------------------------------------
 
 
-[kbengine_defs.xml]: {{ site.baseurl }}/docs/configuration/kbengine_defs.html
+[kbengine_defaults.xml]: {{ site.baseurl }}/docs/configuration/kbengine_defaults.html
 [kbengine.xml]: {{ site.baseurl }}/docs/configuration/kbengine.html
