@@ -72,7 +72,7 @@ docsitem: concepts-layout
 
 
 	· cellapp:
-	处理游戏与空间和位置有关的逻辑，如：AOI、Navigate、AI、战斗等等。
+	处理游戏与空间和位置有关的逻辑，如：View、Navigate、AI、战斗等等。
 	可在多台机器部署多个cellapp进程来动态均衡负载。 
 
 

@@ -279,13 +279,13 @@ there is no conflict in the development along with updated engine or multiple pr
 			<!-- Entry module, like the main-function -->
 			<entryScriptFile> kbengine </entryScriptFile>
 			
-			<!-- Default AOI radius, the script can change it -->
-			<defaultAoIRadius>			
+			<!-- Default View radius, the script can change it -->
+			<defaultViewRadius>			
 				<radius> 80.0 </radius>
 				<hysteresisArea> 5.0 </hysteresisArea>
-			</defaultAoIRadius>
+			</defaultViewRadius>
 			
-			<!-- Optimization EntityID，AOI the Entity is less than 255, 
+			<!-- Optimization EntityID，View the Entity is less than 255, 
 			use an aliasID(1byte) transmitted to the client -->
 			<aliasEntityID> true </aliasEntityID>
 			
@@ -318,11 +318,11 @@ there is no conflict in the development along with updated engine or multiple pr
 			<ghostUpdateHertz> 30 </ghostUpdateHertz>						<!-- Type: Integer -->
 			
 			<!-- Whether the use of coordinate-system, if is false, 
-			AOI, Trap, Move and other functions will not be available -->
+			View, Trap, Move and other functions will not be available -->
 			<coordinate_system> 
 				<enable> true </enable>
 				
-				<!-- is maintenance Y axis? Note: Management y axis, AOI、Trap and other functions with the height,
+				<!-- is maintenance Y axis? Note: Management y axis, View、Trap and other functions with the height,
 				When the entity space within little more useful when, Otherwise, 
 				the management of the y-axis will produce some consumption 
 				-->

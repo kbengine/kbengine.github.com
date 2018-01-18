@@ -72,7 +72,7 @@ Server component description
 
 
 	· cellapp:
-	Real-time processing logic game, such as: AOI, Navigate, AI, Fighting, etc.
+	Real-time processing logic game, such as: View, Navigate, AI, Fighting, etc.
 	Cellapp can deploy multiple processes on multiple machines, 
 	Multiple processes can be automated load balancing.
 	The game logic processing related to space and position.

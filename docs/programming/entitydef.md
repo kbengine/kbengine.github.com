@@ -12,7 +12,7 @@ What needs to be defined Entity:
 
 	Stored in the database.
 	Ability to facilitate remote access.
-	Need to manage and monitor its engines, such as: AOI, Trap, etc...
+	Need to manage and monitor its engines, such as: View, Trap, etc...
 	When a disaster recovery server can automatically recover.
 
 

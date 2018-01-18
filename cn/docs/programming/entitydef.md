@@ -12,7 +12,7 @@ docsitem: documentation-entitydef
 
 	需要进行数据存储。
 	能够方便的远程访问。
-	需要引擎管理和监控, 例如: AOI、Trap、等等。
+	需要引擎管理和监控, 例如: View、Trap、等等。
 	当灾难发生后服务端可以自动进行灾难的恢复。
 
 
