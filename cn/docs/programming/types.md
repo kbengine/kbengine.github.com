@@ -36,7 +36,7 @@ docsitem: documentation-types
 	PY_DICT			N
 	PY_TUPLE		N
 	PY_LIST			N
-	MAILBOX			N
+	ENTITYCALL		N
 	BLOB			N
 
 
