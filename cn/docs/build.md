@@ -35,7 +35,7 @@ Linux:
 
 Windows:
 
-	kbengine\kbe\src\kbengine_vs120.sln  
+	kbengine\kbe\src\kbengine_vs**.sln  
 
 	点击VC开始编译，等待完成即可。
 
