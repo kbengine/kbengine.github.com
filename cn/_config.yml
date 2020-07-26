@@ -1,3 +1,3 @@
 permalink: /:categories/:title
-baseurl: http://kbengine.org
+baseurl: https://kbengine.github.io/
 paginate: 10

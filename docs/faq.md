@@ -93,7 +93,7 @@ FAQ
 	* Turn off the firewall.
 	* Firewall settings, to ensure that the internal network can receive and send UDP packets.
 	* If multiple card(NIC) environment, you need to set up KBEngine.
-		see also：http://kbengine.org/docs/installation.html
+		see also：https://kbengine.github.io//docs/installation.html
 
 
 -----------------------------------------------------
